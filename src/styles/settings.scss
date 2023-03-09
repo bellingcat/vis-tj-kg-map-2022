@@ -1,0 +1,25 @@
+/**
+ * src/styles/settings.scss
+ *
+ * Configures SASS variables and Vuetify overwrites
+ */
+
+// https://next.vuetifyjs.com/features/sass-variables/`
+$normal: 24px;
+
+$zMax: 2000;
+$zMed: 500;
+$zMin: 1;
+
+$markerRadius:32px;
+
+$black1: black;
+$black2: rgb(37, 37, 37);
+$black3: rgb(75, 75, 75);
+$black4: rgb(99, 99, 99);
+
+$opacityMax: 0.92;
+$opacityMed3: 0.75;
+$opacityMed2: 0.50;
+$opacityMed1: 0.35;
+$opacityMin: 0.10;

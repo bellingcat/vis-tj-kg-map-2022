@@ -1,0 +1,78 @@
+{
+    "villages": [{
+        "id": "maksat",
+        "name_en": "Maksat",
+        "name_ru": "Максат",
+        "country": "Kyrgystan",
+        "description": "This is some info on the Maksat village.",
+        "stats": {
+            "population": "TODO maybe"
+        },
+        "incidents": [{
+                "lat": 40.136947,
+                "lon": 69.708919,
+                "tag": "destruction",
+                "description": "Partially destroyed mosque",
+                "links": ["https://bellingcat-archive.nyc3.cdn.digitaloceanspaces.com/batken-2022/photo-video/6c99af95-7ab0-4d9b-b3e5-545726fcef27.mp4"]
+            }, {
+                "lat": 40.1285475,
+                "lon": 69.69366756,
+                "tag": "destruction",
+                "description": "2x Green house destroyed",
+                "link": ""
+            },
+            {
+                "lat": 40.12383212,
+                "lon": 69.68600073,
+                "tag": "destruction",
+                "description": "Green house destroyed"
+            },
+            {
+                "lat": 40.13500432,
+                "lon": 69.7034326,
+                "tag": "destruction",
+                "description": "3x Green houses destroyed"
+            },
+            {
+                "lat": 40.12829971,
+                "lon": 69.69499181,
+                "tag": "destruction",
+                "description": "Maksat school destroyed",
+                "links": ["https://bellingcat-archive.nyc3.cdn.digitaloceanspaces.com/batken-2022/photo-video/6c99af95-7ab0-4d9b-b3e5-545726fcef27.mp4"]
+            },
+            {
+                "lat": 40.12860644,
+                "lon": 69.69572182,
+                "tag": "destruction",
+                "description": "Maksat kindargarten destroyed",
+                "links": ["https://bellingcat-archive.nyc3.cdn.digitaloceanspaces.com/batken-2022/photo-video/6c99af95-7ab0-4d9b-b3e5-545726fcef27.mp4"]
+            },
+            {
+                "lat": 40.12790328,
+                "lon": 69.69322378,
+                "tag": "destruction",
+                "description": "Local administration burned down"
+            },
+            {
+                "lat": 40.12723558,
+                "lon": 69.69370291,
+                "tag": "destruction",
+                "description": "Police building"
+            }
+        ],
+        "satellite": {
+            "bounds": [
+                [40.136006, 69.704556],
+                [40.134149, 69.708604]
+            ],
+            "before": {
+                "url": "/satellite/maksat-2022-08-30.jpg",
+                "date": "2022-08-30"
+            },
+            "after": {
+                "url": "/satellite/maksat-2022-10-03.jpg",
+                "date": "2022-10-03"
+            }
+        }
+    }]
+}

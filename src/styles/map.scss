@@ -1,0 +1,28 @@
+@use './settings.scss';
+
+.leaflet-control-zoom {
+
+    .leaflet-control-zoom-in,
+    .leaflet-control-zoom-out {
+        background-color: $black3;
+        color: white;
+        opacity: $opacityMed3;
+
+        &:hover {
+            background-color: $black2;
+        }
+    }
+}
+
+.leaflet-control-scale {
+    .leaflet-control-scale-line {
+        // border: 2px solid #ffffff00;
+        border: 0px solid #ffffff00;
+        margin-top:2px;
+        border-left: 2px solid white;
+        border-right: 2px solid white;
+        background-color: $black3;
+        color:white;
+        text-shadow: none;
+    }
+}
