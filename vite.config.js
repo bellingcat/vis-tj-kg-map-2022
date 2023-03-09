@@ -8,7 +8,8 @@ import { fileURLToPath, URL } from 'node:url'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/vis-tj-kg-map-2022/',
+  // base: './',
+  // base: '/vis-tj-kg-map-2022/',
   plugins: [
     vue({
       template: { transformAssetUrls }
