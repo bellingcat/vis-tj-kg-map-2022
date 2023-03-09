@@ -16,13 +16,33 @@
 
 .leaflet-control-scale {
     .leaflet-control-scale-line {
-        // border: 2px solid #ffffff00;
-        border: 0px solid #ffffff00;
-        margin-top:2px;
-        border-left: 2px solid white;
-        border-right: 2px solid white;
+        opacity: $opacityMed3;
+        border: 0px;
+        margin-top: 2px;
+        border-left: 2px solid $accentColor;
+        border-right: 2px solid $accentColor;
         background-color: $black3;
-        color:white;
+        color: white;
         text-shadow: none;
+
+        &:hover {
+            font-weight: bold;
+        }
+    }
+
+}
+
+.leaflet-container .leaflet-control-attribution {
+    opacity: $opacityMed3;
+    background-color: $black3;
+    color: white;
+
+    a {
+        color: $accentColor;
+
+        &:hover,
+        &:active {
+            color: $accentColor2;
+        }
     }
 }

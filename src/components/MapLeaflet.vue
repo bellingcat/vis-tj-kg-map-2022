@@ -27,8 +27,8 @@ export default {
   }, methods: {
     getTileUrl() {
       this.mapConfig.tiles.current = this.mapConfig.tiles.satellite;
-      // return `https://tile.openstreetmap.org/{z}/{x}/{y}.png`;
-      return `https://api.mapbox.com/styles/v1/${this.mapConfig.tiles.current}/tiles/256/{z}/{x}/{y}@2x?access_token=${this.mapConfig.mapboxToken}`;
+      return `https://tile.openstreetmap.org/{z}/{x}/{y}.png`;
+      // return `https://api.mapbox.com/styles/v1/${this.mapConfig.tiles.current}/tiles/256/{z}/{x}/{y}@2x?access_token=${this.mapConfig.mapboxToken}`;
     },
     initMap: function () {
       let greenIcon = L.icon({
@@ -50,6 +50,9 @@ export default {
       this.map = L.map("map", { ...this.mapConfig, zoomControl: false }).setView([this.mapConfig.anchor.lat, this.mapConfig.anchor.lon], this.mapConfig.startZoom);
       L.control.scale().addTo(this.map); // adds scale
       L.control.zoom({ position: 'bottomright' }).addTo(this.map);
+      // if (L.Browser.mobile) {
+      //   // alert("mobile")
+      // }
 
       L.tileLayer(this.getTileUrl(), {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',

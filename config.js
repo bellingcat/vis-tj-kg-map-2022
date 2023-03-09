@@ -12,6 +12,7 @@ const config = {
 			minZoom: 4,
 			startZoom: 17,
 			wheelPxPerZoomLevel: 120,
+      zoomSnap: 0.50,
 			mapboxToken: "pk.eyJ1IjoiYmVsbGluZ2NhdC1tYXBib3giLCJhIjoiY2tleW0wbWliMDA1cTJ5bzdkbTRraHgwZSJ9.GJQkjPzj8554VhR5SPsfJg",
 			tiles: {
 				current: "bellingcat-mapbox/cl0qnou2y003m15s8ieuyhgsy",
