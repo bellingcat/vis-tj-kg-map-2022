@@ -5,13 +5,14 @@
  */
 
 // https://next.vuetifyjs.com/features/sass-variables/`
+
 $normal: 24px;
 
 $zMax: 2000;
 $zMed: 500;
 $zMin: 1;
 
-$markerRadius:32px;
+$markerRadius:48px;
 
 $black1: black;
 $black2: rgb(37, 37, 37);
@@ -20,9 +21,16 @@ $black4: rgb(99, 99, 99);
 
 $accentColor: #FFC400;
 $accentColor2: #FFAB00;
+$militaryColor: #454B1B;
+$destructionColor: #AF4D2F;
 
 $opacityMax: 0.92;
 $opacityMed3: 0.75;
 $opacityMed2: 0.50;
 $opacityMed1: 0.35;
 $opacityMin: 0.10;
+
+.Vue-Toastification__toast--default{
+	background-color: $black3;
+	opacity: $opacityMed3;
+}

@@ -5,6 +5,7 @@
         "name_ru": "Максат",
         "country": "Kyrgystan",
         "description": "This is some info on the Maksat village.",
+        "yandex": "https://yandex.com/maps/geo/4209595903/?ll=69.700117%2C40.128022&z=14.11",
         "stats": {
             "population": "TODO maybe"
         },
@@ -13,13 +14,15 @@
                 "lon": 69.708919,
                 "tag": "destruction",
                 "description": "Partially destroyed mosque",
-                "links": ["https://bellingcat-archive.nyc3.cdn.digitaloceanspaces.com/batken-2022/photo-video/6c99af95-7ab0-4d9b-b3e5-545726fcef27.mp4"]
+                "links": [{
+                    "archive": "https://bellingcat-archive.nyc3.cdn.digitaloceanspaces.com/batken-2022/photo-video/6c99af95-7ab0-4d9b-b3e5-545726fcef27.mp4",
+                    "src": "https://www.facebook.com/watch/?v=1256170368292849"
+                }]
             }, {
                 "lat": 40.1285475,
                 "lon": 69.69366756,
                 "tag": "destruction",
-                "description": "2x Green house destroyed",
-                "link": ""
+                "description": "2x Green house destroyed"
             },
             {
                 "lat": 40.12383212,
@@ -38,7 +41,12 @@
                 "lon": 69.69499181,
                 "tag": "destruction",
                 "description": "Maksat school destroyed",
-                "links": ["https://bellingcat-archive.nyc3.cdn.digitaloceanspaces.com/batken-2022/photo-video/6c99af95-7ab0-4d9b-b3e5-545726fcef27.mp4"]
+                "links": [{
+                    "archive": "https://bellingcat-archive.nyc3.cdn.digitaloceanspaces.com/batken-2022/photo-video/6c99af95-7ab0-4d9b-b3e5-545726fcef27.mp4",
+                    "src": "https://www.facebook.com/watch/?v=1256170368292849"
+                }, {
+                    "src": "https://www.youtube.com/watch?v=raWjX-jtYkU"
+                }]
             },
             {
                 "lat": 40.12860644,
@@ -71,6 +79,67 @@
             },
             "after": {
                 "url": "/satellite/maksat-2022-10-03.jpg",
+                "date": "2022-10-03"
+            }
+        }
+    }, {
+        "id": "international",
+        "name_en": "International",
+        "name_ru": "Интернациональное",
+        "country": "Kyrgystan",
+        "description": "This is some info on the International village.",
+        "yandex": "https://yandex.ru/maps/geo/1508554928/?l=sat&ll=69.833683%2C40.188422&z=14",
+        "stats": {
+            "population": "TODO maybe"
+        },
+        "incidents": [{
+            "lat": 40.12198942,
+            "lon": 69.67022984,
+            "tag": "military",
+            "description": "Tajik military roaming and seemingly marodeuring in Dostuk Bazaar (International village).",
+            "links": ["https://bellingcat-archive.nyc3.cdn.digitaloceanspaces.com/batken-2022/photo-video/10d09c6e-8206-47e6-96e2-f44790ab093d.mp4"]
+        }, {
+            "lat": 40.12198942,
+            "lon": 69.67022984,
+            "tag": "destruction",
+            "description": "Media footage of Dostuk Bazaar destroyed/burnt down.",
+            "links": ["TODO"]
+        }, {
+            "lat": 40.12061159,
+            "lon": 69.6695246,
+            "tag": "destruction",
+            "description": "A shop/cafe burnt down near bazaar.",
+            "links": ["https://bellingcat-archive.nyc3.cdn.digitaloceanspaces.com/batken-2022/photo-video/c5589b34-b85d-46e6-b218-ded2c2c7d725.mp4"]
+        }],
+        "satellite": {}
+    }, {
+        "id": "borborduk",
+        "name_en": "Borborduk",
+        "name_ru": "Борбордук",
+        "country": "Kyrgystan",
+        "description": "This is some info on the Borborduk village.",
+        "yandex": "https://yandex.ru/maps/geo/1508554928/?l=sat&ll=69.833683%2C40.188422&z=14",
+        "stats": {
+            "population": "TODO maybe"
+        },
+        "incidents": [{
+            "lat": 40.18801267,
+            "lon": 69.8280565,
+            "tag": "destruction",
+            "description": "Municipality and Police dept destroyed.",
+            "links": ["https://bellingcat-archive.nyc3.cdn.digitaloceanspaces.com/batken-2022/photo-video/67a04548-0c66-4fe5-a457-f59ccc49b443.mp4"]
+        }],
+        "satellite": {
+            "bounds": [
+                [40.188941, 69.825076],
+                [40.186722, 69.829919]
+            ],
+            "before": {
+                "url": "/satellite/borborduk-2022-06-07.jpg",
+                "date": "2022-08-30"
+            },
+            "after": {
+                "url": "/satellite/borborduk-2022-10-03.jpg",
                 "date": "2022-10-03"
             }
         }

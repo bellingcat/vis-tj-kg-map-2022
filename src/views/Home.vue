@@ -1,7 +1,7 @@
 <template>
-  <v-responsive class="fill-height">
+  <!-- <v-responsive class="fill-height"> -->
     <map-leaflet />
-  </v-responsive>
+  <!-- </v-responsive> -->
 </template>
 
 <script setup>
