@@ -19,8 +19,8 @@ export default createVuetify({
       light: {
         dark:true,
         colors: {
-          primary: colors.amber.darken4,
-          secondary: colors.amber.darken3,
+          primary: colors.amber.accent2,
+          secondary: colors.amber.accent3,
         },
       },
     },

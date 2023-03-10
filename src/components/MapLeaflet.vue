@@ -5,22 +5,34 @@
   <v-card :style="selectedVillage ? '' : { zIndex: 0 }" fixed raised class="ma-1" id="sidebar" ref="sidebar">
     <v-container class="pa-0">
       <v-card-text>
-        {{ this.selectedIncidents }}
         <v-window v-model="selectedVillage">
           <v-window-item class="ma-0" v-for="v in villages" :value="v.id" :key="v.id">
-            <v-btn variant="plain" dark @click="selectedVillage = null" class="float-right">
-              <v-icon>mdi-close</v-icon>
-            </v-btn>
-            <h3 class="text-center mb-3">
+            <h3 class="text-center mb-3 mt-3 text-primary">
               {{ v.name_en }} / {{ v.name_ru }}
             </h3>
-            {{ v.description }}
-            <!-- <template v-for="v in [
-              { incidentsData: v.incidentsDestruction, key: 'destruction', class: 'text-red' },
-              { incidentsData: v.incidentsMilitary, key: 'military', class: 'text-lime' },
-            ]" :key="x.key"> -->
-            <h3 v-if="v.incidents.length" class="mt-4 mb-2">
-              {{ v.incidents.length }} geolocated {{ v.incidents.length == 1 ? "incident" : "incidents" }}
+            <v-btn variant="plain" dark @click="selectedVillage = null" class="close-button">
+              <v-icon>mdi-close</v-icon>
+            </v-btn>
+            <p class="ma-2">
+              {{ v.description }}
+            </p>
+
+            <p class="ma-2">
+              <!-- <v-icon icon="mdi-satellite-variant"></v-icon> -->
+              Comparing satellite imagery between
+              <code>{{ v?.satellite?.before?.date }}</code>
+              and
+              <code>{{ v?.satellite?.after?.date }}</code>
+              reveals {{ 'TODO FROM FILES' }}.
+            </p>
+            <div class="d-flex justify-center">
+              <v-btn prepend-icon="mdi-satellite-variant" color="white" variant="outlined">satellite imagery</v-btn>
+            </div>
+
+
+            <hr class="ma-2 mb-4 mt-4">
+            <h3 v-if="v.incidents.length" class="mt-4 mb-2 text-center">
+              Geolocated {{ v.incidents.length == 1 ? "incident" : "incidents" }}: {{ v.incidents.length }}
             </h3>
             <v-expansion-panels v-model="this.selectedIncidents[v.id]" variant="accordion">
               <v-expansion-panel v-for="i in v.incidents" :key="i.id" :value="i.id" :id="i.id">
@@ -60,7 +72,6 @@
                 </v-expansion-panel-text>
               </v-expansion-panel>
             </v-expansion-panels>
-            <!-- </template> -->
 
           </v-window-item>
         </v-window>
@@ -72,9 +83,10 @@
     <v-tabs class="ml-auto mr-auto" v-model="selectedVillage" bg-color="primary" center-active show-arrows
       align-tabs="center">
       <v-tab v-for="v in villages" :value="v.id" :key="v.id">
-        <!-- <v-badge :content="v.incidents.length" floating color="error"> -->
-        {{ v.name_en }}
-        <!-- </v-badge> -->
+        <v-badge v-if="v.id == selectedVillage" :content="v.incidents.length" floating color="error">
+          {{ v.name_en }}
+        </v-badge>
+        <span v-if="v.id != selectedVillage">{{ v.name_en }}</span>
       </v-tab>
     </v-tabs>
   </v-card>
@@ -338,10 +350,10 @@ function assert(condition, message) {
     position: absolute;
     top: 20%;
     width: 35%;
-    max-height: 50vh;
+    max-height: 60vh;
 
     .v-container {
-      height: 50vh;
+      height: 60vh;
     }
   }
 
@@ -371,6 +383,12 @@ function assert(condition, message) {
   .v-card-text {
     height: 100%;
     // overflow-y: auto;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }
 
