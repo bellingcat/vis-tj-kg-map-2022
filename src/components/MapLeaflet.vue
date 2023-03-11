@@ -185,7 +185,7 @@ export default {
 
     },
     populateMap: async function () {
-      let data = await fetch('/data.json').then(async data => await data.json());
+      let data = await fetch('./data.json').then(async data => await data.json());
       console.log(data.villages)
 
       const villageIds = data?.villages?.map(v => v.id).filter(id => id);
@@ -269,7 +269,7 @@ export default {
       });
     },
     addPolygon: async function (villageId) {
-      let data = await fetch(`/polygons/${villageId}.geojson`).then(async data => await data.json());
+      let data = await fetch(`./polygons/${villageId}.geojson`).then(async data => await data.json());
       this.polygons[villageId] = L.geoJSON(data).addTo(this.map);
       // clicking on a polygon selects it
       this.polygons[villageId].on("click", () => {

@@ -9,7 +9,7 @@ import { fileURLToPath, URL } from 'node:url'
 // https://vitejs.dev/config/
 export default defineConfig({
   // base: './',
-  // base: '/vis-tj-kg-map-2022/',
+  base: process.env.NODE_ENV == "development" ? '/vis-tj-kg-map-2022/' : '',
   plugins: [
     vue({
       template: { transformAssetUrls }

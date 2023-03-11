@@ -14,6 +14,11 @@ const routes = [
         // which is lazy-loaded when the route is visited.
         component: () => import(/* webpackChunkName: "home" */ '@/views/Home.vue'),
       },
+      {
+        path: '/vis-tj-kg-map-2022/',
+        name: 'Home',
+        component: () => import(/* webpackChunkName: "home" */ '@/views/Home.vue'),
+      },
     ],
   },
 ]
