@@ -99,13 +99,28 @@
   </v-card>
 
   <v-card class="village-tabs ma-0 mb-0 ml-auto mr-auto" :class="mdAndDown ? 'w-100' : 'w-50'">
-    <v-tabs class="ml-auto mr-auto" v-model="selectedVillage" bg-color="primary" center-active show-arrows
-      align-tabs="center" v-on:update:model-value="fitPolygon">
+
+    <v-tabs v-if="selectedImpact" class="ml-auto mr-auto" v-model="selectedVillage" bg-color="primary" center-active
+      show-arrows align-tabs="center" v-on:update:model-value="fitPolygon">
       <v-tab v-for="v in villages" :value="v.id" :key="v.id">
-        <v-badge v-if="v.id == selectedVillage" :content="v.incidents.length" floating color="error">
+        <v-badge v-if="v.id == selectedVillage" :content="v.incidents.filter(i=>i?.destruction == selectedImpact).length"
+          floating color="black">
           {{ v.name_en }}
         </v-badge>
         <span v-if="v.id != selectedVillage">{{ v.name_en }}</span>
+      </v-tab>
+    </v-tabs>
+
+    <v-tabs class="destruction-tabs" stacked v-model="selectedImpact" bg-color="black" center-active show-arrows
+      align-tabs="center">
+      <v-tab value="civinfra" selected-class="civinfra-selected v-tab--selected">
+        <v-icon icon="mdi-town-hall"></v-icon>Civilian Infrastructure
+      </v-tab>
+      <v-tab value="privateprop" selected-class="privateprop-selected v-tab--selected">
+        <v-icon icon="mdi-home-city"></v-icon> Private Property
+      </v-tab>
+      <v-tab value="borderpost" selected-class="borderpost-selected v-tab--selected">
+        <v-icon icon="mdi-sign-caution"></v-icon> Border Posts
       </v-tab>
     </v-tabs>
   </v-card>
@@ -126,8 +141,26 @@ import config from "../../config";
 import TitleExpand from "./TitleExpand.vue"
 // import Sidebar from "./Sidebar.vue";
 
-const iconDestruction = L.divIcon({ className: 'marker-pin', iconSize: [22, 22] });
-const iconDestructionActive = L.divIcon({ className: 'marker-pin-active', iconSize: [22, 22] });
+const iconSize = 16;
+const icons = {
+  civinfra: {
+    default: L.divIcon({ className: 'marker-pin-civinfra', iconSize: [iconSize, iconSize] }),
+    active: L.divIcon({ className: 'marker-pin-civinfra-active', iconSize: [iconSize, iconSize] }),
+  },
+  privateprop: {
+    default: L.divIcon({ className: 'marker-pin-privateprop', iconSize: [iconSize, iconSize] }),
+    active: L.divIcon({ className: 'marker-pin-privateprop-active', iconSize: [iconSize, iconSize] }),
+  },
+  borderpost: {
+    default: L.divIcon({ className: 'marker-pin-borderpost', iconSize: [iconSize, iconSize] }),
+    active: L.divIcon({ className: 'marker-pin-borderpost-active', iconSize: [iconSize, iconSize] }),
+  },
+  // for when the data is not pre-filled
+  default: {
+    default: L.divIcon({ className: 'marker-pin', iconSize: [iconSize, iconSize] }),
+    active: L.divIcon({ className: 'marker-pin-active', iconSize: [iconSize, iconSize] }),
+  }
+}
 
 export default {
   components: { TitleExpand },
@@ -153,6 +186,7 @@ export default {
       count: 0,
       map: null,
       mapConfig: config.app.map,
+      selectedImpact: null,
       selectedVillage: null,
       selectedIncidents: {}, // villageId -> markerId,
       selectedSat: null,
@@ -219,7 +253,7 @@ export default {
       const errorOverlayUrl = 'https://cdn-icons-png.flaticon.com/512/110/110686.png';
 
       this.satellites[village.id] = { before: {}, after: {}, active: null, display: () => { } };
-      console.log(`village ${village.id} satellite bounds: ${village?.satellite?.bounds}`)
+      // console.log(`village ${village.id} satellite bounds: ${village?.satellite?.bounds}`)
 
       // image overlay for BEFORE
       const bf = village.satellite.before;
@@ -270,7 +304,11 @@ export default {
     },
     addPolygon: async function (villageId) {
       let data = await fetch(`./polygons/${villageId}.geojson`).then(async data => await data.json());
-      this.polygons[villageId] = L.geoJSON(data).addTo(this.map);
+      const villageBounds = L.geoJSON(data).getBounds();
+      const circleCenter = villageBounds.getCenter();
+      const circleRadius = Math.max(villageBounds.getSouthWest().distanceTo(villageBounds.getNorthEast()), villageBounds.getNorthWest().distanceTo(villageBounds.getSouthEast())) / 2;
+
+      this.polygons[villageId] = L.circle(circleCenter, { radius: circleRadius }).addTo(this.map);
       // clicking on a polygon selects it
       this.polygons[villageId].on("click", () => {
         this.selectedVillage = villageId;
@@ -279,8 +317,16 @@ export default {
     },
     addMarkers: function (village) {
       // const iconDestructionHover = L.divIcon({ className: 'marker-pin', iconSize:[22,22] });
+      console.log(`${village.id} has ${village.incidents.length} incidents`)
       village.incidents.forEach(incident => {
-        let marker = new L.marker([incident.lat, incident.lon], { icon: iconDestruction });
+        let marker = null;
+        try {
+          marker = new L.marker([incident.lat, incident.lon], { icon: icons[incident.destruction || "default"].default });
+        } catch (error) {
+          console.error(error);
+          console.warn(incident);
+          return;
+        }
         let group = new L.FeatureGroup(); // used for fitBounds
         group.addLayer(marker).addTo(this.map);
         marker.on("click", () => {
@@ -288,7 +334,7 @@ export default {
           this.selectedIncidents[village.id] = incident.id;
           this.map.fitBounds(group.getBounds(), this.getFitBoundsOptions());
         })
-        this.markers[incident.id] = { marker, group };
+        this.markers[incident.id] = { marker, group, incident };
       })
     },
     viewSat: function (_, villageId, active) {
@@ -352,10 +398,11 @@ export default {
           // fit map to marker
           this.map.fitBounds(this.markers[sI[this.selectedVillage]].group.getBounds(), { ...this.getFitBoundsOptions(), maxZoom: 15 });
           Object.keys(this.markers).forEach(incidentId => {
+            const incident = this.markers[incidentId].incident;
             if (incidentId == sI[this.selectedVillage]) {
-              this.markers[incidentId].marker.setIcon(iconDestructionActive)
+              this.markers[incidentId].marker.setIcon(icons[incident.destruction || "default"].active)
             } else {
-              this.markers[incidentId].marker.setIcon(iconDestruction)
+              this.markers[incidentId].marker.setIcon(icons[incident.destruction || "default"].default)
             }
           })
           // scroll to content on sidebar
@@ -372,6 +419,15 @@ export default {
         this.satellites[ss.villageId]?.display();
       },
       deep: true
+    },
+    selectedImpact: function (sI) {
+      Object.values(this.markers).forEach(marker => {
+        if (marker.incident?.destruction == sI) {
+          marker.marker.getElement().style.display = "";
+        } else {
+          marker.marker.getElement().style.display = "none";
+        }
+      })
     },
   },
   mounted: function () {
@@ -463,29 +519,100 @@ function assert(condition, message) {
   padding: 0;
 }
 
-.leaflet-marker-icon.marker-pin,
-.leaflet-marker-icon.marker-pin-active {
-  width: $markerRadius;
-  height: $markerRadius;
-  border-radius: $markerRadius;
-}
+// .leaflet-marker-icon.marker-pin,
+// .leaflet-marker-icon.marker-pin-active {
+//   width: $markerRadius;
+//   height: $markerRadius;
+//   border-radius: $markerRadius;
+// }
 
-.leaflet-marker-icon.marker-pin {
-  border: 2px solid $yellow;
-  background-color: #689F38;
+// .leaflet-marker-icon.marker-pin {
+//   border: 2px solid black;
+//   background-color: white;
 
-  &:hover {
+//   &:hover {
+//     background-color: red;
+//   }
+
+//   &:active {
+//     background-color: orange;
+//   }
+// }
+
+// .leaflet-marker-icon.marker-pin-active {
+//   border: 2px solid $yellow;
+//   background-color: red;
+// }
+
+.leaflet-marker-icon {
+
+  &.marker-pin,
+  &.marker-pin-active,
+  &.marker-pin-civinfra,
+  &.marker-pin-civinfra-active,
+  &.marker-pin-privateprop,
+  &.marker-pin-privateprop-active,
+  &.marker-pin-borderpost,
+  &.marker-pin-borderpost-active {
+    width: $markerRadius;
+    height: $markerRadius;
+    border-radius: $markerRadius;
+
+    &:hover {
+      background-color: red;
+    }
+
+    &:active {
+      background-color: orange;
+    }
+  }
+
+  &.marker-pin,
+  &.marker-pin-active {
+    border: 2px solid black;
+    background-color: white;
+
+  }
+
+  &.marker-pin-civinfra,
+  &.marker-pin-civinfra-active {
+    border: 2px solid $yellow;
+    background-color: #689F38;
+  }
+
+  &.marker-pin-privateprop,
+  &.marker-pin-privateprop-active {
+    border: 2px solid $yellow;
+    background-color: purple;
+  }
+
+  &.marker-pin-borderpost,
+  &.marker-pin-borderpost-active {
+    border: 2px solid $yellow;
+    background-color: cyan;
+  }
+
+  &.marker-pin-active,
+  &.marker-pin-civinfra-active,
+  &.marker-pin-privateprop-active,
+  &.marker-pin-borderpost-active {
     background-color: red;
   }
 
-  &:active {
-    background-color: orange;
-  }
 }
 
-.leaflet-marker-icon.marker-pin-active {
-  border: 2px solid $yellow;
-  background-color: red;
+.destruction-tabs {
+  & .civinfra-selected {
+    color: #689F38;
+  }
+
+  & .privateprop-selected {
+    color: purple;
+  }
+
+  & .borderpost-selected {
+    color: cyan;
+  }
 }
 
 .chip-military,
