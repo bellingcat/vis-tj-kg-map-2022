@@ -6,10 +6,11 @@ import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 import { defineConfig } from 'vite'
 import { fileURLToPath, URL } from 'node:url'
 
+console.log(process.env.NODE_ENV)
 // https://vitejs.dev/config/
 export default defineConfig({
   // base: './',
-  base: process.env.NODE_ENV == "development" ? '/vis-tj-kg-map-2022/' : '',
+  base: process.env.NODE_ENV == "ghpages" ? '/vis-tj-kg-map-2022/' : '',
   plugins: [
     vue({
       template: { transformAssetUrls }
