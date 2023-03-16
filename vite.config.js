@@ -10,7 +10,7 @@ console.log(process.env.APP_ENV)
 // https://vitejs.dev/config/
 export default defineConfig({
   // base: './',
-  base: process.env.APP_ENV == "production" ? '/vis-tj-kg-map-2022/' : '',
+  base: process.env.APP_ENV == "ghpages" ? '/vis-tj-kg-map-2022/' : '',
   plugins: [
     vue({
       template: { transformAssetUrls }
