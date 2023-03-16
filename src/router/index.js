@@ -11,7 +11,7 @@ let children = [
     component: () => import(/* webpackChunkName: "home" */ '@/views/Home.vue'),
   }
 ];
-if (process.env.APP_ENV == "ghpages") {
+if (process.env.NODE_ENV == "production") {
   console.log("GH_PAGES DEPLOYMENT DETECTED")
   children.push(
     {
@@ -21,7 +21,7 @@ if (process.env.APP_ENV == "ghpages") {
     },
   )
 }
-console.log(`in index: ${process.env.APP_ENV}`)
+console.log(`in index: ${process.env.NODE_ENV}`)
 const routes = [
   {
     path: '/',
