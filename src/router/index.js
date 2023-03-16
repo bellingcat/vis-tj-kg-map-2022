@@ -11,7 +11,8 @@ let children = [
     component: () => import(/* webpackChunkName: "home" */ '@/views/Home.vue'),
   }
 ];
-if (process.env.NODE_ENV == "ghpages") {
+if (process.env.APP_ENV == "ghpages") {
+  console.log("GH_PAGES DEPLOYMENT DETECTED")
   children.push(
     {
       path: '/vis-tj-kg-map-2022/',
@@ -20,7 +21,7 @@ if (process.env.NODE_ENV == "ghpages") {
     },
   )
 }
-console.log(process.env.NODE_ENV)
+console.log(`in index: ${process.env.APP_ENV}`)
 const routes = [
   {
     path: '/',

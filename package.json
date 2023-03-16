@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy-ghpages": "NODE_ENV=ghpages vite build; rm -rf docs; cp -r dist docs; git add docs; git commit -m 'preview docs gh=pages'; git push origin -d gh-pages; git subtree push --prefix docs origin gh-pages; git reset --soft HEAD~1; rm -rf docs",
+    "deploy-ghpages": "APP_ENV=ghpages vite build; rm -rf docs; cp -r dist docs; git add docs; git commit -m 'preview docs ghpages'; git push origin -d gh-pages; git subtree push --prefix docs origin gh-pages; git reset --soft HEAD~1; rm -rf docs",
     "lint": "eslint . --fix --ignore-path .gitignore"
   },
   "dependencies": {
