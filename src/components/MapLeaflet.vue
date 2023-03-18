@@ -54,16 +54,22 @@
                 <v-expansion-panel-title class="pa-0 pl-1 pr-1">
                   <!-- <v-icon :icon="x.key=='military'?'mdi-knife-military':''"></v-icon> -->
                   <small class="mr-2 pa-1" :class="`chip-${i.tag}`">{{ i.tag }}</small>
-                  {{ i.description }}
+                  {{ i.description || JSON.stringify(i.links) }}
                 </v-expansion-panel-title>
                 <v-expansion-panel-text class="pa-0 media-panel">
 
                   <div v-for="(link, linkIndex) in i.links" :key="linkIndex">
                     <!-- TODO: if this is an IMAGE and not a VIDEO -->
-                    <video v-if="link.archive" width="" class="mt-2 mb-2" style="width: 100%;" controls>
+                    <video v-if="link.archive" class="mt-2 mb-2 video-embed" style="width: 100%;" controls>
                       <source :src="link.archive" type="video/mp4">
                       Your browser does not support the video tag.
                     </video>
+
+                    <iframe v-if="convertToEmbedUrl(link.src)" class="video-embed"
+                      :src="convertToEmbedUrl(link.src)" title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+
                     <p v-if="!link.archive">No archived content</p>
                     <v-btn v-if="link.src" variant="outlined" color="secondary" class="ma-1" :href="link.src"
                       title="open original source" target="_blank" append-icon="mdi-open-in-new">
@@ -103,8 +109,8 @@
     <v-tabs v-if="selectedImpact" class="ml-auto mr-auto" v-model="selectedVillage" bg-color="primary" center-active
       show-arrows align-tabs="center" v-on:update:model-value="fitPolygon">
       <v-tab v-for="v in villages" :value="v.id" :key="v.id">
-        <v-badge v-if="v.id == selectedVillage" :content="v.incidents.filter(i=>i?.destruction == selectedImpact).length"
-          floating color="black">
+        <v-badge v-if="v.id == selectedVillage"
+          :content="v.incidents.filter(i => i?.destruction == selectedImpact).length" floating color="black">
           {{ v.name_en }}
         </v-badge>
         <span v-if="v.id != selectedVillage">{{ v.name_en }}</span>
@@ -113,15 +119,9 @@
 
     <v-tabs class="destruction-tabs" stacked v-model="selectedImpact" bg-color="black" center-active show-arrows
       align-tabs="center">
-      <v-tab value="civinfra" selected-class="civinfra-selected v-tab--selected">
-        <v-icon icon="mdi-town-hall"></v-icon>Civilian Infrastructure
-      </v-tab>
-      <v-tab value="privateprop" selected-class="privateprop-selected v-tab--selected">
-        <v-icon icon="mdi-home-city"></v-icon> Private Property
-      </v-tab>
-      <v-tab value="borderpost" selected-class="borderpost-selected v-tab--selected">
-        <v-icon icon="mdi-sign-caution"></v-icon> Border Posts
-      </v-tab>
+      <v-tab v-for="tb in impactTabs" :value="tb.value" :key="tb.value"
+        :selected-class="`${tb.value}-selected v-tab--selected`">
+        <v-icon :icon="tb.icon" :size="smAndDown ? 'small' : 'x-large'"></v-icon>{{ tb.text_en }}</v-tab>
     </v-tabs>
   </v-card>
 
@@ -132,6 +132,7 @@
 </script>
 
 <script>
+
 import { useDisplay } from 'vuetify'
 import { useToast } from "vue-toastification";
 import L from "leaflet";
@@ -140,34 +141,17 @@ import config from "../../config";
 // import BeforeAfterSatellite from "./BeforeAfterSatellite.vue";
 import TitleExpand from "./TitleExpand.vue"
 // import Sidebar from "./Sidebar.vue";
+import MarkerUtils from "./js/MarkerUtils.js";
 
-const iconSize = 16;
-const icons = {
-  civinfra: {
-    default: L.divIcon({ className: 'marker-pin-civinfra', iconSize: [iconSize, iconSize] }),
-    active: L.divIcon({ className: 'marker-pin-civinfra-active', iconSize: [iconSize, iconSize] }),
-  },
-  privateprop: {
-    default: L.divIcon({ className: 'marker-pin-privateprop', iconSize: [iconSize, iconSize] }),
-    active: L.divIcon({ className: 'marker-pin-privateprop-active', iconSize: [iconSize, iconSize] }),
-  },
-  borderpost: {
-    default: L.divIcon({ className: 'marker-pin-borderpost', iconSize: [iconSize, iconSize] }),
-    active: L.divIcon({ className: 'marker-pin-borderpost-active', iconSize: [iconSize, iconSize] }),
-  },
-  // for when the data is not pre-filled
-  default: {
-    default: L.divIcon({ className: 'marker-pin', iconSize: [iconSize, iconSize] }),
-    active: L.divIcon({ className: 'marker-pin-active', iconSize: [iconSize, iconSize] }),
-  }
-}
+// const iconSize = 16;
+const hoverClass = 'dotted-border';
 
 export default {
   components: { TitleExpand },
   setup() {
-    const { mdAndDown } = useDisplay();
+    const { mdAndDown, smAndDown } = useDisplay();
     return {
-      mdAndDown, toast: useToast(), TOAST_OPTIONS: {
+      mdAndDown, smAndDown, toast: useToast(), TOAST_OPTIONS: {
         position: "top-right",
         timeout: 2000,
         closeOnClick: true,
@@ -186,16 +170,20 @@ export default {
       count: 0,
       map: null,
       mapConfig: config.app.map,
+      villages: config.villages?.map(v => { return { ...v, incidents: [] } }),
       selectedImpact: null,
       selectedVillage: null,
       selectedIncidents: {}, // villageId -> markerId,
       selectedSat: null,
-      villages: [],
       polygons: {}, // villageId -> polygonObj
       markers: {}, //villageId -> markerBound : for fitBounds
       satellites: {},
       clipboardWorks: navigator.clipboard !== undefined,
-
+      impactTabs: [
+        { value: "civinfra", icon: "mdi-town-hall", text_en: "Civilian Infrastructure" },
+        { value: "privateprop", icon: "mdi-home-city", text_en: "Private Property" },
+        { value: "borderpost", icon: "mdi-sign-caution", text_en: "Border Posts" },
+      ]
     }
   }, methods: {
     getTileUrl() {
@@ -219,18 +207,16 @@ export default {
 
     },
     populateMap: async function () {
-      let data = await fetch('./data.json').then(async data => await data.json());
-      console.log(data.villages)
-
-      const villageIds = data?.villages?.map(v => v.id).filter(id => id);
+      let incidents = await fetch('./incidents.json').then(async data => await data.json());
+      const villageIds = this.villages?.map(v => v.id).filter(id => id);
       assert(villageIds.length > 0 && villageIds.length == [...new Set(villageIds)].length, `Each village must have a unique ID`)
       // enrich some calculations into each village object
-      this.villages = data.villages.map(v => {
-        v.incidents = v.incidents.map((incident, index) => {
+      this.villages = this.villages.map(v => {
+        v.incidents = incidents[v.id]?.map((incident, index) => {
           this.selectedIncidents[v.id] = null;
           this.selectedIncidents[v.id] = null;
           return { ...incident, id: `${v.id}-${index}` }
-        })
+        }) || [];
         return {
           ...v,
           incidentsDestruction: v.incidents.filter(i => i.tag == 'destruction'),
@@ -321,7 +307,7 @@ export default {
       village.incidents.forEach(incident => {
         let marker = null;
         try {
-          marker = new L.marker([incident.lat, incident.lon], { icon: icons[incident.destruction || "default"].default });
+          marker = new L.marker([incident.lat, incident.lon], { icon: MarkerUtils.getMarkerSvg(incident.destruction, false) });
         } catch (error) {
           console.error(error);
           console.warn(incident);
@@ -334,6 +320,12 @@ export default {
           this.selectedIncidents[village.id] = incident.id;
           this.map.fitBounds(group.getBounds(), this.getFitBoundsOptions());
         })
+        marker.on('mouseover', function () {
+          this._icon.classList.add(hoverClass);
+        });
+        marker.on('mouseout', function () {
+          this._icon.classList.remove(hoverClass);
+        });
         this.markers[incident.id] = { marker, group, incident };
       })
     },
@@ -369,6 +361,20 @@ export default {
         duration: 1.5,
         // easeLinearity: 0.25
       }
+    },
+    convertToEmbedUrl: function(url) {
+      const videoIdMatch = url.match(/youtube.com\/watch\?v=([\w-]{11})(&t=(\d+))?/) || url.match(/youtu.be\/([\w-]{11})(\?t=(\d+))?/);
+      if (videoIdMatch) {
+        const videoId = videoIdMatch[1];
+        const startTime = videoIdMatch[3];
+        let embedUrl = `https://www.youtube-nocookie.com/embed/${videoId}`;
+        if (startTime) {
+          embedUrl += `?start=${startTime}`;
+        }
+        return embedUrl;
+      } else {
+        return null;
+      }
     }
   },
   watch: {
@@ -400,9 +406,9 @@ export default {
           Object.keys(this.markers).forEach(incidentId => {
             const incident = this.markers[incidentId].incident;
             if (incidentId == sI[this.selectedVillage]) {
-              this.markers[incidentId].marker.setIcon(icons[incident.destruction || "default"].active)
+              this.markers[incidentId].marker.setIcon(MarkerUtils.getMarkerSvg(incident.destruction, true))
             } else {
-              this.markers[incidentId].marker.setIcon(icons[incident.destruction || "default"].default)
+              this.markers[incidentId].marker.setIcon(MarkerUtils.getMarkerSvg(incident.destruction, false))
             }
           })
           // scroll to content on sidebar
@@ -431,6 +437,8 @@ export default {
     },
   },
   mounted: function () {
+    // console.log(config)
+    // this.villages = config.villages?.map(v => { return { ...v, incidents: [] } })
     this.initMap();
     this.populateMap();
   }
@@ -460,7 +468,7 @@ function assert(condition, message) {
   z-index: $zMax + 10;
   overflow-y: auto;
 
-  @media (min-width: 600px) {
+  @media (min-width: 960px) {
     position: absolute;
     top: 20%;
     width: 35%;
@@ -471,12 +479,12 @@ function assert(condition, message) {
     }
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 960px) {
     position: fixed;
     // width: 100%;
     left: 0;
     right: 0;
-    bottom: 48px;
+    bottom: 104px; // 48 + 56px
     height: 40vh;
     max-height: 40vh;
     margin-left: auto;
@@ -485,13 +493,6 @@ function assert(condition, message) {
     .v-container {
       height: 50vh;
     }
-  }
-
-  h3.sticky {
-    // position: -webkit-sticky;
-    // /* Safari */
-    // position: sticky;
-    // top: 0;
   }
 
   .v-card-text {
@@ -517,6 +518,18 @@ function assert(condition, message) {
 
 .media-panel .v-expansion-panel-text__wrapper {
   padding: 0;
+}
+
+video.video-embed,
+iframe.video-embed {
+  width: 100%;
+  min-height: 180px;
+}
+
+.dotted-border {
+  stroke: black;
+  stroke-width: 4;
+  stroke-dasharray: 3 3;
 }
 
 // .leaflet-marker-icon.marker-pin,
@@ -626,6 +639,13 @@ function assert(condition, message) {
 
 .chip-military {
   border: 1px solid $militaryColor;
+}
+
+// override default height for stacked
+div.v-tabs--density-default.v-tabs--stacked {
+  @media (max-width: 960px) {
+    --v-tabs-height: 56px;
+  }
 }
 
 /* Leaflet crispness override */
