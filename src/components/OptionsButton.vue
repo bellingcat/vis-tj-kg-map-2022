@@ -64,6 +64,15 @@
           BELLINGCAT
         </v-list-item-title>
       </v-list-item>
+      <!-- code -->
+      <v-list-item @click="openUrl('https://github.com/bellingcat/vis-tj-kg-map-2022')">
+        <template v-slot:prepend>
+          <v-icon icon="mdi-github" size="large"></v-icon>
+        </template>
+        <v-list-item-title>
+          CODE
+        </v-list-item-title>
+      </v-list-item>
 
     </v-list>
   </v-menu>
