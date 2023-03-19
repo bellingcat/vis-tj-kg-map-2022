@@ -46,19 +46,22 @@
             </span>
 
             <v-divider class="ma-2 mb-6 mt-6"></v-divider>
-            <h3 v-if="v.incidents.length" class="mt-4 mb-2 text-center">
-              Geolocated {{ v.incidents.length == 1 ? "incident" : "incidents" }}: {{ v.incidents.length }}
+            <h3 v-if="v.incidents.filter(filterActiveIncident).length" class="mt-4 mb-2 text-center">
+              Geolocated {{ v.incidents.filter(filterActiveIncident).length == 1 ? "incident" : "incidents" }}: {{
+                v.incidents.filter(filterActiveIncident).length }}
             </h3>
 
             <v-expansion-panels v-model="this.selectedIncidents[v.id]" variant="accordion">
-              <v-expansion-panel v-for="(i, iCount) in v.incidents" :key="i.id" :value="i.id" :id="i.id">
+              <v-expansion-panel v-for="i in v.incidents.filter(filterActiveIncident)" :key="i.id" :value="i.id"
+                :id="i.id">
                 <v-expansion-panel-title class="pa-0 pl-1 pr-1">
                   <!-- <v-icon :icon="x.key=='military'?'mdi-knife-military':''"></v-icon> -->
                   <small class="mr-2 pa-1" :class="`chip-${i.tag}`">{{ i.tag }}</small>
-                  {{ i.description_en || `destroyed building n.${iCount + 1}` }}
+                  {{ i.description_en || `destroyed building n.${i.index + 1}` }}
                 </v-expansion-panel-title>
-                <v-expansion-panel-text class="pa-0 media-panel">
+                <v-expansion-panel-text class="pa-0 pb-6 media-panel">
 
+                  <v-code v-if="!i.links.length" class="ma-2 mt-6 mb-6 text-center">No sources to show.</v-code>
                   <div v-for="(link, linkIndex) in i.links" :key="linkIndex">
                     <!-- TODO: if this is an IMAGE and not a VIDEO -->
                     <video v-if="link.archive" class="mt-2 mb-2 video-embed" style="width: 100%;" controls>
@@ -71,11 +74,12 @@
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       allowfullscreen></iframe>
 
-                    <p v-if="!link.archive">No archived content</p>
+                    <!-- <p v-if="!link.archive">No archived content</p> -->
                     <v-btn v-if="link.src" variant="outlined" color="secondary" class="ma-1" :href="link.src"
                       title="open original source" target="_blank" append-icon="mdi-open-in-new">
                       source {{ linkIndex + 1 }}
                     </v-btn>
+                    {{ link.src }}
                     <v-divider v-if="i.links.length > linkIndex + 1" class="mb-3 mt-3"></v-divider>
                   </div>
 
@@ -99,7 +103,6 @@
 
           </v-window-item>
 
-
         </v-window>
       </v-card-text>
     </v-container>
@@ -110,8 +113,8 @@
     <v-tabs v-if="selectedImpact" class="ml-auto mr-auto" v-model="selectedVillage" bg-color="primary" center-active
       show-arrows align-tabs="center" v-on:update:model-value="fitPolygon">
       <v-tab v-for="v in villages" :value="v.id" :key="v.id">
-        <v-badge v-if="v.id == selectedVillage" :content="v.incidents.filter(i => i?.impact == selectedImpact).length"
-          floating color="black">
+        <v-badge v-if="v.id == selectedVillage" :content="v.incidents.filter(this.filterActiveIncident).length" floating
+          color="black">
           {{ v.name_en }}
         </v-badge>
         <span v-if="v.id != selectedVillage">{{ v.name_en }}</span>
@@ -140,9 +143,6 @@ import TitleExpand from "./TitleExpand.vue"
 import OptionsButton from "./OptionsButton.vue"
 import MarkerUtils from "./js/MarkerUtils.js";
 
-// const iconSize = 16;
-const hoverClass = 'dotted-border';
-
 export default {
   components: { TitleExpand, OptionsButton },
   setup() {
@@ -169,7 +169,7 @@ export default {
       clipboardWorks: navigator.clipboard !== undefined,
       tiles: config.app.map.tiles.default,
       impactTabs: [
-        { value: "all", icon: "mdi-select-all", text_en: "All" },
+        { value: "all", icon: "mdi-map-marker-multiple", text_en: "All" },
         { value: "civinfra", icon: "mdi-town-hall", text_en: "Civilian Infrastructure" },
         { value: "privateprop", icon: "mdi-home-city", text_en: "Private Property" },
         { value: "borderpost", icon: "mdi-sign-caution", text_en: "Border Posts" },
@@ -215,7 +215,7 @@ export default {
         v.incidents = incidents[v.id]?.map((incident, index) => {
           this.selectedIncidents[v.id] = null;
           this.selectedIncidents[v.id] = null;
-          return { ...incident, id: `${v.id}-${index}` }
+          return { ...incident, id: `${v.id}-${index}`, index: index }
         }) || [];
         return {
           ...v,
@@ -302,7 +302,6 @@ export default {
       })
     },
     addMarkers: function (village) {
-      // const iconDestructionHover = L.divIcon({ className: 'marker-pin', iconSize:[22,22] });
       console.log(`${village.id} has ${village.incidents.length} incidents`)
       village.incidents.forEach(incident => {
         let marker = null;
@@ -320,12 +319,12 @@ export default {
           this.selectedIncidents[village.id] = incident.id;
           this.map.fitBounds(group.getBounds(), this.getFitBoundsOptions());
         })
-        marker.on('mouseover', function () {
-          this._icon.classList.add(hoverClass);
-        });
-        marker.on('mouseout', function () {
-          this._icon.classList.remove(hoverClass);
-        });
+        // marker.on('mouseover', function () {
+        //   // this._icon.classList.add(hoverClass);
+        // });
+        // marker.on('mouseout', function () {
+        //   // this._icon.classList.remove(hoverClass);
+        // });
         this.markers[incident.id] = { marker, group, incident };
       })
     },
@@ -354,9 +353,16 @@ export default {
       const leftSidebarWidth = this.$refs.sidebar.$el?.offsetWidth || 0;
       const sideBarRect = this.$refs.sidebar.$el?.getBoundingClientRect() || {};
       const titleOffsetTop = this.$refs.titleExpand.$el?.nextElementSibling?.getBoundingClientRect()?.bottom || 0;
+      console.log({
+        paddingTopLeft: [this.smAndDown ? 0 : leftSidebarWidth, titleOffsetTop],
+        paddingBottomRight: [0, this.smAndDown ? window.innerHeight - sideBarRect?.top : 48],
+        animate: true,
+        duration: 1.5,
+        // easeLinearity: 0.25
+      })
       return {
-        paddingTopLeft: [this.mdAndDown ? 0 : leftSidebarWidth, titleOffsetTop],
-        paddingBottomRight: [0, this.mdAndDown ? window.innerHeight - sideBarRect?.top : 48],
+        paddingTopLeft: [this.smAndDown ? 0 : leftSidebarWidth, titleOffsetTop],
+        paddingBottomRight: [0, this.smAndDown ? window.innerHeight - sideBarRect?.top : 48],
         animate: true,
         duration: 1.5,
         // easeLinearity: 0.25
@@ -375,6 +381,9 @@ export default {
       } else {
         return null;
       }
+    },
+    filterActiveIncident(incident) {
+      return this.selectedImpact == 'all' || incident?.impact == this.selectedImpact;
     }
   },
   watch: {
@@ -426,9 +435,9 @@ export default {
       },
       deep: true
     },
-    selectedImpact: function (sI) {
+    selectedImpact: function () {
       Object.values(this.markers).forEach(marker => {
-        if (marker.incident?.impact == sI) {
+        if (this.filterActiveIncident(marker.incident)) {
           marker.marker.getElement().style.display = "";
         } else {
           marker.marker.getElement().style.display = "none";
@@ -437,8 +446,6 @@ export default {
     },
   },
   mounted: function () {
-    // console.log(config)
-    // this.villages = config.villages?.map(v => { return { ...v, incidents: [] } })
     this.initMap();
     this.populateMap();
   }
@@ -473,6 +480,7 @@ function assert(condition, message) {
     top: 20%;
     width: 35%;
     max-height: 60vh;
+    max-width: 550px;
 
     .v-container {
       height: 60vh;
@@ -520,20 +528,26 @@ function assert(condition, message) {
   right: 0;
 }
 
-.media-panel .v-expansion-panel-text__wrapper {
-  padding: 0;
+.media-panel {
+  background-color: #444444;
+
+  &.v-expansion-panel-text__wrapper {
+    padding: 0;
+  }
 }
 
 video.video-embed,
 iframe.video-embed {
   width: 100%;
-  min-height: 180px;
-}
+  min-height: 240px;
 
-.dotted-border {
-  stroke: black;
-  stroke-width: 4;
-  stroke-dasharray: 3 3;
+  @media (min-width: 600px) and (max-width: 960px) {
+    min-height: 300px;
+  }
+
+  @media (max-width: 600px) {
+    min-height: 180px;
+  }
 }
 
 .leaflet-marker-icon {
@@ -551,11 +565,11 @@ iframe.video-embed {
     border-radius: $markerRadius;
 
     &:hover {
-      background-color: red;
-    }
-
-    &:active {
-      background-color: orange;
+      // background-color: red;
+      border: 2px dotted $accentColor;
+      width: 26px !important;
+      height: 26px !important;
+      z-index: $zMax + 15 !important;
     }
   }
 
@@ -568,20 +582,20 @@ iframe.video-embed {
 
   &.marker-pin-civinfra,
   &.marker-pin-civinfra-active {
-    border: 2px solid $yellow;
-    background-color: #689F38;
+    border: 2px solid #33691E;
+    background-color: #9CCC65;
   }
 
   &.marker-pin-privateprop,
   &.marker-pin-privateprop-active {
-    border: 2px solid $yellow;
-    background-color: purple;
+    border: 2px solid #311B92;
+    background-color: #AB47BC;
   }
 
   &.marker-pin-borderpost,
   &.marker-pin-borderpost-active {
-    border: 2px solid $yellow;
-    background-color: cyan;
+    border: 2px solid #006064;
+    background-color: #26C6DA;
   }
 
   &.marker-pin-active,
@@ -589,21 +603,26 @@ iframe.video-embed {
   &.marker-pin-privateprop-active,
   &.marker-pin-borderpost-active {
     background-color: red;
+    z-index: $zMax + 15 !important;
   }
 
 }
 
 .impact-tabs {
+  & .all-selected {
+    color: $accentColor;
+  }
+
   & .civinfra-selected {
-    color: #689F38;
+    color: #C5E1A5;
   }
 
   & .privateprop-selected {
-    color: purple;
+    color: #CE93D8;
   }
 
   & .borderpost-selected {
-    color: cyan;
+    color: #80DEEA;
   }
 }
 

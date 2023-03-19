@@ -10,7 +10,7 @@ import L from "leaflet";
 var MarkerUtils = {
 
   getMarkerSvg(markerClass, active) {
-    const iconSize = 16;
+    const iconSize = 18;
     return L.divIcon({ className: `marker-pin-${markerClass}${active ? '-active' : ''}`, iconSize: [iconSize, iconSize] });
     /*
         const circleDiameter = 24;
