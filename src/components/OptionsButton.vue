@@ -54,14 +54,6 @@
           CSV
         </v-list-item-title>
       </v-list-item>
-      <v-list-item @click="downloadImage()">
-        <template v-slot:prepend>
-          <v-icon icon="mdi-download" size="large"></v-icon>
-        </template>
-        <v-list-item-title>
-          Image
-        </v-list-item-title>
-      </v-list-item>
 
       <!-- bellingcat -->
       <v-list-item @click="openUrl('https://www.bellingcat.com/')">
@@ -88,7 +80,7 @@ import config from "../../config";
 export default {
   name: 'OptionsButton',
   props: ['startTile'],
-  emits: ['newTile', 'downloadImage'],
+  emits: ['newTile'],
   data() {
     return {
       // layers
@@ -144,9 +136,6 @@ export default {
     openUrl(url) {
       window.open(url, '_blank');
     },
-    downloadImage(){
-      this.$emit('downloadImage')
-    }
   },
   mounted() {
     this.updateLocaleIndex();

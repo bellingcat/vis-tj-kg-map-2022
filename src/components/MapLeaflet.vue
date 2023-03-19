@@ -1,6 +1,6 @@
 <template>
   <title-expand ref="titleExpand" />
-  <options-button :startTile="currentTileName" @new-tile="setTileLayer" @download-image="downloadImage" />
+  <options-button :startTile="currentTileName" @new-tile="setTileLayer" />
   <!-- <sidebar /> -->
 
   <v-card :style="selectedVillage ? '' : { zIndex: 0 }" fixed raised class="ma-1" id="sidebar" ref="sidebar">
@@ -134,7 +134,6 @@
 import { useDisplay, useLocale } from 'vuetify'
 import { useToast } from "vue-toastification";
 import L from "leaflet";
-import "leaflet.browser.print/dist/leaflet.browser.print.js"
 import "leaflet/dist/leaflet.css";
 import config from "../../config";
 import TitleExpand from "./TitleExpand.vue"
@@ -349,11 +348,6 @@ export default {
           console.log(`Could not copy: ${error}`)
         }
       }
-    },
-    downloadImage() {
-      let browserPrint = L.browserPrint(this.map, {});
-      browserPrint.print(L.BrowserPrint.Mode.Landscape('A3', { margin: { left: 1, right: 1, top: 1, bottom: 1 }, header: { enabled: true, text: `${config.display_title} - Bellingcat`, overTheMap: true } }));
-      // TODO: translate
     },
     getFitBoundsOptions() {
       // calculates necessary padding options for map.fitBounds to exclude menus and bars.
@@ -657,12 +651,6 @@ div.v-tabs--density-default.v-tabs--stacked {
       font-size: 0.75em;
     }
   }
-}
-
-#print-header {
-  color: black;
-  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-  font-size: 26px;
 }
 
 /* Leaflet crispness override */
