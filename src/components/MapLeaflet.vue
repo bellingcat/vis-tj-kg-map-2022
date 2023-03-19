@@ -1,5 +1,6 @@
 <template>
   <title-expand ref="titleExpand" />
+  <options-button :startTile="currentTileName" @new-tile="setTileLayer" />
   <!-- <sidebar /> -->
 
   <v-card :style="selectedVillage ? '' : { zIndex: 0 }" fixed raised class="ma-1" id="sidebar" ref="sidebar">
@@ -50,11 +51,11 @@
             </h3>
 
             <v-expansion-panels v-model="this.selectedIncidents[v.id]" variant="accordion">
-              <v-expansion-panel v-for="i in v.incidents" :key="i.id" :value="i.id" :id="i.id">
+              <v-expansion-panel v-for="(i, iCount) in v.incidents" :key="i.id" :value="i.id" :id="i.id">
                 <v-expansion-panel-title class="pa-0 pl-1 pr-1">
                   <!-- <v-icon :icon="x.key=='military'?'mdi-knife-military':''"></v-icon> -->
                   <small class="mr-2 pa-1" :class="`chip-${i.tag}`">{{ i.tag }}</small>
-                  {{ i.description || JSON.stringify(i.links) }}
+                  {{ i.description_en || `destroyed building n.${iCount + 1}` }}
                 </v-expansion-panel-title>
                 <v-expansion-panel-text class="pa-0 media-panel">
 
@@ -65,8 +66,8 @@
                       Your browser does not support the video tag.
                     </video>
 
-                    <iframe v-if="convertToEmbedUrl(link.src)" class="video-embed"
-                      :src="convertToEmbedUrl(link.src)" title="YouTube video player" frameborder="0"
+                    <iframe v-if="convertToEmbedUrl(link.src)" class="video-embed" :src="convertToEmbedUrl(link.src)"
+                      title="YouTube video player" frameborder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       allowfullscreen></iframe>
 
@@ -128,18 +129,16 @@
   <div id="map"></div>
 </template>
 
-<script setup>
-</script>
-
 <script>
 
-import { useDisplay } from 'vuetify'
+import { useDisplay, useLocale } from 'vuetify'
 import { useToast } from "vue-toastification";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import config from "../../config";
 // import BeforeAfterSatellite from "./BeforeAfterSatellite.vue";
 import TitleExpand from "./TitleExpand.vue"
+import OptionsButton from "./OptionsButton.vue"
 // import Sidebar from "./Sidebar.vue";
 import MarkerUtils from "./js/MarkerUtils.js";
 
@@ -147,28 +146,19 @@ import MarkerUtils from "./js/MarkerUtils.js";
 const hoverClass = 'dotted-border';
 
 export default {
-  components: { TitleExpand },
+  components: { TitleExpand, OptionsButton },
   setup() {
     const { mdAndDown, smAndDown } = useDisplay();
+    const { current, t } = useLocale();
     return {
-      mdAndDown, smAndDown, toast: useToast(), TOAST_OPTIONS: {
-        position: "top-right",
-        timeout: 2000,
-        closeOnClick: true,
-        pauseOnFocusLoss: false,
-        pauseOnHover: false,
-        draggable: false,
-        showCloseButtonOnHover: true,
-        hideProgressBar: true,
-        closeButton: "button",
-        icon: true,
-      }
+      current, t, mdAndDown, smAndDown, toast: useToast()
     };
   },
   data() {
     return {
       count: 0,
       map: null,
+      toastOptions: config.app.ui.toastOptions,
       mapConfig: config.app.map,
       villages: config.villages?.map(v => { return { ...v, incidents: [] } }),
       selectedImpact: null,
@@ -179,17 +169,33 @@ export default {
       markers: {}, //villageId -> markerBound : for fitBounds
       satellites: {},
       clipboardWorks: navigator.clipboard !== undefined,
+      tiles: config.app.map.tiles.default,
       impactTabs: [
         { value: "civinfra", icon: "mdi-town-hall", text_en: "Civilian Infrastructure" },
         { value: "privateprop", icon: "mdi-home-city", text_en: "Private Property" },
         { value: "borderpost", icon: "mdi-sign-caution", text_en: "Border Posts" },
-      ]
+      ],
+      currentTileName: config.app.map.startTile,
+      currentTile: null
     }
   }, methods: {
+    setTileLayer(tileName) {
+      // remove previous tile if it exists
+      if (this.currentTile != null) {
+        this.currentTile.remove();
+      }
+
+      this.currentTileName = tileName || this.currentTileName;
+      console.log(`setting tile ${this.currentTileName}`)
+      let tileUrl = this.mapConfig.tiles[this.currentTileName](this.mapConfig.mapboxToken);
+      // add new tile
+      this.currentTile = L.tileLayer(tileUrl, {
+        //TODO: if OSM is used
+        // attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      }).addTo(this.map);
+    },
     getTileUrl() {
-      this.mapConfig.tiles.current = this.mapConfig.tiles.satellite;
-      return `https://tile.openstreetmap.org/{z}/{x}/{y}.png`;
-      // return `https://api.mapbox.com/styles/v1/${this.mapConfig.tiles.current}/tiles/256/{z}/{x}/{y}@2x?access_token=${this.mapConfig.mapboxToken}`;
+      return this.mapConfig.tiles[this.currentTileName](this.mapConfig.mapboxToken)
     },
     initMap: function () {
       // creating the map
@@ -199,12 +205,7 @@ export default {
         L.control.zoom({ position: 'bottomright' }).addTo(this.map);
         L.control.scale({ position: 'bottomleft' }).addTo(this.map); // adds scale
       }
-
-      L.tileLayer(this.getTileUrl(), {
-        //TODO: if OSM is used
-        // attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-      }).addTo(this.map);
-
+      this.setTileLayer();
     },
     populateMap: async function () {
       let incidents = await fetch('./incidents.json').then(async data => await data.json());
@@ -343,7 +344,7 @@ export default {
       if (this.clipboardWorks) {
         try {
           navigator.clipboard.writeText(text);
-          this.toast("coordinates copied to clipboard", this.TOAST_OPTIONS)
+          this.toast("coordinates copied to clipboard", this.toastOptions);
         } catch (error) {
           console.log(`Could not copy: ${error}`)
         }
@@ -362,7 +363,7 @@ export default {
         // easeLinearity: 0.25
       }
     },
-    convertToEmbedUrl: function(url) {
+    convertToEmbedUrl: function (url) {
       const videoIdMatch = url.match(/youtube.com\/watch\?v=([\w-]{11})(&t=(\d+))?/) || url.match(/youtu.be\/([\w-]{11})(\?t=(\d+))?/);
       if (videoIdMatch) {
         const videoId = videoIdMatch[1];

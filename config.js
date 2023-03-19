@@ -15,17 +15,27 @@ const config = {
       wheelPxPerZoomLevel: 120,
       zoomSnap: 0.50,
       mapboxToken: "pk.eyJ1IjoiYmVsbGluZ2NhdC1tYXBib3giLCJhIjoiY2tleW0wbWliMDA1cTJ5bzdkbTRraHgwZSJ9.GJQkjPzj8554VhR5SPsfJg",
+      startTile: 'osm',
       tiles: {
-        current: "bellingcat-mapbox/cl0qnou2y003m15s8ieuyhgsy",
-        default: "bellingcat-mapbox/cl0qnou2y003m15s8ieuyhgsy",
-        satellite: "bellingcat-mapbox/cl1win2vp003914pdhateva6p"
+        osm: () => `https://tile.openstreetmap.org/{z}/{x}/{y}.png`,
+        satellite: (token) => `https://api.mapbox.com/styles/v1/bellingcat-mapbox/cl1win2vp003914pdhateva6p/tiles/256/{z}/{x}/{y}@2x?access_token=${token}`,
+        custom: (token) => `https://api.mapbox.com/styles/v1/bellingcat-mapbox/cl0qnou2y003m15s8ieuyhgsy/tiles/256/{z}/{x}/{y}@2x?access_token=${token}`,
       },
+    },
+    ui: {
+      toastOptions: {
+        position: "top-right",
+        timeout: 2000,
+        closeOnClick: true,
+        pauseOnFocusLoss: false,
+        pauseOnHover: false,
+        draggable: false,
+        showCloseButtonOnHover: true,
+        hideProgressBar: true,
+        closeButton: "button",
+        icon: true,
+      }
     }
-  },
-  ui: {
-  },
-  features: {
-    EXAMPLE_FEATURE_ENABLED: true
   },
   villages: [{
     "id": "maksat",
