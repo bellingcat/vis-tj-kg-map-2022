@@ -4,7 +4,7 @@
             "lat": 40.19000625,
             "lon": 69.88410386,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -13,7 +13,7 @@
             "lat": 40.18877103,
             "lon": 69.88161334,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -22,7 +22,7 @@
             "lat": 40.18868096,
             "lon": 69.88107573,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -31,7 +31,7 @@
             "lat": 40.1891503,
             "lon": 69.88054304,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -40,7 +40,7 @@
             "lat": 40.18936276,
             "lon": 69.88051296,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -49,7 +49,7 @@
             "lat": 40.18909445,
             "lon": 69.88293845,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -58,7 +58,7 @@
             "lat": 40.18973207,
             "lon": 69.880429,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -67,7 +67,7 @@
             "lat": 40.19005118,
             "lon": 69.88015234,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -76,7 +76,7 @@
             "lat": 40.18973961,
             "lon": 69.88088805,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -85,7 +85,7 @@
             "lat": 40.19045897,
             "lon": 69.88065148,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -94,7 +94,7 @@
             "lat": 40.19033801,
             "lon": 69.88167403,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -103,7 +103,7 @@
             "lat": 40.19004619,
             "lon": 69.88175983,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -112,7 +112,7 @@
             "lat": 40.19346288,
             "lon": 69.8833152,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -121,7 +121,7 @@
             "lat": 40.193594,
             "lon": 69.88326714,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -130,7 +130,7 @@
             "lat": 40.19300308,
             "lon": 69.88341103,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -139,7 +139,7 @@
             "lat": 40.19297988,
             "lon": 69.88086603,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -148,7 +148,7 @@
             "lat": 40.1927386,
             "lon": 69.88106497,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -157,7 +157,7 @@
             "lat": 40.19259031,
             "lon": 69.88203656,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -166,7 +166,7 @@
             "lat": 40.19234068,
             "lon": 69.8820995,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -175,7 +175,7 @@
             "lat": 40.19431761,
             "lon": 69.88059094,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -184,7 +184,7 @@
             "lat": 40.1935102,
             "lon": 69.88082652,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -193,7 +193,7 @@
             "lat": 40.19390124,
             "lon": 69.88173475,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -202,7 +202,7 @@
             "lat": 40.19483501,
             "lon": 69.88127476,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -211,7 +211,7 @@
             "lat": 40.19469171,
             "lon": 69.87949813,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -220,7 +220,7 @@
             "lat": 40.19439162,
             "lon": 69.87957771,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -229,7 +229,7 @@
             "lat": 40.19432115,
             "lon": 69.87924687,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -238,7 +238,7 @@
             "lat": 40.1940564,
             "lon": 69.88010776,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -247,7 +247,7 @@
             "lat": 40.19367056,
             "lon": 69.87916958,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -256,7 +256,7 @@
             "lat": 40.19372834,
             "lon": 69.88018503,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -265,7 +265,7 @@
             "lat": 40.19331331,
             "lon": 69.87927289,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -274,7 +274,7 @@
             "lat": 40.19292173,
             "lon": 69.87994645,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -283,7 +283,7 @@
             "lat": 40.19276961,
             "lon": 69.87998124,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -292,7 +292,7 @@
             "lat": 40.19267175,
             "lon": 69.88044147,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -301,7 +301,7 @@
             "lat": 40.19244127,
             "lon": 69.88043928,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -310,7 +310,7 @@
             "lat": 40.19523561,
             "lon": 69.87944802,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -319,7 +319,7 @@
             "lat": 40.19522622,
             "lon": 69.87992003,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -328,7 +328,7 @@
             "lat": 40.19588516,
             "lon": 69.88026233,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -337,7 +337,7 @@
             "lat": 40.19609121,
             "lon": 69.88118218,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -346,7 +346,7 @@
             "lat": 40.19681449,
             "lon": 69.87962308,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -355,7 +355,7 @@
             "lat": 40.19632805,
             "lon": 69.87916223,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -364,7 +364,7 @@
             "lat": 40.19616401,
             "lon": 69.87923679,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -373,7 +373,7 @@
             "lat": 40.19583119,
             "lon": 69.8787459,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -382,7 +382,7 @@
             "lat": 40.19648123,
             "lon": 69.87870328,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -391,7 +391,7 @@
             "lat": 40.19740226,
             "lon": 69.88068445,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -400,7 +400,7 @@
             "lat": 40.19669407,
             "lon": 69.88009593,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -409,7 +409,7 @@
             "lat": 40.19684004,
             "lon": 69.87990196,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -418,7 +418,7 @@
             "lat": 40.19857643,
             "lon": 69.88048738,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -427,7 +427,7 @@
             "lat": 40.19846283,
             "lon": 69.88238553,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -436,7 +436,7 @@
             "lat": 40.19905311,
             "lon": 69.88190533,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -445,7 +445,7 @@
             "lat": 40.1999377,
             "lon": 69.881959,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -454,7 +454,7 @@
             "lat": 40.19969877,
             "lon": 69.88201372,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -463,7 +463,7 @@
             "lat": 40.20036307,
             "lon": 69.88190931,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -472,7 +472,7 @@
             "lat": 40.20016652,
             "lon": 69.88190654,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -481,7 +481,7 @@
             "lat": 40.19952277,
             "lon": 69.88092452,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -490,7 +490,7 @@
             "lat": 40.19976814,
             "lon": 69.8801378,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -499,7 +499,7 @@
             "lat": 40.19957382,
             "lon": 69.87937809,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -508,7 +508,7 @@
             "lat": 40.19971236,
             "lon": 69.87903085,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -517,7 +517,7 @@
             "lat": 40.19961581,
             "lon": 69.87840145,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -526,7 +526,7 @@
             "lat": 40.19996351,
             "lon": 69.88422586,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -535,7 +535,7 @@
             "lat": 40.20078745,
             "lon": 69.88436431,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -544,7 +544,7 @@
             "lat": 40.20071892,
             "lon": 69.88415935,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -553,7 +553,7 @@
             "lat": 40.20119443,
             "lon": 69.88414488,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -562,7 +562,7 @@
             "lat": 40.2009004,
             "lon": 69.8839824,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -571,7 +571,7 @@
             "lat": 40.20061896,
             "lon": 69.88348526,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -580,7 +580,7 @@
             "lat": 40.20055482,
             "lon": 69.88247948,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -589,7 +589,7 @@
             "lat": 40.20099241,
             "lon": 69.88269414,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -598,7 +598,7 @@
             "lat": 40.20088535,
             "lon": 69.88236372,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -607,7 +607,7 @@
             "lat": 40.20125973,
             "lon": 69.88216613,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -618,7 +618,7 @@
             "lat": 40.18818809,
             "lon": 69.82864884,
             "tag": "",
-            "destruction": "civinfra",
+            "impact": "civinfra",
             "description_en": "Police station",
             "description_ru": "",
             "links": [
@@ -633,7 +633,7 @@
             "lat": 40.18772418,
             "lon": 69.82780618,
             "tag": "",
-            "destruction": "civinfra",
+            "impact": "civinfra",
             "description_en": "Municipality",
             "description_ru": "",
             "links": [
@@ -648,7 +648,7 @@
             "lat": 40.18089739,
             "lon": 69.79597606,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "Hotel",
             "description_ru": "",
             "links": [
@@ -663,7 +663,7 @@
             "lat": 40.19149107,
             "lon": 69.83647031,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -672,7 +672,7 @@
             "lat": 40.18660708,
             "lon": 69.83015517,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -681,7 +681,7 @@
             "lat": 40.18723545,
             "lon": 69.82834195,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -690,7 +690,7 @@
             "lat": 40.18757293,
             "lon": 69.82933816,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -699,7 +699,7 @@
             "lat": 40.18746162,
             "lon": 69.82902011,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -710,7 +710,7 @@
             "lat": 40.05105118,
             "lon": 70.62923268,
             "tag": "",
-            "destruction": "civinfra",
+            "impact": "civinfra",
             "description_en": "",
             "description_ru": "",
             "links": [
@@ -725,7 +725,7 @@
             "lat": 40.05349791,
             "lon": 70.63514572,
             "tag": "",
-            "destruction": "borderpost",
+            "impact": "borderpost",
             "description_en": "Borderpost",
             "description_ru": "",
             "links": []
@@ -734,7 +734,7 @@
             "lat": 40.05229068,
             "lon": 70.63277194,
             "tag": "",
-            "destruction": "civinfra",
+            "impact": "civinfra",
             "description_en": "School",
             "description_ru": "",
             "links": [
@@ -749,7 +749,7 @@
             "lat": 40.05256826,
             "lon": 70.63278313,
             "tag": "",
-            "destruction": "civinfra",
+            "impact": "civinfra",
             "description_en": "Kindergarten",
             "description_ru": "",
             "links": [
@@ -774,7 +774,7 @@
             "lat": 40.05272614,
             "lon": 70.63291711,
             "tag": "",
-            "destruction": "civinfra",
+            "impact": "civinfra",
             "description_en": "Medical unit",
             "description_ru": "",
             "links": [
@@ -799,7 +799,7 @@
             "lat": 40.0529363,
             "lon": 70.6322936,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": [
@@ -814,7 +814,7 @@
             "lat": 40.0526721,
             "lon": 70.63202613,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -823,7 +823,7 @@
             "lat": 40.05235107,
             "lon": 70.63204254,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": [
@@ -838,7 +838,7 @@
             "lat": 40.05253555,
             "lon": 70.63160599,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": [
@@ -858,7 +858,7 @@
             "lat": 40.05217065,
             "lon": 70.63145763,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -867,7 +867,7 @@
             "lat": 40.05206999,
             "lon": 70.63090058,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -876,7 +876,7 @@
             "lat": 40.05228775,
             "lon": 70.63031801,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -885,7 +885,7 @@
             "lat": 40.04916602,
             "lon": 70.6288643,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -894,7 +894,7 @@
             "lat": 40.05014946,
             "lon": 70.62846703,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": [
@@ -909,7 +909,7 @@
             "lat": 40.05051905,
             "lon": 70.6288973,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -918,7 +918,7 @@
             "lat": 40.05030809,
             "lon": 70.62921313,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -927,7 +927,7 @@
             "lat": 40.05036523,
             "lon": 70.62876699,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": [
@@ -947,7 +947,7 @@
             "lat": 40.04988316,
             "lon": 70.62912308,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -956,7 +956,7 @@
             "lat": 40.04980344,
             "lon": 70.62966769,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -965,7 +965,7 @@
             "lat": 40.05000803,
             "lon": 70.62982317,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -974,7 +974,7 @@
             "lat": 40.05042598,
             "lon": 70.62934993,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -983,7 +983,7 @@
             "lat": 40.05132969,
             "lon": 70.6291046,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -992,7 +992,7 @@
             "lat": 40.05046479,
             "lon": 70.63081113,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1001,7 +1001,7 @@
             "lat": 40.05089751,
             "lon": 70.63062469,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1010,7 +1010,7 @@
             "lat": 40.05077573,
             "lon": 70.63034183,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1019,7 +1019,7 @@
             "lat": 40.05147814,
             "lon": 70.63022037,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1028,7 +1028,7 @@
             "lat": 40.05175183,
             "lon": 70.63073382,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1037,7 +1037,7 @@
             "lat": 40.05175429,
             "lon": 70.63160442,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1046,7 +1046,7 @@
             "lat": 40.0520413,
             "lon": 70.631944,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1055,7 +1055,7 @@
             "lat": 40.05172136,
             "lon": 70.62890181,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1064,7 +1064,7 @@
             "lat": 40.05151207,
             "lon": 70.62922811,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1073,7 +1073,7 @@
             "lat": 40.05133013,
             "lon": 70.62975623,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1082,7 +1082,7 @@
             "lat": 40.05184678,
             "lon": 70.6299726,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1091,7 +1091,7 @@
             "lat": 40.05194969,
             "lon": 70.62960671,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1100,7 +1100,7 @@
             "lat": 40.05214595,
             "lon": 70.62917858,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1109,7 +1109,7 @@
             "lat": 40.05201113,
             "lon": 70.62883718,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1118,7 +1118,7 @@
             "lat": 40.05223402,
             "lon": 70.62880306,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1127,7 +1127,7 @@
             "lat": 40.05236276,
             "lon": 70.62965031,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": [
@@ -1142,7 +1142,7 @@
             "lat": 40.05292282,
             "lon": 70.62951654,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": [
@@ -1157,7 +1157,7 @@
             "lat": 40.05296757,
             "lon": 70.62925894,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": [
@@ -1172,7 +1172,7 @@
             "lat": 40.05292113,
             "lon": 70.62881893,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1181,7 +1181,7 @@
             "lat": 40.05260969,
             "lon": 70.62893462,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": [
@@ -1196,7 +1196,7 @@
             "lat": 40.05326352,
             "lon": 70.6285691,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1205,7 +1205,7 @@
             "lat": 40.05322823,
             "lon": 70.62921172,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1214,7 +1214,7 @@
             "lat": 40.05381641,
             "lon": 70.62899432,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": [
@@ -1229,7 +1229,7 @@
             "lat": 40.05387866,
             "lon": 70.6294919,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": [
@@ -1244,7 +1244,7 @@
             "lat": 40.05350761,
             "lon": 70.62949942,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": [
@@ -1259,7 +1259,7 @@
             "lat": 40.05392832,
             "lon": 70.63005589,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1268,7 +1268,7 @@
             "lat": 40.05410402,
             "lon": 70.63078762,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1277,7 +1277,7 @@
             "lat": 40.05276074,
             "lon": 70.63040648,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1286,7 +1286,7 @@
             "lat": 40.05246737,
             "lon": 70.63103183,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1295,7 +1295,7 @@
             "lat": 40.05272891,
             "lon": 70.63102393,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": [
@@ -1310,7 +1310,7 @@
             "lat": 40.05269253,
             "lon": 70.63159553,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": [
@@ -1330,7 +1330,7 @@
             "lat": 40.05308014,
             "lon": 70.63118575,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1339,7 +1339,7 @@
             "lat": 40.05337844,
             "lon": 70.63067378,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1348,7 +1348,7 @@
             "lat": 40.05435068,
             "lon": 70.63258328,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1357,7 +1357,7 @@
             "lat": 40.05394077,
             "lon": 70.63173765,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": [
@@ -1372,7 +1372,7 @@
             "lat": 40.05418866,
             "lon": 70.63134679,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": [
@@ -1387,7 +1387,7 @@
             "lat": 40.05454593,
             "lon": 70.63117721,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1396,7 +1396,7 @@
             "lat": 40.05460208,
             "lon": 70.63077788,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": [
@@ -1411,7 +1411,7 @@
             "lat": 40.05450563,
             "lon": 70.6304289,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": [
@@ -1426,7 +1426,7 @@
             "lat": 40.05431556,
             "lon": 70.62999735,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1435,7 +1435,7 @@
             "lat": 40.05424378,
             "lon": 70.62965527,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": [
@@ -1450,7 +1450,7 @@
             "lat": 40.05418128,
             "lon": 70.6293153,
             "tag": "",
-            "destruction": "civinfra",
+            "impact": "civinfra",
             "description_en": "Kindergarten",
             "description_ru": "",
             "links": [
@@ -1465,7 +1465,7 @@
             "lat": 40.05459475,
             "lon": 70.62910266,
             "tag": "",
-            "destruction": "",
+            "impact": "",
             "description_en": "",
             "description_ru": "",
             "links": [
@@ -1480,7 +1480,7 @@
             "lat": 40.05012792,
             "lon": 70.62909345,
             "tag": "",
-            "destruction": "",
+            "impact": "",
             "description_en": "",
             "description_ru": "",
             "links": [
@@ -1497,7 +1497,7 @@
             "lat": 40.12790161,
             "lon": 69.69333127,
             "tag": "",
-            "destruction": "civinfra",
+            "impact": "civinfra",
             "description_en": "Municipality",
             "description_ru": "",
             "links": [
@@ -1512,7 +1512,7 @@
             "lat": 40.13683502,
             "lon": 69.708989,
             "tag": "",
-            "destruction": "civinfra",
+            "impact": "civinfra",
             "description_en": "Mosque",
             "description_ru": "",
             "links": [
@@ -1527,7 +1527,7 @@
             "lat": 40.12826864,
             "lon": 69.69500292,
             "tag": "",
-            "destruction": "civinfra",
+            "impact": "civinfra",
             "description_en": "School",
             "description_ru": "",
             "links": [
@@ -1542,7 +1542,7 @@
             "lat": 40.12868864,
             "lon": 69.69602408,
             "tag": "",
-            "destruction": "civinfra",
+            "impact": "civinfra",
             "description_en": "Kindergarten",
             "description_ru": "",
             "links": [
@@ -1562,7 +1562,7 @@
             "lat": 40.12723932,
             "lon": 69.69382823,
             "tag": "",
-            "destruction": "civinfra",
+            "impact": "civinfra",
             "description_en": "Police station",
             "description_ru": "",
             "links": [
@@ -1577,7 +1577,7 @@
             "lat": 40.12837781,
             "lon": 69.69429531,
             "tag": "",
-            "destruction": "civinfra",
+            "impact": "civinfra",
             "description_en": "Electrical transformer",
             "description_ru": "",
             "links": [
@@ -1592,7 +1592,7 @@
             "lat": 40.13500819,
             "lon": 69.70354465,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": [
@@ -1607,7 +1607,7 @@
             "lat": 40.13472031,
             "lon": 69.70325171,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": [
@@ -1622,7 +1622,7 @@
             "lat": 40.1283307,
             "lon": 69.69338396,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": [
@@ -1637,7 +1637,7 @@
             "lat": 40.12379927,
             "lon": 69.68608472,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": [
@@ -1652,7 +1652,7 @@
             "lat": 40.12866753,
             "lon": 69.69427472,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": [
@@ -1667,7 +1667,7 @@
             "lat": 40.12374455,
             "lon": 69.68457834,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1676,7 +1676,7 @@
             "lat": 40.12469236,
             "lon": 69.68421643,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1685,7 +1685,7 @@
             "lat": 40.12426052,
             "lon": 69.68459316,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1694,7 +1694,7 @@
             "lat": 40.12425713,
             "lon": 69.68419473,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1703,7 +1703,7 @@
             "lat": 40.12334657,
             "lon": 69.68517994,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1712,7 +1712,7 @@
             "lat": 40.12465781,
             "lon": 69.68575757,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1721,7 +1721,7 @@
             "lat": 40.12442476,
             "lon": 69.68550208,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1730,7 +1730,7 @@
             "lat": 40.12417263,
             "lon": 69.68575761,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1739,7 +1739,7 @@
             "lat": 40.12432698,
             "lon": 69.68698525,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1748,7 +1748,7 @@
             "lat": 40.12402782,
             "lon": 69.68726835,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1757,7 +1757,7 @@
             "lat": 40.12408289,
             "lon": 69.68759348,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1766,7 +1766,7 @@
             "lat": 40.12460667,
             "lon": 69.68701621,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1775,7 +1775,7 @@
             "lat": 40.12156765,
             "lon": 69.68809396,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1784,7 +1784,7 @@
             "lat": 40.12452795,
             "lon": 69.69043847,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1793,7 +1793,7 @@
             "lat": 40.1257099,
             "lon": 69.6944056,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1802,7 +1802,7 @@
             "lat": 40.1299908,
             "lon": 69.69731824,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1811,7 +1811,7 @@
             "lat": 40.13498212,
             "lon": 69.70653735,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1820,7 +1820,7 @@
             "lat": 40.13525392,
             "lon": 69.70374689,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1829,7 +1829,7 @@
             "lat": 40.12793303,
             "lon": 69.69230219,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1838,7 +1838,7 @@
             "lat": 40.12718301,
             "lon": 69.69208735,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
             "links": []
@@ -1847,7 +1847,7 @@
             "lat": 40.12688869,
             "lon": 69.69221641,
             "tag": "",
-            "destruction": "privateprop",
+            "impact": "privateprop",
             "description_en": "TEST The houses were also seen on Planet (Subscription required) on Sept 15 and then no longer on Sept 17",
             "description_ru": "",
             "links": []

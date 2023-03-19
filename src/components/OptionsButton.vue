@@ -1,5 +1,5 @@
 <template>
-  <v-menu transition="scale-transition" :close-on-content-click="false" offset-y>
+  <v-menu id="options-menu" transition="scale-transition" :close-on-content-click="false" offset-y>
     <template v-slot:activator="{ props }">
       <v-btn icon="mdi-dots-vertical" v-bind="props" id="options-menu-btn" class="ma-1 pa-0"></v-btn>
     </template>
@@ -13,7 +13,7 @@
           <v-icon icon="mdi-layers" size="large"></v-icon>
         </template>
         <v-list-item-title>
-          {{ nextTile }}
+          {{ nextTile.toUpperCase() }}
         </v-list-item-title>
       </v-list-item>
 
@@ -37,6 +37,42 @@
         </v-list-item-title>
       </v-list-item>
 
+      <!-- download (?) -->
+      <v-list-item @click="console.warn('TODO')">
+        <template v-slot:prepend>
+          <v-icon icon="mdi-download" size="large"></v-icon>
+        </template>
+        <v-list-item-title>
+          JSON
+        </v-list-item-title>
+      </v-list-item>
+      <v-list-item @click="console.warn('TODO')">
+        <template v-slot:prepend>
+          <v-icon icon="mdi-download" size="large"></v-icon>
+        </template>
+        <v-list-item-title>
+          CSV
+        </v-list-item-title>
+      </v-list-item>
+      <v-list-item @click="downloadImage()">
+        <template v-slot:prepend>
+          <v-icon icon="mdi-download" size="large"></v-icon>
+        </template>
+        <v-list-item-title>
+          Image
+        </v-list-item-title>
+      </v-list-item>
+
+      <!-- bellingcat -->
+      <v-list-item @click="openUrl('https://www.bellingcat.com/')">
+        <template v-slot:prepend>
+          <v-avatar class="bcat-logo" image="favicon.ico" alt="Bellingcat logo" rounded=""></v-avatar>
+        </template>
+        <v-list-item-title>
+          BELLINGCAT
+        </v-list-item-title>
+      </v-list-item>
+
     </v-list>
   </v-menu>
   <!-- </v-card> -->
@@ -52,7 +88,7 @@ import config from "../../config";
 export default {
   name: 'OptionsButton',
   props: ['startTile'],
-  emits: ['newTile'],
+  emits: ['newTile', 'downloadImage'],
   data() {
     return {
       // layers
@@ -104,6 +140,12 @@ export default {
       console.log("changeTiles")
       this.selectedTile = "default"
       // satellite-variant
+    },
+    openUrl(url) {
+      window.open(url, '_blank');
+    },
+    downloadImage(){
+      this.$emit('downloadImage')
     }
   },
   mounted() {
@@ -124,6 +166,12 @@ export default {
 
  .options-list {
    min-width: 220px;
+
+   .v-avatar.bcat-logo {
+     margin-right: 32px;
+     height: 28px;
+     width: 28px;
+   }
  }
 
  .maptile {
@@ -143,12 +191,16 @@ export default {
 
  }
 
+ .v-overlay {
+   z-index: $zMax + 25 !important;
+ }
+
  #options-menu-btn {
    position: absolute;
    right: 10px;
    top: 0px;
    opacity: $opacityMax;
-   z-index: $zMax + 10;
+   z-index: $zMax + 20;
    border-radius: 25%;
    //  width:
 
@@ -156,8 +208,6 @@ export default {
      color: $accentColor;
    }
 
-   & button {
-     //  width: 60px;
-   }
+
  }
 </style>

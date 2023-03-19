@@ -1,6 +1,6 @@
 <template>
   <title-expand ref="titleExpand" />
-  <options-button :startTile="currentTileName" @new-tile="setTileLayer" />
+  <options-button :startTile="currentTileName" @new-tile="setTileLayer" @download-image="downloadImage" />
   <!-- <sidebar /> -->
 
   <v-card :style="selectedVillage ? '' : { zIndex: 0 }" fixed raised class="ma-1" id="sidebar" ref="sidebar">
@@ -110,19 +110,19 @@
     <v-tabs v-if="selectedImpact" class="ml-auto mr-auto" v-model="selectedVillage" bg-color="primary" center-active
       show-arrows align-tabs="center" v-on:update:model-value="fitPolygon">
       <v-tab v-for="v in villages" :value="v.id" :key="v.id">
-        <v-badge v-if="v.id == selectedVillage"
-          :content="v.incidents.filter(i => i?.destruction == selectedImpact).length" floating color="black">
+        <v-badge v-if="v.id == selectedVillage" :content="v.incidents.filter(i => i?.impact == selectedImpact).length"
+          floating color="black">
           {{ v.name_en }}
         </v-badge>
         <span v-if="v.id != selectedVillage">{{ v.name_en }}</span>
       </v-tab>
     </v-tabs>
 
-    <v-tabs class="destruction-tabs" stacked v-model="selectedImpact" bg-color="black" center-active show-arrows
+    <v-tabs class="impact-tabs" stacked v-model="selectedImpact" bg-color="black" center-active show-arrows
       align-tabs="center">
       <v-tab v-for="tb in impactTabs" :value="tb.value" :key="tb.value"
         :selected-class="`${tb.value}-selected v-tab--selected`">
-        <v-icon :icon="tb.icon" :size="smAndDown ? 'small' : 'x-large'"></v-icon>{{ tb.text_en }}</v-tab>
+        <v-icon :icon="tb.icon"></v-icon>{{ tb.text_en }}</v-tab>
     </v-tabs>
   </v-card>
 
@@ -134,12 +134,11 @@
 import { useDisplay, useLocale } from 'vuetify'
 import { useToast } from "vue-toastification";
 import L from "leaflet";
+import "leaflet.browser.print/dist/leaflet.browser.print.js"
 import "leaflet/dist/leaflet.css";
 import config from "../../config";
-// import BeforeAfterSatellite from "./BeforeAfterSatellite.vue";
 import TitleExpand from "./TitleExpand.vue"
 import OptionsButton from "./OptionsButton.vue"
-// import Sidebar from "./Sidebar.vue";
 import MarkerUtils from "./js/MarkerUtils.js";
 
 // const iconSize = 16;
@@ -171,6 +170,7 @@ export default {
       clipboardWorks: navigator.clipboard !== undefined,
       tiles: config.app.map.tiles.default,
       impactTabs: [
+        { value: "all", icon: "mdi-select-all", text_en: "All" },
         { value: "civinfra", icon: "mdi-town-hall", text_en: "Civilian Infrastructure" },
         { value: "privateprop", icon: "mdi-home-city", text_en: "Private Property" },
         { value: "borderpost", icon: "mdi-sign-caution", text_en: "Border Posts" },
@@ -190,8 +190,8 @@ export default {
       let tileUrl = this.mapConfig.tiles[this.currentTileName](this.mapConfig.mapboxToken);
       // add new tile
       this.currentTile = L.tileLayer(tileUrl, {
-        //TODO: if OSM is used
-        // attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        // attribution: tileUrl.includes("openstreetmap") ? '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' : tileUrl.includes("mapbox")
+        attribution: "&copy;<a href='https://www.mapbox.com/about/maps/'>Mapbox</a> &copy;<a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>"
       }).addTo(this.map);
     },
     getTileUrl() {
@@ -308,7 +308,7 @@ export default {
       village.incidents.forEach(incident => {
         let marker = null;
         try {
-          marker = new L.marker([incident.lat, incident.lon], { icon: MarkerUtils.getMarkerSvg(incident.destruction, false) });
+          marker = new L.marker([incident.lat, incident.lon], { icon: MarkerUtils.getMarkerSvg(incident.impact, false) });
         } catch (error) {
           console.error(error);
           console.warn(incident);
@@ -349,6 +349,11 @@ export default {
           console.log(`Could not copy: ${error}`)
         }
       }
+    },
+    downloadImage() {
+      let browserPrint = L.browserPrint(this.map, {});
+      browserPrint.print(L.BrowserPrint.Mode.Landscape('A3', { margin: { left: 1, right: 1, top: 1, bottom: 1 }, header: { enabled: true, text: `${config.display_title} - Bellingcat`, overTheMap: true } }));
+      // TODO: translate
     },
     getFitBoundsOptions() {
       // calculates necessary padding options for map.fitBounds to exclude menus and bars.
@@ -407,9 +412,9 @@ export default {
           Object.keys(this.markers).forEach(incidentId => {
             const incident = this.markers[incidentId].incident;
             if (incidentId == sI[this.selectedVillage]) {
-              this.markers[incidentId].marker.setIcon(MarkerUtils.getMarkerSvg(incident.destruction, true))
+              this.markers[incidentId].marker.setIcon(MarkerUtils.getMarkerSvg(incident.impact, true))
             } else {
-              this.markers[incidentId].marker.setIcon(MarkerUtils.getMarkerSvg(incident.destruction, false))
+              this.markers[incidentId].marker.setIcon(MarkerUtils.getMarkerSvg(incident.impact, false))
             }
           })
           // scroll to content on sidebar
@@ -429,7 +434,7 @@ export default {
     },
     selectedImpact: function (sI) {
       Object.values(this.markers).forEach(marker => {
-        if (marker.incident?.destruction == sI) {
+        if (marker.incident?.impact == sI) {
           marker.marker.getElement().style.display = "";
         } else {
           marker.marker.getElement().style.display = "none";
@@ -482,9 +487,13 @@ function assert(condition, message) {
 
   @media (max-width: 960px) {
     position: fixed;
-    // width: 100%;
+    // max-width: 800px;
+    width: 100%;
     left: 0;
     right: 0;
+
+
+    // right: 0;
     bottom: 104px; // 48 + 56px
     height: 40vh;
     max-height: 40vh;
@@ -532,31 +541,6 @@ iframe.video-embed {
   stroke-width: 4;
   stroke-dasharray: 3 3;
 }
-
-// .leaflet-marker-icon.marker-pin,
-// .leaflet-marker-icon.marker-pin-active {
-//   width: $markerRadius;
-//   height: $markerRadius;
-//   border-radius: $markerRadius;
-// }
-
-// .leaflet-marker-icon.marker-pin {
-//   border: 2px solid black;
-//   background-color: white;
-
-//   &:hover {
-//     background-color: red;
-//   }
-
-//   &:active {
-//     background-color: orange;
-//   }
-// }
-
-// .leaflet-marker-icon.marker-pin-active {
-//   border: 2px solid $yellow;
-//   background-color: red;
-// }
 
 .leaflet-marker-icon {
 
@@ -615,7 +599,7 @@ iframe.video-embed {
 
 }
 
-.destruction-tabs {
+.impact-tabs {
   & .civinfra-selected {
     color: #689F38;
   }
@@ -644,9 +628,41 @@ iframe.video-embed {
 
 // override default height for stacked
 div.v-tabs--density-default.v-tabs--stacked {
+  --v-tabs-height: 64px;
+
+  .v-icon {
+    font-size: calc(var(--v-icon-size-multiplier) * 1.6em);
+  }
+
   @media (max-width: 960px) {
     --v-tabs-height: 56px;
+
+    .v-icon {
+      font-size: calc(var(--v-icon-size-multiplier) * 1.25em);
+    }
   }
+
+  @media (max-width: 600px) {
+    --v-tabs-height: 56px;
+
+    .v-tab {
+      max-width: 130px;
+    }
+
+    .v-icon {
+      font-size: calc(var(--v-icon-size-multiplier) * 1em);
+    }
+
+    .v-btn {
+      font-size: 0.75em;
+    }
+  }
+}
+
+#print-header {
+  color: black;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  font-size: 26px;
 }
 
 /* Leaflet crispness override */
