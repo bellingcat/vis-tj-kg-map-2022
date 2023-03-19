@@ -58,7 +58,7 @@
       <!-- bellingcat -->
       <v-list-item @click="openUrl('https://www.bellingcat.com/')">
         <template v-slot:prepend>
-          <v-avatar class="bcat-logo" image="favicon.ico" alt="Bellingcat logo" rounded=""></v-avatar>
+          <v-avatar class="bcat-logo" image="@/assets/icon.ico" alt="Bellingcat logo" rounded=""></v-avatar>
         </template>
         <v-list-item-title>
           BELLINGCAT
@@ -165,16 +165,16 @@ export default {
 
  .maptile {
    &.satellite {
-     background-image: url(sat-tile.png);
+     background-image: url('@/assets/sat-tile.png');
    }
 
    &.custom {
-     background-image: url(custom-tile.png);
+     background-image: url('@/assets/custom-tile.png');
      color: black;
    }
 
    &.osm {
-     background-image: url(osm-tile.png);
+     background-image: url('@/assets/osm-tile.png');
      color: black;
    }
 
