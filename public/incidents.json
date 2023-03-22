@@ -1,8 +1,522 @@
 {
+    "ak-tatyr": [
+        {
+            "lat": 39.95920765,
+            "lon": 70.49412691,
+            "tag": "",
+            "impact": "civinfra",
+            "description_en": "School",
+            "description_ru": "",
+            "links": [
+                {
+                    "src": "https://rus.azattyk.org/a/32042279.html",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
+        }
+    ],
+    "aksay": [
+        {
+            "lat": 39.87736829,
+            "lon": 70.51777142,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88063434,
+            "lon": 70.50906685,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88034002,
+            "lon": 70.50918563,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88020632,
+            "lon": 70.51002711,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87975189,
+            "lon": 70.50982713,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87622164,
+            "lon": 70.51416929,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87593529,
+            "lon": 70.51425532,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.8766665,
+            "lon": 70.51369755,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87697956,
+            "lon": 70.51590204,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87804429,
+            "lon": 70.51132741,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.878719,
+            "lon": 70.51066678,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.8801301,
+            "lon": 70.51127992,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87759407,
+            "lon": 70.51842169,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.8778463,
+            "lon": 70.51901979,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87797712,
+            "lon": 70.51937287,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87809773,
+            "lon": 70.519655,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87820358,
+            "lon": 70.51989912,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87705655,
+            "lon": 70.51707957,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.8784035,
+            "lon": 70.52041787,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87923739,
+            "lon": 70.52023364,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87940467,
+            "lon": 70.51987163,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87959586,
+            "lon": 70.51954428,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87891103,
+            "lon": 70.52062506,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87871135,
+            "lon": 70.52102486,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87917746,
+            "lon": 70.51946216,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87957416,
+            "lon": 70.51852779,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87897205,
+            "lon": 70.51843918,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.8784482,
+            "lon": 70.51801344,
+            "tag": "",
+            "impact": "civinfra",
+            "description_en": "School",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87967589,
+            "lon": 70.52223453,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87942059,
+            "lon": 70.52196312,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.8792243,
+            "lon": 70.52181786,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87926583,
+            "lon": 70.52086646,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87916296,
+            "lon": 70.52107228,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87905071,
+            "lon": 70.521279,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87892236,
+            "lon": 70.52152107,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87971354,
+            "lon": 70.52017344,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87960146,
+            "lon": 70.52040442,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88070864,
+            "lon": 70.51523636,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87997353,
+            "lon": 70.51542404,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87902336,
+            "lon": 70.51576918,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87926479,
+            "lon": 70.5159773,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87981398,
+            "lon": 70.51667413,
+            "tag": "",
+            "impact": "civinfra",
+            "description_en": "Kindergarten",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88049904,
+            "lon": 70.51799712,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88031746,
+            "lon": 70.51787142,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88018717,
+            "lon": 70.51765711,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88056357,
+            "lon": 70.5159741,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88026017,
+            "lon": 70.51542572,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88109642,
+            "lon": 70.51511862,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88111373,
+            "lon": 70.51474484,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88058671,
+            "lon": 70.51865687,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88248938,
+            "lon": 70.51896474,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.89542982,
+            "lon": 70.50530184,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "Chichkenfarm",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88167875,
+            "lon": 70.53087051,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        }
+    ],
     "arka": [
         {
             "lat": 40.19000625,
             "lon": 69.88410386,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 40.19346232,
+            "lon": 69.88360754,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 40.19319612,
+            "lon": 69.88371328,
             "tag": "",
             "impact": "privateprop",
             "description_en": "",
@@ -52,7 +566,13 @@
             "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
-            "links": []
+            "links": [
+                {
+                    "src": "https://telegra.ph/file/a1feb17203443a8d595dc.jpg",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
         },
         {
             "lat": 40.18973207,
@@ -88,7 +608,13 @@
             "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
-            "links": []
+            "links": [
+                {
+                    "src": "https://youtu.be/Y3jv9Fgw53s?t=29",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
         },
         {
             "lat": 40.19033801,
@@ -97,7 +623,13 @@
             "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
-            "links": []
+            "links": [
+                {
+                    "src": "https://youtu.be/Y3jv9Fgw53s?t=41",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
         },
         {
             "lat": 40.19004619,
@@ -106,7 +638,13 @@
             "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
-            "links": []
+            "links": [
+                {
+                    "src": "https://youtu.be/Y3jv9Fgw53s?t=49",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
         },
         {
             "lat": 40.19346288,
@@ -142,7 +680,13 @@
             "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
-            "links": []
+            "links": [
+                {
+                    "src": "https://youtu.be/Y3jv9Fgw53s?t=57",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
         },
         {
             "lat": 40.1927386,
@@ -151,7 +695,13 @@
             "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
-            "links": []
+            "links": [
+                {
+                    "src": "https://youtu.be/6wskc5TIvGQ?t=221",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
         },
         {
             "lat": 40.19259031,
@@ -178,7 +728,13 @@
             "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
-            "links": []
+            "links": [
+                {
+                    "src": "https://youtu.be/Y3jv9Fgw53s?t=69",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
         },
         {
             "lat": 40.1935102,
@@ -187,7 +743,13 @@
             "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
-            "links": []
+            "links": [
+                {
+                    "src": "https://youtu.be/Y3jv9Fgw53s?t=59",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
         },
         {
             "lat": 40.19390124,
@@ -205,7 +767,13 @@
             "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
-            "links": []
+            "links": [
+                {
+                    "src": "https://youtu.be/Y3jv9Fgw53s?t=74",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
         },
         {
             "lat": 40.19469171,
@@ -241,7 +809,13 @@
             "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
-            "links": []
+            "links": [
+                {
+                    "src": "https://youtu.be/Y3jv9Fgw53s?t=66",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
         },
         {
             "lat": 40.19367056,
@@ -250,7 +824,13 @@
             "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
-            "links": []
+            "links": [
+                {
+                    "src": "https://youtu.be/6wskc5TIvGQ?t=584",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
         },
         {
             "lat": 40.19372834,
@@ -259,7 +839,13 @@
             "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
-            "links": []
+            "links": [
+                {
+                    "src": "https://youtu.be/Y3jv9Fgw53s?t=60",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
         },
         {
             "lat": 40.19331331,
@@ -268,7 +854,13 @@
             "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
-            "links": []
+            "links": [
+                {
+                    "src": "https://youtu.be/6wskc5TIvGQ?t=584",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
         },
         {
             "lat": 40.19292173,
@@ -277,7 +869,13 @@
             "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
-            "links": []
+            "links": [
+                {
+                    "src": "https://youtu.be/6wskc5TIvGQ?t=584",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
         },
         {
             "lat": 40.19276961,
@@ -286,7 +884,13 @@
             "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
-            "links": []
+            "links": [
+                {
+                    "src": "https://youtu.be/6wskc5TIvGQ?t=584",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
         },
         {
             "lat": 40.19267175,
@@ -295,7 +899,13 @@
             "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
-            "links": []
+            "links": [
+                {
+                    "src": "https://youtu.be/Y3jv9Fgw53s?t=18",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
         },
         {
             "lat": 40.19244127,
@@ -304,7 +914,13 @@
             "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
-            "links": []
+            "links": [
+                {
+                    "src": "https://youtu.be/Y3jv9Fgw53s?t=18",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
         },
         {
             "lat": 40.19523561,
@@ -406,8 +1022,8 @@
             "links": []
         },
         {
-            "lat": 40.19684004,
-            "lon": 69.87990196,
+            "lat": 40.19681796,
+            "lon": 69.87989246,
             "tag": "",
             "impact": "privateprop",
             "description_en": "",
@@ -421,7 +1037,13 @@
             "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
-            "links": []
+            "links": [
+                {
+                    "src": "https://youtu.be/Y3jv9Fgw53s?t=100",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
         },
         {
             "lat": 40.19846283,
@@ -433,8 +1055,8 @@
             "links": []
         },
         {
-            "lat": 40.19905311,
-            "lon": 69.88190533,
+            "lat": 40.19907291,
+            "lon": 69.88197476,
             "tag": "",
             "impact": "privateprop",
             "description_en": "",
@@ -493,7 +1115,13 @@
             "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
-            "links": []
+            "links": [
+                {
+                    "src": "https://youtu.be/Y3jv9Fgw53s?t=88",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
         },
         {
             "lat": 40.19957382,
@@ -502,7 +1130,13 @@
             "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
-            "links": []
+            "links": [
+                {
+                    "src": "https://youtu.be/Y3jv9Fgw53s?t=96",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
         },
         {
             "lat": 40.19971236,
@@ -583,16 +1217,33 @@
             "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
-            "links": []
+            "links": [
+                {
+                    "src": "https://youtu.be/6wskc5TIvGQ?t=208",
+                    "time": "",
+                    "archive": ""
+                },
+                {
+                    "src": "https://telegra.ph/file/fe0f5d386acac9b1990f5.jpg",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
         },
         {
             "lat": 40.20099241,
             "lon": 69.88269414,
             "tag": "",
             "impact": "privateprop",
-            "description_en": "",
+            "description_en": "Pharmacy",
             "description_ru": "",
-            "links": []
+            "links": [
+                {
+                    "src": "https://telegra.ph/file/29d07bdb04eceb3eb9264.jpg",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
         },
         {
             "lat": 40.20088535,
@@ -610,7 +1261,93 @@
             "impact": "privateprop",
             "description_en": "",
             "description_ru": "",
+            "links": [
+                {
+                    "src": "https://telegra.ph/file/dfbfeceb2c451011ef074.jpg",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
+        },
+        {
+            "lat": 40.19048946,
+            "lon": 69.87543246,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
             "links": []
+        },
+        {
+            "lat": 40.1885749,
+            "lon": 69.88508459,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 40.20059808,
+            "lon": 69.8827535,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": [
+                {
+                    "src": "https://youtu.be/6wskc5TIvGQ?t=221",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
+        },
+        {
+            "lat": 40.20110372,
+            "lon": 69.88290982,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": [
+                {
+                    "src": "https://youtu.be/6wskc5TIvGQ?t=214",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
+        },
+        {
+            "lat": 40.18886468,
+            "lon": 69.88200103,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": [
+                {
+                    "src": "https://telegra.ph/file/3b031205f2cda397cddcc.jpg",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
+        }
+    ],
+    "batken": [
+        {
+            "lat": 40.05482036,
+            "lon": 70.81465654,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": [
+                {
+                    "src": "https://t.me/seychas_kg/13354",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
         }
     ],
     "borborduk": [
@@ -705,6 +1442,43 @@
             "links": []
         }
     ],
+    "chorkishlok": [
+        {
+            "lat": 40.06594915,
+            "lon": 70.62324076,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": [
+                {
+                    "src": "https://asiaplustj.info/sites/default/files/articles/316877/1.JPG",
+                    "time": "",
+                    "archive": ""
+                },
+                {
+                    "src": "https://www.asiaplustj.info/ru/news/tajikistan/society/20220928/telo-otvezli-v-drugoe-selo-potomu-kladbitshe-obstrelivali-zhiteli-chorkishlok-rasskazali-kak-sobirali-tela-pogibshih",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
+        },
+        {
+            "lat": 40.06452064,
+            "lon": 70.62437877,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": [
+                {
+                    "src": "https://t.me/today_tj/1388",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
+        }
+    ],
     "dostuk": [
         {
             "lat": 40.05105118,
@@ -779,12 +1553,12 @@
             "description_ru": "",
             "links": [
                 {
-                    "src": "https://youtu.be/vBazRrT6tnQ?t=131,",
+                    "src": "https://youtu.be/vBazRrT6tnQ?t=131",
                     "time": "131",
                     "archive": ""
                 },
                 {
-                    "src": "https://t.me/batken1/1392?single,",
+                    "src": "https://t.me/batken1/1392?single",
                     "time": "00:18",
                     "archive": ""
                 },
@@ -828,7 +1602,7 @@
             "description_ru": "",
             "links": [
                 {
-                    "src": "https://t.me/batken1/1392?single,",
+                    "src": "https://t.me/batken1/1392?single",
                     "time": "01:25",
                     "archive": ""
                 }
@@ -1492,6 +2266,921 @@
             ]
         }
     ],
+    "international": [
+        {
+            "lat": 40.12187132,
+            "lon": 69.6700486,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": [
+                {
+                    "src": "https://youtu.be/ioliQpD3_tM?t=27",
+                    "time": "",
+                    "archive": ""
+                },
+                {
+                    "src": "https://youtu.be/raWjX-jtYkU?t=62",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
+        },
+        {
+            "lat": 40.12205986,
+            "lon": 69.67009177,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 40.12171852,
+            "lon": 69.6700321,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 40.12162388,
+            "lon": 69.66994809,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 40.11702422,
+            "lon": 69.67759088,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 40.11563099,
+            "lon": 69.67980581,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 40.11383719,
+            "lon": 69.68113217,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": [
+                {
+                    "src": "https://youtu.be/6-ujXU5i0bk?t=532",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
+        },
+        {
+            "lat": 40.1172106,
+            "lon": 69.67910553,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        }
+    ],
+    "kapchygai": [
+        {
+            "lat": 39.88135451,
+            "lon": 70.53072702,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.8813299,
+            "lon": 70.53042183,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88163529,
+            "lon": 70.52924126,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88184143,
+            "lon": 70.52896515,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88180178,
+            "lon": 70.5294437,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.8812751,
+            "lon": 70.52955206,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88115414,
+            "lon": 70.52844557,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88177615,
+            "lon": 70.52815549,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88145789,
+            "lon": 70.52883091,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88205088,
+            "lon": 70.52769252,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88200898,
+            "lon": 70.5279773,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88230153,
+            "lon": 70.52739014,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88219554,
+            "lon": 70.52913934,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88237841,
+            "lon": 70.52893501,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88247154,
+            "lon": 70.52865413,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88319922,
+            "lon": 70.5283729,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88387919,
+            "lon": 70.52791112,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88422086,
+            "lon": 70.52782642,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88438482,
+            "lon": 70.52883009,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88483287,
+            "lon": 70.52833984,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88382608,
+            "lon": 70.52873499,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.8847495,
+            "lon": 70.52767386,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.8845179,
+            "lon": 70.52723182,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88415496,
+            "lon": 70.5274326,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88588725,
+            "lon": 70.52746959,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88508085,
+            "lon": 70.52746702,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.8857115,
+            "lon": 70.52659692,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88524402,
+            "lon": 70.5269324,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88297658,
+            "lon": 70.5265921,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88304796,
+            "lon": 70.52687401,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88303539,
+            "lon": 70.52780093,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88325805,
+            "lon": 70.52755641,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88278285,
+            "lon": 70.52760958,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88352965,
+            "lon": 70.52624184,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88363303,
+            "lon": 70.52687686,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88340236,
+            "lon": 70.52664627,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88359282,
+            "lon": 70.52732673,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88387823,
+            "lon": 70.52719655,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88435084,
+            "lon": 70.52512234,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88459946,
+            "lon": 70.52483435,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88523408,
+            "lon": 70.5247663,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.8850963,
+            "lon": 70.52505039,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88424317,
+            "lon": 70.52568353,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88392129,
+            "lon": 70.52612232,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88432528,
+            "lon": 70.52696981,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88470559,
+            "lon": 70.52660934,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88490929,
+            "lon": 70.52643583,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88540305,
+            "lon": 70.52581892,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88545331,
+            "lon": 70.52528254,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.886526,
+            "lon": 70.52592232,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88611851,
+            "lon": 70.52552659,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88595984,
+            "lon": 70.52508419,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88677415,
+            "lon": 70.52545611,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88661374,
+            "lon": 70.52450845,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88750903,
+            "lon": 70.52500163,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88592927,
+            "lon": 70.52336646,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88669396,
+            "lon": 70.52348393,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88663668,
+            "lon": 70.52303151,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88649778,
+            "lon": 70.52406105,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88703512,
+            "lon": 70.52274046,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88744889,
+            "lon": 70.52254855,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88780044,
+            "lon": 70.52350222,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88790604,
+            "lon": 70.52211135,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88848094,
+            "lon": 70.52453897,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88840543,
+            "lon": 70.52477936,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88839081,
+            "lon": 70.52394164,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88840414,
+            "lon": 70.52164058,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        }
+    ],
+    "karabak": [
+        {
+            "lat": 40.16513377,
+            "lon": 70.82919828,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": [
+                {
+                    "src": "https://youtu.be/Qrj7C0eJDOo?t=153",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
+        },
+        {
+            "lat": 40.16506721,
+            "lon": 70.82876471,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": [
+                {
+                    "src": "https://youtu.be/Qrj7C0eJDOo?t=148",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
+        },
+        {
+            "lat": 40.16495626,
+            "lon": 70.83123471,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 40.16407298,
+            "lon": 70.80319677,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 40.16245634,
+            "lon": 70.8028094,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 40.16231641,
+            "lon": 70.80245847,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 40.16236437,
+            "lon": 70.8031912,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 40.1584988,
+            "lon": 70.80304997,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 40.15573854,
+            "lon": 70.80331196,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 40.15513341,
+            "lon": 70.80316983,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 40.15989301,
+            "lon": 70.81514764,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 40.16422135,
+            "lon": 70.80410634,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        }
+    ],
+    "kyzyl-bel": [
+        {
+            "lat": 40.10348123,
+            "lon": 70.74397973,
+            "tag": "",
+            "impact": "civinfra",
+            "description_en": "School",
+            "description_ru": "",
+            "links": [
+                {
+                    "src": "https://t.me/batken1/1347",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
+        }
+    ],
+    "lakkon": [
+        {
+            "lat": 40.17184902,
+            "lon": 70.86549938,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": [
+                {
+                    "src": "https://youtu.be/xzdWXwGTLdA?t=99",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
+        },
+        {
+            "lat": 40.17180342,
+            "lon": 70.8649373,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 40.17160312,
+            "lon": 70.86464591,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": [
+                {
+                    "src": "https://youtu.be/xzdWXwGTLdA?t=391",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
+        },
+        {
+            "lat": 40.17217585,
+            "lon": 70.86513622,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": [
+                {
+                    "src": "https://youtu.be/xzdWXwGTLdA?t=531",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
+        },
+        {
+            "lat": 40.17148446,
+            "lon": 70.86445553,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": [
+                {
+                    "src": "https://youtu.be/xzdWXwGTLdA?t=473",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
+        },
+        {
+            "lat": 40.17087544,
+            "lon": 70.86443788,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        }
+    ],
     "maksat": [
         {
             "lat": 40.12790161,
@@ -1849,6 +3538,1061 @@
             "tag": "",
             "impact": "privateprop",
             "description_en": "TEST The houses were also seen on Planet (Subscription required) on Sept 15 and then no longer on Sept 17",
+            "description_ru": "",
+            "links": []
+        }
+    ],
+    "min-bulak": [
+        {
+            "lat": 39.97868587,
+            "lon": 70.62019439,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.97849574,
+            "lon": 70.61939974,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.98665117,
+            "lon": 70.62289685,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.98659116,
+            "lon": 70.62235044,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.98687887,
+            "lon": 70.62209695,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.98221847,
+            "lon": 70.62132683,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.98721864,
+            "lon": 70.62147404,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        }
+    ],
+    "min-bulak borderpost ": [
+        {
+            "lat": 39.97405571,
+            "lon": 70.60708088,
+            "tag": "",
+            "impact": "borderpost",
+            "description_en": "",
+            "description_ru": "",
+            "links": [
+                {
+                    "src": "https://www.youtube.com/watch?v=FrlTLYfIUEw",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
+        }
+    ],
+    "min-oruk": [
+        {
+            "lat": 39.99114423,
+            "lon": 70.62069736,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.99092737,
+            "lon": 70.62072211,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 40.00143067,
+            "lon": 70.61837709,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.99193559,
+            "lon": 70.62012389,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.99179591,
+            "lon": 70.62018776,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.99229555,
+            "lon": 70.62050535,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.99329091,
+            "lon": 70.62027779,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.99295333,
+            "lon": 70.62027179,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.99284946,
+            "lon": 70.6203639,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.99345732,
+            "lon": 70.61989965,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.99358327,
+            "lon": 70.61987318,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.99371475,
+            "lon": 70.61981569,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": [
+                {
+                    "src": "https://www.turmush.kg/ru/news:1822042",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
+        },
+        {
+            "lat": 39.9937608,
+            "lon": 70.62021733,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": [
+                {
+                    "src": "https://www.turmush.kg/ru/news:1822042",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
+        },
+        {
+            "lat": 39.99443332,
+            "lon": 70.61970041,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.9946997,
+            "lon": 70.61973687,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.99512778,
+            "lon": 70.6201135,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.99588052,
+            "lon": 70.61959729,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.99686771,
+            "lon": 70.61980227,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.99662858,
+            "lon": 70.61983349,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": [
+                {
+                    "src": "https://youtu.be/eFSZ-DZ21YU?t=291",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
+        },
+        {
+            "lat": 39.99658797,
+            "lon": 70.61954566,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.99676887,
+            "lon": 70.62028679,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.99703211,
+            "lon": 70.61982448,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": [
+                {
+                    "src": "https://youtu.be/eFSZ-DZ21YU?t=343",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
+        },
+        {
+            "lat": 39.9969764,
+            "lon": 70.61947789,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": [
+                {
+                    "src": "https://youtu.be/eFSZ-DZ21YU?t=319",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
+        },
+        {
+            "lat": 39.99737103,
+            "lon": 70.61895824,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": [
+                {
+                    "src": "https://youtu.be/N7eE5MPiNQ8?t=630",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
+        },
+        {
+            "lat": 39.99767646,
+            "lon": 70.61929901,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.99793681,
+            "lon": 70.61969501,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.99768676,
+            "lon": 70.61972196,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.99837749,
+            "lon": 70.61990614,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.99827216,
+            "lon": 70.61968036,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.9990661,
+            "lon": 70.61869919,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.99856991,
+            "lon": 70.62032211,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": [
+                {
+                    "src": "https://youtu.be/eFSZ-DZ21YU?t=264",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
+        },
+        {
+            "lat": 39.99866406,
+            "lon": 70.62134482,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.99865591,
+            "lon": 70.62158746,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.99809351,
+            "lon": 70.62064832,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.99780883,
+            "lon": 70.62103947,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.99761219,
+            "lon": 70.6210824,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.99739819,
+            "lon": 70.62083594,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.99717791,
+            "lon": 70.621168,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.99701491,
+            "lon": 70.62113552,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.99648767,
+            "lon": 70.62087285,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.99636085,
+            "lon": 70.62091247,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.99584211,
+            "lon": 70.62089868,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.997171,
+            "lon": 70.62287866,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.99749718,
+            "lon": 70.62210635,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.99626479,
+            "lon": 70.62347204,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.99616395,
+            "lon": 70.62632633,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 40.00156724,
+            "lon": 70.62091675,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "warehouse",
+            "description_ru": "",
+            "links": [
+                {
+                    "src": "https://t.me/ChDambiev/19485",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
+        }
+    ],
+    "ovchi-kalacha": [
+        {
+            "lat": 40.12895642,
+            "lon": 69.6829147,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": [
+                {
+                    "src": "https://youtu.be/Ab-kGpsp6qI?t=160",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
+        },
+        {
+            "lat": 40.11661741,
+            "lon": 69.6850779,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": [
+                {
+                    "src": "https://www.facebook.com/asiaplustj/photos/pcb.5526168997448178/5526165780781833",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
+        },
+        {
+            "lat": 40.11675095,
+            "lon": 69.68476768,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 40.11696564,
+            "lon": 69.68470327,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 40.11721009,
+            "lon": 69.68509949,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 40.11828079,
+            "lon": 69.6829665,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 40.11815253,
+            "lon": 69.68250124,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 40.1264751,
+            "lon": 69.68413889,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": [
+                {
+                    "src": "https://gdb.rferl.org/09850000-0aff-0242-55f5-08da989a619f_w1597_n_st.jpeg",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
+        },
+        {
+            "lat": 40.12615357,
+            "lon": 69.68441803,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": [
+                {
+                    "src": "https://gdb.rferl.org/09850000-0aff-0242-7f19-08da9899f17f_w1597_n_st.jpeg",
+                    "time": "",
+                    "archive": ""
+                },
+                {
+                    "src": "https://gdb.rferl.org/09850000-0aff-0242-5741-08da989aafbd_w1023_s.jpeg",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
+        },
+        {
+            "lat": 40.1262679,
+            "lon": 69.68481947,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": [
+                {
+                    "src": "https://youtu.be/Ab-kGpsp6qI?t=1",
+                    "time": "",
+                    "archive": ""
+                }
+            ]
+        },
+        {
+            "lat": 40.12419955,
+            "lon": 69.68417116,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 40.11656053,
+            "lon": 69.68481169,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        }
+    ],
+    "tenge": [
+        {
+            "lat": 39.87549952,
+            "lon": 70.49267759,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.8770319,
+            "lon": 70.49609389,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.8771852,
+            "lon": 70.49653107,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87740058,
+            "lon": 70.49719886,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87804014,
+            "lon": 70.49664922,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.878367,
+            "lon": 70.49727776,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87779489,
+            "lon": 70.49757475,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88031669,
+            "lon": 70.49767823,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88050994,
+            "lon": 70.49830559,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87940896,
+            "lon": 70.49925236,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87884389,
+            "lon": 70.4984457,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87933721,
+            "lon": 70.5006437,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87861625,
+            "lon": 70.49852067,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87827867,
+            "lon": 70.49879858,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87720994,
+            "lon": 70.49844927,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87739515,
+            "lon": 70.49883868,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87716061,
+            "lon": 70.49899023,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87693618,
+            "lon": 70.49859977,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87688965,
+            "lon": 70.49907554,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87667114,
+            "lon": 70.49921547,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87638416,
+            "lon": 70.49892101,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87637253,
+            "lon": 70.49942015,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87608113,
+            "lon": 70.49907004,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87668076,
+            "lon": 70.49763007,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87620099,
+            "lon": 70.49751763,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87631596,
+            "lon": 70.49638006,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87595331,
+            "lon": 70.49653744,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87564101,
+            "lon": 70.49680333,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.8749494,
+            "lon": 70.4968896,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87966573,
+            "lon": 70.50156069,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88089957,
+            "lon": 70.50518298,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88068133,
+            "lon": 70.50592668,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88072473,
+            "lon": 70.50641148,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88102534,
+            "lon": 70.50718369,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.88159975,
+            "lon": 70.50679221,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87275282,
+            "lon": 70.50609297,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.87447405,
+            "lon": 70.51246792,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        },
+        {
+            "lat": 39.8741315,
+            "lon": 70.51248954,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "links": []
+        }
+    ],
+    "vorukh": [
+        {
+            "lat": 39.87668025,
+            "lon": 70.52436115,
+            "tag": "",
+            "impact": "privateprop",
+            "description_en": "",
             "description_ru": "",
             "links": []
         }

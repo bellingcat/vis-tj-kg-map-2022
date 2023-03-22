@@ -38,7 +38,7 @@
       </v-list-item>
 
       <!-- download (?) -->
-      <v-list-item @click="console.warn('TODO')">
+      <v-list-item @click="openUrl('/incidents.json', 'incidents.json')">
         <template v-slot:prepend>
           <v-icon icon="mdi-download" size="large"></v-icon>
         </template>
@@ -46,7 +46,7 @@
           {{ $t(`options.download.json`) }}
         </v-list-item-title>
       </v-list-item>
-      <v-list-item @click="console.warn('TODO')">
+      <v-list-item @click="openUrl('/incidents.csv', 'incidents.csv')">
         <template v-slot:prepend>
           <v-icon icon="mdi-download" size="large"></v-icon>
         </template>
