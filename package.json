@@ -17,6 +17,7 @@
     "roboto-fontface": "*",
     "vue": "^3.2.13",
     "vue-fullscreen": "^2.6.1",
+    "vue-i18n": "^9.2.2",
     "vue-router": "^4.0.0",
     "vue-toastification": "^2.0.0-rc.5",
     "vuetify": "^3.0.0",

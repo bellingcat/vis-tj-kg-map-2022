@@ -9,46 +9,40 @@
         <v-window v-model="selectedVillage">
           <v-window-item class="ma-0 mb-10" v-for="v in villages" :value="v.id" :key="v.id">
             <h3 class="text-center mb-3 mt-3 text-primary">
-              {{ v.name_en }} / {{ v.name_ru }}
+              {{ $t(`villages.${v.id}.name`) }}
             </h3>
             <v-btn variant="plain" dark @click="selectedVillage = null" class="close-button">
               <v-icon>mdi-close</v-icon>
             </v-btn>
             <p class="ma-2">
-              {{ v.description }}
+              {{ $t(`villages.${v.id}.description`) }}
             </p>
             <span v-if="satellites[v.id]">
               <v-divider class="mb-4 mt-4"></v-divider>
-              <p class="ma-2">
-                <!-- <v-icon icon="mdi-satellite-variant"></v-icon> -->
-                Comparing satellite imagery between
-                <a href="#">{{ v?.satellite?.before?.date }}</a>
-                and
-                <a href="#">{{ v?.satellite?.after?.date }}</a>
-                reveals <strong class="text-secondary"> {{ 'TODO FROM FILES' }}.</strong>
+              <p class="ma-2"
+                v-html="$t('satellite.compareText', { before: v?.satellite?.before?.date, after: v?.satellite?.after?.date })">
               </p>
 
               <div class="d-flex justify-center ma-4">
                 <v-btn prepend-icon="mdi-satellite-variant" color="white" variant="outlined"
-                  @click="viewSat($event, v.id, selectedSat?.active == 'before' ? 'after' : 'before')">view SAT {{
-                    selectedSat?.active == 'before' ? 'after' : 'before'
-                  }}</v-btn>
+                  @click="viewSat($event, v.id, selectedSat?.active == 'before' ? 'after' : 'before')">
+                  {{ selectedSat?.active == 'before' ? $t('satellite.btnBefore') : $t('satellite.btnAfter') }}
+                </v-btn>
               </div>
               <div v-if="selectedSat" class="text-center ma-2">
-                <!-- {{ satellites[selectedSat.villageId]["before"]?.data?.date }} -->
-                <!-- {{ satellites[selectedSat.villageId]["after"]?.data?.date }} -->
-                <p><v-code class="">
-                    Showing satellite imagery from
-                    {{ satellites[v.id][satellites[selectedSat.villageId]?.active]?.data?.date }}
+                <p><v-code>
+                    {{ $t('satellite.showingImagery', {
+                      date:
+                        satellites[v.id][satellites[selectedSat.villageId]?.active]?.data?.date
+                    }) }}
                   </v-code>
                 </p>
               </div>
             </span>
 
             <v-divider class="ma-2 mb-6 mt-6"></v-divider>
-            <h3 v-if="v.incidents.filter(filterActiveIncident).length" class="mt-4 mb-2 text-center">
-              Geolocated {{ v.incidents.filter(filterActiveIncident).length == 1 ? "incident" : "incidents" }}: {{
-                v.incidents.filter(filterActiveIncident).length }}
+            <h3 class="mt-4 mb-2 text-center">
+              {{ $t('incidents.countVisible', v.incidents.filter(filterActiveIncident).length) }}
             </h3>
 
             <v-expansion-panels v-model="this.selectedIncidents[v.id]" variant="accordion">
@@ -57,27 +51,28 @@
                 <v-expansion-panel-title class="pa-0 pl-1 pr-1">
                   <!-- <v-icon :icon="x.key=='military'?'mdi-knife-military':''"></v-icon> -->
                   <small class="mr-2 pa-1" :class="`chip-${i.tag}`">{{ i.tag }}</small>
-                  {{ i.description_en || `destroyed building n.${i.index + 1}` }}
+                  {{ $t(`incidents.all.${i.id}.description`) || $t(`incidents.defaultName`, { index: i.index + 1 }) }}
                 </v-expansion-panel-title>
                 <v-expansion-panel-text class="pa-0 pb-6 media-panel">
 
-                  <v-code v-if="!i.links.length" class="ma-2 mt-6 mb-6 text-center">No sources to show.</v-code>
+                  <v-code v-if="!i.links.length" class="ma-2 mt-6 mb-6 text-center">{{ $t('incidents.panel.noSources')
+                  }}</v-code>
                   <div v-for="(link, linkIndex) in i.links" :key="linkIndex">
                     <!-- TODO: if this is an IMAGE and not a VIDEO -->
                     <video v-if="link.archive" class="mt-2 mb-2 video-embed" style="width: 100%;" controls>
                       <source :src="link.archive" type="video/mp4">
-                      Your browser does not support the video tag.
+                      {{ $t('incidents.panel.videoNotSupported') }}
                     </video>
 
                     <iframe v-if="convertToEmbedUrl(link.src)" class="video-embed" :src="convertToEmbedUrl(link.src)"
-                      title="YouTube video player" frameborder="0"
+                      :title="$t('incidents.panel.youtubeTitle')" frameborder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       allowfullscreen></iframe>
 
                     <!-- <p v-if="!link.archive">No archived content</p> -->
                     <v-btn v-if="link.src" variant="outlined" color="secondary" class="ma-1" :href="link.src"
-                      title="open original source" target="_blank" append-icon="mdi-open-in-new">
-                      source {{ linkIndex + 1 }}
+                      :title="$t(`incidents.panel.sourceButtonTitle`)" target="_blank" append-icon="mdi-open-in-new">
+                      {{ $t(`incidents.panel.sourceButton`, { index: linkIndex + 1 }) }}
                     </v-btn>
                     {{ link.src }}
                     <v-divider v-if="i.links.length > linkIndex + 1" class="mb-3 mt-3"></v-divider>
@@ -86,12 +81,12 @@
 
                   <v-btn variant="outlined" class="ma-1" append-icon="mdi-open-in-new"
                     :href="`http://maps.google.com/maps?t=k&q=${i.lat},${i.lon}`" target="_blank"
-                    title="show coordinates on google maps">
-                    GMaps
+                    :title="$t(`incidents.panel.gMapsTitle`)">
+                    {{ $t(`incidents.panel.gMapsButton`) }}
                   </v-btn>
                   <v-btn v-if="clipboardWorks" variant="outlined" class="ma-1"
                     @click="copyText($event, `${i.lat},${i.lon}`)" append-icon="mdi-content-copy"
-                    title="copy incident coordinates">
+                    :title="$t(`incidents.panel.copyCoordsTitle`)">
                     {{ i.lat }},{{ i.lon }}
                   </v-btn>
                   <v-chip v-if="!clipboardWorks" label class="ma-1">
@@ -115,9 +110,9 @@
       <v-tab v-for="v in villages" :value="v.id" :key="v.id">
         <v-badge v-if="v.id == selectedVillage" :content="v.incidents.filter(this.filterActiveIncident).length" floating
           color="black">
-          {{ v.name_en }}
+          {{ $t(`villages.${v.id}.name`) }}
         </v-badge>
-        <span v-if="v.id != selectedVillage">{{ v.name_en }}</span>
+        <span v-if="v.id != selectedVillage">{{ $t(`villages.${v.id}.name`) }}</span>
       </v-tab>
     </v-tabs>
 
@@ -125,7 +120,7 @@
       align-tabs="center">
       <v-tab v-for="tb in impactTabs" :value="tb.value" :key="tb.value"
         :selected-class="`${tb.value}-selected v-tab--selected`">
-        <v-icon :icon="tb.icon"></v-icon>{{ tb.text_en }}</v-tab>
+        <v-icon :icon="tb.icon"></v-icon>{{ $t(`impact.${tb.value}.name`) }}</v-tab>
     </v-tabs>
   </v-card>
 
@@ -142,14 +137,15 @@ import config from "../../config";
 import TitleExpand from "./TitleExpand.vue"
 import OptionsButton from "./OptionsButton.vue"
 import MarkerUtils from "./js/MarkerUtils.js";
+import { i18n } from '../plugins/vuetify'
 
 export default {
   components: { TitleExpand, OptionsButton },
   setup() {
     const { mdAndDown, smAndDown } = useDisplay();
-    const { current, t } = useLocale();
+    const { current } = useLocale();
     return {
-      current, t, mdAndDown, smAndDown, toast: useToast()
+      current, mdAndDown, smAndDown, toast: useToast()
     };
   },
   data() {
@@ -169,10 +165,10 @@ export default {
       clipboardWorks: navigator.clipboard !== undefined,
       tiles: config.app.map.tiles.default,
       impactTabs: [
-        { value: "all", icon: "mdi-map-marker-multiple", text_en: "All" },
-        { value: "civinfra", icon: "mdi-town-hall", text_en: "Civilian Infrastructure" },
-        { value: "privateprop", icon: "mdi-home-city", text_en: "Private Property" },
-        { value: "borderpost", icon: "mdi-sign-caution", text_en: "Border Posts" },
+        { value: "all", icon: "mdi-map-marker-multiple" },
+        { value: "civinfra", icon: "mdi-town-hall" },
+        { value: "privateprop", icon: "mdi-home-city" },
+        { value: "borderpost", icon: "mdi-sign-caution" },
       ],
       currentTileName: config.app.map.startTile,
       currentTile: null
@@ -208,6 +204,7 @@ export default {
     },
     populateMap: async function () {
       let incidents = await fetch('./incidents.json').then(async data => await data.json());
+
       const villageIds = this.villages?.map(v => v.id).filter(id => id);
       assert(villageIds.length > 0 && villageIds.length == [...new Set(villageIds)].length, `Each village must have a unique ID`)
       // enrich some calculations into each village object
@@ -223,6 +220,7 @@ export default {
           incidentsMilitary: v.incidents.filter(i => i.tag == 'military'),
         }
       });
+      this.addIncidentsTranslations(this.villages);
 
       this.villages.forEach(village => {
         this.addPolygon(village.id);
@@ -245,12 +243,15 @@ export default {
       const bf = village.satellite.before;
       this.satellites[village.id].before.data = bf;
       this.satellites[village.id].active = "before";
+      console.log(village.id)
+      console.log(`villages.${village.id}.name`)
+      console.log(this.$t(`villages.${village.id}.name`))
       this.satellites[village.id].before.overlay = L.imageOverlay(
         bf.url,
         L.latLngBounds(village.satellite.bounds), {
         opacity: 0.8,
         errorOverlayUrl: errorOverlayUrl,
-        alt: `Satellite view of ${village?.name} on ${bf.date}`,
+        alt: this.$t(`satellite.altText`, {village: this.$t(`villages.${village.id}.name`), date: bf.date}),
         interactive: true,
         pane: paneId
       }).addTo(this.map);
@@ -263,7 +264,7 @@ export default {
         L.latLngBounds(village.satellite.bounds), {
         opacity: 0,
         errorOverlayUrl: errorOverlayUrl,
-        alt: `Satellite view of ${village?.name} on ${af.date}`,
+        alt: this.$t(`satellite.altText`, {village: this.$t(`villages.${village.id}.name`), date: af.date}),
         interactive: true,
         pane: paneId
       }).addTo(this.map);
@@ -342,9 +343,10 @@ export default {
       if (this.clipboardWorks) {
         try {
           navigator.clipboard.writeText(text);
-          this.toast("coordinates copied to clipboard", this.toastOptions);
+          this.toast(this.$t('incidents.panel.copyCoordsSuccess'), this.toastOptions);
         } catch (error) {
           console.log(`Could not copy: ${error}`)
+          this.toast.error(this.$t('incidents.panel.copyCoordsError'), this.toastOptions);
         }
       }
     },
@@ -384,6 +386,18 @@ export default {
     },
     filterActiveIncident(incident) {
       return this.selectedImpact == 'all' || incident?.impact == this.selectedImpact;
+    },
+    addIncidentsTranslations(villages) {
+      const flatIncidents = Object.values(villages.map(v => v.incidents)).flat();
+      ["en", "ru"].forEach(locale => {
+        const incidentsLocale = Object.fromEntries(flatIncidents.map(i => {
+          return [i.id, { "description": i[`description_${locale}`] }]
+        }))
+
+        i18n.global.mergeLocaleMessage(locale, {
+          incidents: { all: incidentsLocale }
+        })
+      })
     }
   },
   watch: {

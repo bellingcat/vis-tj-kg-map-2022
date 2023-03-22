@@ -5,15 +5,15 @@
     </template>
 
     <v-list density="compact" class="options-list">
-      <v-list-subheader>Actions</v-list-subheader>
+      <v-list-subheader>{{ $t('options.title') }}</v-list-subheader>
 
       <!-- tiles change -->
       <v-list-item @click="switchNextTile()" ref="maptile" class="maptile" :class="nextTile">
         <template v-slot:prepend>
           <v-icon icon="mdi-layers" size="large"></v-icon>
         </template>
-        <v-list-item-title>
-          {{ nextTile.toUpperCase() }}
+        <v-list-item-title class="text-uppercase">
+          {{ $t(`options.tiles.${nextTile}`) }}
         </v-list-item-title>
       </v-list-item>
 
@@ -22,8 +22,8 @@
         <template v-slot:prepend>
           <v-icon icon="mdi-translate" size="large"></v-icon>
         </template>
-        <v-list-item-title>
-          {{ availableLangs[(currentLangIndex + 1) % availableLangs.length]?.toUpperCase() }}
+        <v-list-item-title class="text-uppercase">
+          {{ $t(`options.locale.${availableLangs[(currentLangIndex + 1) % availableLangs.length]}`) }}
         </v-list-item-title>
       </v-list-item>
 
@@ -32,8 +32,8 @@
         <template v-slot:prepend>
           <v-icon :icon="fullscreen ? 'mdi-fullscreen-exit' : 'mdi-fullscreen'" size="large"></v-icon>
         </template>
-        <v-list-item-title>
-          {{ (fullscreen ? 'exit fullscreen' : 'fullscreen').toUpperCase() }}
+        <v-list-item-title class="text-uppercase">
+          {{ (fullscreen ? $t(`options.fullscreen.off`) : $t(`options.fullscreen.on`)) }}
         </v-list-item-title>
       </v-list-item>
 
@@ -43,7 +43,7 @@
           <v-icon icon="mdi-download" size="large"></v-icon>
         </template>
         <v-list-item-title>
-          JSON
+          {{ $t(`options.download.json`) }}
         </v-list-item-title>
       </v-list-item>
       <v-list-item @click="console.warn('TODO')">
@@ -51,7 +51,7 @@
           <v-icon icon="mdi-download" size="large"></v-icon>
         </template>
         <v-list-item-title>
-          CSV
+          {{ $t(`options.download.csv`) }}
         </v-list-item-title>
       </v-list-item>
 
@@ -60,8 +60,8 @@
         <template v-slot:prepend>
           <v-avatar class="bcat-logo" image="@/assets/icon.ico" alt="Bellingcat logo" rounded=""></v-avatar>
         </template>
-        <v-list-item-title>
-          BELLINGCAT
+        <v-list-item-title class="text-uppercase">
+          {{ $t(`options.links.bellingcat`) }}
         </v-list-item-title>
       </v-list-item>
       <!-- code -->
@@ -69,8 +69,8 @@
         <template v-slot:prepend>
           <v-icon icon="mdi-github" size="large"></v-icon>
         </template>
-        <v-list-item-title>
-          CODE
+        <v-list-item-title class="text-uppercase">
+          {{ $t(`options.links.code`) }}
         </v-list-item-title>
       </v-list-item>
 
@@ -160,7 +160,7 @@ export default {
 }
 </script>
 
-<style lang="scss"> @import '../styles/settings.scss';
+<style lang="scss" scoped> @import '../styles/settings.scss';
 
  .options-list {
    min-width: 220px;
@@ -189,9 +189,6 @@ export default {
 
  }
 
- .v-overlay {
-   z-index: $zMax + 25 !important;
- }
 
  #options-menu-btn {
    position: absolute;

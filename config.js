@@ -41,8 +41,8 @@ const config = {
     "id": "maksat",
     "name_en": "Maksat",
     "name_ru": "Максат",
-    "country": "Kyrgystan",
-    "description": "This is some info on the Maksat village.",
+    "description_en": "This is some info on the Maksat village.",
+    "description_ru": "Это некоторая информация о поселке Максат.",
     "yandex": "https://yandex.com/maps/geo/4209595903/?ll=69.700117%2C40.128022&z=14.11",
     "stats": {
       "population": "TODO maybe"
@@ -65,8 +65,8 @@ const config = {
     "id": "international",
     "name_en": "International",
     "name_ru": "Интернациональное",
-    "country": "Kyrgystan",
-    "description": "This is some info on the International village.",
+    "description_en": "This is some info on the International village.",
+    "description_ru": "Это некоторая информация о поселке Интернациональное.",
     "yandex": "https://yandex.ru/maps/geo/1508554928/?l=sat&ll=69.833683%2C40.188422&z=14",
     "stats": {
       "population": "TODO maybe"
@@ -76,8 +76,8 @@ const config = {
     "id": "borborduk",
     "name_en": "Borborduk",
     "name_ru": "Борбордук",
-    "country": "Kyrgystan",
-    "description": "This is some info on the Borborduk village.",
+    "description_en": "This is some info on the Borborduk village.",
+    "description_ru": "Это некоторая информация о поселке Борбордук.",
     "yandex": "https://yandex.ru/maps/geo/1508554928/?l=sat&ll=69.833683%2C40.188422&z=14",
     "stats": {
       "population": "TODO maybe"
@@ -100,8 +100,8 @@ const config = {
     "id": "dostuk",
     "name_en": "Dostuk",
     "name_ru": "Достук",
-    "country": "Kyrgystan",
-    "description": "This is some info on the Dostuk village.",
+    "description_en": "This is some info on the Dostuk village.",
+    "description_ru": "Это некоторая информация о поселке Достук.",
     "yandex": "https://yandex.ru/maps/geo/1671313862/?l=sat&ll=70.631908%2C40.052397&z=16",
     "stats": {
       "population": "TODO maybe"
