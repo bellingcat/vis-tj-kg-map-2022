@@ -11,7 +11,8 @@
             <h3 class="text-center mb-3 mt-3 text-primary">
               {{ $t(`villages.${v.id}.name`) }}
             </h3>
-            <v-btn variant="plain" dark @click="selectedVillage = null" class="close-button">
+            <v-btn variant="plain" dark @click="selectedIncidents[selectedVillage] = null; selectedVillage = null;"
+              class="close-button">
               <v-icon>mdi-close</v-icon>
             </v-btn>
             <p class="ma-2">
@@ -25,8 +26,8 @@
 
               <div class="d-flex justify-center ma-4">
                 <v-btn prepend-icon="mdi-satellite-variant" color="white" variant="outlined"
-                  @click="viewSat($event, v.id, selectedSat?.active == 'before' ? 'after' : 'before')">
-                  {{ selectedSat?.active == 'before' ? $t('satellite.btnBefore') : $t('satellite.btnAfter') }}
+                  @click="viewSat($event, v.id, selectedSat?.active == 'after' ? 'before' : 'after')">
+                  {{ selectedSat?.active == 'after' ? $t('satellite.btnBefore') : $t('satellite.btnAfter') }}
                 </v-btn>
               </div>
               <div v-if="selectedSat" class="text-center ma-2">
@@ -211,7 +212,6 @@ export default {
       this.villages = this.villages.map(v => {
         v.incidents = incidents[v.id]?.map((incident, index) => {
           this.selectedIncidents[v.id] = null;
-          this.selectedIncidents[v.id] = null;
           return { ...incident, id: `${v.id}-${index}`, index: index }
         }) || [];
         return {
@@ -251,7 +251,7 @@ export default {
         L.latLngBounds(village.satellite.bounds), {
         opacity: 0.8,
         errorOverlayUrl: errorOverlayUrl,
-        alt: this.$t(`satellite.altText`, {village: this.$t(`villages.${village.id}.name`), date: bf.date}),
+        alt: this.$t(`satellite.altText`, { village: this.$t(`villages.${village.id}.name`), date: bf.date }),
         interactive: true,
         pane: paneId
       }).addTo(this.map);
@@ -264,7 +264,7 @@ export default {
         L.latLngBounds(village.satellite.bounds), {
         opacity: 0,
         errorOverlayUrl: errorOverlayUrl,
-        alt: this.$t(`satellite.altText`, {village: this.$t(`villages.${village.id}.name`), date: af.date}),
+        alt: this.$t(`satellite.altText`, { village: this.$t(`villages.${village.id}.name`), date: af.date }),
         interactive: true,
         pane: paneId
       }).addTo(this.map);
@@ -316,9 +316,9 @@ export default {
         let group = new L.FeatureGroup(); // used for fitBounds
         group.addLayer(marker).addTo(this.map);
         marker.on("click", () => {
+          console.log(`Marker clicked: ${JSON.stringify(incident)}`)
           this.selectedVillage = village.id;
           this.selectedIncidents[village.id] = incident.id;
-          this.map.fitBounds(group.getBounds(), this.getFitBoundsOptions());
         })
         // marker.on('mouseover', function () {
         //   // this._icon.classList.add(hoverClass);
@@ -332,10 +332,14 @@ export default {
     viewSat: function (_, villageId, active) {
       this.satellites[villageId].active = active;
       this.selectedSat = { villageId, active };
-      this.map.fitBounds(this.satellites[this.selectedSat.villageId]?.before?.overlay?.getBounds(), this.getFitBoundsOptions())
+      // only fitBounds to satellite if not in viewport yet
+      if (!this.map.getBounds().intersects(this.satellites[this.selectedSat.villageId]?.before?.overlay?.getBounds())) {
+        this.map.fitBounds(this.satellites[this.selectedSat.villageId]?.before?.overlay?.getBounds(), this.getFitBoundsOptions())
+      }
     },
     fitPolygon: function (villageId) {
       if (this.polygons[villageId]) {
+        console.log(`FITTING POLYGON ${villageId}`)
         this.map.fitBounds(this.polygons[villageId].getBounds(), this.getFitBoundsOptions())
       }
     },
@@ -423,17 +427,21 @@ export default {
     },
     selectedIncidents: {
       handler: function (sI) {
+        console.log(`WATCH selectedIncidents ${sI[this.selectedVillage]}`)
+        Object.keys(this.markers).forEach(incidentId => {
+          const incident = this.markers[incidentId].incident;
+          if (sI[this.selectedVillage] && incidentId == sI[this.selectedVillage]) {
+            this.markers[incidentId].marker.setIcon(MarkerUtils.getMarkerSvg(incident.impact, true))
+          } else {
+            this.markers[incidentId].marker.setIcon(MarkerUtils.getMarkerSvg(incident.impact, false))
+          }
+        })
+
         if (sI[this.selectedVillage]) {
           // fit map to marker
-          this.map.fitBounds(this.markers[sI[this.selectedVillage]].group.getBounds(), { ...this.getFitBoundsOptions(), maxZoom: 15 });
-          Object.keys(this.markers).forEach(incidentId => {
-            const incident = this.markers[incidentId].incident;
-            if (incidentId == sI[this.selectedVillage]) {
-              this.markers[incidentId].marker.setIcon(MarkerUtils.getMarkerSvg(incident.impact, true))
-            } else {
-              this.markers[incidentId].marker.setIcon(MarkerUtils.getMarkerSvg(incident.impact, false))
-            }
-          })
+          console.log(`SELECTED INCIDENT ${JSON.stringify(sI[this.selectedVillage])}`)
+          this.map.fitBounds(this.markers[sI[this.selectedVillage]].group.getBounds(), { ...this.getFitBoundsOptions(), maxZoom: Math.max(17, this.map.getZoom()) });
+
           // scroll to content on sidebar
           setTimeout(() => {
             console.log(`SCROLLING #${sI[this.selectedVillage]}`)
