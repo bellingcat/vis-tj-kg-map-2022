@@ -18,6 +18,10 @@ export default {
     },
     bellingcat: "Bellingcat"
   },
+  buildingLocation: {
+    socialmedia: { name: "Geolocated", explanation: "Buildings geolocated via video/image content." },
+    satellite: { name: "Satellite", explanation: "Destruction observed in before/after satellite imagery." },
+  },
   impact: {
     all: { name: "All" },
     civinfra: { name: "Civilian Infrastructure" },
@@ -38,7 +42,7 @@ export default {
   incidents: {
     all: {}, // this will be loaded from incidents.json
     defaultName: `Destroyed building N.{index}`,
-    countVisible: `No incidents | 1 geolocated incident | {n} geolocated incidents`,
+    countVisible: `No incidents | 1 incident | {n} incidents`,
     panel: {
       noSources: `No sources to show.`,
       videoNotSupported: `Your browser does not support the video tag.`,

@@ -106,8 +106,8 @@
 
   <v-card class="village-tabs ma-0 mb-0 ml-auto mr-auto" :class="mdAndDown ? 'w-100' : 'w-50'">
 
-    <v-tabs v-if="selectedImpact" class="ml-auto mr-auto" v-model="selectedVillage" bg-color="primary" center-active
-      show-arrows align-tabs="center" v-on:update:model-value="fitPolygon">
+    <v-tabs class="ml-auto mr-auto" v-model="selectedVillage" bg-color="primary" center-active show-arrows
+      align-tabs="center" v-on:update:model-value="fitPolygon">
       <v-tab v-for="v in villages" :value="v.id" :key="v.id">
         <v-badge v-if="v.id == selectedVillage" :content="v.incidents.filter(this.filterActiveIncident).length" floating
           color="black">
@@ -117,12 +117,44 @@
       </v-tab>
     </v-tabs>
 
-    <v-tabs class="impact-tabs" stacked v-model="selectedImpact" bg-color="black" center-active show-arrows
-      align-tabs="center">
-      <v-tab v-for="tb in impactTabs" :value="tb.value" :key="tb.value"
-        :selected-class="`${tb.value}-selected v-tab--selected`">
-        <v-icon :icon="tb.icon"></v-icon>{{ $t(`impact.${tb.value}.name`) }}</v-tab>
-    </v-tabs>
+
+    <div class="d-flex align-center justify-center pa-0">
+      <!-- <div class="d-flex align-center pa-0 ml-2"> -->
+      <!-- <v-label v-if="!smAndDown" class="pr-4">Buildings of Interest:</v-label> -->
+      <v-slide-group show-arrows>
+        <v-btn-toggle v-model="enabledTags" divided multiple>
+          <v-slide-group-item v-for="tb in tagTabs" :key="tb.value" :selected-class="`${tb.value}-selected`">
+            <v-btn :value="tb.value" :key="tb.value" density="compact" :size="smAndDown ? 'x-small' : 'small'"
+              variant="tonal" :color="tb.color">
+              <div class="d-flex align-center flex-column justify-center">
+                <!-- <v-icon :icon="tb.icon"></v-icon> -->
+                {{ $t(`buildingLocation.${tb.value}.name`) }}
+              </div>
+              <v-tooltip activator="parent" location="top" open-delay="400" z-index="3000">{{
+                $t(`buildingLocation.${tb.value}.explanation`) }}</v-tooltip>
+            </v-btn>
+          </v-slide-group-item>
+        </v-btn-toggle>
+      </v-slide-group>
+    </div>
+
+
+    <div class="d-flex align-center justify-center pa-0">
+      <!-- <div class="d-flex align-center pa-0 ml-2"> -->
+      <!-- <v-label v-if="!smAndDown" class="pr-4">Impact:</v-label> -->
+      <v-slide-group show-arrows>
+        <v-btn-toggle v-model="enabledImpacts" divided multiple color="blue-grey-darken-2">
+          <v-slide-group-item v-for="tb in impactTabs" :key="tb.value">
+            <v-btn :value="tb.value" :key="tb.value" :selected-class="`${tb.value}-selected v-tab--selected`"
+              density="compact" :size="smAndDown ? 'x-small' : 'small'">
+              <div class="d-flex align-center flex-column justify-center">
+                <v-icon :icon="tb.icon" :color="enabledImpacts.includes(tb.value)?'yellow':''"></v-icon>{{ $t(`impact.${tb.value}.name`) }}
+              </div>
+            </v-btn>
+          </v-slide-group-item>
+        </v-btn-toggle>
+      </v-slide-group>
+    </div>
   </v-card>
 
   <div id="map"></div>
@@ -156,7 +188,6 @@ export default {
       toastOptions: config.app.ui.toastOptions,
       mapConfig: config.app.map,
       villages: config.villages?.map(v => { return { ...v, incidents: [] } }),
-      selectedImpact: null,
       selectedVillage: null,
       selectedIncidents: {}, // villageId -> markerId,
       selectedSat: null,
@@ -165,14 +196,19 @@ export default {
       satellites: {},
       clipboardWorks: navigator.clipboard !== undefined,
       tiles: config.app.map.tiles.default,
+      tagTabs: [
+        { value: "socialmedia", icon: "mdi-map-marker-multiple", color: "#00E5FF" },
+        { value: "satellite", icon: "mdi-satellite-variant", color: "#81C784" }
+      ],
       impactTabs: [
-        { value: "all", icon: "mdi-map-marker-multiple" },
         { value: "civinfra", icon: "mdi-town-hall" },
         { value: "privateprop", icon: "mdi-home-city" },
         { value: "borderpost", icon: "mdi-sign-caution" },
       ],
+      enabledTags: ["socialmedia"],
+      enabledImpacts: ["civinfra", "privateprop", "borderpost"],
       currentTileName: config.app.map.startTile,
-      currentTile: null
+      currentTile: null,
     }
   }, methods: {
     setTileLayer(tileName) {
@@ -227,6 +263,7 @@ export default {
         this.addMarkers(village);
         this.addBeforeAfterSat(village);
       })
+      this.refreshVisibleIncidents();
     },
     addBeforeAfterSat: function (village) {
       if (village.satellite === undefined) return;
@@ -307,7 +344,7 @@ export default {
       village.incidents.forEach(incident => {
         let marker = null;
         try {
-          marker = new L.marker([incident.lat, incident.lon], { icon: MarkerUtils.getMarkerSvg(incident.impact, false) });
+          marker = new L.marker([incident.lat, incident.lon], { icon: MarkerUtils.getMarkerSvg(incident, false) });
         } catch (error) {
           console.error(error);
           console.warn(incident);
@@ -389,7 +426,16 @@ export default {
       }
     },
     filterActiveIncident(incident) {
-      return this.selectedImpact == 'all' || incident?.impact == this.selectedImpact;
+      return this.enabledTags.includes(incident.tag) && this.enabledImpacts.includes(incident.impact)
+    },
+    refreshVisibleIncidents() {
+      Object.values(this.markers).forEach(marker => {
+        if (this.filterActiveIncident(marker.incident)) {
+          marker.marker.getElement().style.display = "";
+        } else {
+          marker.marker.getElement().style.display = "none";
+        }
+      })
     },
     addIncidentsTranslations(villages) {
       const flatIncidents = Object.values(villages.map(v => v.incidents)).flat();
@@ -402,7 +448,7 @@ export default {
           incidents: { all: incidentsLocale }
         })
       })
-    }
+    },
   },
   watch: {
     selectedVillage: function (villageId, prevV) {
@@ -431,9 +477,9 @@ export default {
         Object.keys(this.markers).forEach(incidentId => {
           const incident = this.markers[incidentId].incident;
           if (sI[this.selectedVillage] && incidentId == sI[this.selectedVillage]) {
-            this.markers[incidentId].marker.setIcon(MarkerUtils.getMarkerSvg(incident.impact, true))
+            this.markers[incidentId].marker.setIcon(MarkerUtils.getMarkerSvg(incident, true))
           } else {
-            this.markers[incidentId].marker.setIcon(MarkerUtils.getMarkerSvg(incident.impact, false))
+            this.markers[incidentId].marker.setIcon(MarkerUtils.getMarkerSvg(incident, false))
           }
         })
 
@@ -457,15 +503,8 @@ export default {
       },
       deep: true
     },
-    selectedImpact: function () {
-      Object.values(this.markers).forEach(marker => {
-        if (this.filterActiveIncident(marker.incident)) {
-          marker.marker.getElement().style.display = "";
-        } else {
-          marker.marker.getElement().style.display = "none";
-        }
-      })
-    },
+    enabledTags: function () { this.refreshVisibleIncidents() },
+    enabledImpacts: function () { this.refreshVisibleIncidents() },
   },
   mounted: function () {
     this.initMap();
@@ -602,23 +641,23 @@ iframe.video-embed {
 
   }
 
-  &.marker-pin-civinfra,
-  &.marker-pin-civinfra-active {
-    border: 2px solid #33691E;
-    background-color: #9CCC65;
-  }
+  // &.marker-pin-civinfra,
+  // &.marker-pin-civinfra-active {
+  //   border: 2px solid #33691E;
+  //   background-color: #9CCC65;
+  // }
 
-  &.marker-pin-privateprop,
-  &.marker-pin-privateprop-active {
-    border: 2px solid #311B92;
-    background-color: #AB47BC;
-  }
+  // &.marker-pin-privateprop,
+  // &.marker-pin-privateprop-active {
+  //   border: 2px solid #311B92;
+  //   background-color: #AB47BC;
+  // }
 
-  &.marker-pin-borderpost,
-  &.marker-pin-borderpost-active {
-    border: 2px solid #006064;
-    background-color: #26C6DA;
-  }
+  // &.marker-pin-borderpost,
+  // &.marker-pin-borderpost-active {
+  //   border: 2px solid #006064;
+  //   background-color: #26C6DA;
+  // }
 
   &.marker-pin-active,
   &.marker-pin-civinfra-active,
@@ -692,6 +731,12 @@ div.v-tabs--density-default.v-tabs--stacked {
       font-size: 0.75em;
     }
   }
+
+}
+
+div.v-overlay--absolute.v-tooltip div.v-overlay__content {
+  background: #CFD8DC;
+  box-shadow: 1px 1px #707070;
 }
 
 /* Leaflet crispness override */
