@@ -24,7 +24,8 @@ const TagConfig = {
 }
 
 const iconSize = 18;
-const circleDiameter = 24;
+const iconDiameter = 24;
+const circleDiameter = 32;
 const defaultIcon = L.divIcon({ className: `marker-pin`, iconSize: [iconSize, iconSize] });
 
 var MarkerUtils = {
@@ -46,7 +47,9 @@ var MarkerUtils = {
     return L.divIcon({
       className: `marker-pin-${incident.impact}${active ? '-active' : ''}`,
       // html: `<svg width="${circleDiameter}" height="${circleDiameter}"><circle cx="${circleDiameter / 2}" cy="${circleDiameter / 2}" r="${circleDiameter / 2}" fill="red" stroke="blue" stroke-width="2" /></svg>`,
-      html: `<svg fill="${fill}" stroke="${stroke}" stroke-width="1"  width="${circleDiameter}" height="${circleDiameter}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${circleDiameter} ${circleDiameter}">${svgPath}</svg>`,
+      html: `<svg fill="${fill}" stroke="${stroke}" stroke-width="1"  width="${iconDiameter}" height="${iconDiameter}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${circleDiameter} ${circleDiameter}">
+      ${svgPath}</svg>`,
+      // <circle cx="${circleDiameter / 2}" cy="${circleDiameter / 2}" r="${circleDiameter / 2}" fill="#e3e3e3" stroke="blue" stroke-width="2"/>
       iconSize: [iconSize, iconSize],
       iconAnchor: [iconSize, iconSize],
     })

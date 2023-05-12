@@ -51,7 +51,8 @@
                 :id="i.id">
                 <v-expansion-panel-title class="pa-0 pl-1 pr-1">
                   <!-- <v-icon :icon="x.key=='military'?'mdi-knife-military':''"></v-icon> -->
-                  <small class="mr-2 pa-1" :class="`chip-${i.tag}`">{{ i.tag }}</small>
+                  <!-- <small class="mr-2 pa-1" :class="`chip-${i.tag}`">{{ i.tag }}</small> -->
+                  <v-icon :icon="impactTabs[i.impact]?.icon" :color="tagTabs[i.tag]?.color" class="mr-3"></v-icon>
                   {{ $t(`incidents.all.${i.id}.description`) || $t(`incidents.defaultName`, { index: i.index + 1 }) }}
                 </v-expansion-panel-title>
                 <v-expansion-panel-text class="pa-0 pb-6 media-panel">
@@ -65,17 +66,24 @@
                       {{ $t('incidents.panel.videoNotSupported') }}
                     </video>
 
-                    <iframe v-if="convertToEmbedUrl(link.src)" class="video-embed" :src="convertToEmbedUrl(link.src)"
+                    <iframe v-if="isValidYoutube(link.src)" class="video-embed" :src="youtubeEmbed(link.src)"
                       :title="$t('incidents.panel.youtubeTitle')" frameborder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       allowfullscreen></iframe>
 
+                    <iframe v-if="isValidTelegram(link.src)" :title="$t('incidents.panel.telegramTitle')"
+                      class="video-embed" :src="telegramEmbed(link.src)" height="240px" width="100%" :id="link.src" />
+
                     <!-- <p v-if="!link.archive">No archived content</p> -->
                     <v-btn v-if="link.src" variant="outlined" color="secondary" class="ma-1" :href="link.src"
                       :title="$t(`incidents.panel.sourceButtonTitle`)" target="_blank" append-icon="mdi-open-in-new">
-                      {{ $t(`incidents.panel.sourceButton`, { index: linkIndex + 1 }) }}
+                      {{ $t(`incidents.panel.sourceButton`, { index: linkIndex + 1 }) }} -
+                      {{ getDomain(link.src) }}
+
+                      <v-tooltip v-if="link.time" activator="parent" location="top" open-delay="400">
+                        {{ $t(`incidents.panel.videoStartAt`, { seconds: link.time }) }}
+                      </v-tooltip>
                     </v-btn>
-                    {{ link.src }}
                     <v-divider v-if="i.links.length > linkIndex + 1" class="mb-3 mt-3"></v-divider>
                   </div>
 
@@ -109,7 +117,8 @@
     <v-tabs class="ml-auto mr-auto" v-model="selectedVillage" bg-color="primary" center-active show-arrows
       align-tabs="center" v-on:update:model-value="fitPolygon">
       <v-tab v-for="v in villages" :value="v.id" :key="v.id">
-        <v-badge  :content="v.incidents.filter(this.filterActiveIncident).length" floating :color="v.id == selectedVillage?'black':'blue-grey'">
+        <v-badge :content="v.incidents.filter(this.filterActiveIncident).length" floating
+          :color="v.id == selectedVillage ? 'black' : 'blue-grey'">
           {{ $t(`villages.${v.id}.name`) }}
         </v-badge>
       </v-tab>
@@ -121,15 +130,15 @@
       <!-- <v-label v-if="!smAndDown" class="pr-4">Buildings of Interest:</v-label> -->
       <v-slide-group show-arrows>
         <v-btn-toggle v-model="enabledTags" divided multiple>
-          <v-slide-group-item v-for="tb in tagTabs" :key="tb.value" :selected-class="`${tb.value}-selected`">
-            <v-btn :value="tb.value" :key="tb.value" density="compact" :size="smAndDown ? 'x-small' : 'small'"
-              variant="tonal" :color="tb.color">
+          <v-slide-group-item v-for="(tagProps, tag) in tagTabs" :key="tag" :selected-class="`${tag}-selected`">
+            <v-btn :value="tag" :key="tag" density="compact" :size="smAndDown ? 'x-small' : 'small'" variant="tonal"
+              :color="tagProps.color">
               <div class="d-flex align-center flex-column justify-center">
-                <!-- <v-icon :icon="tb.icon"></v-icon> -->
-                {{ $t(`buildingLocation.${tb.value}.name`) }}
+                <!-- <v-icon :icon="tagProps.icon"></v-icon> -->
+                {{ $t(`buildingLocation.${tag}.name`) }}
               </div>
               <v-tooltip activator="parent" location="top" open-delay="400" z-index="3000">{{
-                $t(`buildingLocation.${tb.value}.explanation`) }}</v-tooltip>
+                $t(`buildingLocation.${tag}.explanation`) }}</v-tooltip>
             </v-btn>
           </v-slide-group-item>
         </v-btn-toggle>
@@ -142,11 +151,12 @@
       <!-- <v-label v-if="!smAndDown" class="pr-4">Impact:</v-label> -->
       <v-slide-group show-arrows>
         <v-btn-toggle v-model="enabledImpacts" divided multiple color="blue-grey-darken-2">
-          <v-slide-group-item v-for="tb in impactTabs" :key="tb.value">
-            <v-btn :value="tb.value" :key="tb.value" :selected-class="`${tb.value}-selected v-tab--selected`"
-              density="compact" :size="smAndDown ? 'x-small' : 'small'">
+          <v-slide-group-item v-for="(impactProps, impact) in impactTabs" :key="impact">
+            <v-btn :value="impact" :key="impact" :selected-class="`${impact}-selected v-tab--selected`" density="compact"
+              :size="smAndDown ? 'x-small' : 'small'">
               <div class="d-flex align-center flex-column justify-center">
-                <v-icon :icon="tb.icon" :color="enabledImpacts.includes(tb.value)?'yellow':''"></v-icon>{{ $t(`impact.${tb.value}.name`) }}
+                <v-icon :icon="impactProps.icon" :color="enabledImpacts.includes(impact) ? 'yellow' : ''"></v-icon>{{
+                  $t(`impact.${impact}.name`) }}
               </div>
             </v-btn>
           </v-slide-group-item>
@@ -168,6 +178,7 @@ import config from "../../config";
 import TitleExpand from "./TitleExpand.vue"
 import OptionsButton from "./OptionsButton.vue"
 import MarkerUtils from "./js/MarkerUtils.js";
+import UrlUtils from "./js/UrlUtils.js";
 import { i18n } from '../plugins/vuetify'
 
 export default {
@@ -194,21 +205,22 @@ export default {
       satellites: {},
       clipboardWorks: navigator.clipboard !== undefined,
       tiles: config.app.map.tiles.default,
-      tagTabs: [
-        { value: "socialmedia", icon: "mdi-map-marker-multiple", color: "#00E5FF" },
-        { value: "satellite", icon: "mdi-satellite-variant", color: "#81C784" }
-      ],
-      impactTabs: [
-        { value: "civinfra", icon: "mdi-town-hall" },
-        { value: "privateprop", icon: "mdi-home-city" },
-        { value: "borderpost", icon: "mdi-sign-caution" },
-      ],
+      tagTabs: {
+        "socialmedia": { color: "#00E5FF" }, //, icon: "mdi-map-marker-multiple"
+        "satellite": { color: "#81C784" } // icon: "mdi-satellite-variant",
+      },
+      impactTabs: {
+        "civinfra": { icon: "mdi-town-hall" },
+        "privateprop": { icon: "mdi-home-city" },
+        "borderpost": { icon: "mdi-sign-caution" },
+      },
       enabledTags: ["socialmedia"],
       enabledImpacts: ["civinfra", "privateprop", "borderpost"],
       currentTileName: config.app.map.startTile,
       currentTile: null,
     }
   }, methods: {
+    ...UrlUtils,
     setTileLayer(tileName) {
       // remove previous tile if it exists
       if (this.currentTile != null) {
@@ -327,6 +339,8 @@ export default {
     addPolygon: async function (villageId) {
       let data = await fetch(`./polygons/${villageId}.geojson`).then(async data => await data.json());
       const villageBounds = L.geoJSON(data).getBounds();
+      console.log(villageId)
+      console.log(villageBounds)
       const circleCenter = villageBounds.getCenter();
       const circleRadius = Math.max(villageBounds.getSouthWest().distanceTo(villageBounds.getNorthEast()), villageBounds.getNorthWest().distanceTo(villageBounds.getSouthEast())) / 2;
 
@@ -367,8 +381,9 @@ export default {
     viewSat: function (_, villageId, active) {
       this.satellites[villageId].active = active;
       this.selectedSat = { villageId, active };
-      // only fitBounds to satellite if not in viewport yet
-      if (!this.map.getBounds().intersects(this.satellites[this.selectedSat.villageId]?.before?.overlay?.getBounds())) {
+      // only fitBounds to satellite if not in viewport yet Or too zoomed-out
+      console.log(this.map.getZoom())
+      if (!this.map.getBounds().intersects(this.satellites[this.selectedSat.villageId]?.before?.overlay?.getBounds()) || this.map.getZoom() <= 15) {
         this.map.fitBounds(this.satellites[this.selectedSat.villageId]?.before?.overlay?.getBounds(), this.getFitBoundsOptions())
       }
     },
@@ -622,6 +637,7 @@ iframe.video-embed {
     width: $markerRadius;
     height: $markerRadius;
     border-radius: $markerRadius;
+    background-color: #e3e3e34a;
 
     &:hover {
       // background-color: red;

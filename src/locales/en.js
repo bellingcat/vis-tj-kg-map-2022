@@ -46,7 +46,9 @@ export default {
     panel: {
       noSources: `No sources to show.`,
       videoNotSupported: `Your browser does not support the video tag.`,
+      videoStartAt: `Start video from {seconds}s`,
       youtubeTitle: `Youtube video player`,
+      telegramTitle: `Telegram embedded post`,
       sourceButtonTitle: `open original source`,
       sourceButton: `source {index}`,
       gMapsTitle: `show coordinates on google maps`,
