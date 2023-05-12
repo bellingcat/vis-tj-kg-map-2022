@@ -228,7 +228,6 @@ export default {
       }
 
       this.currentTileName = tileName || this.currentTileName;
-      console.log(`setting tile ${this.currentTileName}`)
       let tileUrl = this.mapConfig.tiles[this.currentTileName](this.mapConfig.mapboxToken);
       // add new tile
       this.currentTile = L.tileLayer(tileUrl, {
@@ -290,9 +289,6 @@ export default {
       const bf = village.satellite.before;
       this.satellites[village.id].before.data = bf;
       this.satellites[village.id].active = "before";
-      console.log(village.id)
-      console.log(`villages.${village.id}.name`)
-      console.log(this.$t(`villages.${village.id}.name`))
       this.satellites[village.id].before.overlay = L.imageOverlay(
         bf.url,
         L.latLngBounds(village.satellite.bounds), {
@@ -339,8 +335,6 @@ export default {
     addPolygon: async function (villageId) {
       let data = await fetch(`./polygons/${villageId}.geojson`).then(async data => await data.json());
       const villageBounds = L.geoJSON(data).getBounds();
-      console.log(villageId)
-      console.log(villageBounds)
       const circleCenter = villageBounds.getCenter();
       const circleRadius = Math.max(villageBounds.getSouthWest().distanceTo(villageBounds.getNorthEast()), villageBounds.getNorthWest().distanceTo(villageBounds.getSouthEast())) / 2;
 
@@ -382,7 +376,6 @@ export default {
       this.satellites[villageId].active = active;
       this.selectedSat = { villageId, active };
       // only fitBounds to satellite if not in viewport yet Or too zoomed-out
-      console.log(this.map.getZoom())
       if (!this.map.getBounds().intersects(this.satellites[this.selectedSat.villageId]?.before?.overlay?.getBounds()) || this.map.getZoom() <= 15) {
         this.map.fitBounds(this.satellites[this.selectedSat.villageId]?.before?.overlay?.getBounds(), this.getFitBoundsOptions())
       }
