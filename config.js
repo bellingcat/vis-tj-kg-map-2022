@@ -99,6 +99,30 @@ const config = {
       }
     }
   }, {
+    "id": "batken",
+    "name_en": "Batken",
+    "name_ru": "Баткен",
+    "description_en": "This is some info on the Batken village.",
+    "description_ru": "Это некоторая информация о поселке Баткен.",
+    "yandex": "https://yandex.ru/maps/geo/771296045/?l=sat%2Cskl&ll=70.827197%2C40.053080&z=14",
+    "stats": {
+      "population": "TODO maybe"
+    },
+    "satellite": {
+      "bounds": [
+        [40.056006, 70.811470],
+        [40.053336, 70.817432]
+      ],
+      "before": {
+        "url": "./satellite/batken-2022-06-06.jpg",
+        "date": "2022-06-06"
+      },
+      "after": {
+        "url": "./satellite/batken-2022-09-19.jpg",
+        "date": "2022-09-19"
+      }
+    }
+  }, {
     "id": "maksat",
     "name_en": "Maksat",
     "name_ru": "Максат",
