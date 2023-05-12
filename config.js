@@ -147,6 +147,30 @@ const config = {
         }
       }
     }, {
+      "id": "chorkishlok",
+      "name_en": "Chordeh",
+      "name_ru": "Чордех",
+      "description_en": "This is some info on the Chordeh village.",
+      "description_ru": "Это некоторая информация о поселке Чордех.",
+      "yandex": "https://yandex.ru/maps/geo/3496863555/?l=sat&ll=70.619929%2C40.061854&z=15",
+      "stats": {
+        "population": "TODO maybe"
+      },
+      "satellite": {
+        "bounds": [
+          [40.066217, 70.621070],
+          [40.063709, 70.626682]
+        ],
+        "before": {
+          "url": "./satellite/chorkishlok-2022-02-27.jpg",
+          "date": "2022-02-27"
+        },
+        "after": {
+          "url": "./satellite/chorkishlok-2022-11-01.jpg",
+          "date": "2022-11-01"
+        }
+      }
+    }, {
       "id": "maksat",
       "name_en": "Maksat",
       "name_ru": "Максат",
