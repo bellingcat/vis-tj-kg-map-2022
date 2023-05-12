@@ -8,15 +8,15 @@ const config = {
     map: {
       // anchor: { lat: 39.936132, lon: 69.931180 },
       // anchor: { lat: 40.05026367251, lon: 70.63018585 }, // maksat
-      anchor: { lat: 39.87811455, lon: 70.5107378 }, //aksai
+      anchor: { lat: 40.19233, lon: 69.873305 }, //aksai
       maxZoom: 18,
       minZoom: 4,
       // startZoom: 9,
-      startZoom: 15,
+      startZoom: 15.15,
       wheelPxPerZoomLevel: 120,
       zoomSnap: 0.50,
       mapboxToken: "pk.eyJ1IjoiYmVsbGluZ2NhdC1tYXBib3giLCJhIjoiY2tleW0wbWliMDA1cTJ5bzdkbTRraHgwZSJ9.GJQkjPzj8554VhR5SPsfJg",
-      startTile: 'osm',
+      startTile: 'satellite',
       tiles: {
         osm: () => `https://tile.openstreetmap.org/{z}/{x}/{y}.png`,
         satellite: (token) => `https://api.mapbox.com/styles/v1/bellingcat-mapbox/cl1win2vp003914pdhateva6p/tiles/256/{z}/{x}/{y}@2x?access_token=${token}`,
@@ -38,7 +38,8 @@ const config = {
       }
     }
   },
-  villages: [{
+  villages: [
+    {
     "id": "ak-sai",
     "name_en": "Ak-Sai",
     "name_ru": "Ак-Сай",
@@ -73,6 +74,30 @@ const config = {
       "population": "TODO maybe"
     },
     "satellite": {}
+  }, {
+    "id": "arka",
+    "name_en": "Arka",
+    "name_ru": "Арка",
+    "description_en": "This is some info on the Arka village.",
+    "description_ru": "Это некоторая информация о поселке Арка.",
+    "yandex": "https://yandex.ru/maps/geo/1508553697/?l=sat&ll=69.889571%2C40.195924&z=15",
+    "stats": {
+      "population": "TODO maybe"
+    },
+    "satellite": {
+      "bounds": [
+        [40.202673, 69.873405],
+        [40.184426, 69.887576]
+      ],
+      "before": {
+        "url": "./satellite/arka-2022-03-30.jpg",
+        "date": "2022-03-30"
+      },
+      "after": {
+        "url": "./satellite/arka-2022-10-03.jpg",
+        "date": "2022-10-03"
+      }
+    }
   }, {
     "id": "maksat",
     "name_en": "Maksat",
