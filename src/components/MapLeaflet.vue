@@ -109,11 +109,9 @@
     <v-tabs class="ml-auto mr-auto" v-model="selectedVillage" bg-color="primary" center-active show-arrows
       align-tabs="center" v-on:update:model-value="fitPolygon">
       <v-tab v-for="v in villages" :value="v.id" :key="v.id">
-        <v-badge v-if="v.id == selectedVillage" :content="v.incidents.filter(this.filterActiveIncident).length" floating
-          color="black">
+        <v-badge  :content="v.incidents.filter(this.filterActiveIncident).length" floating :color="v.id == selectedVillage?'black':'blue-grey'">
           {{ $t(`villages.${v.id}.name`) }}
         </v-badge>
-        <span v-if="v.id != selectedVillage">{{ $t(`villages.${v.id}.name`) }}</span>
       </v-tab>
     </v-tabs>
 
