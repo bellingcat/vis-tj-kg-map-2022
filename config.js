@@ -8,11 +8,11 @@ const config = {
     map: {
       // anchor: { lat: 39.936132, lon: 69.931180 },
       // anchor: { lat: 40.05026367251, lon: 70.63018585 }, // maksat
-      anchor: { lat: 40.19025, lon: 69.824087 }, //aksai
+      anchor: { lat: 40.120235, lon: 69.661630 }, //aksai
       maxZoom: 18,
       minZoom: 4,
       // startZoom: 9,
-      startZoom: 16,
+      startZoom: 15,
       wheelPxPerZoomLevel: 120,
       zoomSnap: 0.50,
       mapboxToken: "pk.eyJ1IjoiYmVsbGluZ2NhdC1tYXBib3giLCJhIjoiY2tleW0wbWliMDA1cTJ5bzdkbTRraHgwZSJ9.GJQkjPzj8554VhR5SPsfJg",
@@ -171,41 +171,6 @@ const config = {
         }
       }
     }, {
-      "id": "maksat",
-      "name_en": "Maksat",
-      "name_ru": "Максат",
-      "description_en": "This is some info on the Maksat village.",
-      "description_ru": "Это некоторая информация о поселке Максат.",
-      "yandex": "https://yandex.com/maps/geo/4209595903/?ll=69.700117%2C40.128022&z=14.11",
-      "stats": {
-        "population": "TODO maybe"
-      },
-      "satellite": {
-        "bounds": [
-          [40.136006, 69.704556],
-          [40.134149, 69.708604]
-        ],
-        "before": {
-          "url": "./satellite/maksat-2022-08-30.jpg",
-          "date": "2022-08-30"
-        },
-        "after": {
-          "url": "./satellite/maksat-2022-10-03.jpg",
-          "date": "2022-10-03"
-        }
-      }
-    }, {
-      "id": "international",
-      "name_en": "International",
-      "name_ru": "Интернациональное",
-      "description_en": "This is some info on the International village.",
-      "description_ru": "Это некоторая информация о поселке Интернациональное.",
-      "yandex": "https://yandex.ru/maps/geo/1508554928/?l=sat&ll=69.833683%2C40.188422&z=14",
-      "stats": {
-        "population": "TODO maybe"
-      },
-      "satellite": {}
-    }, {
       "id": "dostuk",
       "name_en": "Dostuk",
       "name_ru": "Достук",
@@ -227,6 +192,54 @@ const config = {
         "after": {
           "url": "./satellite/dostuk-2022-11-01.jpg",
           "date": "2022-11-01"
+        }
+      }
+    }, {
+      "id": "international",
+      "name_en": "International",
+      "name_ru": "Интернациональное",
+      "description_en": "This is some info on the International village.",
+      "description_ru": "Это некоторая информация о поселке Интернациональное.",
+      "yandex": "https://yandex.ru/maps/geo/1508554928/?l=sat&ll=69.833683%2C40.188422&z=14",
+      "stats": {
+        "population": "TODO maybe"
+      },
+      "satellite": {
+        "bounds": [
+          [40.122355, 69.661650],
+          [40.113302, 69.682138]
+        ],
+        "before": {
+          "url": "./satellite/international-2022-08-30.jpg",
+          "date": "2022-08-30"
+        },
+        "after": {
+          "url": "./satellite/international-2022-10-03.jpg",
+          "date": "2022-10-03"
+        }
+      }
+    }, {
+      "id": "maksat",
+      "name_en": "Maksat",
+      "name_ru": "Максат",
+      "description_en": "This is some info on the Maksat village.",
+      "description_ru": "Это некоторая информация о поселке Максат.",
+      "yandex": "https://yandex.com/maps/geo/4209595903/?ll=69.700117%2C40.128022&z=14.11",
+      "stats": {
+        "population": "TODO maybe"
+      },
+      "satellite": {
+        "bounds": [
+          [40.136006, 69.704556],
+          [40.134149, 69.708604]
+        ],
+        "before": {
+          "url": "./satellite/maksat-2022-08-30.jpg",
+          "date": "2022-08-30"
+        },
+        "after": {
+          "url": "./satellite/maksat-2022-10-03.jpg",
+          "date": "2022-10-03"
         }
       }
     }]

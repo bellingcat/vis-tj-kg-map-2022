@@ -74,6 +74,7 @@
                     <iframe v-if="isValidTelegram(link.src)" :title="$t('incidents.panel.telegramTitle')"
                       class="video-embed" :src="telegramEmbed(link.src)" height="240px" width="100%" :id="link.src" />
 
+
                     <!-- <p v-if="!link.archive">No archived content</p> -->
                     <v-btn v-if="link.src" variant="outlined" color="secondary" class="ma-1" :href="link.src"
                       :title="$t(`incidents.panel.sourceButtonTitle`)" target="_blank" append-icon="mdi-open-in-new">
@@ -770,5 +771,4 @@ div.v-overlay--absolute.v-tooltip div.v-overlay__content {
   /* CSS4 Proposed  */
   -ms-interpolation-mode: nearest-neighbor;
   /* IE8+           */
-}
-</style >
+}</style >
