@@ -7,11 +7,12 @@ const config = {
   app: {
     map: {
       // anchor: { lat: 39.936132, lon: 69.931180 },
-      anchor: { lat: 40.05026367251, lon: 70.63018585 },
+      // anchor: { lat: 40.05026367251, lon: 70.63018585 }, // maksat
+      anchor: { lat: 39.87811455, lon: 70.5107378 }, //aksai
       maxZoom: 18,
       minZoom: 4,
       // startZoom: 9,
-      startZoom: 16,
+      startZoom: 15,
       wheelPxPerZoomLevel: 120,
       zoomSnap: 0.50,
       mapboxToken: "pk.eyJ1IjoiYmVsbGluZ2NhdC1tYXBib3giLCJhIjoiY2tleW0wbWliMDA1cTJ5bzdkbTRraHgwZSJ9.GJQkjPzj8554VhR5SPsfJg",
@@ -38,6 +39,30 @@ const config = {
     }
   },
   villages: [{
+    "id": "ak-sai",
+    "name_en": "Ak-Sai",
+    "name_ru": "Ак-Сай",
+    "description_en": "This is some info on the Ак-Сай village.",
+    "description_ru": "Это некоторая информация о поселке Ак-Сай.",
+    "yandex": "https://yandex.com/maps/geo/1508557129/?ll=70.516430%2C39.878330&z=14",
+    "stats": {
+      "population": "TODO maybe"
+    },
+    "satellite": {
+      "bounds": [
+        [39.883406, 70.505637],
+        [39.874425, 70.525534]
+      ],
+      "before": {
+        "url": "./satellite/aksai-2022-03-02.jpg",
+        "date": "2022-03-02"
+      },
+      "after": {
+        "url": "./satellite/aksai-2022-11-01.jpg",
+        "date": "2022-11-01"
+      }
+    }
+  }, {
     "id": "maksat",
     "name_en": "Maksat",
     "name_ru": "Максат",

@@ -56,3 +56,14 @@ pnpm lint
 ### Customize configuration
 
 See [Configuration Reference](https://vitejs.dev/config/).
+
+
+### Configuring data/transaltions
+1. incidents present in [incidents.json](/public/incidents.json)
+2. villages configs in [config.js](config.js)
+3. translations in [config.js](config.js) and [locales/](src/locales/) (en and ru)
+
+### Fetching geojson's from yandex maps
+1. find the village
+2. Network > find the `search` which returns a large payload with all the village's data
+3. Extract, format and find the `GeometryCollection` info.
