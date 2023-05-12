@@ -267,6 +267,17 @@ const config = {
         }
       }
     }, {
+      "id": "kyzyl-bel",
+      "name_en": "Kyzyl-Bel",
+      "name_ru": "Кызыл-Бель",
+      "description_en": "This is some info on the Kyzyl-Bel village.",
+      "description_ru": "Это некоторая информация о поселке Кызыл-Бель.",
+      "yandex": "https://yandex.ru/maps/geo/1508553687/?l=sat%2Cskl&ll=70.741848%2C40.097820&z=15",
+      "stats": {
+        "population": "TODO maybe"
+      },
+      "satellite": {}
+    }, {
       "id": "maksat",
       "name_en": "Maksat",
       "name_ru": "Максат",
