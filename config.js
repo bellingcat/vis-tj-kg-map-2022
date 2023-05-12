@@ -42,7 +42,7 @@ const config = {
     "id": "ak-sai",
     "name_en": "Ak-Sai",
     "name_ru": "Ак-Сай",
-    "description_en": "This is some info on the Ак-Сай village.",
+    "description_en": "This is some info on the Ak-Sai village.",
     "description_ru": "Это некоторая информация о поселке Ак-Сай.",
     "yandex": "https://yandex.com/maps/geo/1508557129/?ll=70.516430%2C39.878330&z=14",
     "stats": {
@@ -62,6 +62,17 @@ const config = {
         "date": "2022-11-01"
       }
     }
+  }, {
+    "id": "ak-tatyr",
+    "name_en": "Ak-Tatyr",
+    "name_ru": "Ак-Татыр",
+    "description_en": "This is some info on the Ак-Сай village.",
+    "description_ru": "Это некоторая информация о поселке Ак-Татыр.",
+    "yandex": "https://yandex.com/maps/geo/1508557126/?ll=70.479325%2C39.961688&z=14.84",
+    "stats": {
+      "population": "TODO maybe"
+    },
+    "satellite": {}
   }, {
     "id": "maksat",
     "name_en": "Maksat",

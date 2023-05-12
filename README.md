@@ -65,5 +65,5 @@ See [Configuration Reference](https://vitejs.dev/config/).
 
 ### Fetching geojson's from yandex maps
 1. find the village
-2. Network > find the `search` which returns a large payload with all the village's data
+2. Network > find the `search?axaj=1` request which returns a large payload with all the village's data
 3. Extract, format and find the `GeometryCollection` info.
