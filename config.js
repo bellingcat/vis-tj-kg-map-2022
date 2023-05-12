@@ -8,11 +8,11 @@ const config = {
     map: {
       // anchor: { lat: 39.936132, lon: 69.931180 },
       // anchor: { lat: 40.05026367251, lon: 70.63018585 }, // maksat
-      anchor: { lat: 40.120235, lon: 69.661630 }, //aksai
+      anchor: { lat: 39.884641, lon: 70.520695 }, //aksai
       maxZoom: 18,
       minZoom: 4,
       // startZoom: 9,
-      startZoom: 15,
+      startZoom: 15.5,
       wheelPxPerZoomLevel: 120,
       zoomSnap: 0.50,
       mapboxToken: "pk.eyJ1IjoiYmVsbGluZ2NhdC1tYXBib3giLCJhIjoiY2tleW0wbWliMDA1cTJ5bzdkbTRraHgwZSJ9.GJQkjPzj8554VhR5SPsfJg",
@@ -216,6 +216,30 @@ const config = {
         "after": {
           "url": "./satellite/international-2022-10-03.jpg",
           "date": "2022-10-03"
+        }
+      }
+    },  {
+      "id": "kapchygai",
+      "name_en": "Kapchygai",
+      "name_ru": "Капчыгай",
+      "description_en": "This is some info on the Kapchygai village.",
+      "description_ru": "Это некоторая информация о поселке Капчыгай.",
+      "yandex": "https://yandex.ru/maps/geo/4114188022/?l=sat&ll=70.524627%2C39.884988&z=16",
+      "stats": {
+        "population": "TODO maybe"
+      },
+      "satellite": {
+        "bounds": [
+          [39.889441, 70.520695],
+          [39.880379, 70.531788]
+        ],
+        "before": {
+          "url": "./satellite/kapchygai-2022-03-02.jpg",
+          "date": "2022-03-02"
+        },
+        "after": {
+          "url": "./satellite/kapchygai-2022-11-01.jpg",
+          "date": "2022-11-01"
         }
       }
     }, {
