@@ -218,7 +218,7 @@ const config = {
           "date": "2022-10-03"
         }
       }
-    },  {
+    }, {
       "id": "kapchygai",
       "name_en": "Kapchygai",
       "name_ru": "Капчыгай",
@@ -240,6 +240,30 @@ const config = {
         "after": {
           "url": "./satellite/kapchygai-2022-11-01.jpg",
           "date": "2022-11-01"
+        }
+      }
+    }, {
+      "id": "karabak",
+      "name_en": "Karabak",
+      "name_ru": "Кара-Бак",
+      "description_en": "This is some info on the Karabak village.",
+      "description_ru": "Это некоторая информация о поселке Кара-Бак.",
+      "yandex": "https://yandex.ru/maps/geo/4024919320/?l=sat%2Cskl&ll=70.821785%2C40.154385&z=14",
+      "stats": {
+        "population": "TODO maybe"
+      },
+      "satellite": {
+        "bounds": [
+          [40.166333, 70.800183],
+          [40.153551, 70.833681]
+        ],
+        "before": {
+          "url": "./satellite/karabak-2022-06-02.jpg",
+          "date": "2022-06-02"
+        },
+        "after": {
+          "url": "./satellite/karabak-2022-09-19.jpg",
+          "date": "2022-09-19"
         }
       }
     }, {
