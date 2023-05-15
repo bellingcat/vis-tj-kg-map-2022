@@ -11,6 +11,7 @@ const config = {
       // anchor: { lat: 40.115915, lon: 69.684732 }, //aksai
       maxZoom: 19,
       minZoom: 4,
+      startZoom: 10,
       wheelPxPerZoomLevel: 120,
       zoomSnap: 0.50,
       mapboxToken: "pk.eyJ1IjoiYmVsbGluZ2NhdC1tYXBib3giLCJhIjoiY2tleW0wbWliMDA1cTJ5bzdkbTRraHgwZSJ9.GJQkjPzj8554VhR5SPsfJg",

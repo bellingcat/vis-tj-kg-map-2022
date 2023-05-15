@@ -73,6 +73,15 @@
           {{ $t(`options.links.code`) }}
         </v-list-item-title>
       </v-list-item>
+      <!-- share -->
+      <v-list-item @click="copyCurrentUrl()">
+        <template v-slot:prepend>
+          <v-icon icon="mdi-share" size="large"></v-icon>
+        </template>
+        <v-list-item-title class="text-uppercase">
+          {{ $t(`options.links.share.button`) }}
+        </v-list-item-title>
+      </v-list-item>
 
     </v-list>
   </v-menu>
@@ -106,6 +115,7 @@ export default {
 
       //others
       toastOptions: config.app.ui.toastOptions,
+      clipboardWorks: navigator.clipboard !== undefined,
     }
   },
   setup() {
@@ -144,6 +154,19 @@ export default {
     },
     openUrl(url) {
       window.open(url, '_blank');
+    },
+    copyCurrentUrl(url) {
+      url = url || window.location;
+      if (this.clipboardWorks) {
+        try {
+          navigator.clipboard.writeText(url);
+          this.toast(this.$t('options.links.share.success'), this.toastOptions);
+        } catch (error) {
+          console.log(`Could not copy: ${error}`)
+          this.toast.error(this.$t('options.links.share.error'), this.toastOptions);
+          // this.openUrl(url)
+        }
+      }
     },
   },
   mounted() {

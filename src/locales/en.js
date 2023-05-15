@@ -74,12 +74,17 @@ export default {
       off: "exit fullscreen"
     },
     download: {
-      json: "JSON data",
-      csv: "CSV data",
+      json: "JSON DATA",
+      csv: "CSV DATA",
     },
     links: {
       bellingcat: "Bellingcat",
       code: "Code",
+      share: {
+        button: "Share Map",
+        success: `Link copied to clipboard`,
+        error: `Unable to copy link to clipboard`,
+      }
     }
   },
   villages: {

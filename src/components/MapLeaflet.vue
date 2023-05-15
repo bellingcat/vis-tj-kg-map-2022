@@ -52,6 +52,7 @@
                 <v-expansion-panel-title class="pa-0 pl-1 pr-1">
                   <!-- <v-icon :icon="x.key=='military'?'mdi-knife-military':''"></v-icon> -->
                   <!-- <small class="mr-2 pa-1" :class="`chip-${i.tag}`">{{ i.tag }}</small> -->
+                  <small class="mr-2 pa-1 pl-2 pr-2 chip-tkid" title="ID">TK-{{ i.tkid }}</small>
                   <v-icon :icon="impactTabs[i.impact]?.icon" :color="tagTabs[i.tag]?.color" class="mr-3"></v-icon>
                   {{ $t(`incidents.all.${i.id}.description`) || $t(`incidents.defaultName`, { index: i.index + 1 }) }}
                 </v-expansion-panel-title>
@@ -74,6 +75,7 @@
                     <iframe v-if="isValidTelegram(link.src)" :title="$t('incidents.panel.telegramTitle')"
                       class="video-embed" :src="telegramEmbed(link.src)" height="240px" width="100%" :id="link.src" />
 
+                    <!-- TODO: embed if image jpg... -->
 
                     <!-- <p v-if="!link.archive">No archived content</p> -->
                     <v-btn v-if="link.src" variant="outlined" color="secondary" class="ma-1" :href="link.src"
@@ -114,11 +116,11 @@
   </v-card>
 
   <v-card class="village-tabs ma-0 mb-0 ml-auto mr-auto" :class="mdAndDown ? 'w-100' : 'w-50'">
-
     <v-tabs class="ml-auto mr-auto" v-model="selectedVillage" bg-color="primary" center-active show-arrows
       align-tabs="center" v-on:update:model-value="fitPolygon">
       <v-tab v-for="v in villages" :value="v.id" :key="v.id">
-        <v-badge :content="v.incidents.filter(this.filterActiveIncident).length" floating
+        <v-badge @mouseover="hoverVillage = v.id" @mouseleave="hoverVillage = null"
+          :content="v.incidents.filter(this.filterActiveIncident).length" floating
           :color="v.id == selectedVillage ? 'black' : 'blue-grey'">
           {{ $t(`villages.${v.id}.name`) }}
         </v-badge>
@@ -206,6 +208,7 @@ export default {
       satellites: {},
       clipboardWorks: navigator.clipboard !== undefined,
       tiles: config.app.map.tiles.default,
+      hoverVillage: null,
       tagTabs: {
         "socialmedia": { color: "#00E5FF" }, //, icon: "mdi-map-marker-multiple"
         "satellite": { color: "#81C784" } // icon: "mdi-satellite-variant",
@@ -340,6 +343,12 @@ export default {
       const circleRadius = Math.max(villageBounds.getSouthWest().distanceTo(villageBounds.getNorthEast()), villageBounds.getNorthWest().distanceTo(villageBounds.getSouthEast())) / 2;
 
       this.polygons[villageId] = L.circle(circleCenter, { radius: circleRadius }).addTo(this.map);
+      this.polygons[villageId].setStyle({
+        fillColor: "#000",
+        weight: 2,
+        color: "#000",
+        fillOpacity: 0.1,
+      });
       // clicking on a polygon selects it
       this.polygons[villageId].on("click", () => {
         this.selectedVillage = villageId;
@@ -456,12 +465,18 @@ export default {
         })
       })
     },
-  },
-  watch: {
-    selectedVillage: function (villageId, prevV) {
-      this.selectedIncidents[prevV] = null; // reset the open incident/marker
+    updatePolygonColors() {
       Object.keys(this.polygons).forEach(vId => {
-        if (vId == villageId) {
+        this.polygons[vId].unbindTooltip();
+        if (vId == this.hoverVillage) {
+          this.polygons[vId].setStyle({
+            fillColor: "#FF6F00",
+            weight: 2,
+            color: "#FF5722",
+            fillOpacity: 0.2,
+          });
+          this.polygons[vId].bindTooltip(this.$t(`villages.${vId}.name`)).openTooltip();
+        } else if (vId == this.selectedVillage) {
           this.polygons[vId].setStyle({
             fillColor: "#FFAB00",
             weight: 2,
@@ -477,6 +492,12 @@ export default {
           });
         }
       })
+    }
+  },
+  watch: {
+    selectedVillage: function (_villageId, prevV) {
+      this.selectedIncidents[prevV] = null; // reset the open incident/marker
+      this.updatePolygonColors();
     },
     selectedIncidents: {
       handler: function (sI) {
@@ -510,6 +531,7 @@ export default {
       },
       deep: true
     },
+    hoverVillage: function () { this.updatePolygonColors() },
     enabledTags: function () { this.refreshVisibleIncidents() },
     enabledImpacts: function () { this.refreshVisibleIncidents() },
   },
@@ -695,17 +717,22 @@ iframe.video-embed {
   }
 }
 
-.chip-military,
-.chip-destruction {
+// .chip-military,
+// .chip-destruction,
+.chip-tkid {
   border-radius: 6px;
 }
 
-.chip-destruction {
-  border: 1px solid $destructionColor;
-}
+// .chip-destruction {
+//   border: 1px solid $destructionColor;
+// }
 
-.chip-military {
-  border: 1px solid $militaryColor;
+// .chip-military {
+//   border: 1px solid $militaryColor;
+// }
+
+.chip-tkid {
+  border: 1px solid black;
 }
 
 // override default height for stacked
@@ -771,4 +798,5 @@ div.v-overlay--absolute.v-tooltip div.v-overlay__content {
   /* CSS4 Proposed  */
   -ms-interpolation-mode: nearest-neighbor;
   /* IE8+           */
-}</style >
+}
+</style >
