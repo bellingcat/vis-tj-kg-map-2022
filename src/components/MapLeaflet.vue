@@ -471,13 +471,15 @@ export default {
       Object.keys(this.polygons).forEach(vId => {
         this.polygons[vId].unbindTooltip();
         if (vId == this.hoverVillage) {
-          this.polygons[vId].setStyle({
-            fillColor: "#FF6F00",
-            weight: 2,
-            color: "#FF5722",
-            fillOpacity: 0.2,
-          });
-          this.polygons[vId].bindTooltip(this.$t(`villages.${vId}.name`)).openTooltip();
+          if (!L.Browser.mobile) {
+            this.polygons[vId].setStyle({
+              fillColor: "#FF6F00",
+              weight: 2,
+              color: "#FF5722",
+              fillOpacity: 0.2,
+            });
+            this.polygons[vId].bindTooltip(this.$t(`villages.${vId}.name`)).openTooltip();
+          }
         } else if (vId == this.selectedVillage) {
           this.polygons[vId].setStyle({
             fillColor: "#FFAB00",
@@ -588,7 +590,7 @@ function assert(condition, message) {
 
 
     // right: 0;
-    bottom: 104px; // 48 + 56px
+    bottom: 144px; // 48px x 3
     height: 40vh;
     max-height: 40vh;
     margin-left: auto;
