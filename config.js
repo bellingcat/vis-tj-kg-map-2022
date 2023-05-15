@@ -6,17 +6,15 @@ const config = {
 
   app: {
     map: {
-      // anchor: { lat: 39.936132, lon: 69.931180 },
+      anchor: { lat: 39.936132, lon: 69.931180 },
       // anchor: { lat: 40.05026367251, lon: 70.63018585 }, // maksat
-      anchor: { lat: 40.115915, lon: 69.684732 }, //aksai
+      // anchor: { lat: 40.115915, lon: 69.684732 }, //aksai
       maxZoom: 19,
       minZoom: 4,
-      // startZoom: 9,
-      startZoom: 17,
       wheelPxPerZoomLevel: 120,
       zoomSnap: 0.50,
       mapboxToken: "pk.eyJ1IjoiYmVsbGluZ2NhdC1tYXBib3giLCJhIjoiY2tleW0wbWliMDA1cTJ5bzdkbTRraHgwZSJ9.GJQkjPzj8554VhR5SPsfJg",
-      startTile: 'satellite',
+      startTile: 'osm',
       tiles: {
         osm: () => `https://tile.openstreetmap.org/{z}/{x}/{y}.png`,
         satellite: (token) => `https://api.mapbox.com/styles/v1/bellingcat-mapbox/cl1win2vp003914pdhateva6p/tiles/256/{z}/{x}/{y}@2x?access_token=${token}`,
@@ -63,18 +61,20 @@ const config = {
           "date": "2022-11-01"
         }
       }
-    }, {
-      "id": "ak-tatyr",
-      "name_en": "Ak-Tatyr",
-      "name_ru": "Ак-Татыр",
-      "description_en": "This is some info on the Ак-Сай village.",
-      "description_ru": "Это некоторая информация о поселке Ак-Татыр.",
-      "yandex": "https://yandex.com/maps/geo/1508557126/?ll=70.479325%2C39.961688&z=14.84",
-      "stats": {
-        "population": "TODO maybe"
-      },
-      "satellite": {}
-    }, {
+    },
+    // {
+    //   "id": "ak-tatyr",
+    //   "name_en": "Ak-Tatyr",
+    //   "name_ru": "Ак-Татыр",
+    //   "description_en": "This is some info on the Ак-Сай village.",
+    //   "description_ru": "Это некоторая информация о поселке Ак-Татыр.",
+    //   "yandex": "https://yandex.com/maps/geo/1508557126/?ll=70.479325%2C39.961688&z=14.84",
+    //   "stats": {
+    //     "population": "TODO maybe"
+    //   },
+    //   "satellite": {}
+    // },
+    {
       "id": "arka",
       "name_en": "Arka",
       "name_ru": "Арка",
@@ -266,18 +266,20 @@ const config = {
           "date": "2022-09-19"
         }
       }
-    }, {
-      "id": "kyzyl-bel",
-      "name_en": "Kyzyl-Bel",
-      "name_ru": "Кызыл-Бель",
-      "description_en": "This is some info on the Kyzyl-Bel village.",
-      "description_ru": "Это некоторая информация о поселке Кызыл-Бель.",
-      "yandex": "https://yandex.ru/maps/geo/1508553687/?l=sat%2Cskl&ll=70.741848%2C40.097820&z=15",
-      "stats": {
-        "population": "TODO maybe"
-      },
-      "satellite": {}
-    }, {
+    },
+    //  {
+    //   "id": "kyzyl-bel",
+    //   "name_en": "Kyzyl-Bel",
+    //   "name_ru": "Кызыл-Бель",
+    //   "description_en": "This is some info on the Kyzyl-Bel village.",
+    //   "description_ru": "Это некоторая информация о поселке Кызыл-Бель.",
+    //   "yandex": "https://yandex.ru/maps/geo/1508553687/?l=sat%2Cskl&ll=70.741848%2C40.097820&z=15",
+    //   "stats": {
+    //     "population": "TODO maybe"
+    //   },
+    //   "satellite": {}
+    // },
+    {
       "id": "lakkon",
       "name_en": "Lakkon",
       "name_ru": "Лаккон",
@@ -397,6 +399,17 @@ const config = {
           "date": "2022-10-03"
         }
       }
+    }, {
+      "id": "vorukh",
+      "name_en": "Vorukh",
+      "name_ru": "Ворух",
+      "description_en": "This is some info on the Vorukh village.",
+      "description_ru": "Это некоторая информация о поселке Ворух.",
+      "yandex": "https://yandex.ru/maps/geo/2013643750/?l=sat&ll=70.532777%2C39.875283&z=15",
+      // "stats": {
+      //   "population": "TODO maybe"
+      // },
+      "satellite": {}
     }]
 };
 
