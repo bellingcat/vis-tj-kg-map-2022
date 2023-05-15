@@ -8,11 +8,11 @@ const config = {
     map: {
       // anchor: { lat: 39.936132, lon: 69.931180 },
       // anchor: { lat: 40.05026367251, lon: 70.63018585 }, // maksat
-      anchor: { lat: 39.884641, lon: 70.520695 }, //aksai
-      maxZoom: 18,
+      anchor: { lat: 40.170147, lon: 70.867946}, //aksai
+      maxZoom: 19,
       minZoom: 4,
       // startZoom: 9,
-      startZoom: 15.5,
+      startZoom: 18,
       wheelPxPerZoomLevel: 120,
       zoomSnap: 0.50,
       mapboxToken: "pk.eyJ1IjoiYmVsbGluZ2NhdC1tYXBib3giLCJhIjoiY2tleW0wbWliMDA1cTJ5bzdkbTRraHgwZSJ9.GJQkjPzj8554VhR5SPsfJg",
@@ -278,6 +278,30 @@ const config = {
       },
       "satellite": {}
     }, {
+      "id": "lakkon",
+      "name_en": "Lakkon",
+      "name_ru": "Лаккон",
+      "description_en": "This is some info on the Lakkon village.",
+      "description_ru": "Это некоторая информация о поселке Лаккон.",
+      "yandex": "https://yandex.ru/maps/geo/1508553686/?l=sat&ll=70.861816%2C40.176772&z=15",
+      "stats": {
+        "population": "TODO maybe"
+      },
+      "satellite": {
+        "bounds": [
+          [40.172841, 70.862127],
+          [40.170207, 70.867966]
+        ],
+        "before": {
+          "url": "./satellite/lakkon-2022-07-23.jpg",
+          "date": "2022-07-23"
+        },
+        "after": {
+          "url": "./satellite/lakkon-2022-09-17.jpg",
+          "date": "2022-09-17"
+        }
+      }
+    }, {
       "id": "maksat",
       "name_en": "Maksat",
       "name_ru": "Максат",
@@ -301,6 +325,30 @@ const config = {
           "date": "2022-10-03"
         }
       }
+    }, {
+      // "id": "min-bulak",
+      // "name_en": "Maksat",
+      // "name_ru": "Максат",
+      // "description_en": "This is some info on the Maksat village.",
+      // "description_ru": "Это некоторая информация о поселке Максат.",
+      // "yandex": "https://yandex.com/maps/geo/4209595903/?ll=69.700117%2C40.128022&z=14.11",
+      // "stats": {
+      //   "population": "TODO maybe"
+      // },
+      // "satellite": {
+      //   "bounds": [
+      //     [40.136006, 69.704556],
+      //     [40.134149, 69.708604]
+      //   ],
+      //   "before": {
+      //     "url": "./satellite/maksat-2022-08-30.jpg",
+      //     "date": "2022-08-30"
+      //   },
+      //   "after": {
+      //     "url": "./satellite/maksat-2022-10-03.jpg",
+      //     "date": "2022-10-03"
+      //   }
+      // }
     }]
 };
 
