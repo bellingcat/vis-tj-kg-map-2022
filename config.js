@@ -8,11 +8,11 @@ const config = {
     map: {
       // anchor: { lat: 39.936132, lon: 69.931180 },
       // anchor: { lat: 40.05026367251, lon: 70.63018585 }, // maksat
-      anchor: { lat: 39.997023, lon: 70.617505 }, //aksai
+      anchor: { lat: 40.115915, lon: 69.684732 }, //aksai
       maxZoom: 19,
       minZoom: 4,
       // startZoom: 9,
-      startZoom: 16,
+      startZoom: 17,
       wheelPxPerZoomLevel: 120,
       zoomSnap: 0.50,
       mapboxToken: "pk.eyJ1IjoiYmVsbGluZ2NhdC1tYXBib3giLCJhIjoiY2tleW0wbWliMDA1cTJ5bzdkbTRraHgwZSJ9.GJQkjPzj8554VhR5SPsfJg",
@@ -371,6 +371,30 @@ const config = {
         "after": {
           "url": "./satellite/min-oruk-2022-11-01.jpg",
           "date": "2022-11-01"
+        }
+      }
+    }, {
+      "id": "ovchi-kalacha",
+      "name_en": "Ovchikalacha",
+      "name_ru": "Овчикалача",
+      "description_en": "This is some info on the Ovchikalacha village.",
+      "description_ru": "Это некоторая информация о поселке Овчикалача.",
+      "yandex": "https://yandex.ru/maps/geo/3159398637/?l=sat&ll=69.676854%2C40.126601&z=14",
+      // "stats": {
+      //   "population": "TODO maybe"
+      // },
+      "satellite": {
+        "bounds": [
+          [40.129800, 69.679759],
+          [40.115515, 69.689402]
+        ],
+        "before": {
+          "url": "./satellite/ovchi-kalacha-2022-08-30.jpg",
+          "date": "2022-08-30"
+        },
+        "after": {
+          "url": "./satellite/ovchi-kalacha-2022-10-03.jpg",
+          "date": "2022-10-03"
         }
       }
     }]
