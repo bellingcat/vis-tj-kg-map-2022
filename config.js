@@ -8,7 +8,7 @@ const config = {
     map: {
       // anchor: { lat: 39.936132, lon: 69.931180 },
       // anchor: { lat: 40.05026367251, lon: 70.63018585 }, // maksat
-      anchor: { lat: 39.983070, lon: 70.618106 }, //aksai
+      anchor: { lat: 39.997023, lon: 70.617505 }, //aksai
       maxZoom: 19,
       minZoom: 4,
       // startZoom: 9,
@@ -346,6 +346,30 @@ const config = {
         },
         "after": {
           "url": "./satellite/min-bulak-2022-11-01.jpg",
+          "date": "2022-11-01"
+        }
+      }
+    }, {
+      "id": "min-oruk",
+      "name_en": "Min-Oruk",
+      "name_ru": "Мин-Орук",
+      "description_en": "This is some info on the Min-Oruk village.",
+      "description_ru": "Это некоторая информация о поселке Мин-Орук.",
+      "yandex": "https://yandex.ru/maps/geo/4114127012/?l=sat&ll=70.628840%2C39.995050&z=15",
+      // "stats": {
+      //   "population": "TODO maybe"
+      // },
+      "satellite": {
+        "bounds": [
+          [40.001899, 70.617585],
+          [39.990400, 70.628043]
+        ],
+        "before": {
+          "url": "./satellite/min-oruk-2022-07-08.jpg",
+          "date": "2022-07-08"
+        },
+        "after": {
+          "url": "./satellite/min-oruk-2022-11-01.jpg",
           "date": "2022-11-01"
         }
       }
