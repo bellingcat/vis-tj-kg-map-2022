@@ -8,11 +8,11 @@ const config = {
     map: {
       // anchor: { lat: 39.936132, lon: 69.931180 },
       // anchor: { lat: 40.05026367251, lon: 70.63018585 }, // maksat
-      anchor: { lat: 40.170147, lon: 70.867946}, //aksai
+      anchor: { lat: 39.983070, lon: 70.618106 }, //aksai
       maxZoom: 19,
       minZoom: 4,
       // startZoom: 9,
-      startZoom: 18,
+      startZoom: 16,
       wheelPxPerZoomLevel: 120,
       zoomSnap: 0.50,
       mapboxToken: "pk.eyJ1IjoiYmVsbGluZ2NhdC1tYXBib3giLCJhIjoiY2tleW0wbWliMDA1cTJ5bzdkbTRraHgwZSJ9.GJQkjPzj8554VhR5SPsfJg",
@@ -284,9 +284,9 @@ const config = {
       "description_en": "This is some info on the Lakkon village.",
       "description_ru": "Это некоторая информация о поселке Лаккон.",
       "yandex": "https://yandex.ru/maps/geo/1508553686/?l=sat&ll=70.861816%2C40.176772&z=15",
-      "stats": {
-        "population": "TODO maybe"
-      },
+      // "stats": {
+      //   "population": "TODO maybe"
+      // },
       "satellite": {
         "bounds": [
           [40.172841, 70.862127],
@@ -308,9 +308,9 @@ const config = {
       "description_en": "This is some info on the Maksat village.",
       "description_ru": "Это некоторая информация о поселке Максат.",
       "yandex": "https://yandex.com/maps/geo/4209595903/?ll=69.700117%2C40.128022&z=14.11",
-      "stats": {
-        "population": "TODO maybe"
-      },
+      // "stats": {
+      //   "population": "TODO maybe"
+      // },
       "satellite": {
         "bounds": [
           [40.136006, 69.704556],
@@ -326,29 +326,29 @@ const config = {
         }
       }
     }, {
-      // "id": "min-bulak",
-      // "name_en": "Maksat",
-      // "name_ru": "Максат",
-      // "description_en": "This is some info on the Maksat village.",
-      // "description_ru": "Это некоторая информация о поселке Максат.",
-      // "yandex": "https://yandex.com/maps/geo/4209595903/?ll=69.700117%2C40.128022&z=14.11",
+      "id": "min-bulak",
+      "name_en": "Min-Bulak",
+      "name_ru": "Мин-Булак",
+      "description_en": "This is some info on the Min-Bulak village.",
+      "description_ru": "Это некоторая информация о поселке Мин-Булак.",
+      "yandex": "https://yandex.ru/maps/geo/4229754559/?l=sat%2Cskl&ll=70.632302%2C39.983485&z=15",
       // "stats": {
       //   "population": "TODO maybe"
       // },
-      // "satellite": {
-      //   "bounds": [
-      //     [40.136006, 69.704556],
-      //     [40.134149, 69.708604]
-      //   ],
-      //   "before": {
-      //     "url": "./satellite/maksat-2022-08-30.jpg",
-      //     "date": "2022-08-30"
-      //   },
-      //   "after": {
-      //     "url": "./satellite/maksat-2022-10-03.jpg",
-      //     "date": "2022-10-03"
-      //   }
-      // }
+      "satellite": {
+        "bounds": [
+          [39.987702, 70.618198],
+          [39.977753, 70.626834]
+        ],
+        "before": {
+          "url": "./satellite/min-bulak-2022-07-08.jpg",
+          "date": "2022-07-08"
+        },
+        "after": {
+          "url": "./satellite/min-bulak-2022-11-01.jpg",
+          "date": "2022-11-01"
+        }
+      }
     }]
 };
 

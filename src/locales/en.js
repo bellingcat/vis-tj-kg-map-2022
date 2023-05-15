@@ -74,8 +74,8 @@ export default {
       off: "exit fullscreen"
     },
     download: {
-      json: "JSON",
-      csv: "CSV",
+      json: "JSON data",
+      csv: "CSV data",
     },
     links: {
       bellingcat: "Bellingcat",
