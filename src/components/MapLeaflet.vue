@@ -117,7 +117,7 @@
 
   <v-card class="village-tabs ma-0 mb-0 ml-auto mr-auto" :class="mdAndDown ? 'w-100' : 'w-50'">
     <v-tabs class="ml-auto mr-auto" v-model="selectedVillage" bg-color="primary" center-active show-arrows
-      align-tabs="center" v-on:update:model-value="fitPolygon">
+      align-tabs="center" v-on:update:model-value="fitPolygon" mandatory="false">
       <v-tab v-for="v in villages" :value="v.id" :key="v.id">
         <v-badge @mouseover="hoverVillage = v.id" @mouseleave="hoverVillage = null"
           :content="v.incidents.filter(this.filterActiveIncident).length" floating
@@ -324,16 +324,25 @@ export default {
           this.satellites[village.id].after?.overlay?.setOpacity(0.8);
         }
       }
-
-      imagePane.addEventListener('click', () => {
-        if (this.satellites[village.id].active == "before") {
-          this.satellites[village.id].active = "after";
-        } else {
-          this.satellites[village.id].active = "before";
+      const clickCoords = { x: 0, y: 0, delta: 10 }; // used not to change imagery on map drag
+      imagePane.addEventListener('mousedown', (e) => {
+        clickCoords.x = e.pageX;
+        clickCoords.y = e.pageY;
+      })
+      imagePane.addEventListener('mouseup', (e) => {
+        const diffX = Math.abs(e.pageX - clickCoords.x);
+        const diffY = Math.abs(e.pageY - clickCoords.y);
+        if (diffX < clickCoords.delta && diffY < clickCoords.delta) {
+          // Click and not drag
+          if (this.satellites[village.id].active == "before") {
+            this.satellites[village.id].active = "after";
+          } else {
+            this.satellites[village.id].active = "before";
+          }
+          this.selectedVillage = village.id;
+          this.selectedSat = { villageId: village.id, active: this.satellites[village.id].active };
+          this.satellites[village.id].display();
         }
-        this.selectedVillage = village.id;
-        this.selectedSat = { villageId: village.id, active: this.satellites[village.id].active };
-        this.satellites[village.id].display();
       });
     },
     addPolygon: async function (villageId) {
@@ -352,7 +361,7 @@ export default {
       // clicking on a polygon selects it
       this.polygons[villageId].on("click", () => {
         this.selectedVillage = villageId;
-        this.map.fitBounds(this.polygons[villageId].getBounds(), this.getFitBoundsOptions());
+        this.map.flyToBounds(this.polygons[villageId].getBounds(), this.getFitBoundsOptions());
       })
     },
     addMarkers: function (village) {
@@ -387,13 +396,13 @@ export default {
       this.selectedSat = { villageId, active };
       // only fitBounds to satellite if not in viewport yet Or too zoomed-out
       if (!this.map.getBounds().intersects(this.satellites[this.selectedSat.villageId]?.before?.overlay?.getBounds()) || this.map.getZoom() <= 15) {
-        this.map.fitBounds(this.satellites[this.selectedSat.villageId]?.before?.overlay?.getBounds(), this.getFitBoundsOptions())
+        this.map.flyToBounds(this.satellites[this.selectedSat.villageId]?.before?.overlay?.getBounds(), this.getFitBoundsOptions())
       }
     },
     fitPolygon: function (villageId) {
       if (this.polygons[villageId]) {
         console.log(`FITTING POLYGON ${villageId}`)
-        this.map.fitBounds(this.polygons[villageId].getBounds(), this.getFitBoundsOptions())
+        this.map.flyToBounds(this.polygons[villageId].getBounds(), this.getFitBoundsOptions())
       }
     },
     copyText(_, text) {
@@ -408,23 +417,16 @@ export default {
       }
     },
     getFitBoundsOptions() {
-      // calculates necessary padding options for map.fitBounds to exclude menus and bars.
+      // calculates necessary padding options for map.flyToBounds to exclude menus and bars.
       const leftSidebarWidth = this.$refs.sidebar.$el?.offsetWidth || 0;
       const sideBarRect = this.$refs.sidebar.$el?.getBoundingClientRect() || {};
       const titleOffsetTop = this.$refs.titleExpand.$el?.nextElementSibling?.getBoundingClientRect()?.bottom || 0;
-      console.log({
-        paddingTopLeft: [this.smAndDown ? 0 : leftSidebarWidth, titleOffsetTop],
-        paddingBottomRight: [0, this.smAndDown ? window.innerHeight - sideBarRect?.top : 48],
-        animate: true,
-        duration: 1.5,
-        // easeLinearity: 0.25
-      })
       return {
         paddingTopLeft: [this.smAndDown ? 0 : leftSidebarWidth, titleOffsetTop],
         paddingBottomRight: [0, this.smAndDown ? window.innerHeight - sideBarRect?.top : 48],
         animate: true,
-        duration: 1.5,
-        // easeLinearity: 0.25
+        duration: 1.0,
+        easeLinearity: 0.75
       }
     },
     convertToEmbedUrl: function (url) {
@@ -514,7 +516,7 @@ export default {
         if (sI[this.selectedVillage]) {
           // fit map to marker
           console.log(`SELECTED INCIDENT ${JSON.stringify(sI[this.selectedVillage])}`)
-          this.map.fitBounds(this.markers[sI[this.selectedVillage]].group.getBounds(), { ...this.getFitBoundsOptions(), maxZoom: Math.max(17, this.map.getZoom()) });
+          this.map.flyToBounds(this.markers[sI[this.selectedVillage]].group.getBounds(), { ...this.getFitBoundsOptions(), maxZoom: Math.max(17, this.map.getZoom()) });
 
           // scroll to content on sidebar
           setTimeout(() => {
