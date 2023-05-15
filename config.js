@@ -7,11 +7,11 @@ const config = {
   app: {
     map: {
       anchor: { lat: 39.936132, lon: 69.931180 },
-      // anchor: { lat: 40.05026367251, lon: 70.63018585 }, // maksat
-      // anchor: { lat: 40.115915, lon: 69.684732 }, //aksai
+      // anchor: { lat: 40.132130, lon: 69.688729 },
       maxZoom: 19,
       minZoom: 4,
       startZoom: 10,
+      // startZoom: 15,
       wheelPxPerZoomLevel: 120,
       zoomSnap: 0.50,
       mapboxToken: "pk.eyJ1IjoiYmVsbGluZ2NhdC1tYXBib3giLCJhIjoiY2tleW0wbWliMDA1cTJ5bzdkbTRraHgwZSJ9.GJQkjPzj8554VhR5SPsfJg",
@@ -316,8 +316,8 @@ const config = {
       // },
       "satellite": {
         "bounds": [
-          [40.136006, 69.704556],
-          [40.134149, 69.708604]
+          [40.135828, 69.689145],
+          [40.124024, 69.708766]
         ],
         "before": {
           "url": "./satellite/maksat-2022-08-30.jpg",
@@ -389,7 +389,7 @@ const config = {
       "satellite": {
         "bounds": [
           [40.129800, 69.679759],
-          [40.115515, 69.689402]
+          [40.115515, 69.689352]
         ],
         "before": {
           "url": "./satellite/ovchi-kalacha-2022-08-30.jpg",
