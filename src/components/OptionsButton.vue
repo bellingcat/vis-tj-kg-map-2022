@@ -1,5 +1,5 @@
 <template>
-  <v-menu id="options-menu" transition="scale-transition" :close-on-content-click="false" offset-y>
+  <v-menu id="options-menu" transition="scale-transition" :close-on-content-click="false" offset-y v-model="menuOpen">
     <template v-slot:activator="{ props }">
       <v-btn icon="mdi-dots-vertical" v-bind="props" id="options-menu-btn" class="ma-1 pa-0"></v-btn>
     </template>
@@ -119,6 +119,16 @@
         </v-list-item-title>
       </v-list-item>
 
+      <!-- info panel -->
+      <v-list-item @click="showAboutPanel()">
+        <template v-slot:prepend>
+          <v-icon icon="mdi-information-outline" size="large"></v-icon>
+        </template>
+        <v-list-item-title class="text-uppercase">
+          {{ $t(`options.links.about`) }}
+        </v-list-item-title>
+      </v-list-item>
+
     </v-list>
   </v-menu>
   <!-- </v-card> -->
@@ -134,9 +144,11 @@ import config from "../../config";
 export default {
   name: 'OptionsButton',
   props: ['startTile'],
-  emits: ['newTile', 'embedChanged'],
+  emits: ['newTile', 'embedChanged', 'showAboutPanel'],
   data() {
     return {
+      menuOpen: false,
+
       // layers
       availableTiles: Object.keys(config.app.map.tiles),
       currentTileIndex: 0,
@@ -216,6 +228,10 @@ export default {
           // this.openUrl(url)
         }
       }
+    },
+    showAboutPanel() {
+      this.$emit("showAboutPanel");
+      this.menuOpen = false;
     },
     setCookie(key, value, days) {
       var expireDate = new Date();

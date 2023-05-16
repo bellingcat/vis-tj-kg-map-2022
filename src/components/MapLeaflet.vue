@@ -1,6 +1,6 @@
 <template>
-  <title-expand ref="titleExpand" />
-  <options-button :startTile="currentTileName" @new-tile="setTileLayer" @embed-changed="updateEmbedSettings" />
+  <title-expand ref="titleExpand" :villages="villages" />
+  <options-button :startTile="currentTileName" @new-tile="setTileLayer" @embed-changed="updateEmbedSettings" @show-about-panel="showAboutPanel" />
   <!-- <sidebar /> -->
 
   <v-card :style="selectedVillage ? '' : { zIndex: 0 }" fixed raised class="ma-1" id="sidebar" ref="sidebar">
@@ -255,6 +255,10 @@ export default {
       console.log(`embedEnabled: ${embedEnabled}`)
       this.embedEnabled = embedEnabled;
       console.log(this.$cookies)
+    },
+    showAboutPanel(){
+      console.log("showing dialog")
+      this.$refs.titleExpand.dialog=true;
     },
     getTileUrl() {
       return this.mapConfig.tiles[this.currentTileName](this.mapConfig.mapboxToken)

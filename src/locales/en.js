@@ -28,9 +28,9 @@ export default {
       <h3>A Note on the Descriptions and Filters</h3>
       Each larger circle on the map represents a geographic grouping of incidents. Every building is represented by a symbol on the map.
 
-      “Geolocated” incidents appear in <span style="color:#00E5FF">Blue</span>. Each “Geolocated” incident includes coordinates, satellite imagery of before and after and either footage or stills from media or social media.These incidents have been geolocated by Bellingcat.
+      “Geolocated” incidents appear in <span class="geolocated">Blue</span>. Each “Geolocated” incident includes coordinates, satellite imagery of before and after and either footage or stills from media or social media.These incidents have been geolocated by Bellingcat.
 
-      “Satellite” incidents appear in <span style="color:#81C784">Green</span>. Each “Satellite” incident includes coordinates as well as satellite imagery of before and after.These are incidents where change to building has been observed on satellite imagery, but further investigation is needed.
+      “Satellite” incidents appear in <span class="satellite">Green</span>. Each “Satellite” incident includes coordinates as well as satellite imagery of before and after.These are incidents where change to building has been observed on satellite imagery, but further investigation is needed.
 
       The coordinates match the exact building. All incidents can be seen in satellite imagery. In four cases we have used Planet Labs Images- as they provided high quality images of areas immediately after the clashes occurred, in all other cases we used Google Earth Pro satellite images which provided good quality images in the days and weeks after fighting occurred.Satellite imagery that we have used was taken up to six weeks after the clashes or up to a year before them.
 
@@ -38,6 +38,13 @@ export default {
 
       <div><small><a class="text-right" href="https://www.bellingcat.com/about/data-privacy/">Privacy policy.</a></small></div>
       `,
+      dataBreakdown: `Data breakdown`,
+      table:{
+        colVillage: `Village`,
+        col2: ``,
+        col3: ``,
+        col4: ``,
+      },
       read: "TODO: read the article"
     },
     bellingcat: "Bellingcat"
@@ -121,7 +128,8 @@ export default {
         button: "Share Map",
         success: `Link copied to clipboard`,
         error: `Unable to copy link to clipboard`,
-      }
+      },
+      about: `About`
     }
   },
   villages: {
