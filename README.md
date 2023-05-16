@@ -67,3 +67,6 @@ See [Configuration Reference](https://vitejs.dev/config/).
 1. find the village
 2. Network > find the `search?axaj=1` request which returns a large payload with all the village's data
 3. Extract, format and find the `GeometryCollection` info.
+
+
+<iframe src="https://bellingcat.github.io/vis-tj-kg-map-2022/" title="Tajikistan - Kyrgyzstan border conflict 2022 MAP" height="640" width="100%"></iframe>

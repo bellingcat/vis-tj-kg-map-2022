@@ -80,8 +80,8 @@ const config = {
       "id": "arka",
       "name_en": "Arka",
       "name_ru": "Арка",
-      "description_en": "This is some info on the Arka village.",
-      "description_ru": "Это некоторая информация о поселке Арка.",
+      "description_en": "A village about 2 kilometres south of Tajikistan’s Bahri Tochik Reservoir (the name translates as “Tajik Sea”).",
+      "description_ru": "TODO: Это некоторая информация о поселке Арка.",
       "yandex": "https://yandex.ru/maps/geo/1508553697/?l=sat&ll=69.889571%2C40.195924&z=15",
       "stats": {
         "population": "TODO maybe"
@@ -104,8 +104,8 @@ const config = {
       "id": "batken",
       "name_en": "Batken",
       "name_ru": "Баткен",
-      "description_en": "This is some info on the Batken village.",
-      "description_ru": "Это некоторая информация о поселке Баткен.",
+      "description_en": "The capital of the Batken Region, Kyrgyzstan. The only city in Batken Region that has an airport. ",
+      "description_ru": "TODO: Это некоторая информация о поселке Баткен.",
       "yandex": "https://yandex.ru/maps/geo/771296045/?l=sat%2Cskl&ll=70.827197%2C40.053080&z=14",
       "stats": {
         "population": "TODO maybe"
@@ -128,8 +128,8 @@ const config = {
       "id": "borborduk",
       "name_en": "Borborduk",
       "name_ru": "Борбордук",
-      "description_en": "This is some info on the Borborduk village.",
-      "description_ru": "Это некоторая информация о поселке Борбордук.",
+      "description_en": "Located 5 km southwest of Tajikistan’s Bahri Tochik Reservoir.",
+      "description_ru": "TODO: Это некоторая информация о поселке Борбордук.",
       "yandex": "https://yandex.ru/maps/geo/1508554928/?l=sat&ll=69.833683%2C40.188422&z=14",
       "stats": {
         "population": "TODO maybe"
@@ -152,8 +152,8 @@ const config = {
       "id": "chorkishlok",
       "name_en": "Chordeh",
       "name_ru": "Чордех",
-      "description_en": "This is some info on the Chordeh village.",
-      "description_ru": "Это некоторая информация о поселке Чордех.",
+      "description_en": "A village located along the Isfara river and surrounded by mountains to the west and east. The village is located approximately 5 km south of the Tajik city of Isfara.",
+      "description_ru": "TODO: Это некоторая информация о поселке Чордех.",
       "yandex": "https://yandex.ru/maps/geo/3496863555/?l=sat&ll=70.619929%2C40.061854&z=15",
       "stats": {
         "population": "TODO maybe"
@@ -176,8 +176,8 @@ const config = {
       "id": "dostuk",
       "name_en": "Dostuk",
       "name_ru": "Достук",
-      "description_en": "This is some info on the Dostuk village.",
-      "description_ru": "Это некоторая информация о поселке Достук.",
+      "description_en": "A collection of about 60 households, surrounded by mountains to the east, and the Isfara river to the west.",
+      "description_ru": "TODO: Это некоторая информация о поселке Достук.",
       "yandex": "https://yandex.ru/maps/geo/1671313862/?l=sat&ll=70.631908%2C40.052397&z=16",
       "stats": {
         "population": "TODO maybe"
@@ -200,8 +200,8 @@ const config = {
       "id": "international",
       "name_en": "International",
       "name_ru": "Интернациональное",
-      "description_en": "This is some info on the International village.",
-      "description_ru": "Это некоторая информация о поселке Интернациональное.",
+      "description_en": "About 20 kilometres southwest of Tajikistan’s Bahri Tochik Reservoir located across the disputed border.",
+      "description_ru": "TODO: Это некоторая информация о поселке Интернациональное.",
       "yandex": "https://yandex.ru/maps/geo/1508554928/?l=sat&ll=69.833683%2C40.188422&z=14",
       "stats": {
         "population": "TODO maybe"
@@ -224,8 +224,8 @@ const config = {
       "id": "kapchygai",
       "name_en": "Kapchygai",
       "name_ru": "Капчыгай",
-      "description_en": "This is some info on the Kapchygai village.",
-      "description_ru": "Это некоторая информация о поселке Капчыгай.",
+      "description_en": "TODO: This is some info on the Kapchygai village.",
+      "description_ru": "TODO: Это некоторая информация о поселке Капчыгай.",
       "yandex": "https://yandex.ru/maps/geo/4114188022/?l=sat&ll=70.524627%2C39.884988&z=16",
       "stats": {
         "population": "TODO maybe"
@@ -248,8 +248,8 @@ const config = {
       "id": "karabak",
       "name_en": "Karabak",
       "name_ru": "Кара-Бак",
-      "description_en": "This is some info on the Karabak village.",
-      "description_ru": "Это некоторая информация о поселке Кара-Бак.",
+      "description_en": "A village located a couple of kilometres west of Lakkon, in the same valley.",
+      "description_ru": "TODO: Это некоторая информация о поселке Кара-Бак.",
       "yandex": "https://yandex.ru/maps/geo/4024919320/?l=sat%2Cskl&ll=70.821785%2C40.154385&z=14",
       "stats": {
         "population": "TODO maybe"
@@ -285,8 +285,8 @@ const config = {
       "id": "lakkon",
       "name_en": "Lakkon",
       "name_ru": "Лаккон",
-      "description_en": "This is some info on the Lakkon village.",
-      "description_ru": "Это некоторая информация о поселке Лаккон.",
+      "description_en": "A small village located in a valley, approximately 5 km south of the Uzbek border.",
+      "description_ru": "TODO: Это некоторая информация о поселке Лаккон.",
       "yandex": "https://yandex.ru/maps/geo/1508553686/?l=sat&ll=70.861816%2C40.176772&z=15",
       // "stats": {
       //   "population": "TODO maybe"
@@ -309,8 +309,8 @@ const config = {
       "id": "maksat",
       "name_en": "Maksat",
       "name_ru": "Максат",
-      "description_en": "This is some info on the Maksat village.",
-      "description_ru": "Это некоторая информация о поселке Максат.",
+      "description_en": "About 20 kilometres southwest of Tajikistan’s Bahri Tochik Reservoir located across the disputed border.",
+      "description_ru": "TODO: Это некоторая информация о поселке Максат.",
       "yandex": "https://yandex.com/maps/geo/4209595903/?ll=69.700117%2C40.128022&z=14.11",
       // "stats": {
       //   "population": "TODO maybe"
@@ -333,8 +333,8 @@ const config = {
       "id": "min-bulak",
       "name_en": "Min-Bulak",
       "name_ru": "Мин-Булак",
-      "description_en": "This is some info on the Min-Bulak village.",
-      "description_ru": "Это некоторая информация о поселке Мин-Булак.",
+      "description_en": "TODO: This is some info on the Min-Bulak village.",
+      "description_ru": "TODO: Это некоторая информация о поселке Мин-Булак.",
       "yandex": "https://yandex.ru/maps/geo/4229754559/?l=sat%2Cskl&ll=70.632302%2C39.983485&z=15",
       // "stats": {
       //   "population": "TODO maybe"
@@ -357,8 +357,8 @@ const config = {
       "id": "min-oruk",
       "name_en": "Min-Oruk",
       "name_ru": "Мин-Орук",
-      "description_en": "This is some info on the Min-Oruk village.",
-      "description_ru": "Это некоторая информация о поселке Мин-Орук.",
+      "description_en": "TODO: This is some info on the Min-Oruk village.",
+      "description_ru": "TODO: Это некоторая информация о поселке Мин-Орук.",
       "yandex": "https://yandex.ru/maps/geo/4114127012/?l=sat&ll=70.628840%2C39.995050&z=15",
       // "stats": {
       //   "population": "TODO maybe"
@@ -381,8 +381,8 @@ const config = {
       "id": "ovchi-kalacha",
       "name_en": "Ovchikalacha",
       "name_ru": "Овчикалача",
-      "description_en": "This is some info on the Ovchikalacha village.",
-      "description_ru": "Это некоторая информация о поселке Овчикалача.",
+      "description_en": "About 20 kilometres southwest of Tajikistan’s Bahri Tochik Reservoir located across the disputed border. A narrow river and a road separates it from Kyrgyz villages of Maksat and International.",
+      "description_ru": "TODO: Это некоторая информация о поселке Овчикалача.",
       "yandex": "https://yandex.ru/maps/geo/3159398637/?l=sat&ll=69.676854%2C40.126601&z=14",
       // "stats": {
       //   "population": "TODO maybe"
@@ -405,8 +405,8 @@ const config = {
       "id": "vorukh",
       "name_en": "Vorukh",
       "name_ru": "Ворух",
-      "description_en": "This is some info on the Vorukh village.",
-      "description_ru": "Это некоторая информация о поселке Ворух.",
+      "description_en": "TODO: This is some info on the Vorukh village.",
+      "description_ru": "TODO: Это некоторая информация о поселке Ворух.",
       "yandex": "https://yandex.ru/maps/geo/2013643750/?l=sat&ll=70.532777%2C39.875283&z=15",
       // "stats": {
       //   "population": "TODO maybe"

@@ -33,7 +33,7 @@ export default {
     <strong>{before}</strong>
     and
     <strong>{after}</strong>
-    reveals part of the destruction.`,
+    reveals change to buildings.`,
     btnBefore: `view sat before`,
     btnAfter: `view sat after`,
     showingImagery: `Showing satellite imagery from {date}`,
