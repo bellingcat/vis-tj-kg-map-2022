@@ -75,7 +75,7 @@
                     <iframe v-if="isValidTelegram(link.src)" :title="$t('incidents.panel.telegramTitle')"
                       class="video-embed" :src="telegramEmbed(link.src)" height="240px" width="100%" :id="link.src" />
 
-                    <!-- TODO: embed if image jpg... -->
+                    <img v-if="isImage(link.src)" :title="$t('incidents.panel.TODO')" :src="link.src" class="image-embed" :id="link.src" />
 
                     <!-- <p v-if="!link.archive">No archived content</p> -->
                     <v-btn v-if="link.src" variant="outlined" color="secondary" class="ma-1" :href="link.src"
@@ -543,7 +543,7 @@ export default {
   mounted: function () {
     this.initMap();
     this.populateMap();
-    this.selectedVillage = null; // override default v-tabs behaviour of assinging 1st
+    this.selectedVillage = this.mapConfig.startVillage; // override default v-tabs behaviour of assinging 1st
   }
 }
 
@@ -632,6 +632,7 @@ function assert(condition, message) {
   }
 }
 
+img.image-embed,
 video.video-embed,
 iframe.video-embed {
   width: 100%;

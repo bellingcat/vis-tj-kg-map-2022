@@ -33,6 +33,9 @@ var UrlUtils = {
       return null;
     }
   },
+  isImage: function (url) {
+    return /\.(jpg|jpeg|png|webp|avif|gif|svg)$/.test(url);
+  }
 }
 
 export default UrlUtils;
