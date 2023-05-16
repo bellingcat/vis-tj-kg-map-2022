@@ -37,7 +37,9 @@ export default {
     btnBefore: `view sat before`,
     btnAfter: `view sat after`,
     showingImagery: `Showing satellite imagery from {date}`,
-    altText: `Satellite view of {village} on {date}.`
+    altText: `Satellite view of {village} on {date}.`,
+    loadBtn: `Download satellite imagery`,
+    loadBtnWarning: `Warning: satellite imagery can use several MBs of data`
   },
   incidents: {
     all: {}, // this will be loaded from incidents.json

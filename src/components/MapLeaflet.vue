@@ -18,23 +18,34 @@
             <p class="ma-2">
               {{ $t(`villages.${v.id}.description`) }}
             </p>
-            <span v-if="satellites[v.id]">
+            <!-- <span v-if="satellites[v.id]"> -->
+            <span v-if="villageHasSate(v.id)">
               <v-divider class="mb-4 mt-4"></v-divider>
               <p class="ma-2"
                 v-html="$t('satellite.compareText', { before: v?.satellite?.before?.date, after: v?.satellite?.after?.date })">
               </p>
 
               <div class="d-flex justify-center ma-4">
-                <v-btn prepend-icon="mdi-satellite-variant" color="white" variant="outlined"
+                <v-btn v-if="satellites[v.id]" prepend-icon="mdi-satellite-variant" color="white" variant="outlined"
                   @click="viewSat($event, v.id, selectedSat?.active == 'after' ? 'before' : 'after')">
                   {{ selectedSat?.active == 'after' ? $t('satellite.btnBefore') : $t('satellite.btnAfter') }}
                 </v-btn>
+                <v-btn v-if="!satellites[v.id]" prepend-icon="mdi-download" color="white" variant="outlined"
+                  @click="addBeforeAfterSat(v);">
+                  {{ $t(`satellite.loadBtn`) }}
+                  <v-tooltip activator="parent" location="top" open-delay="200">
+                    {{ $t(`satellite.loadBtnWarning`) }}
+                  </v-tooltip>
+                </v-btn>
               </div>
-              <div v-if="selectedSat" class="text-center ma-2">
+              <!-- {{ satellites[selectedSat.villageId]?.active }}<br/> -->
+              <!-- {{ satellites }}<br/> -->
+              <!-- {{ satellites[v.id] }}<br/> -->
+              <!-- {{ satellites[v.id][satellites[selectedSat.villageId]?.active] }}<br/> -->
+              <div v-if="selectedSat && satellites[v.id]" class="text-center ma-2">
                 <p><v-code>
                     {{ $t('satellite.showingImagery', {
-                      date:
-                        satellites[v.id][satellites[selectedSat.villageId]?.active]?.data?.date
+                      date: satellites[v.id][satellites[selectedSat.villageId]?.active]?.data?.date
                     }) }}
                   </v-code>
                 </p>
@@ -75,7 +86,9 @@
                     <iframe v-if="isValidTelegram(link.src)" :title="$t('incidents.panel.telegramTitle')"
                       class="video-embed" :src="telegramEmbed(link.src)" height="240px" width="100%" :id="link.src" />
 
-                    <img v-if="isImage(link.src)" :title="$t('incidents.panel.embeddedImage', {domain: getDomain(link.src)})" :src="link.src" class="image-embed" :id="link.src" />
+                    <img v-if="isImage(link.src)"
+                      :title="$t('incidents.panel.embeddedImage', { domain: getDomain(link.src) })" :src="link.src"
+                      class="image-embed" :id="link.src" />
 
                     <!-- <p v-if="!link.archive">No archived content</p> -->
                     <v-btn v-if="link.src" variant="outlined" color="secondary" class="ma-1" :href="link.src"
@@ -274,13 +287,19 @@ export default {
       this.villages.forEach(village => {
         this.addPolygon(village.id);
         this.addMarkers(village);
-        this.addBeforeAfterSat(village);
+        // this.addBeforeAfterSat(village);
       })
       this.refreshVisibleIncidents();
+    },
+    villageHasSate: function (villageId) {
+      const village = this.villages.find(v => v.id == villageId);
+      return (village !== undefined && village.satellite !== undefined && village.satellite.before !== undefined && village.satellite.after !== undefined);
     },
     addBeforeAfterSat: function (village) {
       if (village.satellite === undefined) return;
       if (!village.satellite.before || !village.satellite.after) return;
+      // singleton logic - only created on first call
+      if (this.satellites[village.id] !== undefined) return;
 
       const paneId = `satellite-pane-${village.id}`;
       let imagePane = this.map.createPane(paneId);
@@ -344,6 +363,7 @@ export default {
           this.satellites[village.id].display();
         }
       });
+      console.log(`ADDED SAT: ${village.id}`)
     },
     addPolygon: async function (villageId) {
       let data = await fetch(`./polygons/${villageId}.geojson`).then(async data => await data.json());
@@ -392,6 +412,7 @@ export default {
       })
     },
     viewSat: function (_, villageId, active) {
+      console.log(`VIEW SAT ${villageId}: ${active}`)
       this.satellites[villageId].active = active;
       this.selectedSat = { villageId, active };
       // only fitBounds to satellite if not in viewport yet Or too zoomed-out
