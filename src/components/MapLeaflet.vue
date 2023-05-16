@@ -500,6 +500,7 @@ export default {
   },
   watch: {
     selectedVillage: function (_villageId, prevV) {
+      console.log(`selectedVillage change from ${prevV} to ${_villageId}`)
       this.selectedIncidents[prevV] = null; // reset the open incident/marker
       this.updatePolygonColors();
     },
@@ -542,6 +543,7 @@ export default {
   mounted: function () {
     this.initMap();
     this.populateMap();
+    this.selectedVillage = null; // override default v-tabs behaviour of assinging 1st
   }
 }
 
