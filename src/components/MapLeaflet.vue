@@ -39,10 +39,6 @@
                   </v-tooltip>
                 </v-btn>
               </div>
-              <!-- {{ satellites[selectedSat.villageId]?.active }}<br/> -->
-              <!-- {{ satellites }}<br/> -->
-              <!-- {{ satellites[v.id] }}<br/> -->
-              <!-- {{ satellites[v.id][satellites[selectedSat.villageId]?.active] }}<br/> -->
               <div v-if="selectedSat && satellites[v.id]" class="text-center ma-2">
                 <p><v-code>
                     {{ $t('satellite.showingImagery', {
@@ -371,6 +367,7 @@ export default {
           this.satellites[village.id].display();
         }
       });
+      this.selectedSat = { villageId: village.id, active: this.satellites[village.id].active };
       console.log(`ADDED SAT: ${village.id}`)
     },
     addPolygon: async function (villageId) {
