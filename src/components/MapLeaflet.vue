@@ -75,7 +75,7 @@
                     <iframe v-if="isValidTelegram(link.src)" :title="$t('incidents.panel.telegramTitle')"
                       class="video-embed" :src="telegramEmbed(link.src)" height="240px" width="100%" :id="link.src" />
 
-                    <img v-if="isImage(link.src)" :title="$t('incidents.panel.TODO')" :src="link.src" class="image-embed" :id="link.src" />
+                    <img v-if="isImage(link.src)" :title="$t('incidents.panel.embeddedImage', {domain: getDomain(link.src)})" :src="link.src" class="image-embed" :id="link.src" />
 
                     <!-- <p v-if="!link.archive">No archived content</p> -->
                     <v-btn v-if="link.src" variant="outlined" color="secondary" class="ma-1" :href="link.src"

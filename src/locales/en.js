@@ -49,6 +49,7 @@ export default {
       videoStartAt: `Start video from {seconds}s`,
       youtubeTitle: `Youtube video player`,
       telegramTitle: `Telegram embedded post`,
+      embeddedImage: `Embedded image from {domain}`,
       sourceButtonTitle: `open original source`,
       sourceButton: `source {index}`,
       gMapsTitle: `show coordinates on google maps`,
