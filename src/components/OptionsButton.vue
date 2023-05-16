@@ -69,20 +69,22 @@
         </v-list-item-title>
       </v-list-item>
 
-      <!-- download (?) -->
+      <!-- download JSON -->
       <v-list-item @click="openUrl('/incidents.json', 'incidents.json')">
         <template v-slot:prepend>
           <v-icon icon="mdi-download" size="large"></v-icon>
         </template>
-        <v-list-item-title>
+        <v-list-item-title class="text-uppercase">
           {{ $t(`options.download.json`) }}
         </v-list-item-title>
       </v-list-item>
+
+      <!-- download CSV -->
       <v-list-item @click="openUrl('/incidents.csv', 'incidents.csv')">
         <template v-slot:prepend>
           <v-icon icon="mdi-download" size="large"></v-icon>
         </template>
-        <v-list-item-title>
+        <v-list-item-title class="text-uppercase">
           {{ $t(`options.download.csv`) }}
         </v-list-item-title>
       </v-list-item>
@@ -96,6 +98,7 @@
           {{ $t(`options.links.bellingcat`) }}
         </v-list-item-title>
       </v-list-item>
+
       <!-- code -->
       <v-list-item @click="openUrl('https://github.com/bellingcat/vis-tj-kg-map-2022')">
         <template v-slot:prepend>
@@ -105,8 +108,9 @@
           {{ $t(`options.links.code`) }}
         </v-list-item-title>
       </v-list-item>
+
       <!-- share -->
-      <v-list-item @click="copyCurrentUrl()">
+      <v-list-item @click="shareUrl()" v-if="shareWorks || clipboardWorks">
         <template v-slot:prepend>
           <v-icon icon="mdi-share" size="large"></v-icon>
         </template>
@@ -148,6 +152,7 @@ export default {
       //others
       toastOptions: config.app.ui.toastOptions,
       clipboardWorks: navigator.clipboard !== undefined,
+      shareWorks: navigator.share !== undefined,
       embedDialog: false,
       embedEnabled: false,
       embedsCookieName: "EmbedsEnabledCookie"
@@ -190,8 +195,17 @@ export default {
     openUrl(url) {
       window.open(url, '_blank');
     },
-    copyCurrentUrl(url) {
+    shareUrl(url) {
       url = url || window.location;
+      if (this.shareWorks) {
+        navigator.share({
+          title: document.title,
+          text: this.$t("main.title"),
+          url: url
+        })
+          .then(() => console.log('Successful share'))
+          .catch(error => console.log('Error sharing:', error));
+      }
       if (this.clipboardWorks) {
         try {
           navigator.clipboard.writeText(url);
@@ -226,7 +240,6 @@ export default {
     }
   },
   mounted() {
-    console.log("MOUNTED")
     this.updateLocaleIndex();
     // tiles current/next
     this.currentTileIndex = this.availableTiles.findIndex(l => l == this.startTile);
