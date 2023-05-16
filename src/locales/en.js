@@ -46,7 +46,7 @@ export default {
     defaultName: `Destroyed building N.{index}`,
     countVisible: `No incidents | 1 incident | {n} incidents`,
     panel: {
-      noSources: `No sources to show.`,
+      noSources: `This building entry is visible on satellite only - no media sources to show.`,
       videoNotSupported: `Your browser does not support the video tag.`,
       videoStartAt: `Start video from {seconds}s`,
       youtubeTitle: `Youtube video player`,
