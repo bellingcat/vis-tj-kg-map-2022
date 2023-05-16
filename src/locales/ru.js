@@ -9,6 +9,9 @@ export default {
   $vuetify: {
     badge: ""
   },
+  main: {
+    title: `Таджикистан-Кыргызский пограничный конфликт 2022`,
+  },
   impact: {
     all: { name: "все" }
   },

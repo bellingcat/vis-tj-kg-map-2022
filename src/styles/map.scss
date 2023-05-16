@@ -45,3 +45,13 @@
         }
     }
 }
+
+
+a {
+    color: $accentColor;
+
+    &:hover,
+    &:active {
+        color: $accentColor2;
+    }
+}

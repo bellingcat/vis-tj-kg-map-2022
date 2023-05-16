@@ -70,3 +70,7 @@ See [Configuration Reference](https://vitejs.dev/config/).
 
 
 <iframe src="https://bellingcat.github.io/vis-tj-kg-map-2022/" title="Tajikistan - Kyrgyzstan border conflict 2022 MAP" height="640" width="100%"></iframe>
+
+Optional GET parameters:
+1. `disable-scroll=1` - will disable auto-scroll on the left side panel - needed for `<iframe>` embeds.
+2. `ask-embeds=1` - will not show dialog to ask for embeds when clicking the actions menu for the first time.

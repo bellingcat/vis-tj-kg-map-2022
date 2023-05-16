@@ -27,6 +27,38 @@
         </v-list-item-title>
       </v-list-item>
 
+      <!-- allow embeds -->
+      <v-list-item @click="embedDialog = true;">
+        <template v-slot:prepend>
+          <v-icon icon="mdi-cookie-alert" size="large" :color="embedEnabled ? 'primary' : ''"></v-icon>
+        </template>
+        <v-list-item-title class="text-uppercase">
+          <v-dialog v-model="embedDialog" scrollable width="auto" origin="top right">
+            <template v-slot:activator="">
+              {{ $t(`options.embeds.title`) }}
+            </template>
+            <v-card>
+              <v-card-title class="text-center">{{ $t(`options.embeds.card.title`) }}</v-card-title>
+              <v-divider></v-divider>
+              <v-card-text class="text-center" style="max-height: 450px;max-width:450px">
+                {{ $t(`options.embeds.card.disclaimer`) }}
+              </v-card-text>
+              <v-divider></v-divider>
+              <v-card-actions class="justify-center">
+                <v-btn color="primary" variant="text" @click="embedEnabled = false; embedDialog = false;"
+                  :disabled="!embedEnabled">
+                  {{ $t(`options.embeds.card.disable`) }}
+                </v-btn>
+                <v-btn color="primary" variant="text" @click="embedEnabled = true; embedDialog = false;"
+                  :disabled="embedEnabled">
+                  {{ $t(`options.embeds.card.enable`) }}
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-dialog>
+        </v-list-item-title>
+      </v-list-item>
+
       <!-- fullscreen -->
       <v-list-item @click="toggleFullscreen()">
         <template v-slot:prepend>
@@ -98,7 +130,7 @@ import config from "../../config";
 export default {
   name: 'OptionsButton',
   props: ['startTile'],
-  emits: ['newTile'],
+  emits: ['newTile', 'embedChanged'],
   data() {
     return {
       // layers
@@ -116,6 +148,9 @@ export default {
       //others
       toastOptions: config.app.ui.toastOptions,
       clipboardWorks: navigator.clipboard !== undefined,
+      embedDialog: false,
+      embedEnabled: false,
+      embedsCookieName: "EmbedsEnabledCookie"
     }
   },
   setup() {
@@ -168,16 +203,44 @@ export default {
         }
       }
     },
+    setCookie(key, value, days) {
+      var expireDate = new Date();
+      expireDate.setDate(expireDate.getDate() + (days || 365));
+      document.cookie = `${key}=${value}; expires=${expireDate.toUTCString()}; path=/`;
+    },
+    getCookie(key) {
+      //https://www.w3schools.com/js/js_cookies.asp
+      let name = key + "=";
+      let decodedCookie = decodeURIComponent(document.cookie);
+      let ca = decodedCookie.split(';');
+      for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return undefined;
+    }
   },
   mounted() {
+    console.log("MOUNTED")
     this.updateLocaleIndex();
     // tiles current/next
     this.currentTileIndex = this.availableTiles.findIndex(l => l == this.startTile);
     this.nextTile = this.availableTiles[(this.currentTileIndex + 1) % this.availableTiles.length];
+    this.embedEnabled = this.getCookie(this.embedsCookieName) == "true"; // reads cookie
+    this.embedDialog = this.getCookie(this.embedsCookieName) === undefined && (this.$route.query["ask-embeds"] == undefined);
   },
   watch: {
     current: function () {
       this.updateLocaleIndex();
+    },
+    embedEnabled: function () {
+      this.setCookie(this.embedsCookieName, this.embedEnabled); // writes cookie
+      this.$emit('embedChanged', this.embedEnabled);
     }
   }
 }

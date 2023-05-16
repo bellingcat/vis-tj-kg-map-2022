@@ -1,9 +1,10 @@
 <template>
   <title-expand ref="titleExpand" />
-  <options-button :startTile="currentTileName" @new-tile="setTileLayer" />
+  <options-button :startTile="currentTileName" @new-tile="setTileLayer" @embed-changed="updateEmbedSettings" />
   <!-- <sidebar /> -->
 
   <v-card :style="selectedVillage ? '' : { zIndex: 0 }" fixed raised class="ma-1" id="sidebar" ref="sidebar">
+
     <v-container class="pa-0">
       <v-card-text>
         <v-window v-model="selectedVillage">
@@ -30,7 +31,7 @@
                   @click="viewSat($event, v.id, selectedSat?.active == 'after' ? 'before' : 'after')">
                   {{ selectedSat?.active == 'after' ? $t('satellite.btnBefore') : $t('satellite.btnAfter') }}
                 </v-btn>
-                <v-btn v-if="!satellites[v.id]" prepend-icon="mdi-download" color="white" variant="outlined"
+                <v-btn v-if="!satellites[v.id]" prepend-icon="mdi-download" color="primary" variant="outlined"
                   @click="addBeforeAfterSat(v);">
                   {{ $t(`satellite.loadBtn`) }}
                   <v-tooltip activator="parent" location="top" open-delay="200">
@@ -78,15 +79,15 @@
                       {{ $t('incidents.panel.videoNotSupported') }}
                     </video>
 
-                    <iframe v-if="isValidYoutube(link.src)" class="video-embed" :src="youtubeEmbed(link.src)"
-                      :title="$t('incidents.panel.youtubeTitle')" frameborder="0"
+                    <iframe v-if="embedEnabled && isValidYoutube(link.src)" class="video-embed"
+                      :src="youtubeEmbed(link.src)" :title="$t('incidents.panel.youtubeTitle')" frameborder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       allowfullscreen></iframe>
 
-                    <iframe v-if="isValidTelegram(link.src)" :title="$t('incidents.panel.telegramTitle')"
+                    <iframe v-if="embedEnabled && isValidTelegram(link.src)" :title="$t('incidents.panel.telegramTitle')"
                       class="video-embed" :src="telegramEmbed(link.src)" height="240px" width="100%" :id="link.src" />
 
-                    <img v-if="isImage(link.src)"
+                    <img v-if="embedEnabled && isImage(link.src)"
                       :title="$t('incidents.panel.embeddedImage', { domain: getDomain(link.src) })" :src="link.src"
                       class="image-embed" :id="link.src" />
 
@@ -235,6 +236,8 @@ export default {
       enabledImpacts: ["civinfra", "privateprop", "borderpost"],
       currentTileName: config.app.map.startTile,
       currentTile: null,
+      embedsEnabled: false,
+      autoScroll: true
     }
   }, methods: {
     ...UrlUtils,
@@ -251,6 +254,11 @@ export default {
         // attribution: tileUrl.includes("openstreetmap") ? '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' : tileUrl.includes("mapbox")
         attribution: "&copy;<a href='https://www.mapbox.com/about/maps/'>Mapbox</a> &copy;<a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>"
       }).addTo(this.map);
+    },
+    updateEmbedSettings(embedEnabled) {
+      console.log(`embedEnabled: ${embedEnabled}`)
+      this.embedEnabled = embedEnabled;
+      console.log(this.$cookies)
     },
     getTileUrl() {
       return this.mapConfig.tiles[this.currentTileName](this.mapConfig.mapboxToken)
@@ -543,10 +551,12 @@ export default {
           this.map.flyToBounds(this.markers[sI[this.selectedVillage]].group.getBounds(), { ...this.getFitBoundsOptions(), maxZoom: Math.max(17, this.map.getZoom()) });
 
           // scroll to content on sidebar
-          setTimeout(() => {
-            console.log(`SCROLLING #${sI[this.selectedVillage]}`)
-            document.getElementById(sI[this.selectedVillage])?.scrollIntoView({ behavior: 'smooth', block: 'start', inline: "nearest" })
-          }, 250);
+          if (this.autoScroll) {
+            setTimeout(() => {
+              console.log(`SCROLLING #${sI[this.selectedVillage]}`)
+              document.getElementById(sI[this.selectedVillage])?.scrollIntoView({ behavior: 'smooth', block: 'start', inline: "nearest" })
+            }, 250);
+          }
         }
       },
       deep: true
@@ -565,6 +575,7 @@ export default {
     this.initMap();
     this.populateMap();
     this.selectedVillage = this.mapConfig.startVillage; // override default v-tabs behaviour of assinging 1st
+    this.autoScroll = !(this.$route.query["auto-scroll"] != undefined);
   }
 }
 
