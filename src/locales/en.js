@@ -41,17 +41,14 @@ export default {
       dataBreakdown: `Data breakdown`,
       table:{
         colVillage: `Village`,
-        col2: ``,
-        col3: ``,
-        col4: ``,
       },
       read: "TODO: read the article"
     },
     bellingcat: "Bellingcat"
   },
   buildingLocation: {
-    socialmedia: { name: "Geolocated", explanation: "Buildings geolocated via video/image content." },
-    satellite: { name: "Satellite", explanation: "Destruction observed in before/after satellite imagery." },
+    socialmedia: { name: "Geolocated", explanation: "Buildings geolocated via video/image content" },
+    satellite: { name: "Satellite", explanation: "Change observed in satellite imagery" },
   },
   impact: {
     all: { name: "All" },
@@ -74,7 +71,7 @@ export default {
   },
   incidents: {
     all: {}, // this will be loaded from incidents.json
-    defaultName: `Destroyed building N.{index}`,
+    defaultName: `Building N.{index}`,
     countVisible: `No incidents | 1 incident | {n} incidents`,
     panel: {
       noSources: `This building entry is visible on satellite only - no media sources to show.`,

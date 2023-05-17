@@ -69,25 +69,19 @@
                   <v-code v-if="!i.links.length" class="ma-2 mt-6 mb-6 text-center">{{ $t('incidents.panel.noSources')
                   }}</v-code>
                   <div v-for="(link, linkIndex) in i.links" :key="linkIndex">
-                    <!-- TODO: if this is an IMAGE and not a VIDEO -->
-                    <video v-if="link.archive" class="mt-2 mb-2 video-embed" style="width: 100%;" controls>
-                      <source :src="link.archive" type="video/mp4">
-                      {{ $t('incidents.panel.videoNotSupported') }}
-                    </video>
 
                     <iframe v-if="embedEnabled && isValidYoutube(link.src)" class="video-embed"
                       :src="youtubeEmbed(link.src)" :title="$t('incidents.panel.youtubeTitle')" frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;fullscreen;"
                       allowfullscreen></iframe>
 
                     <iframe v-if="embedEnabled && isValidTelegram(link.src)" :title="$t('incidents.panel.telegramTitle')"
-                      class="video-embed" :src="telegramEmbed(link.src)" height="240px" width="100%" :id="link.src" />
+                      class="video-embed" :src="telegramEmbed(link.src)" height="240px" width="100%" :id="link.src" allowfullscreen/>
 
                     <img v-if="embedEnabled && isImage(link.src)"
                       :title="$t('incidents.panel.embeddedImage', { domain: getDomain(link.src) })" :src="link.src"
                       class="image-embed" :id="link.src" />
 
-                    <!-- <p v-if="!link.archive">No archived content</p> -->
                     <v-btn v-if="link.src" variant="outlined" color="secondary" class="ma-1" :href="link.src"
                       :title="$t(`incidents.panel.sourceButtonTitle`)" target="_blank" append-icon="mdi-open-in-new">
                       {{ $t(`incidents.panel.sourceButton`, { index: linkIndex + 1 }) }} -
@@ -232,7 +226,7 @@ export default {
       enabledImpacts: ["civinfra", "privateprop", "borderpost"],
       currentTileName: config.app.map.startTile,
       currentTile: null,
-      embedsEnabled: false,
+      embedEnabled: false,
       autoScroll: true
     }
   }, methods: {
@@ -576,7 +570,7 @@ export default {
     this.initMap();
     this.populateMap();
     this.selectedVillage = this.mapConfig.startVillage; // override default v-tabs behaviour of assinging 1st
-    this.autoScroll = !(this.$route.query["auto-scroll"] != undefined);
+    this.autoScroll = !(this.$route.query["disable-scroll"] != undefined);
   }
 }
 
