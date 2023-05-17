@@ -69,8 +69,8 @@ See [Configuration Reference](https://vitejs.dev/config/).
 3. Extract, format and find the `GeometryCollection` info.
 
 
-<iframe src="https://bellingcat.github.io/vis-tj-kg-map-2022?disable-scroll=1&ask-embeds=1" title="Tajikistan-Kyrgyzstan Border Clash 2022 map" height="640" width="100%" allow="fullscreen; clipboard-write; "></iframe>
-<iframe src="http://localhost:3000?disable-scroll=1&ask-embeds=1" title="Tajikistan-Kyrgyzstan Border Clash 2022 map" height="640" width="100%" allow="fullscreen; clipboard-write; "></iframe>
+<iframe src="https://bellingcat.github.io/vis-tj-kg-map-2022?disable-scroll=1&ask-embeds=0" title="Tajikistan-Kyrgyzstan Border Clash 2022 map" height="640" width="100%" allow="fullscreen; clipboard-write; "></iframe>
+<iframe src="http://localhost:3000?disable-scroll=1&ask-embeds=0" title="Tajikistan-Kyrgyzstan Border Clash 2022 map" height="640" width="100%" allow="fullscreen; clipboard-write; "></iframe>
 
 Optional GET parameters:
 1. `disable-scroll=1` - will disable auto-scroll on the left side panel - needed for `<iframe>` embeds.

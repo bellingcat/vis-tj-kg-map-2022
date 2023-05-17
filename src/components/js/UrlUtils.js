@@ -34,7 +34,7 @@ var UrlUtils = {
     }
   },
   isImage: function (url) {
-    return /\.(jpg|jpeg|png|webp|avif|gif|svg)$/.test(url);
+    return /\.(jpg|jpeg|png|webp|avif|gif|svg)$/.test(url.toLowerCase());
   }
 }
 

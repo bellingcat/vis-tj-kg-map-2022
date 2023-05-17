@@ -6,11 +6,11 @@ const config = {
 
   app: {
     map: {
-      anchor: { lat: 39.936132, lon: 69.931180 },
+      anchor: { lat: 39.936132, lon: 70.351180 },
       // anchor: { lat: 40.132130, lon: 69.688729 },
       maxZoom: 19,
       minZoom: 4,
-      startZoom: 10,
+      startZoom: 9,
       // startZoom: 15,
       wheelPxPerZoomLevel: 120,
       zoomSnap: 0.50,

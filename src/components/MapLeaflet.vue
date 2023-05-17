@@ -360,7 +360,7 @@ export default {
           } else {
             this.satellites[village.id].active = "before";
           }
-          this.selectedVillage = village.id;
+          // this.selectedVillage = village.id; // disbaled for better interactivity
           this.selectedSat = { villageId: village.id, active: this.satellites[village.id].active };
           this.satellites[village.id].display();
         }
