@@ -119,7 +119,7 @@ export default {
       csv: "CSV data",
     },
     links: {
-      bellingcat: "Bellingcat",
+      article: "Read article",
       code: "Code",
       share: {
         button: "Share Map",

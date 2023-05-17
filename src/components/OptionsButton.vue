@@ -89,13 +89,13 @@
         </v-list-item-title>
       </v-list-item>
 
-      <!-- bellingcat -->
-      <v-list-item @click="openUrl('https://www.bellingcat.com/')">
+      <!-- article link -->
+      <v-list-item @click="openUrl('https://www.bellingcat.com/TODO')">
         <template v-slot:prepend>
           <v-avatar class="bcat-logo" image="@/assets/icon.ico" alt="Bellingcat logo" rounded=""></v-avatar>
         </template>
         <v-list-item-title class="text-uppercase">
-          {{ $t(`options.links.bellingcat`) }}
+          {{ $t(`options.links.article`) }}
         </v-list-item-title>
       </v-list-item>
 
