@@ -1,6 +1,6 @@
 # Tajikistan-Kyrgyzstan Border Clash 2022
 
-### [visit the map](https://bellingcat.github.io/vis-tj-kg-map-2022/)
+<h2 align="center"><a href="https://bellingcat.github.io/vis-tj-kg-map-2022/">visit the map</a></h3>
 
 ### Development
 
@@ -33,8 +33,11 @@ npm run lint
 3. Extract, format and find the `GeometryCollection` info.
 
 
+```html
 <iframe src="https://bellingcat.github.io/vis-tj-kg-map-2022?disable-scroll=1&ask-embeds=0" title="Tajikistan-Kyrgyzstan Border Clash 2022 map" height="640" width="100%" allow="fullscreen; clipboard-write; "></iframe>
+
 <iframe src="http://localhost:3000?disable-scroll=1&ask-embeds=0" title="Tajikistan-Kyrgyzstan Border Clash 2022 map" height="640" width="100%" allow="fullscreen; clipboard-write; "></iframe>
+```
 
 Optional GET parameters:
 1. `disable-scroll=1` - will disable auto-scroll on the left side panel - needed for `<iframe>` embeds.
