@@ -15,7 +15,7 @@ export default {
       title: `Tajikistan-Kyrgyzstan Border Clash 2022`,
       card: `This database was created by Miguel Ramalho as part of Bellingcat’s Tech Team using research gathered by Aiganysh Aidarbekova and Narine Khachatryan using available open source evidence, including media and social media footage.
 
-      It shows changes to buildings observed via satellite imagery following clashes between Tajikistan and Kyrgyzstan between September 14 and September 19, 2022. Where possible, we have geolocated buildings using available social media and media footage. This forms the first layer of the map. It should be noted there is very limited social media and media content posted from inside Tajikistan — a country that <a href="https://rsf.org/en/country/tajikistan">heavily restricts</a> the media and social media usage. The second layer of the map we have identified changes to buildings in both high resolution satellite imagery and PlanetScope imagery, but further investigation is needed. The changes to buildings observed on satellite imagery does not provide conclusive proof of damage caused during the conflict - but provides a starting point for investigation for researchers interested to see areas of potential impact from the conflict. This is not a living document but is designed to provide a database for researchers and interested parties.
+      It shows changes to buildings observed via satellite imagery following clashes between Tajikistan and Kyrgyzstan between September 14 and September 19, 2022. Where possible, we have geolocated buildings using available social media and media footage. This forms the first layer of the map. It should be noted there is very limited social media and media content posted from inside Tajikistan — a country that <a target="_blank" href="https://rsf.org/en/country/tajikistan">heavily restricts</a> the media and social media usage. The second layer of the map we have identified changes to buildings in both high resolution satellite imagery and PlanetScope imagery, but further investigation is needed. The changes to buildings observed on satellite imagery does not provide conclusive proof of damage caused during the conflict - but provides a starting point for investigation for researchers interested to see areas of potential impact from the conflict. This is not a living document but is designed to provide a database for researchers and interested parties.
 
       <h3>A Note on the Disputed Border</h3>
       Sections of the border between Tajikistan and Kyrgyzstan are not conclusively demarcated, and may appear differently on various maps. We have used OpenStreetMaps as the base layer for the map — it includes a border but we can not vouch for its accuracy and recognise that it may be disputed in some places. Where we have marked incidents we have referred to the village’s name based on Yandex Maps.
@@ -36,13 +36,13 @@ export default {
 
       At the bottom of the map, a user can toggle between incidents that apparently involve Civilian Infrastructure; Private Property (Private Homes and Businesses) or Border Posts. Decisions on these classifications are based on available open source evidence for the function of these buildings.
 
-      <div><small><a class="text-right" href="https://www.bellingcat.com/about/data-privacy/">Privacy policy.</a></small></div>
+      <div><small><a class="text-right" target="_blank" href="https://www.bellingcat.com/about/data-privacy/">Privacy policy.</a></small></div>
       `,
       dataBreakdown: `Data breakdown`,
       table:{
         colVillage: `Village`,
       },
-      read: "TODO: read the article"
+      read: "read the article"
     },
     bellingcat: "Bellingcat"
   },

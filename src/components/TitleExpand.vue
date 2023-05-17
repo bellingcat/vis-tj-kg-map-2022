@@ -20,7 +20,7 @@
         <div class="explanation-text" v-html="$t('main.panel.card').replaceAll('\n', '<br/>')"></div>
 
         <h2 class="ma-5">{{ $t('main.panel.dataBreakdown') }}</h2>
-        <v-table density="compact">
+        <v-table density="compact" class="mb-10">
           <thead>
             <tr>
               <th class="text-left">
@@ -76,16 +76,13 @@
           </tbody>
         </v-table>
       </v-card-text>
-      <v-card-actions class="ma-10 text-uppercase" style="display:block">
+      <v-card-actions v-if="!isEmbed" class="ma-10 text-uppercase" style="display:block">
         <div class="justify-center">
-          <v-btn href="https://www.bellingcat.com/" class="ma-2" target="_blank" variant="outlined" size="x-large">
+          <v-btn href="TODO" class="ma-2" target="_blank" variant="outlined" size="x-large" append-icon="mdi-open-in-new">
             <template v-slot:prepend>
               <v-avatar class="bcat-logo ma-2" image="@/assets/icon.ico" alt="Bellingcat logo" rounded=""
                 size="28"></v-avatar>
             </template>
-            {{ $t(`main.bellingcat`) }}
-          </v-btn>
-          <v-btn href="TODO" class="ma-2" target="_blank" variant="outlined" size="x-large" append-icon="mdi-open-in-new">
             {{ $t(`main.panel.read`) }}
           </v-btn>
         </div>
@@ -104,6 +101,7 @@ export default {
       notifications: false,
       sound: true,
       widgets: false,
+      isEmbed: window !== window.parent
     }
   }
 }

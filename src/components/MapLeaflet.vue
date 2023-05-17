@@ -73,10 +73,10 @@
                     <iframe v-if="embedEnabled && isValidYoutube(link.src)" class="video-embed"
                       :src="youtubeEmbed(link.src)" :title="$t('incidents.panel.youtubeTitle')" frameborder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;fullscreen;"
-                      allowfullscreen></iframe>
+                      allowFullScreen="true"></iframe>
 
                     <iframe v-if="embedEnabled && isValidTelegram(link.src)" :title="$t('incidents.panel.telegramTitle')"
-                      class="video-embed" :src="telegramEmbed(link.src)" height="240px" width="100%" :id="link.src" allowfullscreen/>
+                      class="video-embed" :src="telegramEmbed(link.src)" height="240px" width="100%" :id="link.src" allowFullScreen="true"/>
 
                     <img v-if="embedEnabled && isImage(link.src)"
                       :title="$t('incidents.panel.embeddedImage', { domain: getDomain(link.src) })" :src="link.src"

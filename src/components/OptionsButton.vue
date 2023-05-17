@@ -70,7 +70,7 @@
       </v-list-item>
 
       <!-- download JSON -->
-      <v-list-item @click="openUrl('/incidents.json', 'incidents.json')">
+      <v-list-item @click="openUrl('./incidents.json', 'incidents.json')">
         <template v-slot:prepend>
           <v-icon icon="mdi-download" size="large"></v-icon>
         </template>
@@ -80,7 +80,7 @@
       </v-list-item>
 
       <!-- download CSV -->
-      <v-list-item @click="openUrl('/incidents.csv', 'incidents.csv')">
+      <v-list-item @click="openUrl('./incidents.csv', 'incidents.csv')">
         <template v-slot:prepend>
           <v-icon icon="mdi-download" size="large"></v-icon>
         </template>
