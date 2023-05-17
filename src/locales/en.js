@@ -66,7 +66,7 @@ export default {
     btnAfter: `view sat after`,
     showingImagery: `Showing satellite imagery from {date}`,
     altText: `Satellite view of {village} on {date}.`,
-    loadBtn: `Download satellite imagery`,
+    loadBtn: `Load satellite imagery`,
     loadBtnWarning: `Warning: satellite imagery can use several MBs of data`
   },
   incidents: {

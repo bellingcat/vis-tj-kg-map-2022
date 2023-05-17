@@ -1,71 +1,35 @@
-# base
+# Tajikistan-Kyrgyzstan Border Clash 2022
 
-sources: https://data.humdata.org/dataset/geoboundaries-admin-boundaries-for-kyrgyzstan
-## Project setup
+### [visit the map](https://bellingcat.github.io/vis-tj-kg-map-2022/)
 
-```
-# yarn
-yarn
+### Development
 
-# npm
+Built with vite, vue.js and vuetify. 
+
+```bash
+# install dependencies
 npm install
-
-# pnpm
-pnpm install
-```
-
-### Compiles and hot-reloads for development
-
-```
-# yarn
-yarn dev
-
-# npm
+# run locally with hot reload
 npm run dev
-
-# pnpm
-pnpm dev
-```
-
-### Compiles and minifies for production
-
-```
-# yarn
-yarn build
-
-# npm
+# same but share on local network
+npm run dev -- --host
+# build (optional)
 npm run build
+# deploy
+npm run deploy-ghpages
 
-# pnpm
-pnpm build
-```
-
-### Lints and fixes files
-
-```
-# yarn
-yarn lint
-
-# npm
+# lint fix
 npm run lint
-
-# pnpm
-pnpm lint
 ```
 
-### Customize configuration
-
-See [Configuration Reference](https://vitejs.dev/config/).
-
-
-### Configuring data/transaltions
+### Configuring data/translations
 1. incidents present in [incidents.json](/public/incidents.json)
 2. villages configs in [config.js](config.js)
 3. translations in [config.js](config.js) and [locales/](src/locales/) (en and ru)
 
 ### Fetching geojson's from yandex maps
 1. find the village
-2. Network > find the `search?axaj=1` request which returns a large payload with all the village's data
+2. Network > find the `search?ajax=1` request which returns a large payload with all the village's data
 3. Extract, format and find the `GeometryCollection` info.
 
 
