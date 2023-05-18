@@ -1,10 +1,24 @@
 <template>
   <title-expand ref="titleExpand" :villages="villages" />
-  <options-button :startTile="currentTileName" @new-tile="setTileLayer" @embed-changed="updateEmbedSettings" @show-about-panel="showAboutPanel" />
+  <options-button :startTile="currentTileName" @new-tile="setTileLayer" @embed-changed="updateEmbedSettings"
+    @show-about-panel="showAboutPanel" />
   <!-- <sidebar /> -->
+  <v-dialog v-model="coverDialog" scrollable width="auto" origin="top right">
+    <v-card class="pb-2">
+      <v-card-title class="text-center text-uppercase pa-3 ">{{ $t('cover.title') }}</v-card-title>
+      <v-divider></v-divider>
+      <v-card-text class="text-justify" style="max-height: 450px;max-width:450px">
+        <p v-html="$t('cover.cover', { villageCount: villages.length })"></p>
+        <br>
+        <v-code>{{ $t('cover.link1') }}<a href="#!"
+            @click="e => { e.preventDefault(); showAboutPanel(); coverDialog = false; }">{{ $t('cover.link2')
+            }}</a>.</v-code>
+      </v-card-text>
+    </v-card>
+  </v-dialog>
+
 
   <v-card :style="selectedVillage ? '' : { zIndex: 0 }" fixed raised class="ma-1" id="sidebar" ref="sidebar">
-
     <v-container class="pa-0">
       <v-card-text>
         <v-window v-model="selectedVillage">
@@ -76,7 +90,8 @@
                       allowFullScreen="true"></iframe>
 
                     <iframe v-if="embedEnabled && isValidTelegram(link.src)" :title="$t('incidents.panel.telegramTitle')"
-                      class="video-embed" :src="telegramEmbed(link.src)" height="240px" width="100%" :id="link.src" allowFullScreen="true"/>
+                      class="video-embed" :src="telegramEmbed(link.src)" height="240px" width="100%" :id="link.src"
+                      allowFullScreen="true" />
 
                     <img v-if="embedEnabled && isImage(link.src)"
                       :title="$t('incidents.panel.embeddedImage', { domain: getDomain(link.src) })" :src="link.src"
@@ -120,6 +135,7 @@
   </v-card>
 
   <v-card class="village-tabs ma-0 mb-0 ml-auto mr-auto" :class="mdAndDown ? 'w-100' : 'w-50'">
+    {{ this.getCookie(this.coverCookieName) }} , {{ test }}
     <v-tabs class="ml-auto mr-auto" v-model="selectedVillage" bg-color="primary" center-active show-arrows
       align-tabs="center" v-on:update:model-value="fitPolygon" mandatory="false">
       <v-tab v-for="v in villages" :value="v.id" :key="v.id">
@@ -186,6 +202,7 @@ import TitleExpand from "./TitleExpand.vue"
 import OptionsButton from "./OptionsButton.vue"
 import MarkerUtils from "./js/MarkerUtils.js";
 import UrlUtils from "./js/UrlUtils.js";
+import CookieUtils from "./js/CookieUtils.js";
 import { i18n } from '../plugins/vuetify'
 
 export default {
@@ -227,10 +244,13 @@ export default {
       currentTileName: config.app.map.startTile,
       currentTile: null,
       embedEnabled: false,
-      autoScroll: true
+      autoScroll: true,
+      coverCookieName: 'coverCookieHasBeenDismissed',
+      coverDialog: false
     }
   }, methods: {
     ...UrlUtils,
+    ...CookieUtils,
     setTileLayer(tileName) {
       // remove previous tile if it exists
       if (this.currentTile != null) {
@@ -248,11 +268,10 @@ export default {
     updateEmbedSettings(embedEnabled) {
       console.log(`embedEnabled: ${embedEnabled}`)
       this.embedEnabled = embedEnabled;
-      console.log(this.$cookies)
     },
-    showAboutPanel(){
+    showAboutPanel() {
       console.log("showing dialog")
-      this.$refs.titleExpand.dialog=true;
+      this.$refs.titleExpand.dialog = true;
     },
     getTileUrl() {
       return this.mapConfig.tiles[this.currentTileName](this.mapConfig.mapboxToken)
@@ -521,8 +540,8 @@ export default {
         }
       })
     },
-    readableDate(dateStr){
-      if(!dateStr) return dateStr;
+    readableDate(dateStr) {
+      if (!dateStr) return dateStr;
       let d = new Date(dateStr);
       return d.toLocaleString(this.$vuetify.locale.current, { year: 'numeric', month: 'long', day: 'numeric' });
     }
@@ -570,12 +589,16 @@ export default {
     hoverVillage: function () { this.updatePolygonColors() },
     enabledTags: function () { this.refreshVisibleIncidents() },
     enabledImpacts: function () { this.refreshVisibleIncidents() },
+    coverDialog: function () {
+      this.setCookie(this.coverCookieName, 'true');
+    }
   },
   mounted: function () {
     this.initMap();
     this.populateMap();
     this.selectedVillage = this.mapConfig.startVillage; // override default v-tabs behaviour of assinging 1st
     this.autoScroll = !(this.$route.query["disable-scroll"] != undefined);
+    this.coverDialog = !(this.$route.query["no-cover"] != undefined) && this.getCookie(this.coverCookieName) != "true"
   }
 }
 
@@ -754,6 +777,14 @@ iframe.video-embed {
   & .borderpost-selected {
     color: #80DEEA;
   }
+}
+
+.geolocated {
+  color: #00E5FF;
+}
+
+.satellite {
+  color: #81C784;
 }
 
 // .chip-military,

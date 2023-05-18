@@ -1,14 +1,15 @@
 <template>
+  <v-btn :icon="fullscreen ? 'mdi-fullscreen-exit' : 'mdi-fullscreen'" id="fullscreen-btn" class="ma-1 pa-0"
+    @click="toggleFullscreen()" :title="fullscreen ? $t(`options.fullscreen.off`) : $t(`options.fullscreen.on`)"></v-btn>
   <v-menu id="options-menu" transition="scale-transition" :close-on-content-click="false" offset-y v-model="menuOpen">
     <template v-slot:activator="{ props }">
       <v-btn icon="mdi-dots-vertical" v-bind="props" id="options-menu-btn" class="ma-1 pa-0"></v-btn>
     </template>
-
     <v-list density="compact" class="options-list">
       <v-list-subheader>{{ $t('options.title') }}</v-list-subheader>
 
       <!-- tiles change -->
-      <v-list-item @click="switchNextTile()" ref="maptile" class="maptile" :class="nextTile">
+      <v-list-item @click="switchNextTile()" ref="maptile" class="maptile" :class="`${nextTile}-tile`">
         <template v-slot:prepend>
           <v-icon icon="mdi-layers" size="large"></v-icon>
         </template>
@@ -59,16 +60,6 @@
         </v-list-item-title>
       </v-list-item>
 
-      <!-- fullscreen -->
-      <v-list-item @click="toggleFullscreen()">
-        <template v-slot:prepend>
-          <v-icon :icon="fullscreen ? 'mdi-fullscreen-exit' : 'mdi-fullscreen'" size="large"></v-icon>
-        </template>
-        <v-list-item-title class="text-uppercase">
-          {{ (fullscreen ? $t(`options.fullscreen.off`) : $t(`options.fullscreen.on`)) }}
-        </v-list-item-title>
-      </v-list-item>
-
       <!-- download JSON -->
       <v-list-item @click="openUrl('./incidents.json', 'incidents.json')">
         <template v-slot:prepend>
@@ -109,16 +100,6 @@
         </v-list-item-title>
       </v-list-item>
 
-      <!-- share -->
-      <v-list-item @click="shareUrl()" v-if="shareWorks || clipboardWorks">
-        <template v-slot:prepend>
-          <v-icon icon="mdi-share" size="large"></v-icon>
-        </template>
-        <v-list-item-title class="text-uppercase">
-          {{ $t(`options.links.share.button`) }}
-        </v-list-item-title>
-      </v-list-item>
-
       <!-- info panel -->
       <v-list-item @click="showAboutPanel()">
         <template v-slot:prepend>
@@ -139,6 +120,7 @@
 import { useLocale } from 'vuetify';
 import { api as fullscreen } from 'vue-fullscreen';
 import { useToast } from "vue-toastification";
+import CookieUtils from "./js/CookieUtils.js";
 import config from "../../config";
 
 export default {
@@ -163,8 +145,6 @@ export default {
 
       //others
       toastOptions: config.app.ui.toastOptions,
-      clipboardWorks: navigator.clipboard !== undefined,
-      shareWorks: navigator.share !== undefined,
       embedDialog: false,
       embedEnabled: false,
       embedsCookieName: "EmbedsEnabledCookie"
@@ -175,6 +155,7 @@ export default {
     return { current, toast: useToast() };
   },
   methods: {
+    ...CookieUtils,
     switchNextTile() {
       this.currentTileIndex = (this.currentTileIndex + 1) % this.availableTiles.length; //rotate
       this.nextTile = this.availableTiles[(this.currentTileIndex + 1) % this.availableTiles.length];
@@ -207,53 +188,10 @@ export default {
     openUrl(url) {
       window.open(url, '_blank');
     },
-    shareUrl(url) {
-      url = url || window.location;
-      if (this.shareWorks) {
-        navigator.share({
-          title: document.title,
-          text: this.$t("main.title"),
-          url: url
-        })
-          .then(() => console.log('Successful share'))
-          .catch(error => console.log('Error sharing:', error));
-      }
-      if (this.clipboardWorks) {
-        try {
-          navigator.clipboard.writeText(url);
-          this.toast(this.$t('options.links.share.success'), this.toastOptions);
-        } catch (error) {
-          console.log(`Could not copy: ${error}`)
-          this.toast.error(this.$t('options.links.share.error'), this.toastOptions);
-          // this.openUrl(url)
-        }
-      }
-    },
     showAboutPanel() {
       this.$emit("showAboutPanel");
       this.menuOpen = false;
     },
-    setCookie(key, value, days) {
-      var expireDate = new Date();
-      expireDate.setDate(expireDate.getDate() + (days || 365));
-      document.cookie = `${key}=${value}; expires=${expireDate.toUTCString()}; path=/`;
-    },
-    getCookie(key) {
-      //https://www.w3schools.com/js/js_cookies.asp
-      let name = key + "=";
-      let decodedCookie = decodeURIComponent(document.cookie);
-      let ca = decodedCookie.split(';');
-      for (let i = 0; i < ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) == ' ') {
-          c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-          return c.substring(name.length, c.length);
-        }
-      }
-      return undefined;
-    }
   },
   mounted() {
     this.updateLocaleIndex();
@@ -288,16 +226,16 @@ export default {
  }
 
  .maptile {
-   &.satellite {
+   &.satellite-tile {
      background-image: url('@/assets/sat-tile.png');
    }
 
-   &.custom {
+   &.custom-tile {
      background-image: url('@/assets/custom-tile.png');
      color: black;
    }
 
-   &.osm {
+   &.osm-tile {
      background-image: url('@/assets/osm-tile.png');
      color: black;
    }
@@ -305,19 +243,21 @@ export default {
  }
 
 
- #options-menu-btn {
+ #options-menu-btn,
+ #fullscreen-btn {
    position: absolute;
    right: 10px;
    top: 0px;
    opacity: $opacityMax;
    z-index: $zMax + 20;
    border-radius: 25%;
-   //  width:
 
    &:hover {
      color: $accentColor;
    }
+ }
 
-
+ button#fullscreen-btn {
+   top: 55px;
  }
 </style>

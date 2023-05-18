@@ -141,13 +141,6 @@ export default {
    }
  }
 
- .geolocated {
-   color: #00E5FF;
- }
-
- .satellite {
-   color: #81C784;
- }
 
  table {
    max-width: 920px;
