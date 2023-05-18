@@ -23,7 +23,7 @@
             <span v-if="villageHasSate(v.id)">
               <v-divider class="mb-4 mt-4"></v-divider>
               <p class="ma-2"
-                v-html="$t('satellite.compareText', { before: v?.satellite?.before?.date, after: v?.satellite?.after?.date })">
+                v-html="$t('satellite.compareText', { before: readableDate(v?.satellite?.before?.date), after: readableDate(v?.satellite?.after?.date) })">
               </p>
 
               <div class="d-flex justify-center ma-4">
@@ -42,7 +42,7 @@
               <div v-if="selectedSat && satellites[v.id]" class="text-center ma-2">
                 <p><v-code>
                     {{ $t('satellite.showingImagery', {
-                      date: satellites[v.id][satellites[selectedSat.villageId]?.active]?.data?.date
+                      date: readableDate(satellites[v.id][satellites[selectedSat.villageId]?.active]?.data?.date)
                     }) }}
                   </v-code>
                 </p>
@@ -520,6 +520,11 @@ export default {
           });
         }
       })
+    },
+    readableDate(dateStr){
+      if(!dateStr) return dateStr;
+      let d = new Date(dateStr);
+      return d.toLocaleString(this.$vuetify.locale.current, { year: 'numeric', month: 'long', day: 'numeric' });
     }
   },
   watch: {
