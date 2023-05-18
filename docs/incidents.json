@@ -1,0 +1,4591 @@
+{
+    "ak-sai": [
+        {
+            "tkid": 240,
+            "lat": 39.8770319,
+            "lon": 70.49609389,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 241,
+            "lat": 39.8771852,
+            "lon": 70.49653107,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 242,
+            "lat": 39.87740058,
+            "lon": 70.49719886,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 243,
+            "lat": 39.87804014,
+            "lon": 70.49664922,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 244,
+            "lat": 39.878367,
+            "lon": 70.49727776,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 245,
+            "lat": 39.87779489,
+            "lon": 70.49757475,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 246,
+            "lat": 39.88031669,
+            "lon": 70.49767823,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 247,
+            "lat": 39.88050994,
+            "lon": 70.49830559,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 248,
+            "lat": 39.87940896,
+            "lon": 70.49925236,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 249,
+            "lat": 39.87884389,
+            "lon": 70.4984457,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 250,
+            "lat": 39.87933721,
+            "lon": 70.5006437,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 251,
+            "lat": 39.87861625,
+            "lon": 70.49852067,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 252,
+            "lat": 39.87827867,
+            "lon": 70.49879858,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 253,
+            "lat": 39.87720994,
+            "lon": 70.49844927,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 254,
+            "lat": 39.87739515,
+            "lon": 70.49883868,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 255,
+            "lat": 39.87716061,
+            "lon": 70.49899023,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 256,
+            "lat": 39.87693618,
+            "lon": 70.49859977,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 257,
+            "lat": 39.87688965,
+            "lon": 70.49907554,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 258,
+            "lat": 39.87667114,
+            "lon": 70.49921547,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 259,
+            "lat": 39.87638416,
+            "lon": 70.49892101,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 260,
+            "lat": 39.87608113,
+            "lon": 70.49907004,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 261,
+            "lat": 39.87668076,
+            "lon": 70.49763007,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 262,
+            "lat": 39.87620099,
+            "lon": 70.49751763,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 263,
+            "lat": 39.87646891,
+            "lon": 70.49629721,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 264,
+            "lat": 39.87595331,
+            "lon": 70.49653744,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 265,
+            "lat": 39.87564101,
+            "lon": 70.49680333,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 266,
+            "lat": 39.8749494,
+            "lon": 70.4968896,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 267,
+            "lat": 39.87966573,
+            "lon": 70.50156069,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 268,
+            "lat": 39.88089957,
+            "lon": 70.50518298,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 269,
+            "lat": 39.88068133,
+            "lon": 70.50592668,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 270,
+            "lat": 39.88072473,
+            "lon": 70.50641148,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 271,
+            "lat": 39.88102534,
+            "lon": 70.50718369,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 272,
+            "lat": 39.88159975,
+            "lon": 70.50679221,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 273,
+            "lat": 39.87275282,
+            "lon": 70.50609297,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 274,
+            "lat": 39.87430765,
+            "lon": 70.51233073,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 337,
+            "lat": 39.87725795,
+            "lon": 70.51755184,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 338,
+            "lat": 39.88063434,
+            "lon": 70.50906685,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 339,
+            "lat": 39.88034002,
+            "lon": 70.50918563,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 340,
+            "lat": 39.88020632,
+            "lon": 70.51002711,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 341,
+            "lat": 39.87975189,
+            "lon": 70.50982713,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 342,
+            "lat": 39.87622164,
+            "lon": 70.51416929,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 343,
+            "lat": 39.87593529,
+            "lon": 70.51425532,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 344,
+            "lat": 39.8766665,
+            "lon": 70.51369755,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 345,
+            "lat": 39.87697956,
+            "lon": 70.51590204,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 346,
+            "lat": 39.87804429,
+            "lon": 70.51132741,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 347,
+            "lat": 39.8801301,
+            "lon": 70.51127992,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 348,
+            "lat": 39.87759407,
+            "lon": 70.51842169,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/raWjX-jtYkU?t=677",
+                    "time": 677.0
+                }
+            ]
+        },
+        {
+            "tkid": 349,
+            "lat": 39.8778463,
+            "lon": 70.51901979,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 350,
+            "lat": 39.87797712,
+            "lon": 70.51937287,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 351,
+            "lat": 39.87809773,
+            "lon": 70.519655,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 352,
+            "lat": 39.87820358,
+            "lon": 70.51989912,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 353,
+            "lat": 39.87705655,
+            "lon": 70.51707957,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 354,
+            "lat": 39.8784035,
+            "lon": 70.52041787,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 355,
+            "lat": 39.87923739,
+            "lon": 70.52023364,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 356,
+            "lat": 39.87940467,
+            "lon": 70.51987163,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 357,
+            "lat": 39.87959586,
+            "lon": 70.51954428,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 358,
+            "lat": 39.87891103,
+            "lon": 70.52062506,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 359,
+            "lat": 39.87871135,
+            "lon": 70.52102486,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 360,
+            "lat": 39.87957416,
+            "lon": 70.51852779,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/raWjX-jtYkU?t=711",
+                    "time": 711.0
+                }
+            ]
+        },
+        {
+            "tkid": 361,
+            "lat": 39.87897205,
+            "lon": 70.51843918,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 362,
+            "lat": 39.8784482,
+            "lon": 70.51801344,
+            "impact": "civinfra",
+            "description_en": "School",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://t.me/seychas_kg/13359",
+                    "time": ""
+                },
+                {
+                    "src": "https://sputnik.kg/img/07e6/09/13/1068067083_0:0:3072:2048_600x0_80_0_1_38501ebaba72e31c911651ae4a495047.jpg.webp",
+                    "time": ""
+                },
+                {
+                    "src": "https://youtu.be/raWjX-jtYkU?t=645",
+                    "time": 645.0
+                }
+            ]
+        },
+        {
+            "tkid": 363,
+            "lat": 39.87967589,
+            "lon": 70.52223453,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 364,
+            "lat": 39.87942059,
+            "lon": 70.52196312,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 365,
+            "lat": 39.8792243,
+            "lon": 70.52181786,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 366,
+            "lat": 39.87926583,
+            "lon": 70.52086646,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 367,
+            "lat": 39.87916296,
+            "lon": 70.52107228,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 368,
+            "lat": 39.87905071,
+            "lon": 70.521279,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 369,
+            "lat": 39.87892236,
+            "lon": 70.52152107,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 370,
+            "lat": 39.87971354,
+            "lon": 70.52017344,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 371,
+            "lat": 39.88070864,
+            "lon": 70.51523636,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 372,
+            "lat": 39.87997353,
+            "lon": 70.51542404,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 373,
+            "lat": 39.87902336,
+            "lon": 70.51576918,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 374,
+            "lat": 39.87926479,
+            "lon": 70.5159773,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 375,
+            "lat": 39.87981398,
+            "lon": 70.51667413,
+            "impact": "civinfra",
+            "description_en": "Kindergarten",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 376,
+            "lat": 39.88049904,
+            "lon": 70.51799712,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 377,
+            "lat": 39.88031746,
+            "lon": 70.51787142,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/raWjX-jtYkU?t=711",
+                    "time": 711.0
+                }
+            ]
+        },
+        {
+            "tkid": 378,
+            "lat": 39.88018717,
+            "lon": 70.51765711,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/raWjX-jtYkU?t=711",
+                    "time": 711.0
+                }
+            ]
+        },
+        {
+            "tkid": 379,
+            "lat": 39.88026017,
+            "lon": 70.51542572,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 380,
+            "lat": 39.88109642,
+            "lon": 70.51511862,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 381,
+            "lat": 39.88111373,
+            "lon": 70.51474484,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 382,
+            "lat": 39.88058671,
+            "lon": 70.51865687,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 383,
+            "lat": 39.88248938,
+            "lon": 70.51896474,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 384,
+            "lat": 39.89542982,
+            "lon": 70.50530184,
+            "impact": "privateprop",
+            "description_en": "Chicken farm",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://eurasianet.org/sites/default/files/styles/article/public/2022-10/Photo_6553723_DJI_123_jpg_5279256_0_2022921143934_photo_original-01.jpeg?itok=-PPQ82wm",
+                    "time": ""
+                }
+            ]
+        },
+        {
+            "tkid": 385,
+            "lat": 39.88053494,
+            "lon": 70.51676853,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/raWjX-jtYkU?t=661",
+                    "time": 661.0
+                }
+            ]
+        }
+    ],
+    "arka": [
+        {
+            "tkid": 162,
+            "lat": 40.19346232,
+            "lon": 69.88360754,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 163,
+            "lat": 40.19319612,
+            "lon": 69.88371328,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 164,
+            "lat": 40.18877103,
+            "lon": 69.88161334,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 165,
+            "lat": 40.18868096,
+            "lon": 69.88107573,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 166,
+            "lat": 40.1891503,
+            "lon": 69.88054304,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 167,
+            "lat": 40.18936276,
+            "lon": 69.88051296,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 168,
+            "lat": 40.18909445,
+            "lon": 69.88293845,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://telegra.ph/file/a1feb17203443a8d595dc.jpg",
+                    "time": ""
+                }
+            ]
+        },
+        {
+            "tkid": 169,
+            "lat": 40.18973207,
+            "lon": 69.880429,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 170,
+            "lat": 40.18973961,
+            "lon": 69.88088805,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 171,
+            "lat": 40.19045897,
+            "lon": 69.88065148,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/Y3jv9Fgw53s?t=29",
+                    "time": 29.0
+                }
+            ]
+        },
+        {
+            "tkid": 172,
+            "lat": 40.19033801,
+            "lon": 69.88167403,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/Y3jv9Fgw53s?t=41",
+                    "time": 41.0
+                }
+            ]
+        },
+        {
+            "tkid": 173,
+            "lat": 40.19004619,
+            "lon": 69.88175983,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/Y3jv9Fgw53s?t=49",
+                    "time": 49.0
+                }
+            ]
+        },
+        {
+            "tkid": 174,
+            "lat": 40.19346288,
+            "lon": 69.8833152,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 175,
+            "lat": 40.193594,
+            "lon": 69.88326714,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 176,
+            "lat": 40.19300308,
+            "lon": 69.88341103,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 177,
+            "lat": 40.19297988,
+            "lon": 69.88086603,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/Y3jv9Fgw53s?t=57",
+                    "time": 57.0
+                }
+            ]
+        },
+        {
+            "tkid": 178,
+            "lat": 40.1927386,
+            "lon": 69.88106497,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/6wskc5TIvGQ?t=221",
+                    "time": 221.0
+                }
+            ]
+        },
+        {
+            "tkid": 179,
+            "lat": 40.19259031,
+            "lon": 69.88203656,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 180,
+            "lat": 40.19234068,
+            "lon": 69.8820995,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 181,
+            "lat": 40.19431761,
+            "lon": 69.88059094,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/Y3jv9Fgw53s?t=69",
+                    "time": 69.0
+                }
+            ]
+        },
+        {
+            "tkid": 182,
+            "lat": 40.1935102,
+            "lon": 69.88082652,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/Y3jv9Fgw53s?t=59",
+                    "time": 59.0
+                }
+            ]
+        },
+        {
+            "tkid": 183,
+            "lat": 40.19390124,
+            "lon": 69.88173475,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 184,
+            "lat": 40.19483501,
+            "lon": 69.88127476,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/Y3jv9Fgw53s?t=74",
+                    "time": 74.0
+                }
+            ]
+        },
+        {
+            "tkid": 185,
+            "lat": 40.19469171,
+            "lon": 69.87949813,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 186,
+            "lat": 40.19439162,
+            "lon": 69.87957771,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 187,
+            "lat": 40.19432115,
+            "lon": 69.87924687,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 188,
+            "lat": 40.1940564,
+            "lon": 69.88010776,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/Y3jv9Fgw53s?t=66",
+                    "time": 66.0
+                }
+            ]
+        },
+        {
+            "tkid": 189,
+            "lat": 40.19367056,
+            "lon": 69.87916958,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/6wskc5TIvGQ?t=584",
+                    "time": 584.0
+                }
+            ]
+        },
+        {
+            "tkid": 190,
+            "lat": 40.19372834,
+            "lon": 69.88018503,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/Y3jv9Fgw53s?t=60",
+                    "time": 60.0
+                }
+            ]
+        },
+        {
+            "tkid": 191,
+            "lat": 40.19331331,
+            "lon": 69.87927289,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/6wskc5TIvGQ?t=584",
+                    "time": 584.0
+                }
+            ]
+        },
+        {
+            "tkid": 192,
+            "lat": 40.19292173,
+            "lon": 69.87994645,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/6wskc5TIvGQ?t=584",
+                    "time": 584.0
+                }
+            ]
+        },
+        {
+            "tkid": 193,
+            "lat": 40.19276961,
+            "lon": 69.87998124,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/6wskc5TIvGQ?t=584",
+                    "time": 584.0
+                }
+            ]
+        },
+        {
+            "tkid": 194,
+            "lat": 40.19267175,
+            "lon": 69.88044147,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/Y3jv9Fgw53s?t=18",
+                    "time": 18.0
+                }
+            ]
+        },
+        {
+            "tkid": 195,
+            "lat": 40.19244127,
+            "lon": 69.88043928,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/Y3jv9Fgw53s?t=18",
+                    "time": 18.0
+                }
+            ]
+        },
+        {
+            "tkid": 196,
+            "lat": 40.19523561,
+            "lon": 69.87944802,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 197,
+            "lat": 40.19522622,
+            "lon": 69.87992003,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 198,
+            "lat": 40.19588516,
+            "lon": 69.88026233,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 199,
+            "lat": 40.19609121,
+            "lon": 69.88118218,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 200,
+            "lat": 40.19681449,
+            "lon": 69.87962308,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 201,
+            "lat": 40.19632805,
+            "lon": 69.87916223,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 202,
+            "lat": 40.19616401,
+            "lon": 69.87923679,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 203,
+            "lat": 40.19583119,
+            "lon": 69.8787459,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 204,
+            "lat": 40.19648123,
+            "lon": 69.87870328,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 205,
+            "lat": 40.19740226,
+            "lon": 69.88068445,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 206,
+            "lat": 40.19669407,
+            "lon": 69.88009593,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 207,
+            "lat": 40.19857643,
+            "lon": 69.88048738,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/Y3jv9Fgw53s?t=100",
+                    "time": 100.0
+                }
+            ]
+        },
+        {
+            "tkid": 208,
+            "lat": 40.19846283,
+            "lon": 69.88238553,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 209,
+            "lat": 40.19907291,
+            "lon": 69.88197476,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 210,
+            "lat": 40.1999377,
+            "lon": 69.881959,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 211,
+            "lat": 40.19969877,
+            "lon": 69.88201372,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 212,
+            "lat": 40.20016652,
+            "lon": 69.88190654,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 213,
+            "lat": 40.19976814,
+            "lon": 69.8801378,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/Y3jv9Fgw53s?t=88",
+                    "time": 88.0
+                }
+            ]
+        },
+        {
+            "tkid": 214,
+            "lat": 40.19957382,
+            "lon": 69.87937809,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/Y3jv9Fgw53s?t=96",
+                    "time": 96.0
+                }
+            ]
+        },
+        {
+            "tkid": 215,
+            "lat": 40.19996351,
+            "lon": 69.88422586,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 216,
+            "lat": 40.20078745,
+            "lon": 69.88436431,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 217,
+            "lat": 40.20119443,
+            "lon": 69.88414488,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 218,
+            "lat": 40.2009004,
+            "lon": 69.8839824,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 219,
+            "lat": 40.20061896,
+            "lon": 69.88348526,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 220,
+            "lat": 40.20055482,
+            "lon": 69.88247948,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/6wskc5TIvGQ?t=208",
+                    "time": 208.0
+                },
+                {
+                    "src": "https://telegra.ph/file/fe0f5d386acac9b1990f5.jpg",
+                    "time": ""
+                }
+            ]
+        },
+        {
+            "tkid": 221,
+            "lat": 40.20099241,
+            "lon": 69.88269414,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://telegra.ph/file/29d07bdb04eceb3eb9264.jpg",
+                    "time": ""
+                }
+            ]
+        },
+        {
+            "tkid": 222,
+            "lat": 40.20088535,
+            "lon": 69.88236372,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 223,
+            "lat": 40.20125973,
+            "lon": 69.88216613,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://telegra.ph/file/dfbfeceb2c451011ef074.jpg",
+                    "time": ""
+                }
+            ]
+        },
+        {
+            "tkid": 224,
+            "lat": 40.19048946,
+            "lon": 69.87543246,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 225,
+            "lat": 40.20059808,
+            "lon": 69.8827535,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/6wskc5TIvGQ?t=221",
+                    "time": 221.0
+                }
+            ]
+        },
+        {
+            "tkid": 226,
+            "lat": 40.20110372,
+            "lon": 69.88290982,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/6wskc5TIvGQ?t=214",
+                    "time": 214.0
+                }
+            ]
+        },
+        {
+            "tkid": 227,
+            "lat": 40.18886468,
+            "lon": 69.88200103,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://telegra.ph/file/3b031205f2cda397cddcc.jpg",
+                    "time": ""
+                }
+            ]
+        }
+    ],
+    "batken": [
+        {
+            "tkid": 93,
+            "lat": 40.05482036,
+            "lon": 70.81465654,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://t.me/seychas_kg/13354",
+                    "time": ""
+                }
+            ]
+        }
+    ],
+    "borborduk": [
+        {
+            "tkid": 57,
+            "lat": 40.18818809,
+            "lon": 69.82864884,
+            "impact": "civinfra",
+            "description_en": "Police Station",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://fb.watch/jk0s06_Xq6/",
+                    "time": 126.0
+                }
+            ]
+        },
+        {
+            "tkid": 58,
+            "lat": "",
+            "lon": 69.82780618,
+            "impact": "civinfra",
+            "description_en": "Municipality Building ",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://fb.watch/jk0s06_Xq6/",
+                    "time": 103.0
+                }
+            ]
+        },
+        {
+            "tkid": 59,
+            "lat": 40.18089739,
+            "lon": 69.79597606,
+            "impact": "privateprop",
+            "description_en": "Hotel",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/6wskc5TIvGQ?t=2567",
+                    "time": 2567.0
+                }
+            ]
+        },
+        {
+            "tkid": 60,
+            "lat": 40.19149107,
+            "lon": 69.83647031,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 61,
+            "lat": 40.18660708,
+            "lon": 69.83015517,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 62,
+            "lat": 40.18723545,
+            "lon": 69.82834195,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 63,
+            "lat": 40.18757293,
+            "lon": 69.82933816,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 64,
+            "lat": 40.18746162,
+            "lon": 69.82902011,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        }
+    ],
+    "chorkishlok": [
+        {
+            "tkid": 91,
+            "lat": 40.06594915,
+            "lon": 70.62324076,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://asiaplustj.info/sites/default/files/articles/316877/1.JPG",
+                    "time": ""
+                },
+                {
+                    "src": "https://www.asiaplustj.info/ru/news/tajikistan/society/20220928/telo-otvezli-v-drugoe-selo-potomu-kladbitshe-obstrelivali-zhiteli-chorkishlok-rasskazali-kak-sobirali-tela-pogibshih",
+                    "time": ""
+                }
+            ]
+        },
+        {
+            "tkid": 92,
+            "lat": 40.06452064,
+            "lon": 70.62437877,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://t.me/today_tj/1388",
+                    "time": ""
+                }
+            ]
+        }
+    ],
+    "dostuk": [
+        {
+            "tkid": 1,
+            "lat": 40.05229068,
+            "lon": 70.63277194,
+            "impact": "civinfra",
+            "description_en": "School",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/JvugPEjieZU?t=531",
+                    "time": 531.0
+                }
+            ]
+        },
+        {
+            "tkid": 2,
+            "lat": 40.05256826,
+            "lon": 70.63278313,
+            "impact": "civinfra",
+            "description_en": "Kindergarten",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/vBazRrT6tnQ?t=131",
+                    "time": 131.0
+                },
+                {
+                    "src": "https://t.me/batken1/1392?single",
+                    "time": 43.0
+                },
+                {
+                    "src": "https://youtu.be/JvugPEjieZU?t=570",
+                    "time": 570.0
+                }
+            ]
+        },
+        {
+            "tkid": 3,
+            "lat": 40.05272614,
+            "lon": 70.63291711,
+            "impact": "civinfra",
+            "description_en": "Medical unit",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/vBazRrT6tnQ?t=131",
+                    "time": 131.0
+                },
+                {
+                    "src": "https://t.me/batken1/1392?single",
+                    "time": 18.0
+                },
+                {
+                    "src": "https://youtu.be/JvugPEjieZU?t=601",
+                    "time": 601.0
+                }
+            ]
+        },
+        {
+            "tkid": 4,
+            "lat": 40.0529363,
+            "lon": 70.6322936,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/vBazRrT6tnQ?t=131",
+                    "time": 131.0
+                }
+            ]
+        },
+        {
+            "tkid": 5,
+            "lat": 40.0526721,
+            "lon": 70.63202613,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 6,
+            "lat": 40.05235107,
+            "lon": 70.63204254,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://t.me/batken1/1392?single",
+                    "time": 85.0
+                }
+            ]
+        },
+        {
+            "tkid": 7,
+            "lat": 40.05253555,
+            "lon": 70.63160599,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/vBazRrT6tnQ?t=154",
+                    "time": 154.0
+                },
+                {
+                    "src": "https://t.me/batken1/1392?single",
+                    "time": 126.0
+                }
+            ]
+        },
+        {
+            "tkid": 8,
+            "lat": 40.05217065,
+            "lon": 70.63145763,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 9,
+            "lat": 40.05206999,
+            "lon": 70.63090058,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 10,
+            "lat": 40.05228775,
+            "lon": 70.63031801,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 11,
+            "lat": 40.04916602,
+            "lon": 70.6288643,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 12,
+            "lat": 40.05030809,
+            "lon": 70.62921313,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 13,
+            "lat": 40.05036523,
+            "lon": 70.62876699,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/vBazRrT6tnQ?t=2091",
+                    "time": 2091.0
+                },
+                {
+                    "src": "https://youtu.be/JvugPEjieZU?t=199",
+                    "time": 199.0
+                }
+            ]
+        },
+        {
+            "tkid": 14,
+            "lat": 40.04988316,
+            "lon": 70.62912308,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 15,
+            "lat": 40.04980344,
+            "lon": 70.62966769,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 16,
+            "lat": 40.05000803,
+            "lon": 70.62982317,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 17,
+            "lat": 40.05132969,
+            "lon": 70.6291046,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 18,
+            "lat": 40.05046479,
+            "lon": 70.63081113,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 19,
+            "lat": 40.05089751,
+            "lon": 70.63062469,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 20,
+            "lat": 40.05077573,
+            "lon": 70.63034183,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 21,
+            "lat": 40.05147814,
+            "lon": 70.63022037,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 22,
+            "lat": 40.05175183,
+            "lon": 70.63073382,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 23,
+            "lat": 40.05175429,
+            "lon": 70.63160442,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 24,
+            "lat": 40.0520413,
+            "lon": 70.631944,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 25,
+            "lat": 40.05151207,
+            "lon": 70.62922811,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 26,
+            "lat": 40.05133013,
+            "lon": 70.62975623,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 27,
+            "lat": 40.05184678,
+            "lon": 70.6299726,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 28,
+            "lat": 40.05194969,
+            "lon": 70.62960671,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 29,
+            "lat": 40.05214595,
+            "lon": 70.62917858,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 30,
+            "lat": 40.05201113,
+            "lon": 70.62883718,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 31,
+            "lat": 40.05223402,
+            "lon": 70.62880306,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 32,
+            "lat": 40.05236276,
+            "lon": 70.62965031,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/vBazRrT6tnQ?t=1391",
+                    "time": 1391.0
+                }
+            ]
+        },
+        {
+            "tkid": 33,
+            "lat": 40.05292282,
+            "lon": 70.62951654,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/vBazRrT6tnQ?t=1293",
+                    "time": 1293.0
+                }
+            ]
+        },
+        {
+            "tkid": 34,
+            "lat": 40.05296757,
+            "lon": 70.62925894,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/vBazRrT6tnQ?t=1395",
+                    "time": 1395.0
+                }
+            ]
+        },
+        {
+            "tkid": 35,
+            "lat": 40.05260969,
+            "lon": 70.62893462,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/vBazRrT6tnQ?t=1392",
+                    "time": 1392.0
+                }
+            ]
+        },
+        {
+            "tkid": 36,
+            "lat": 40.05326352,
+            "lon": 70.6285691,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 37,
+            "lat": 40.05381641,
+            "lon": 70.62899432,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/vBazRrT6tnQ?t=514",
+                    "time": 514.0
+                }
+            ]
+        },
+        {
+            "tkid": 38,
+            "lat": 40.05387866,
+            "lon": 70.6294919,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/vBazRrT6tnQ?t=257",
+                    "time": 257.0
+                }
+            ]
+        },
+        {
+            "tkid": 39,
+            "lat": 40.05392832,
+            "lon": 70.63005589,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 40,
+            "lat": 40.05410402,
+            "lon": 70.63078762,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 41,
+            "lat": 40.05276074,
+            "lon": 70.63040648,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 42,
+            "lat": 40.05246737,
+            "lon": 70.63103183,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 43,
+            "lat": 40.05272891,
+            "lon": 70.63102393,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/vBazRrT6tnQ?t=154",
+                    "time": 154.0
+                }
+            ]
+        },
+        {
+            "tkid": 44,
+            "lat": 40.05269253,
+            "lon": 70.63159553,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/vBazRrT6tnQ?t=154",
+                    "time": 154.0
+                },
+                {
+                    "src": "https://t.me/batken1/1392?single",
+                    "time": 157.0
+                }
+            ]
+        },
+        {
+            "tkid": 45,
+            "lat": 40.05308014,
+            "lon": 70.63118575,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 46,
+            "lat": 40.05337844,
+            "lon": 70.63067378,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 47,
+            "lat": 40.05435068,
+            "lon": 70.63258328,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 48,
+            "lat": 40.05394077,
+            "lon": 70.63173765,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/vBazRrT6tnQ?t=154",
+                    "time": 154.0
+                }
+            ]
+        },
+        {
+            "tkid": 49,
+            "lat": 40.05418866,
+            "lon": 70.63134679,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/vBazRrT6tnQ?t=154",
+                    "time": 154.0
+                }
+            ]
+        },
+        {
+            "tkid": 50,
+            "lat": 40.05454593,
+            "lon": 70.63117721,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 51,
+            "lat": 40.05460208,
+            "lon": 70.63077788,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/vBazRrT6tnQ?t=154",
+                    "time": 154.0
+                }
+            ]
+        },
+        {
+            "tkid": 52,
+            "lat": 40.05450563,
+            "lon": 70.6304289,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/vBazRrT6tnQ?t=154",
+                    "time": 154.0
+                }
+            ]
+        },
+        {
+            "tkid": 53,
+            "lat": 40.05431556,
+            "lon": 70.62999735,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 54,
+            "lat": 40.05424378,
+            "lon": 70.62965527,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/vBazRrT6tnQ?t=255",
+                    "time": 255.0
+                }
+            ]
+        },
+        {
+            "tkid": 55,
+            "lat": 40.05418128,
+            "lon": 70.6293153,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/vBazRrT6tnQ?t=251",
+                    "time": 251.0
+                }
+            ]
+        },
+        {
+            "tkid": 56,
+            "lat": 40.05459475,
+            "lon": 70.62910266,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/vBazRrT6tnQ?t=247",
+                    "time": 247.0
+                }
+            ]
+        }
+    ],
+    "international": [
+        {
+            "tkid": 110,
+            "lat": 40.12187132,
+            "lon": 69.6700486,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/ioliQpD3_tM?t=27",
+                    "time": 27.0
+                },
+                {
+                    "src": "https://youtu.be/raWjX-jtYkU?t=62",
+                    "time": 62.0
+                }
+            ]
+        },
+        {
+            "tkid": 111,
+            "lat": 40.12205986,
+            "lon": 69.67009177,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 112,
+            "lat": 40.12171852,
+            "lon": 69.6700321,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 113,
+            "lat": 40.12162388,
+            "lon": 69.66994809,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 114,
+            "lat": 40.11702422,
+            "lon": 69.67759088,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 115,
+            "lat": 40.11563099,
+            "lon": 69.67980581,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 116,
+            "lat": 40.11383719,
+            "lon": 69.68113217,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/6-ujXU5i0bk?t=532",
+                    "time": 532.0
+                }
+            ]
+        },
+        {
+            "tkid": 117,
+            "lat": 40.1172106,
+            "lon": 69.67910553,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        }
+    ],
+    "kapchygai": [
+        {
+            "tkid": 275,
+            "lat": 39.88167875,
+            "lon": 70.53087051,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 276,
+            "lat": 39.88135451,
+            "lon": 70.53072702,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 277,
+            "lat": 39.8813299,
+            "lon": 70.53042183,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 278,
+            "lat": 39.88163529,
+            "lon": 70.52924126,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 279,
+            "lat": 39.88184143,
+            "lon": 70.52896515,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 280,
+            "lat": 39.88180178,
+            "lon": 70.5294437,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 281,
+            "lat": 39.8812751,
+            "lon": 70.52955206,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 282,
+            "lat": 39.88115414,
+            "lon": 70.52844557,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 283,
+            "lat": 39.88177615,
+            "lon": 70.52815549,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 284,
+            "lat": 39.88145789,
+            "lon": 70.52883091,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 285,
+            "lat": 39.88205088,
+            "lon": 70.52769252,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 286,
+            "lat": 39.88200898,
+            "lon": 70.5279773,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 287,
+            "lat": 39.88230153,
+            "lon": 70.52739014,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 288,
+            "lat": 39.88237841,
+            "lon": 70.52893501,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 289,
+            "lat": 39.88247154,
+            "lon": 70.52865413,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 290,
+            "lat": 39.88319922,
+            "lon": 70.5283729,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 291,
+            "lat": 39.88387919,
+            "lon": 70.52791112,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/raWjX-jtYkU?t=458",
+                    "time": 458.0
+                }
+            ]
+        },
+        {
+            "tkid": 292,
+            "lat": 39.88422086,
+            "lon": 70.52782642,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/raWjX-jtYkU?t=438",
+                    "time": 438.0
+                }
+            ]
+        },
+        {
+            "tkid": 293,
+            "lat": 39.88438482,
+            "lon": 70.52883009,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 294,
+            "lat": 39.88382608,
+            "lon": 70.52873499,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 295,
+            "lat": 39.8847495,
+            "lon": 70.52767386,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/raWjX-jtYkU?t=450",
+                    "time": 450.0
+                }
+            ]
+        },
+        {
+            "tkid": 296,
+            "lat": 39.8845179,
+            "lon": 70.52723182,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/raWjX-jtYkU?t=440",
+                    "time": 440.0
+                }
+            ]
+        },
+        {
+            "tkid": 297,
+            "lat": 39.88588725,
+            "lon": 70.52746959,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/raWjX-jtYkU?t=455",
+                    "time": 455.0
+                }
+            ]
+        },
+        {
+            "tkid": 298,
+            "lat": 39.88508085,
+            "lon": 70.52746702,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 299,
+            "lat": 39.8857115,
+            "lon": 70.52659692,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 300,
+            "lat": 39.88524402,
+            "lon": 70.5269324,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 301,
+            "lat": 39.88297658,
+            "lon": 70.5265921,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 302,
+            "lat": 39.88303539,
+            "lon": 70.52780093,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 303,
+            "lat": 39.88325805,
+            "lon": 70.52755641,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 304,
+            "lat": 39.88278285,
+            "lon": 70.52760958,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 305,
+            "lat": 39.88352965,
+            "lon": 70.52624184,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/raWjX-jtYkU?t=438",
+                    "time": 438.0
+                }
+            ]
+        },
+        {
+            "tkid": 306,
+            "lat": 39.88363303,
+            "lon": 70.52687686,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/raWjX-jtYkU?t=502",
+                    "time": 502.0
+                }
+            ]
+        },
+        {
+            "tkid": 307,
+            "lat": 39.88340236,
+            "lon": 70.52664627,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 308,
+            "lat": 39.88359282,
+            "lon": 70.52732673,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 309,
+            "lat": 39.88387823,
+            "lon": 70.52719655,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/raWjX-jtYkU?t=508",
+                    "time": 508.0
+                }
+            ]
+        },
+        {
+            "tkid": 310,
+            "lat": 39.88459946,
+            "lon": 70.52483435,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 311,
+            "lat": 39.88523408,
+            "lon": 70.5247663,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 312,
+            "lat": 39.88424317,
+            "lon": 70.52568353,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 313,
+            "lat": 39.88392129,
+            "lon": 70.52612232,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 314,
+            "lat": 39.88432528,
+            "lon": 70.52696981,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 315,
+            "lat": 39.88470559,
+            "lon": 70.52660934,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/raWjX-jtYkU?t=433",
+                    "time": 433.0
+                }
+            ]
+        },
+        {
+            "tkid": 316,
+            "lat": 39.88490929,
+            "lon": 70.52643583,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/raWjX-jtYkU?t=433",
+                    "time": 433.0
+                }
+            ]
+        },
+        {
+            "tkid": 317,
+            "lat": 39.88540305,
+            "lon": 70.52581892,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 318,
+            "lat": 39.88545331,
+            "lon": 70.52528254,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 319,
+            "lat": 39.886526,
+            "lon": 70.52592232,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 320,
+            "lat": 39.88611851,
+            "lon": 70.52552659,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 321,
+            "lat": 39.88592877,
+            "lon": 70.52519855,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/R9T8VIYCS7Q?t=9",
+                    "time": 9.0
+                }
+            ]
+        },
+        {
+            "tkid": 322,
+            "lat": 39.88677415,
+            "lon": 70.52545611,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 323,
+            "lat": 39.88661374,
+            "lon": 70.52450845,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 324,
+            "lat": 39.88750903,
+            "lon": 70.52500163,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 325,
+            "lat": 39.88592927,
+            "lon": 70.52336646,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 326,
+            "lat": 39.88669396,
+            "lon": 70.52348393,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 327,
+            "lat": 39.88663668,
+            "lon": 70.52303151,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 328,
+            "lat": 39.88649778,
+            "lon": 70.52406105,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 329,
+            "lat": 39.88703512,
+            "lon": 70.52274046,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 330,
+            "lat": 39.88744889,
+            "lon": 70.52254855,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 331,
+            "lat": 39.88780044,
+            "lon": 70.52350222,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 332,
+            "lat": 39.88790604,
+            "lon": 70.52211135,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 333,
+            "lat": 39.88848094,
+            "lon": 70.52453897,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 334,
+            "lat": 39.88840543,
+            "lon": 70.52477936,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 335,
+            "lat": 39.88839081,
+            "lon": 70.52394164,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 336,
+            "lat": 39.88840414,
+            "lon": 70.52164058,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        }
+    ],
+    "karabak": [
+        {
+            "tkid": 228,
+            "lat": 40.16513377,
+            "lon": 70.82919828,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/Qrj7C0eJDOo?t=153",
+                    "time": 153.0
+                }
+            ]
+        },
+        {
+            "tkid": 229,
+            "lat": 40.16506721,
+            "lon": 70.82876471,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/Qrj7C0eJDOo?t=148",
+                    "time": 148.0
+                }
+            ]
+        },
+        {
+            "tkid": 230,
+            "lat": 40.16495626,
+            "lon": 70.83123471,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 231,
+            "lat": 40.16407298,
+            "lon": 70.80319677,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 232,
+            "lat": 40.16245634,
+            "lon": 70.8028094,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 233,
+            "lat": 40.16231641,
+            "lon": 70.80245847,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 234,
+            "lat": 40.16236437,
+            "lon": 70.8031912,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 235,
+            "lat": 40.1584988,
+            "lon": 70.80304997,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 236,
+            "lat": 40.15573854,
+            "lon": 70.80331196,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 237,
+            "lat": 40.15513341,
+            "lon": 70.80316983,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 238,
+            "lat": 40.15989301,
+            "lon": 70.81514764,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 239,
+            "lat": 40.16422135,
+            "lon": 70.80410634,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        }
+    ],
+    "kok-terek": [
+        {
+            "tkid": 387,
+            "lat": 39.9572414,
+            "lon": 70.51522964,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 388,
+            "lat": 39.96003911,
+            "lon": 70.52037155,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 389,
+            "lat": 39.96104967,
+            "lon": 70.5202376,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 390,
+            "lat": 39.96124584,
+            "lon": 70.52064893,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 391,
+            "lat": 39.96068691,
+            "lon": 70.52094348,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 392,
+            "lat": 39.96080887,
+            "lon": 70.52114368,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 393,
+            "lat": 39.96102831,
+            "lon": 70.52143986,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 394,
+            "lat": 39.96169198,
+            "lon": 70.52174942,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 395,
+            "lat": 39.96141832,
+            "lon": 70.5222517,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 396,
+            "lat": 39.96186864,
+            "lon": 70.52233596,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 397,
+            "lat": 39.96192477,
+            "lon": 70.52283975,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 398,
+            "lat": 39.96207094,
+            "lon": 70.52302511,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 399,
+            "lat": 39.96213634,
+            "lon": 70.52354219,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 400,
+            "lat": 39.94871735,
+            "lon": 70.51476946,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 401,
+            "lat": 39.95095581,
+            "lon": 70.5163684,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 402,
+            "lat": 39.95087885,
+            "lon": 70.51720161,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        }
+    ],
+    "lakkon": [
+        {
+            "tkid": 94,
+            "lat": 40.17184902,
+            "lon": 70.86549938,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/xzdWXwGTLdA?t=99",
+                    "time": 99.0
+                }
+            ]
+        },
+        {
+            "tkid": 95,
+            "lat": 40.17180342,
+            "lon": 70.8649373,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 96,
+            "lat": 40.17160312,
+            "lon": 70.86464591,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/xzdWXwGTLdA?t=391",
+                    "time": 391.0
+                }
+            ]
+        },
+        {
+            "tkid": 97,
+            "lat": 40.17217585,
+            "lon": 70.86513622,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/xzdWXwGTLdA?t=531",
+                    "time": 531.0
+                }
+            ]
+        },
+        {
+            "tkid": 98,
+            "lat": 40.17148446,
+            "lon": 70.86445553,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/xzdWXwGTLdA?t=473",
+                    "time": 473.0
+                }
+            ]
+        },
+        {
+            "tkid": 99,
+            "lat": 40.17087544,
+            "lon": 70.86443788,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        }
+    ],
+    "maksat": [
+        {
+            "tkid": 65,
+            "lat": 40.12790161,
+            "lon": 69.69333127,
+            "impact": "civinfra",
+            "description_en": "Municipality Building ",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/x5ubzv86-VQ?t=132",
+                    "time": 132.0
+                }
+            ]
+        },
+        {
+            "tkid": 66,
+            "lat": 40.135253,
+            "lon": 69.703747,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 67,
+            "lat": 40.13500819,
+            "lon": 69.70354465,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/x5ubzv86-VQ?t=605",
+                    "time": 605.0
+                }
+            ]
+        },
+        {
+            "tkid": 68,
+            "lat": 40.13472031,
+            "lon": 69.70325171,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/x5ubzv86-VQ?t=550",
+                    "time": 550.0
+                }
+            ]
+        },
+        {
+            "tkid": 69,
+            "lat": 40.1283307,
+            "lon": 69.69338396,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/x5ubzv86-VQ?t=54",
+                    "time": 54.0
+                }
+            ]
+        },
+        {
+            "tkid": 70,
+            "lat": 40.12379927,
+            "lon": 69.68608472,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/raWjX-jtYkU?t=162",
+                    "time": 162.0
+                }
+            ]
+        },
+        {
+            "tkid": 71,
+            "lat": 40.12866753,
+            "lon": 69.69427472,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/raWjX-jtYkU?t=201",
+                    "time": 201.0
+                }
+            ]
+        },
+        {
+            "tkid": 72,
+            "lat": 40.12374455,
+            "lon": 69.68457834,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 73,
+            "lat": 40.12469236,
+            "lon": 69.68421643,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 74,
+            "lat": 40.12426052,
+            "lon": 69.68459316,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 75,
+            "lat": 40.12339269,
+            "lon": 69.68502113,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 76,
+            "lat": 40.12465781,
+            "lon": 69.68575757,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 77,
+            "lat": 40.12442476,
+            "lon": 69.68550208,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 78,
+            "lat": 40.12417263,
+            "lon": 69.68575761,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 79,
+            "lat": 40.12432698,
+            "lon": 69.68698525,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 80,
+            "lat": 40.12402782,
+            "lon": 69.68726835,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 81,
+            "lat": 40.12408289,
+            "lon": 69.68759348,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 82,
+            "lat": 40.12156765,
+            "lon": 69.68809396,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 83,
+            "lat": 40.12452795,
+            "lon": 69.69043847,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 84,
+            "lat": 40.1257099,
+            "lon": 69.6944056,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 85,
+            "lat": 40.1299908,
+            "lon": 69.69731824,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 86,
+            "lat": 40.13498212,
+            "lon": 69.70653735,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 87,
+            "lat": 40.13525392,
+            "lon": 69.70374689,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 88,
+            "lat": 40.12793303,
+            "lon": 69.69230219,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 89,
+            "lat": 40.12718301,
+            "lon": 69.69208735,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 90,
+            "lat": 40.12688869,
+            "lon": 69.69221641,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        }
+    ],
+    "min-bulak": [
+        {
+            "tkid": 156,
+            "lat": 39.97868587,
+            "lon": 70.62019439,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 157,
+            "lat": 39.97849574,
+            "lon": 70.61939974,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 158,
+            "lat": 39.98665117,
+            "lon": 70.62289685,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 159,
+            "lat": 39.98659116,
+            "lon": 70.62235044,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 160,
+            "lat": 39.98687887,
+            "lon": 70.62209695,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 161,
+            "lat": 39.98221847,
+            "lon": 70.62132683,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        }
+    ],
+    "min-oruk": [
+        {
+            "tkid": 118,
+            "lat": 39.99114423,
+            "lon": 70.62069736,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 119,
+            "lat": 39.99092737,
+            "lon": 70.62072211,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 120,
+            "lat": 39.99193559,
+            "lon": 70.62012389,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 121,
+            "lat": 39.99179591,
+            "lon": 70.62018776,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 122,
+            "lat": 39.99229555,
+            "lon": 70.62050535,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 123,
+            "lat": 39.99329091,
+            "lon": 70.62027779,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 124,
+            "lat": 39.99284946,
+            "lon": 70.6203639,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 125,
+            "lat": 39.99345732,
+            "lon": 70.61989965,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 126,
+            "lat": 39.99358327,
+            "lon": 70.61987318,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 127,
+            "lat": 39.99371475,
+            "lon": 70.61981569,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://www.turmush.kg/ru/news:1822042",
+                    "time": ""
+                }
+            ]
+        },
+        {
+            "tkid": 128,
+            "lat": 39.9937608,
+            "lon": 70.62021733,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://www.turmush.kg/ru/news:1822042",
+                    "time": ""
+                }
+            ]
+        },
+        {
+            "tkid": 129,
+            "lat": 39.99443332,
+            "lon": 70.61970041,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 130,
+            "lat": 39.99512778,
+            "lon": 70.6201135,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 131,
+            "lat": 39.99588052,
+            "lon": 70.61959729,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 132,
+            "lat": 39.99686771,
+            "lon": 70.61980227,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 133,
+            "lat": 39.99662858,
+            "lon": 70.61983349,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/eFSZ-DZ21YU?t=291",
+                    "time": 291.0
+                }
+            ]
+        },
+        {
+            "tkid": 134,
+            "lat": 39.99658797,
+            "lon": 70.61954566,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 135,
+            "lat": 39.99703211,
+            "lon": 70.61982448,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/eFSZ-DZ21YU?t=343",
+                    "time": 343.0
+                }
+            ]
+        },
+        {
+            "tkid": 136,
+            "lat": 39.9969764,
+            "lon": 70.61947789,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/eFSZ-DZ21YU?t=319",
+                    "time": 319.0
+                }
+            ]
+        },
+        {
+            "tkid": 137,
+            "lat": 39.99737103,
+            "lon": 70.61895824,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/N7eE5MPiNQ8?t=630",
+                    "time": 630.0
+                }
+            ]
+        },
+        {
+            "tkid": 138,
+            "lat": 39.99767646,
+            "lon": 70.61929901,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 139,
+            "lat": 39.99793681,
+            "lon": 70.61969501,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 140,
+            "lat": 39.99768676,
+            "lon": 70.61972196,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 141,
+            "lat": 39.99837749,
+            "lon": 70.61990614,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 142,
+            "lat": 39.99856991,
+            "lon": 70.62032211,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://youtu.be/eFSZ-DZ21YU?t=264",
+                    "time": 264.0
+                }
+            ]
+        },
+        {
+            "tkid": 143,
+            "lat": 39.99866406,
+            "lon": 70.62134482,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 144,
+            "lat": 39.99865591,
+            "lon": 70.62158746,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 145,
+            "lat": 39.99809351,
+            "lon": 70.62064832,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 146,
+            "lat": 39.99761219,
+            "lon": 70.6210824,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 147,
+            "lat": 39.99739819,
+            "lon": 70.62083594,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 148,
+            "lat": 39.99701491,
+            "lon": 70.62113552,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 149,
+            "lat": 39.99648767,
+            "lon": 70.62087285,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 150,
+            "lat": 39.99636085,
+            "lon": 70.62091247,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 151,
+            "lat": 39.99584211,
+            "lon": 70.62089868,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 152,
+            "lat": 39.997171,
+            "lon": 70.62287866,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 153,
+            "lat": 39.99749718,
+            "lon": 70.62210635,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 154,
+            "lat": 39.99626479,
+            "lon": 70.62347204,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 155,
+            "lat": 40.00156724,
+            "lon": 70.62091675,
+            "impact": "privateprop",
+            "description_en": "warehouse",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://t.me/ChDambiev/19485",
+                    "time": ""
+                }
+            ]
+        }
+    ],
+    "ovchi-kalacha": [
+        {
+            "tkid": 100,
+            "lat": 40.12425713,
+            "lon": 69.68419473,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 101,
+            "lat": 40.11661741,
+            "lon": 69.6850779,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://www.facebook.com/asiaplustj/photos/pcb.5526168997448178/5526165780781833",
+                    "time": ""
+                }
+            ]
+        },
+        {
+            "tkid": 102,
+            "lat": 40.11675095,
+            "lon": 69.68476768,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 103,
+            "lat": 40.11696564,
+            "lon": 69.68470327,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 104,
+            "lat": 40.11721009,
+            "lon": 69.68509949,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 105,
+            "lat": 40.11828079,
+            "lon": 69.6829665,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 106,
+            "lat": 40.1264751,
+            "lon": 69.68413889,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://gdb.rferl.org/09850000-0aff-0242-55f5-08da989a619f_w1597_n_st.jpeg",
+                    "time": ""
+                }
+            ]
+        },
+        {
+            "tkid": 107,
+            "lat": 40.12615357,
+            "lon": 69.68441803,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "socialmedia",
+            "links": [
+                {
+                    "src": "https://gdb.rferl.org/09850000-0aff-0242-7f19-08da9899f17f_w1597_n_st.jpeg",
+                    "time": ""
+                },
+                {
+                    "src": "https://gdb.rferl.org/09850000-0aff-0242-5741-08da989aafbd_w1023_s.jpeg",
+                    "time": ""
+                }
+            ]
+        },
+        {
+            "tkid": 108,
+            "lat": 40.12419955,
+            "lon": 69.68417116,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        },
+        {
+            "tkid": 109,
+            "lat": 40.11656053,
+            "lon": 69.68481169,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        }
+    ],
+    "vorukh": [
+        {
+            "tkid": 386,
+            "lat": 39.87669721,
+            "lon": 70.52428464,
+            "impact": "privateprop",
+            "description_en": "",
+            "description_ru": "",
+            "tag": "satellite",
+            "links": []
+        }
+    ]
+}
