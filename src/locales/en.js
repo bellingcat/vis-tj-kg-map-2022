@@ -48,7 +48,7 @@ export default {
   },
   cover: {
     title: `Map introduction`,
-    cover: `Using the bottom navigation rows you can go through {villageCount} Kyrgyz and Tajik villages, apply filters on the method of identification used (<span class="geolocated">Geolocated</span> and <span class="satellite">Satellite</span>) and filter by the type of building affected. Further configurations can be configured on the top-right menu.`,
+    cover: `Using the bottom navigation rows you can go through {villageCount} Kyrgyz and Tajik villages, apply filters on the method of identification used (<span class="geolocated">Geolocated</span> and <span class="satellite">Satellite</span>) and filter by the type of building affected. Further configurations can be found on the top-right menu.`,
     link1: `For full methodology and context read the `,
     link2: `about page`
   },

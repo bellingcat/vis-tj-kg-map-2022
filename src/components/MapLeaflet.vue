@@ -135,7 +135,6 @@
   </v-card>
 
   <v-card class="village-tabs ma-0 mb-0 ml-auto mr-auto" :class="mdAndDown ? 'w-100' : 'w-50'">
-    {{ this.getCookie(this.coverCookieName) }} , {{ test }}
     <v-tabs class="ml-auto mr-auto" v-model="selectedVillage" bg-color="primary" center-active show-arrows
       align-tabs="center" v-on:update:model-value="fitPolygon" mandatory="false">
       <v-tab v-for="v in villages" :value="v.id" :key="v.id">
