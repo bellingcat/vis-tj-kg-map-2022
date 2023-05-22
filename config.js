@@ -7,11 +7,11 @@ const config = {
   app: {
     map: {
       // anchor: { lat: 39.936132, lon: 70.351180 },
-      anchor: { lat: 39.987965, lon: 70.618574 }, //dev
+      anchor: { lat:40.135559, lon: 69.683247 }, //dev
       maxZoom: 19,
       minZoom: 4,
       // startZoom: 9,
-      startZoom: 16,
+      startZoom: 17,
       wheelPxPerZoomLevel: 120,
       zoomSnap: 0.50,
       mapboxToken: "pk.eyJ1IjoiYmVsbGluZ2NhdC1tYXBib3giLCJhIjoiY2tleW0wbWliMDA1cTJ5bzdkbTRraHgwZSJ9.GJQkjPzj8554VhR5SPsfJg",
@@ -22,7 +22,7 @@ const config = {
         satellite: (token) => `https://api.mapbox.com/styles/v1/bellingcat-mapbox/cl1win2vp003914pdhateva6p/tiles/256/{z}/{x}/{y}@2x?access_token=${token}`,
         custom: (token) => `https://api.mapbox.com/styles/v1/bellingcat-mapbox/cl0qnou2y003m15s8ieuyhgsy/tiles/256/{z}/{x}/{y}@2x?access_token=${token}`,
       },
-      startVillage: 'min-bulak' // eg: "ovchi-kalacha"
+      startVillage: 'maksat' // eg: "ovchi-kalacha"
     },
     ui: {
       toastOptions: {
@@ -176,28 +176,30 @@ const config = {
           "date": "2022-11-01"
         }
       }
-    }, {
-      "id": "international",
-      "name_en": "International",
-      "name_ru": "Интернациональное",
-      "description_en": "About 20 kilometres southwest of Tajikistan’s Bahri Tochik Reservoir located across the disputed border.",
-      "description_ru": "TODO: Это некоторая информация о поселке Интернациональное.",
-      "yandex": "https://yandex.ru/maps/geo/1508554928/?l=sat&ll=69.833683%2C40.188422&z=14",
-      "satellite": {
-        "bounds": [
-          [40.122355, 69.661650],
-          [40.113302, 69.682138]
-        ],
-        "before": {
-          "url": "./satellite/international-2022-08-30.jpg",
-          "date": "2022-08-30"
-        },
-        "after": {
-          "url": "./satellite/international-2022-10-03.jpg",
-          "date": "2022-10-03"
-        }
-      }
-    }, {
+    },
+    // {
+    //   "id": "international",
+    //   "name_en": "International",
+    //   "name_ru": "Интернациональное",
+    //   "description_en": "About 20 kilometres southwest of Tajikistan’s Bahri Tochik Reservoir located across the disputed border.",
+    //   "description_ru": "TODO: Это некоторая информация о поселке Интернациональное.",
+    //   "yandex": "https://yandex.ru/maps/geo/1508554928/?l=sat&ll=69.833683%2C40.188422&z=14",
+    //   "satellite": {
+    //     "bounds": [
+    //       [40.122355, 69.661650],
+    //       [40.113302, 69.682138]
+    //     ],
+    //     "before": {
+    //       "url": "./satellite/international-2022-08-30.jpg",
+    //       "date": "2022-08-30"
+    //     },
+    //     "after": {
+    //       "url": "./satellite/international-2022-10-03.jpg",
+    //       "date": "2022-10-03"
+    //     }
+    //   }
+    // },
+     {
       "id": "kapchygai",
       "name_en": "Kapchygai",
       "name_ru": "Капчыгай",
@@ -300,8 +302,8 @@ const config = {
       "yandex": "https://yandex.com/maps/geo/4209595903/?ll=69.700117%2C40.128022&z=14.11",
       "satellite": {
         "bounds": [
-          [40.135828, 69.689145],
-          [40.124024, 69.708766]
+          [40.135509, 69.683447],
+          [40.121072, 69.707574]
         ],
         "before": {
           "url": "./satellite/maksat-2022-08-30.jpg",
@@ -359,28 +361,30 @@ const config = {
           "date": "2022-11-01"
         }
       }
-    }, {
-      "id": "ovchi-kalacha",
-      "name_en": "Ovchikalacha",
-      "name_ru": "Овчикалача",
-      "description_en": "About 20 kilometres southwest of Tajikistan’s Bahri Tochik Reservoir located across the disputed border. A narrow river and a road separates it from Kyrgyz villages of Maksat and International.",
-      "description_ru": "TODO: Это некоторая информация о поселке Овчикалача.",
-      "yandex": "https://yandex.ru/maps/geo/3159398637/?l=sat&ll=69.676854%2C40.126601&z=14",
-      "satellite": {
-        "bounds": [
-          [40.129800, 69.679759],
-          [40.115515, 69.689352]
-        ],
-        "before": {
-          "url": "./satellite/ovchi-kalacha-2022-08-30.jpg",
-          "date": "2022-08-30"
-        },
-        "after": {
-          "url": "./satellite/ovchi-kalacha-2022-10-03.jpg",
-          "date": "2022-10-03"
-        }
-      }
-    }, {
+    },
+    //  {
+    //   "id": "ovchi-kalacha",
+    //   "name_en": "Ovchikalacha",
+    //   "name_ru": "Овчикалача",
+    //   "description_en": "About 20 kilometres southwest of Tajikistan’s Bahri Tochik Reservoir located across the disputed border. A narrow river and a road separates it from Kyrgyz villages of Maksat and International.",
+    //   "description_ru": "TODO: Это некоторая информация о поселке Овчикалача.",
+    //   "yandex": "https://yandex.ru/maps/geo/3159398637/?l=sat&ll=69.676854%2C40.126601&z=14",
+    //   "satellite": {
+    //     "bounds": [
+    //       [40.129800, 69.679759],
+    //       [40.115515, 69.689352]
+    //     ],
+    //     "before": {
+    //       "url": "./satellite/ovchi-kalacha-2022-08-30.jpg",
+    //       "date": "2022-08-30"
+    //     },
+    //     "after": {
+    //       "url": "./satellite/ovchi-kalacha-2022-10-03.jpg",
+    //       "date": "2022-10-03"
+    //     }
+    //   }
+    // },
+     {
       "id": "vorukh",
       "name_en": "Vorukh",
       "name_ru": "Ворух",
