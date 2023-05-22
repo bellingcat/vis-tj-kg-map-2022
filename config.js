@@ -320,10 +320,6 @@ const config = {
       "description_ru": "TODO: Это некоторая информация о поселке Мин-Булак.",
       "yandex": "https://yandex.ru/maps/geo/4229754559/?l=sat%2Cskl&ll=70.632302%2C39.983485&z=15",
       "satellite": {
-        "bounds": [
-          // [39.987702, 70.618198],
-          // [39.977753, 70.626834]
-        ],
         "before": {
           "url": "./satellite/min-bulak-2022-07-08.jpg",
           "date": "2022-07-08",
@@ -335,6 +331,7 @@ const config = {
         "after": {
           "url": "./satellite/min-bulak-2022-09-17.png",
           "date": "2022-09-17",
+          // "attribution": "planet", // TODO: implement display?
           "bounds": [
             [39.987845, 70.618734],
             [39.977115, 70.624708]
