@@ -6,22 +6,23 @@ const config = {
 
   app: {
     map: {
-      anchor: { lat: 39.936132, lon: 70.351180 },
-      // anchor: { lat: 40.132130, lon: 69.688729 },
+      // anchor: { lat: 39.936132, lon: 70.351180 },
+      anchor: { lat: 39.9572414, lon: 70.51522964 }, //dev
       maxZoom: 19,
       minZoom: 4,
-      startZoom: 9,
-      // startZoom: 15,
+      // startZoom: 9,
+      startZoom: 16,
       wheelPxPerZoomLevel: 120,
       zoomSnap: 0.50,
       mapboxToken: "pk.eyJ1IjoiYmVsbGluZ2NhdC1tYXBib3giLCJhIjoiY2tleW0wbWliMDA1cTJ5bzdkbTRraHgwZSJ9.GJQkjPzj8554VhR5SPsfJg",
-      startTile: 'osm',
+      // startTile: 'osm',
+      startTile: 'satellite', // dev
       tiles: {
         osm: () => `https://tile.openstreetmap.org/{z}/{x}/{y}.png`,
         satellite: (token) => `https://api.mapbox.com/styles/v1/bellingcat-mapbox/cl1win2vp003914pdhateva6p/tiles/256/{z}/{x}/{y}@2x?access_token=${token}`,
         custom: (token) => `https://api.mapbox.com/styles/v1/bellingcat-mapbox/cl0qnou2y003m15s8ieuyhgsy/tiles/256/{z}/{x}/{y}@2x?access_token=${token}`,
       },
-      startVillage: null//"ovchi-kalacha"
+      startVillage: 'kok-tash' // eg: "ovchi-kalacha"
     },
     ui: {
       toastOptions: {
@@ -46,9 +47,6 @@ const config = {
       "description_en": "This is some info on the Ak-Sai village.",
       "description_ru": "Это некоторая информация о поселке Ак-Сай.",
       "yandex": "https://yandex.com/maps/geo/1508557129/?ll=70.516430%2C39.878330&z=14",
-      "stats": {
-        "population": "TODO maybe"
-      },
       "satellite": {
         "bounds": [
           [39.883406, 70.505637],
@@ -71,9 +69,6 @@ const config = {
     //   "description_en": "This is some info on the Ак-Сай village.",
     //   "description_ru": "Это некоторая информация о поселке Ак-Татыр.",
     //   "yandex": "https://yandex.com/maps/geo/1508557126/?ll=70.479325%2C39.961688&z=14.84",
-    //   "stats": {
-    //     "population": "TODO maybe"
-    //   },
     //   "satellite": {}
     // },
     {
@@ -83,9 +78,6 @@ const config = {
       "description_en": "A village about 2 kilometres south of Tajikistan’s Bahri Tochik Reservoir (the name translates as “Tajik Sea”).",
       "description_ru": "TODO: Это некоторая информация о поселке Арка.",
       "yandex": "https://yandex.ru/maps/geo/1508553697/?l=sat&ll=69.889571%2C40.195924&z=15",
-      "stats": {
-        "population": "TODO maybe"
-      },
       "satellite": {
         "bounds": [
           [40.202673, 69.873405],
@@ -107,9 +99,6 @@ const config = {
       "description_en": "The capital of the Batken Region, Kyrgyzstan. The only city in Batken Region that has an airport. ",
       "description_ru": "TODO: Это некоторая информация о поселке Баткен.",
       "yandex": "https://yandex.ru/maps/geo/771296045/?l=sat%2Cskl&ll=70.827197%2C40.053080&z=14",
-      "stats": {
-        "population": "TODO maybe"
-      },
       "satellite": {
         "bounds": [
           [40.056006, 70.811470],
@@ -131,9 +120,6 @@ const config = {
       "description_en": "Located 5 km southwest of Tajikistan’s Bahri Tochik Reservoir.",
       "description_ru": "TODO: Это некоторая информация о поселке Борбордук.",
       "yandex": "https://yandex.ru/maps/geo/1508554928/?l=sat&ll=69.833683%2C40.188422&z=14",
-      "stats": {
-        "population": "TODO maybe"
-      },
       "satellite": {
         "bounds": [
           [40.192325, 69.823687],
@@ -155,9 +141,6 @@ const config = {
       "description_en": "A village located along the Isfara river and surrounded by mountains to the west and east. The village is located approximately 5 km south of the Tajik city of Isfara.",
       "description_ru": "TODO: Это некоторая информация о поселке Чордех.",
       "yandex": "https://yandex.ru/maps/geo/3496863555/?l=sat&ll=70.619929%2C40.061854&z=15",
-      "stats": {
-        "population": "TODO maybe"
-      },
       "satellite": {
         "bounds": [
           [40.066217, 70.621070],
@@ -179,9 +162,6 @@ const config = {
       "description_en": "A collection of about 60 households, surrounded by mountains to the east, and the Isfara river to the west.",
       "description_ru": "TODO: Это некоторая информация о поселке Достук.",
       "yandex": "https://yandex.ru/maps/geo/1671313862/?l=sat&ll=70.631908%2C40.052397&z=16",
-      "stats": {
-        "population": "TODO maybe"
-      },
       "satellite": {
         "bounds": [
           [40.054985, 70.624425],
@@ -203,9 +183,6 @@ const config = {
       "description_en": "About 20 kilometres southwest of Tajikistan’s Bahri Tochik Reservoir located across the disputed border.",
       "description_ru": "TODO: Это некоторая информация о поселке Интернациональное.",
       "yandex": "https://yandex.ru/maps/geo/1508554928/?l=sat&ll=69.833683%2C40.188422&z=14",
-      "stats": {
-        "population": "TODO maybe"
-      },
       "satellite": {
         "bounds": [
           [40.122355, 69.661650],
@@ -227,9 +204,6 @@ const config = {
       "description_en": "TODO: This is some info on the Kapchygai village.",
       "description_ru": "TODO: Это некоторая информация о поселке Капчыгай.",
       "yandex": "https://yandex.ru/maps/geo/4114188022/?l=sat&ll=70.524627%2C39.884988&z=16",
-      "stats": {
-        "population": "TODO maybe"
-      },
       "satellite": {
         "bounds": [
           [39.889441, 70.520695],
@@ -251,9 +225,6 @@ const config = {
       "description_en": "A village located a couple of kilometres west of Lakkon, in the same valley.",
       "description_ru": "TODO: Это некоторая информация о поселке Кара-Бак.",
       "yandex": "https://yandex.ru/maps/geo/4024919320/?l=sat%2Cskl&ll=70.821785%2C40.154385&z=14",
-      "stats": {
-        "population": "TODO maybe"
-      },
       "satellite": {
         "bounds": [
           [40.166333, 70.800183],
@@ -268,6 +239,27 @@ const config = {
           "date": "2022-09-19"
         }
       }
+    }, {
+      "id": "kok-tash",
+      "name_en": "Kochoboyu",
+      "name_ru": "Көчө-бою",
+      "description_en": "TODO: Kochoboyu.",
+      "description_ru": "TODO: Это некоторая информация о поселке Көчө-бою.",
+      "yandex": "https://yandex.com/maps/geo/1655397381/?ll=70.514188%2C39.948397&z=16.41",
+      "satellite": {
+        "bounds": [
+          [39.963020, 70.512989],
+          [39.948058, 70.524950]
+        ],
+        "before": {
+          "url": "./satellite/kok-tash-2022-03-02.jpg",
+          "date": "2022-03-02"
+        },
+        "after": {
+          "url": "./satellite/kok-tash-2022-11-01.jpg",
+          "date": "2022-11-01"
+        }
+      }
     },
     //  {
     //   "id": "kyzyl-bel",
@@ -276,9 +268,6 @@ const config = {
     //   "description_en": "This is some info on the Kyzyl-Bel village.",
     //   "description_ru": "Это некоторая информация о поселке Кызыл-Бель.",
     //   "yandex": "https://yandex.ru/maps/geo/1508553687/?l=sat%2Cskl&ll=70.741848%2C40.097820&z=15",
-    //   "stats": {
-    //     "population": "TODO maybe"
-    //   },
     //   "satellite": {}
     // },
     {
@@ -288,9 +277,6 @@ const config = {
       "description_en": "A small village located in a valley, approximately 5 km south of the Uzbek border.",
       "description_ru": "TODO: Это некоторая информация о поселке Лаккон.",
       "yandex": "https://yandex.ru/maps/geo/1508553686/?l=sat&ll=70.861816%2C40.176772&z=15",
-      // "stats": {
-      //   "population": "TODO maybe"
-      // },
       "satellite": {
         "bounds": [
           [40.172841, 70.862127],
@@ -312,9 +298,6 @@ const config = {
       "description_en": "About 20 kilometres southwest of Tajikistan’s Bahri Tochik Reservoir located across the disputed border.",
       "description_ru": "TODO: Это некоторая информация о поселке Максат.",
       "yandex": "https://yandex.com/maps/geo/4209595903/?ll=69.700117%2C40.128022&z=14.11",
-      // "stats": {
-      //   "population": "TODO maybe"
-      // },
       "satellite": {
         "bounds": [
           [40.135828, 69.689145],
@@ -336,9 +319,6 @@ const config = {
       "description_en": "TODO: This is some info on the Min-Bulak village.",
       "description_ru": "TODO: Это некоторая информация о поселке Мин-Булак.",
       "yandex": "https://yandex.ru/maps/geo/4229754559/?l=sat%2Cskl&ll=70.632302%2C39.983485&z=15",
-      // "stats": {
-      //   "population": "TODO maybe"
-      // },
       "satellite": {
         "bounds": [
           [39.987702, 70.618198],
@@ -360,9 +340,6 @@ const config = {
       "description_en": "TODO: This is some info on the Min-Oruk village.",
       "description_ru": "TODO: Это некоторая информация о поселке Мин-Орук.",
       "yandex": "https://yandex.ru/maps/geo/4114127012/?l=sat&ll=70.628840%2C39.995050&z=15",
-      // "stats": {
-      //   "population": "TODO maybe"
-      // },
       "satellite": {
         "bounds": [
           [40.001899, 70.617585],
@@ -384,9 +361,6 @@ const config = {
       "description_en": "About 20 kilometres southwest of Tajikistan’s Bahri Tochik Reservoir located across the disputed border. A narrow river and a road separates it from Kyrgyz villages of Maksat and International.",
       "description_ru": "TODO: Это некоторая информация о поселке Овчикалача.",
       "yandex": "https://yandex.ru/maps/geo/3159398637/?l=sat&ll=69.676854%2C40.126601&z=14",
-      // "stats": {
-      //   "population": "TODO maybe"
-      // },
       "satellite": {
         "bounds": [
           [40.129800, 69.679759],
@@ -408,9 +382,6 @@ const config = {
       "description_en": "TODO: This is some info on the Vorukh village.",
       "description_ru": "TODO: Это некоторая информация о поселке Ворух.",
       "yandex": "https://yandex.ru/maps/geo/2013643750/?l=sat&ll=70.532777%2C39.875283&z=15",
-      // "stats": {
-      //   "population": "TODO maybe"
-      // },
       "satellite": {}
     }]
 };
