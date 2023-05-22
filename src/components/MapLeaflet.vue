@@ -135,9 +135,7 @@
   </v-card>
 
   <v-card class="village-tabs ma-0 mb-0 ml-auto mr-auto" :class="mdAndDown ? 'w-100' : 'w-50'">
-    <p class="text-center " >
-      Displaying&nbsp;<strong>{{ villages?.map(v=>v.incidents.filter(i => enabledTags.includes(i.tag) && enabledImpacts.includes(i.impact)).length).reduce((a, b) => a + b) }}</strong>&nbsp;total geolocated buildings.
-    </p>
+    <p class="text-center" v-html="$t('buildingCount', {buildingCount :  villages?.map(v=>v.incidents.filter(i => enabledTags.includes(i.tag) && enabledImpacts.includes(i.impact)).length).reduce((a, b) => a + b)})"></p>
 
     <div class="d-flex align-center justify-center pa-0">
       <!-- <div class="d-flex align-center pa-0 ml-2"> -->

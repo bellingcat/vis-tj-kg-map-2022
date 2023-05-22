@@ -52,6 +52,7 @@ export default {
     link1: `For full methodology and context read the `,
     link2: `about page`
   },
+  buildingCount: `Displaying <strong>{buildingCount}</strong> total geolocated buildings.`,
   buildingLocation: {
     socialmedia: { name: "Satellite Imagery With Media", explanation: "Buildings geolocated via video/image content" },
     satellite: { name: "Satellite Imagery Without Media", explanation: "Change observed in satellite imagery" },
