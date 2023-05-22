@@ -39,12 +39,6 @@
                 {{ $t('impact.privateprop.name') }}:
                 {{ villages.reduce((acc, v) => acc + v.incidents.filter(i => i.impact == "privateprop").length, 0) }}
               </th>
-              <th class="text-center">
-                <v-icon icon="mdi-sign-caution" color="secondary"></v-icon>
-                <br />
-                {{ $t('impact.borderpost.name') }}:
-                {{ villages.reduce((acc, v) => acc + v.incidents.filter(i => i.impact == "borderpost").length, 0) }}
-              </th>
             </tr>
           </thead>
           <tbody>
@@ -60,8 +54,6 @@
                   "socialmedia").length }}</td>
                 <td class="text-center">{{ v.incidents.filter(i => i.impact == "privateprop" && i.tag ==
                   "socialmedia").length }}</td>
-                <td class="text-center">{{ v.incidents.filter(i => i.impact == "borderpost" && i.tag ==
-                  "socialmedia").length }}</td>
               </tr>
               <tr>
                 <td class="text-left"><span class="satellite">{{ $t('buildingLocation.satellite.name') }}:</span> {{
@@ -70,8 +62,6 @@
                 <td class="text-center">{{ v.incidents.filter(i => i.impact == "civinfra" && i.tag == "satellite").length
                 }}</td>
                 <td class="text-center">{{ v.incidents.filter(i => i.impact == "privateprop" && i.tag ==
-                  "satellite").length }}</td>
-                <td class="text-center">{{ v.incidents.filter(i => i.impact == "borderpost" && i.tag ==
                   "satellite").length }}</td>
               </tr>
             </template>

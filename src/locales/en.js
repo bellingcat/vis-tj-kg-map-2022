@@ -39,7 +39,7 @@ export default {
       <div><small><a class="text-right" target="_blank" href="https://www.bellingcat.com/about/data-privacy/">Privacy policy.</a></small></div>
       `,
       dataBreakdown: `Data breakdown`,
-      table:{
+      table: {
         colVillage: `Village`,
       },
       read: "read the article"
@@ -60,7 +60,6 @@ export default {
     all: { name: "All" },
     civinfra: { name: "Civilian Infrastructure" },
     privateprop: { name: "Private Property" },
-    borderpost: { name: "Border Posts" },
   },
   satellite: {
     compareText: `Comparing satellite imagery between

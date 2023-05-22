@@ -236,10 +236,9 @@ export default {
       impactTabs: {
         "civinfra": { icon: "mdi-town-hall" },
         "privateprop": { icon: "mdi-home-city" },
-        "borderpost": { icon: "mdi-sign-caution" },
       },
       enabledTags: ["socialmedia"],
-      enabledImpacts: ["civinfra", "privateprop", "borderpost"],
+      enabledImpacts: ["civinfra", "privateprop"],
       currentTileName: config.app.map.startTile,
       currentTile: null,
       embedEnabled: false,
@@ -708,9 +707,7 @@ iframe.video-embed {
   &.marker-pin-civinfra,
   &.marker-pin-civinfra-active,
   &.marker-pin-privateprop,
-  &.marker-pin-privateprop-active,
-  &.marker-pin-borderpost,
-  &.marker-pin-borderpost-active {
+  &.marker-pin-privateprop-active {
     width: $markerRadius;
     height: $markerRadius;
     border-radius: $markerRadius;
@@ -744,16 +741,9 @@ iframe.video-embed {
   //   background-color: #AB47BC;
   // }
 
-  // &.marker-pin-borderpost,
-  // &.marker-pin-borderpost-active {
-  //   border: 2px solid #006064;
-  //   background-color: #26C6DA;
-  // }
-
   &.marker-pin-active,
   &.marker-pin-civinfra-active,
-  &.marker-pin-privateprop-active,
-  &.marker-pin-borderpost-active {
+  &.marker-pin-privateprop-active {
     background-color: red;
     z-index: $zMax + 15 !important;
   }
@@ -771,10 +761,6 @@ iframe.video-embed {
 
   & .privateprop-selected {
     color: #CE93D8;
-  }
-
-  & .borderpost-selected {
-    color: #80DEEA;
   }
 }
 
