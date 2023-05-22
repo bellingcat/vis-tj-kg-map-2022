@@ -43,3 +43,4 @@ Optional GET parameters:
 1. `disable-scroll=1` - will disable auto-scroll on the left side panel - needed for `<iframe>` embeds.
 2. `ask-embeds=0` - will not show dialog to ask for embeds when clicking the actions menu for the first time.
 3. `no-cover=1` - will not show the initial cover pane
+3. `lang=en/ru` - will overwrite the default display language `en`

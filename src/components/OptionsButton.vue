@@ -162,8 +162,10 @@ export default {
       this.$emit('newTile', this.availableTiles[this.currentTileIndex]);
       console.log(this.availableTiles[this.currentTileIndex])
     },
-    updateLocaleIndex() {
-      this.currentLangIndex = this.availableLangs.findIndex(l => l == this.current);
+    updateLocaleIndex(forceLang) {
+      let setLang = this.availableLangs.includes(forceLang)?forceLang:this.current;
+      this.currentLangIndex = this.availableLangs.findIndex(l => l == setLang);
+      this.$vuetify.locale.current = this.availableLangs[this.currentLangIndex];
     },
     nextLang() {
       this.$vuetify.locale.current = this.availableLangs[(this.currentLangIndex + 1) % this.availableLangs.length];
@@ -194,7 +196,7 @@ export default {
     },
   },
   mounted() {
-    this.updateLocaleIndex();
+    this.updateLocaleIndex(this.$route.query["lang"]);
     // tiles current/next
     this.currentTileIndex = this.availableTiles.findIndex(l => l == this.startTile);
     this.nextTile = this.availableTiles[(this.currentTileIndex + 1) % this.availableTiles.length];
