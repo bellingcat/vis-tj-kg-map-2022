@@ -7,7 +7,7 @@ const config = {
   app: {
     map: {
       // anchor: { lat: 39.936132, lon: 70.351180 },
-      anchor: { lat: 39.995599, lon:70.617585 }, //dev
+      anchor: { lat: 39.987965, lon: 70.618574 }, //dev
       maxZoom: 19,
       minZoom: 4,
       // startZoom: 9,
@@ -22,7 +22,7 @@ const config = {
         satellite: (token) => `https://api.mapbox.com/styles/v1/bellingcat-mapbox/cl1win2vp003914pdhateva6p/tiles/256/{z}/{x}/{y}@2x?access_token=${token}`,
         custom: (token) => `https://api.mapbox.com/styles/v1/bellingcat-mapbox/cl0qnou2y003m15s8ieuyhgsy/tiles/256/{z}/{x}/{y}@2x?access_token=${token}`,
       },
-      startVillage: 'min-oruk' // eg: "ovchi-kalacha"
+      startVillage: 'min-bulak' // eg: "ovchi-kalacha"
     },
     ui: {
       toastOptions: {
@@ -321,16 +321,24 @@ const config = {
       "yandex": "https://yandex.ru/maps/geo/4229754559/?l=sat%2Cskl&ll=70.632302%2C39.983485&z=15",
       "satellite": {
         "bounds": [
-          [39.987702, 70.618198],
-          [39.977753, 70.626834]
+          // [39.987702, 70.618198],
+          // [39.977753, 70.626834]
         ],
         "before": {
           "url": "./satellite/min-bulak-2022-07-08.jpg",
-          "date": "2022-07-08"
+          "date": "2022-07-08",
+          "bounds": [
+            [39.987702, 70.618198],
+            [39.977753, 70.626894]
+          ],
         },
         "after": {
-          "url": "./satellite/min-bulak-2022-11-01.jpg",
-          "date": "2022-11-01"
+          "url": "./satellite/min-bulak-2022-09-17.png",
+          "date": "2022-09-17",
+          "bounds": [
+            [39.987845, 70.618734],
+            [39.977115, 70.624708]
+          ],
         }
       }
     }, {
