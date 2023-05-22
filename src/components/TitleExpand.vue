@@ -53,8 +53,9 @@
                 <td rowspan="2" class="text-left">
                   {{ $t(`villages.${v.id}.name`) }}: {{ v.incidents.length }}
                 </td>
-                <td class="text-left"><span class="geolocated">{{ $t('buildingLocation.socialmedia.name') }}:</span> {{ v.incidents.filter(i => i.tag ==
-                  "socialmedia").length }}</td>
+                <td class="text-left"><span class="geolocated">{{ $t('buildingLocation.socialmedia.name') }}:</span> {{
+                  v.incidents.filter(i => i.tag ==
+                    "socialmedia").length }}</td>
                 <td class="text-center">{{ v.incidents.filter(i => i.impact == "civinfra" && i.tag ==
                   "socialmedia").length }}</td>
                 <td class="text-center">{{ v.incidents.filter(i => i.impact == "privateprop" && i.tag ==
@@ -63,8 +64,9 @@
                   "socialmedia").length }}</td>
               </tr>
               <tr>
-                <td class="text-left"><span class="satellite">{{ $t('buildingLocation.satellite.name') }}:</span> {{ v.incidents.filter(i => i.tag ==
-                  "satellite").length }}</td>
+                <td class="text-left"><span class="satellite">{{ $t('buildingLocation.satellite.name') }}:</span> {{
+                  v.incidents.filter(i => i.tag ==
+                    "satellite").length }}</td>
                 <td class="text-center">{{ v.incidents.filter(i => i.impact == "civinfra" && i.tag == "satellite").length
                 }}</td>
                 <td class="text-center">{{ v.incidents.filter(i => i.impact == "privateprop" && i.tag ==
@@ -143,7 +145,7 @@ export default {
 
 
  table {
-   max-width: 920px;
+   max-width: 1200px;
    margin: auto;
  }
 </style>
