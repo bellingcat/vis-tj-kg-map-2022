@@ -139,26 +139,6 @@
 
     <div class="d-flex align-center justify-center pa-0">
       <!-- <div class="d-flex align-center pa-0 ml-2"> -->
-      <!-- <v-label v-if="!smAndDown" class="pr-4">Impact:</v-label> -->
-      <v-slide-group show-arrows>
-        <v-btn-toggle v-model="enabledImpacts" divided multiple color="blue-grey-darken-2">
-          <v-slide-group-item v-for="(impactProps, impact) in impactTabs" :key="impact">
-            <v-btn :value="impact" :key="impact" :selected-class="`${impact}-selected v-tab--selected`" density="compact"
-            variant="tonal" :size="smAndDown ? 'x-small' : 'small'" :color="enabledImpacts.includes(impact) ? 'white':'black'" rounded="0" >
-            <template v-slot:prepend>
-              <v-icon :icon="impactProps.icon" :color="enabledImpacts.includes(impact) ? 'yellow' : ''"></v-icon>
-            </template>
-            <div class="d-flex align-center justify-center">
-                {{ $t(`impact.${impact}.name`) }}
-              </div>
-            </v-btn>
-          </v-slide-group-item>
-        </v-btn-toggle>
-      </v-slide-group>
-    </div>
-
-    <div class="d-flex align-center justify-center pa-0">
-      <!-- <div class="d-flex align-center pa-0 ml-2"> -->
       <!-- <v-label v-if="!smAndDown" class="pr-4">Buildings of Interest:</v-label> -->
       <v-slide-group show-arrows>
         <v-btn-toggle v-model="enabledTags" divided multiple>
@@ -171,6 +151,27 @@
               </div>
               <v-tooltip activator="parent" location="top" open-delay="400" z-index="3000">{{
                 $t(`buildingLocation.${tag}.explanation`) }}</v-tooltip>
+            </v-btn>
+          </v-slide-group-item>
+        </v-btn-toggle>
+      </v-slide-group>
+    </div>
+
+
+    <div class="d-flex align-center justify-center pa-0">
+      <!-- <div class="d-flex align-center pa-0 ml-2"> -->
+      <!-- <v-label v-if="!smAndDown" class="pr-4">Impact:</v-label> -->
+      <v-slide-group show-arrows>
+        <v-btn-toggle v-model="enabledImpacts" divided multiple color="blue-grey-darken-2">
+          <v-slide-group-item v-for="(impactProps, impact) in impactTabs" :key="impact">
+            <v-btn :value="impact" :key="impact" :selected-class="`${impact}-selected v-tab--selected`" density="compact"
+            variant="tonal" :size="smAndDown ? 'x-small' : 'small'" :color="enabledImpacts.includes(impact) ? 'white':'black'" rounded="0" >
+            <template v-slot:prepend>
+              <v-icon :icon="impactProps.icon" :color="enabledImpacts.includes(impact) ? 'yellow' : ''"></v-icon>
+            </template>
+            <div class="d-flex align-center justify-center">
+                {{ $t(`impact.${impact}.name`) }}
+              </div>
             </v-btn>
           </v-slide-group-item>
         </v-btn-toggle>
