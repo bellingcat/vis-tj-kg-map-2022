@@ -53,8 +53,8 @@ export default {
     link2: `about page`
   },
   buildingLocation: {
-    socialmedia: { name: "With Media", explanation: "Buildings geolocated via video/image content" },
-    satellite: { name: "Without Media", explanation: "Change observed in satellite imagery" },
+    socialmedia: { name: "Satellite Imagery With Media", explanation: "Buildings geolocated via video/image content" },
+    satellite: { name: "Satellite Imagery Without Media", explanation: "Change observed in satellite imagery" },
   },
   impact: {
     all: { name: "All" },

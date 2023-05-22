@@ -7,7 +7,7 @@ const config = {
   app: {
     map: {
       // anchor: { lat: 39.936132, lon: 70.351180 },
-      anchor: { lat:40.135559, lon: 69.683247 }, //dev
+      anchor: { lat: 40.135559, lon: 69.683247 }, //dev
       maxZoom: 19,
       minZoom: 4,
       // startZoom: 9,
@@ -177,29 +177,29 @@ const config = {
         }
       }
     },
-    // {
-    //   "id": "international",
-    //   "name_en": "International",
-    //   "name_ru": "Интернациональное",
-    //   "description_en": "About 20 kilometres southwest of Tajikistan’s Bahri Tochik Reservoir located across the disputed border.",
-    //   "description_ru": "TODO: Это некоторая информация о поселке Интернациональное.",
-    //   "yandex": "https://yandex.ru/maps/geo/1508554928/?l=sat&ll=69.833683%2C40.188422&z=14",
-    //   "satellite": {
-    //     "bounds": [
-    //       [40.122355, 69.661650],
-    //       [40.113302, 69.682138]
-    //     ],
-    //     "before": {
-    //       "url": "./satellite/international-2022-08-30.jpg",
-    //       "date": "2022-08-30"
-    //     },
-    //     "after": {
-    //       "url": "./satellite/international-2022-10-03.jpg",
-    //       "date": "2022-10-03"
-    //     }
-    //   }
-    // },
-     {
+    {
+      "id": "international",
+      "name_en": "International",
+      "name_ru": "Интернациональное",
+      "description_en": "About 20 kilometres southwest of Tajikistan’s Bahri Tochik Reservoir located across the disputed border.",
+      "description_ru": "TODO: Это некоторая информация о поселке Интернациональное.",
+      "yandex": "https://yandex.ru/maps/geo/1508554928/?l=sat&ll=69.833683%2C40.188422&z=14",
+      "satellite": {
+        "bounds": [
+          [40.122355, 69.661650],
+          [40.113252, 69.682038]
+        ],
+        "before": {
+          "url": "./satellite/international-2022-08-30.jpg",
+          "date": "2022-08-30"
+        },
+        "after": {
+          "url": "./satellite/international-2022-10-03.jpg",
+          "date": "2022-10-03"
+        }
+      }
+    },
+    {
       "id": "kapchygai",
       "name_en": "Kapchygai",
       "name_ru": "Капчыгай",
@@ -361,30 +361,28 @@ const config = {
           "date": "2022-11-01"
         }
       }
-    },
-    //  {
-    //   "id": "ovchi-kalacha",
-    //   "name_en": "Ovchikalacha",
-    //   "name_ru": "Овчикалача",
-    //   "description_en": "About 20 kilometres southwest of Tajikistan’s Bahri Tochik Reservoir located across the disputed border. A narrow river and a road separates it from Kyrgyz villages of Maksat and International.",
-    //   "description_ru": "TODO: Это некоторая информация о поселке Овчикалача.",
-    //   "yandex": "https://yandex.ru/maps/geo/3159398637/?l=sat&ll=69.676854%2C40.126601&z=14",
-    //   "satellite": {
-    //     "bounds": [
-    //       [40.129800, 69.679759],
-    //       [40.115515, 69.689352]
-    //     ],
-    //     "before": {
-    //       "url": "./satellite/ovchi-kalacha-2022-08-30.jpg",
-    //       "date": "2022-08-30"
-    //     },
-    //     "after": {
-    //       "url": "./satellite/ovchi-kalacha-2022-10-03.jpg",
-    //       "date": "2022-10-03"
-    //     }
-    //   }
-    // },
-     {
+    }, {
+      "id": "ovchi-kalacha",
+      "name_en": "Ovchikalacha",
+      "name_ru": "Овчикалача",
+      "description_en": "About 20 kilometres southwest of Tajikistan’s Bahri Tochik Reservoir located across the disputed border. A narrow river and a road separates it from Kyrgyz villages of Maksat and International.",
+      "description_ru": "TODO: Это некоторая информация о поселке Овчикалача.",
+      "yandex": "https://yandex.ru/maps/geo/3159398637/?l=sat&ll=69.676854%2C40.126601&z=14",
+      "satellite": {
+        "bounds": [
+          [40.129780, 69.680000],
+          [40.115495, 69.689602]
+        ],
+        "before": {
+          "url": "./satellite/ovchi-kalacha-2022-08-30.jpg",
+          "date": "2022-08-30"
+        },
+        "after": {
+          "url": "./satellite/ovchi-kalacha-2022-10-03.jpg",
+          "date": "2022-10-03"
+        }
+      }
+    }, {
       "id": "vorukh",
       "name_en": "Vorukh",
       "name_ru": "Ворух",
