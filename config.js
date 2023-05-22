@@ -7,7 +7,7 @@ const config = {
   app: {
     map: {
       // anchor: { lat: 39.936132, lon: 70.351180 },
-      anchor: { lat: 39.9572414, lon: 70.51522964 }, //dev
+      anchor: { lat: 39.995599, lon:70.617585 }, //dev
       maxZoom: 19,
       minZoom: 4,
       // startZoom: 9,
@@ -22,7 +22,7 @@ const config = {
         satellite: (token) => `https://api.mapbox.com/styles/v1/bellingcat-mapbox/cl1win2vp003914pdhateva6p/tiles/256/{z}/{x}/{y}@2x?access_token=${token}`,
         custom: (token) => `https://api.mapbox.com/styles/v1/bellingcat-mapbox/cl0qnou2y003m15s8ieuyhgsy/tiles/256/{z}/{x}/{y}@2x?access_token=${token}`,
       },
-      startVillage: 'kok-tash' // eg: "ovchi-kalacha"
+      startVillage: 'min-oruk' // eg: "ovchi-kalacha"
     },
     ui: {
       toastOptions: {
@@ -49,8 +49,8 @@ const config = {
       "yandex": "https://yandex.com/maps/geo/1508557129/?ll=70.516430%2C39.878330&z=14",
       "satellite": {
         "bounds": [
-          [39.883406, 70.505637],
-          [39.874425, 70.525534]
+          [39.882873, 70.492895],
+          [39.871997, 70.523326]
         ],
         "before": {
           "url": "./satellite/aksai-2022-03-02.jpg",
