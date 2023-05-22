@@ -135,29 +135,22 @@
   </v-card>
 
   <v-card class="village-tabs ma-0 mb-0 ml-auto mr-auto" :class="mdAndDown ? 'w-100' : 'w-50'">
-    <v-tabs class="ml-auto mr-auto" v-model="selectedVillage" bg-color="primary" center-active show-arrows
-      align-tabs="center" v-on:update:model-value="fitPolygon" mandatory="false">
-      <v-tab v-for="v in villages" :value="v.id" :key="v.id">
-        <v-badge @mouseover="hoverVillage = v.id" @mouseleave="hoverVillage = null"
-          :content="v.incidents.filter(this.filterActiveIncident).length" floating
-          :color="v.id == selectedVillage ? 'black' : 'blue-grey'">
-          {{ $t(`villages.${v.id}.name`) }}
-        </v-badge>
-      </v-tab>
-    </v-tabs>
-
+    <p class="text-center " >
+      Displaying&nbsp;<strong>{{ villages?.map(v=>v.incidents.filter(i => enabledTags.includes(i.tag) && enabledImpacts.includes(i.impact)).length).reduce((a, b) => a + b) }}</strong>&nbsp;total geolocated buildings.
+    </p>
 
     <div class="d-flex align-center justify-center pa-0">
       <!-- <div class="d-flex align-center pa-0 ml-2"> -->
       <!-- <v-label v-if="!smAndDown" class="pr-4">Buildings of Interest:</v-label> -->
+
       <v-slide-group show-arrows>
         <v-btn-toggle v-model="enabledTags" divided multiple>
           <v-slide-group-item v-for="(tagProps, tag) in tagTabs" :key="tag" :selected-class="`${tag}-selected`">
             <v-btn :value="tag" :key="tag" density="compact" :size="smAndDown ? 'x-small' : 'small'" variant="tonal"
-              :color="tagProps.color">
-              <div class="d-flex align-center flex-column justify-center">
-                <!-- <v-icon :icon="tagProps.icon"></v-icon> -->
-                {{ $t(`buildingLocation.${tag}.name`) }}
+            :color="tagProps.color" rounded="0">
+            <div class="d-flex align-center flex-column justify-center">
+              <!-- <v-icon :icon="tagProps.icon"></v-icon> -->
+              {{ $t(`buildingLocation.${tag}.name`) }}
               </div>
               <v-tooltip activator="parent" location="top" open-delay="400" z-index="3000">{{
                 $t(`buildingLocation.${tag}.explanation`) }}</v-tooltip>
@@ -175,16 +168,30 @@
         <v-btn-toggle v-model="enabledImpacts" divided multiple color="blue-grey-darken-2">
           <v-slide-group-item v-for="(impactProps, impact) in impactTabs" :key="impact">
             <v-btn :value="impact" :key="impact" :selected-class="`${impact}-selected v-tab--selected`" density="compact"
-              :size="smAndDown ? 'x-small' : 'small'">
-              <div class="d-flex align-center flex-column justify-center">
-                <v-icon :icon="impactProps.icon" :color="enabledImpacts.includes(impact) ? 'yellow' : ''"></v-icon>{{
-                  $t(`impact.${impact}.name`) }}
+            variant="tonal" :size="smAndDown ? 'x-small' : 'small'" :color="enabledImpacts.includes(impact) ? 'white':'black'" rounded="0" >
+            <template v-slot:prepend>
+              <v-icon :icon="impactProps.icon" :color="enabledImpacts.includes(impact) ? 'yellow' : ''"></v-icon>
+            </template>
+            <div class="d-flex align-center justify-center">
+                {{ $t(`impact.${impact}.name`) }}
               </div>
             </v-btn>
           </v-slide-group-item>
         </v-btn-toggle>
       </v-slide-group>
     </div>
+
+    <v-tabs class="ml-auto mr-auto" v-model="selectedVillage" bg-color="primary" center-active show-arrows
+      align-tabs="center" v-on:update:model-value="fitPolygon" mandatory="false">
+      <v-tab v-for="v in villages" :value="v.id" :key="v.id">
+        <v-badge @mouseover="hoverVillage = v.id" @mouseleave="hoverVillage = null"
+          :content="v.incidents.filter(this.filterActiveIncident).length" floating
+          :color="v.id == selectedVillage ? 'black' : 'blue-grey'">
+          {{ $t(`villages.${v.id}.name`) }}
+        </v-badge>
+      </v-tab>
+    </v-tabs>
+
   </v-card>
 
   <div id="map"></div>
@@ -333,7 +340,7 @@ export default {
       this.satellites[village.id].active = "before";
       this.satellites[village.id].before.overlay = L.imageOverlay(
         bf.url,
-        L.latLngBounds(village.satellite.bounds), {
+        L.latLngBounds(bf?.bounds || village.satellite.bounds), {
         opacity: 0.8,
         errorOverlayUrl: errorOverlayUrl,
         alt: this.$t(`satellite.altText`, { village: this.$t(`villages.${village.id}.name`), date: bf.date }),
@@ -346,7 +353,7 @@ export default {
       this.satellites[village.id].active = this.satellites[village.id].active || "after"; //default if only after
       this.satellites[village.id].after.overlay = L.imageOverlay(
         af.url,
-        L.latLngBounds(village.satellite.bounds), {
+        L.latLngBounds(af?.bounds || village.satellite.bounds), {
         opacity: 0,
         errorOverlayUrl: errorOverlayUrl,
         alt: this.$t(`satellite.altText`, { village: this.$t(`villages.${village.id}.name`), date: af.date }),
@@ -645,7 +652,7 @@ function assert(condition, message) {
 
 
     // right: 0;
-    bottom: 144px; // 48px x 3
+    bottom: 140px; // 48px + 34px x 2 + 24px
     height: 40vh;
     max-height: 40vh;
     margin-left: auto;
@@ -670,11 +677,15 @@ function assert(condition, message) {
 
 .village-tabs {
   z-index: $zMax;
-  opacity: $opacityMax;
+  opacity: $opacityMax - 0.05;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
+
+  .v-btn-group{
+    height:34px;
+  }
 }
 
 .media-panel {
@@ -750,20 +761,6 @@ iframe.video-embed {
 
 }
 
-.impact-tabs {
-  & .all-selected {
-    color: $accentColor;
-  }
-
-  & .civinfra-selected {
-    color: #C5E1A5;
-  }
-
-  & .privateprop-selected {
-    color: #CE93D8;
-  }
-}
-
 .geolocated {
   color: #00E5FF;
 }
@@ -772,19 +769,10 @@ iframe.video-embed {
   color: #81C784;
 }
 
-// .chip-military,
-// .chip-destruction,
 .chip-tkid {
   border-radius: 6px;
 }
 
-// .chip-destruction {
-//   border: 1px solid $destructionColor;
-// }
-
-// .chip-military {
-//   border: 1px solid $militaryColor;
-// }
 
 .chip-tkid {
   border: 1px solid black;
@@ -828,6 +816,18 @@ div.v-overlay--absolute.v-tooltip div.v-overlay__content {
   background: #CFD8DC;
   box-shadow: 1px 1px #707070;
 }
+
+// optional: if the buttons go to the same row
+// .v-btn-group {
+//   // flex-wrap:
+//   .v-btn {
+//     max-width: 170px; /* Adjust the desired maximum width */
+//     word-break: break-word;
+//     .v-btn__content {
+//       white-space: normal;
+//     }
+//   }
+// }
 
 /* Leaflet crispness override */
 .leaflet-container .leaflet-overlay-pane svg,
