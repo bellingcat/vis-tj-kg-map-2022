@@ -6,23 +6,23 @@ const config = {
 
   app: {
     map: {
-      // anchor: { lat: 39.936132, lon: 70.351180 },
-      anchor: { lat: 40.135559, lon: 69.683247 }, //dev
+      anchor: { lat: 39.936132, lon: 70.351180 },
+      // anchor: { lat: 40.135559, lon: 69.683247 }, //dev
       maxZoom: 19,
       minZoom: 4,
-      // startZoom: 9,
-      startZoom: 17,
+      startZoom: 9,
+      // startZoom: 17,
       wheelPxPerZoomLevel: 120,
       zoomSnap: 0.50,
       mapboxToken: "pk.eyJ1IjoiYmVsbGluZ2NhdC1tYXBib3giLCJhIjoiY2tleW0wbWliMDA1cTJ5bzdkbTRraHgwZSJ9.GJQkjPzj8554VhR5SPsfJg",
-      // startTile: 'osm',
-      startTile: 'satellite', // dev
+      startTile: 'osm',
+      // startTile: 'satellite', // dev
       tiles: {
         osm: () => `https://tile.openstreetmap.org/{z}/{x}/{y}.png`,
         satellite: (token) => `https://api.mapbox.com/styles/v1/bellingcat-mapbox/cl1win2vp003914pdhateva6p/tiles/256/{z}/{x}/{y}@2x?access_token=${token}`,
         custom: (token) => `https://api.mapbox.com/styles/v1/bellingcat-mapbox/cl0qnou2y003m15s8ieuyhgsy/tiles/256/{z}/{x}/{y}@2x?access_token=${token}`,
       },
-      startVillage: 'maksat' // eg: "ovchi-kalacha"
+      startVillage: null // eg: "ovchi-kalacha"
     },
     ui: {
       toastOptions: {
@@ -389,7 +389,20 @@ const config = {
       "description_en": "TODO: This is some info on the Vorukh village.",
       "description_ru": "TODO: Это некоторая информация о поселке Ворух.",
       "yandex": "https://yandex.ru/maps/geo/2013643750/?l=sat&ll=70.532777%2C39.875283&z=15",
-      "satellite": {}
+      "satellite": {
+        "bounds": [
+          [39.877353, 70.522732],
+          [39.875836, 70.526223],
+        ],
+        "before": {
+          "url": "./satellite/vorukh-2022-03-02.jpg",
+          "date": "2022-03-02"
+        },
+        "after": {
+          "url": "./satellite/vorukh-2022-11-01.jpg",
+          "date": "2022-11-01"
+        }
+      }
     }]
 };
 
