@@ -6,17 +6,17 @@ const config = {
 
   app: {
     map: {
-      // anchor: { lat: 39.936132, lon: 70.351180 },
-      anchor: { lat: 40.001499, lon: 70.617585 }, //dev
+      anchor: { lat: 39.936132, lon: 70.351180 },
+      // anchor: { lat: 40.001499, lon: 70.617585 }, //dev
       maxZoom: 19,
       minZoom: 4,
-      // startZoom: 9,
-      startZoom: 16,
+      startZoom: 9,
+      // startZoom: 16,
       wheelPxPerZoomLevel: 120,
       zoomSnap: 0.50,
       mapboxToken: "pk.eyJ1IjoiYmVsbGluZ2NhdC1tYXBib3giLCJhIjoiY2tleW0wbWliMDA1cTJ5bzdkbTRraHgwZSJ9.GJQkjPzj8554VhR5SPsfJg",
-      // startTile: 'osm',
-      startTile: 'satellite', // dev
+      startTile: 'osm',
+      // startTile: 'satellite', // dev
       tiles: {
         osm: () => `https://tile.openstreetmap.org/{z}/{x}/{y}.png`,
         satellite: (token) => `https://api.mapbox.com/styles/v1/bellingcat-mapbox/cl1win2vp003914pdhateva6p/tiles/256/{z}/{x}/{y}@2x?access_token=${token}`,
