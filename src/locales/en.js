@@ -55,7 +55,7 @@ export default {
   buildingCount: `Displaying <strong>{buildingCount}</strong> total geolocated buildings.`,
   buildingLocation: {
     socialmedia: { name: "Satellite Imagery With Media", explanation: "Buildings geolocated via video/image content" },
-    satellite: { name: "Satellite Imagery Without Media", explanation: "Change observed in satellite imagery" },
+    satellite: { name: "Satellite Imagery Without Media", explanation: "Change observed in satellite imagery only" },
   },
   impact: {
     all: { name: "All" },

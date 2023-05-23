@@ -6,23 +6,23 @@ const config = {
 
   app: {
     map: {
-      anchor: { lat: 39.936132, lon: 70.351180 },
-      // anchor: { lat: 40.135559, lon: 69.683247 }, //dev
+      // anchor: { lat: 39.936132, lon: 70.351180 },
+      anchor: { lat: 39.985702, lon: 70.618198 }, //dev
       maxZoom: 19,
       minZoom: 4,
-      startZoom: 9,
-      // startZoom: 17,
+      // startZoom: 9,
+      startZoom: 16.5,
       wheelPxPerZoomLevel: 120,
       zoomSnap: 0.50,
       mapboxToken: "pk.eyJ1IjoiYmVsbGluZ2NhdC1tYXBib3giLCJhIjoiY2tleW0wbWliMDA1cTJ5bzdkbTRraHgwZSJ9.GJQkjPzj8554VhR5SPsfJg",
-      startTile: 'osm',
-      // startTile: 'satellite', // dev
+      // startTile: 'osm',
+      startTile: 'satellite', // dev
       tiles: {
         osm: () => `https://tile.openstreetmap.org/{z}/{x}/{y}.png`,
         satellite: (token) => `https://api.mapbox.com/styles/v1/bellingcat-mapbox/cl1win2vp003914pdhateva6p/tiles/256/{z}/{x}/{y}@2x?access_token=${token}`,
         custom: (token) => `https://api.mapbox.com/styles/v1/bellingcat-mapbox/cl0qnou2y003m15s8ieuyhgsy/tiles/256/{z}/{x}/{y}@2x?access_token=${token}`,
       },
-      startVillage: null // eg: "ovchi-kalacha"
+      startVillage: 'min-bulak' // eg: "ovchi-kalacha"
     },
     ui: {
       toastOptions: {
