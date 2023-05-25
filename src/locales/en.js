@@ -37,7 +37,7 @@ Each larger circle on the map represents a geographic grouping of incidents. Eve
 
 <span class="satellite">“Satellite Imagery without Media”</span> incidents appear in <span class="satellite">Green</span>. Each “Without Media” incident includes coordinates as well as satellite imagery of before and after the clashes.
 
-The coordinates we have provided match the exact building, however the icons included in the map may appear slightly to the side of the building so that it can be clearly viewed . All incidents can be seen in satellite imagery. In five cases, we have used Planet Labs Skysat Images, in all other cases we used images displayed on Google Earth Pro.
+The coordinates we have provided match the exact building, however the icons included in the map may appear slightly to the side of the building so that it can be clearly viewed . All incidents can be seen in satellite imagery. In two cases, we have used Planet Labs Skysat Images, in all other cases we used images displayed on Google Earth Pro.
 
 At the bottom of the map, a user can toggle between incidents that appear to involve Civilian Infrastructure or Private Property (Private Homes and Businesses). Decisions on these classifications are based on available open source evidence for the function of these buildings.
 
