@@ -1,8 +1,10 @@
-# Tajikistan-Kyrgyzstan Border Clash 2022
+<h1 align="center">Tajikistan-Kyrgyzstan Border Clash 2022</h1>
 
-<h2 align="center"><a href="https://bellingcat.github.io/vis-tj-kg-map-2022/">visit the map</a></h3>
+<h2 align="center"><a href="https://www.bellingcat.com/news/2023/05/25/mapping-the-aftermath-of-the-kyrgyzstan-tajikistan-border-clashes/">Read the article</a></h2>
 
-### Development
+<h3 align="center">and <a href="https://bellingcat.github.io/vis-tj-kg-map-2022/">visit the map</a></h3>
+
+<details><summary>More on development</summary>
 
 Built with vite, vue.js and vuetify. 
 
@@ -45,3 +47,4 @@ Optional GET parameters:
 3. `no-cover=1` - will not show the initial cover pane
 3. `no-cover=0` - will force show the initial cover pane
 3. `lang=en/ru` - will overwrite the default display language `en`
+</details>
