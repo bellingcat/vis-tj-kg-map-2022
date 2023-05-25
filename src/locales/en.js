@@ -2,7 +2,7 @@
 import { en } from 'vuetify/locale'
 import config from "../../config"
 
-const villageProps = ["name", "description"]
+const villageProps = ["name", "description", "country"]
 
 export default {
   ...en,
@@ -80,13 +80,14 @@ Once loaded, you can click on a satellite image to toggle between before and aft
     showingImagery: `Showing satellite imagery from {date}`,
     altText: `Satellite view of {village} on {date}.`,
     loadBtn: `Load satellite imagery`,
-    loadBtnWarning: `Warning: satellite imagery can use several MBs of data`
+    loadBtnWarning: `Warning: satellite imagery can use several MBs of data, and take a few seconds load.`
   },
   incidents: {
     all: {}, // this will be loaded from incidents.json
     defaultName: `Building N.{index}`,
     countVisible: `No incidents | 1 incident | {n} incidents`,
     panel: {
+      villageDisclaimer: `We have used the village name and country that appears on Yandex Maps, but recognise that some of these designations may be disputed.`,
       noSources: `This building entry is visible on satellite only - no media sources to show.`,
       videoNotSupported: `Your browser does not support the video tag.`,
       videoStartAt: `Start video from {seconds}s`,

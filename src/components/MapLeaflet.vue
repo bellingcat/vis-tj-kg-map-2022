@@ -29,7 +29,7 @@
         <v-window v-model="selectedVillage">
           <v-window-item class="ma-0 mb-10" v-for="v in villages" :value="v.id" :key="v.id">
             <h3 class="text-center mb-3 mt-3 text-primary">
-              {{ $t(`villages.${v.id}.name`) }}
+              {{ $t(`villages.${v.id}.name`) }} ({{ $t(`villages.${v.id}.country`) }})
             </h3>
             <v-btn variant="plain" dark @click="selectedIncidents[selectedVillage] = null; selectedVillage = null;"
               class="close-button">
@@ -37,6 +37,9 @@
             </v-btn>
             <p class="ma-2">
               {{ $t(`villages.${v.id}.description`) }}
+              <p>
+                <small>{{ $t(`incidents.panel.villageDisclaimer`) }}</small>
+              </p>
             </p>
             <!-- <span v-if="satellites[v.id]"> -->
             <span v-if="villageHasSate(v.id)">

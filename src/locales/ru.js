@@ -2,7 +2,7 @@
 import { ru } from 'vuetify/locale'
 import config from "../../config"
 
-const villageProps = ["name", "description"]
+const villageProps = ["name", "description", "country"]
 
 export default {
   ...ru,
@@ -97,13 +97,14 @@ export default {
     showingImagery: `Отобраден спутниквый снимок от {date}`,
     altText: `Спутниковый снимок {village} {date}.`,
     loadBtn: `Загрузить спутниковы снимок`,
-    loadBtnWarning: `Внимание: каждый спутниковых снимок может весить до 20 мегабайт данных и загрузка может занять несколько секунд` +++
+    loadBtnWarning: `Внимание: каждый спутниковых снимок может весить до 20 мегабайт данных и загрузка может занять несколько секунд`
   },
   incidents: {
     all: {}, // this will be loaded from incidents.json
     defaultName: `Здание N.{index}`,
-    countVisible: `Нет зданий | 1 здание | {n} зданий`, 
+    countVisible: `Нет зданий | 1 здание | {n} зданий`,
     panel: {
+      villageDisclaimer: `Мы использовали название села и страну, которые отображаются на картах Яндекса, но признаем, что некоторые из этих обозначений могут быть оспорены.`,
       noSources: `Изменение данного здания видно только со спутника - медиа отстутсвует.`,
       videoNotSupported: `Ваш браузер не поддерживает тег видео.`,
       videoStartAt: `Начать видео с {seconds}с`,
@@ -144,6 +145,7 @@ export default {
       on: "полноэкранный режим",
       off: "выйти из полноэкранного режима"
     },
+    help: `Помощь`,
     download: {
       json: "JSON данные",
       csv: "CSV данные",
