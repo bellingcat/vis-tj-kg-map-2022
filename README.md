@@ -1,8 +1,14 @@
 <h1 align="center">Tajikistan-Kyrgyzstan Border Clash 2022</h1>
 
-<h2 align="center"><a href="https://www.bellingcat.com/news/2023/05/25/mapping-the-aftermath-of-the-kyrgyzstan-tajikistan-border-clashes/">Read the article</a></h2>
+<h2 align="center">
+<a href="https://www.bellingcat.com/news/2023/05/25/mapping-the-aftermath-of-the-kyrgyzstan-tajikistan-border-clashes/">Read the article</a> - 
+<a href="https://ru.bellingcat.com/novosti/2023/05/25/kartu-posledstvii-kyrgyzstan-tajikistan-ru/">Прочитать статью</a>
+</h2>
 
-<h3 align="center">and <a href="https://bellingcat.github.io/vis-tj-kg-map-2022/">visit the map</a></h3>
+<h3 align="center">and 
+<a href="https://bellingcat.github.io/vis-tj-kg-map-2022/">view the map</a> - 
+<a href="https://bellingcat.github.io/vis-tj-kg-map-2022/?lang=ru">посмотреть карту</a>
+</h3>
 
 This repository holds the code for the map, the displayed data in [CSV](public/incidents.csv) and [JSON](public/incidents.json), along with the before/after [satellite imagery](public/satellite/) shown on the map. 
 
