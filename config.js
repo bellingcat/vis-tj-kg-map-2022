@@ -1,13 +1,13 @@
 const config = {
   title: "tj-kg",
-  display_title: "Tajikistan - Kyrgyzstan border conflict 2022",
+  display_title: "Tajikistan-Kyrgyzstan Border Clash 2022",
   //   SERVER_ROOT: "https://ukraine.bellingcat.com/ukraine-server",
   // MEDIA_EXT: "/api/media",
 
   app: {
     map: {
       anchor: { lat: 39.936132, lon: 70.351180 },
-      // anchor: { lat: 40.001499, lon: 70.617585 }, //dev
+      // anchor: { lat: 40.172841, lon: 70.862127 }, //dev
       maxZoom: 19,
       minZoom: 4,
       startZoom: 9,
@@ -22,7 +22,8 @@ const config = {
         satellite: (token) => `https://api.mapbox.com/styles/v1/bellingcat-mapbox/cl1win2vp003914pdhateva6p/tiles/256/{z}/{x}/{y}@2x?access_token=${token}`,
         custom: (token) => `https://api.mapbox.com/styles/v1/bellingcat-mapbox/cl0qnou2y003m15s8ieuyhgsy/tiles/256/{z}/{x}/{y}@2x?access_token=${token}`,
       },
-      startVillage: null // eg: "ovchi-kalacha"
+      startVillage: null
+      // startVillage: 'lakkon' // eg: "ovchi-kalacha"
     },
     ui: {
       toastOptions: {
@@ -144,8 +145,8 @@ const config = {
       }
     }, {
       "id": "chorkishlok",
-      "name_en": "Chorkishlok",
-      "name_ru": "Чоркишлок",
+      "name_en": "Chordeh",
+      "name_ru": "Чордех",
       "country_en": "Tj",
       "country_ru": "Тадж",
       "description_en": "A village located along the Isfara river and surrounded by mountains to the west and east. The village is located approximately five kilometres south of the Tajik city of Isfara.",
@@ -302,17 +303,21 @@ const config = {
       "description_ru": "Небольшое село, расположенное в долине, примерно в пяти километрах к югу от узбекской границы.",
       "yandex": "https://yandex.ru/maps/geo/1508553686/?l=sat&ll=70.861816%2C40.176772&z=15",
       "satellite": {
-        "bounds": [
-          [40.172841, 70.862127],
-          [40.170207, 70.867966]
-        ],
         "before": {
           "url": "./satellite/lakkon-2022-07-23.jpg",
-          "date": "2022-07-23"
+          "date": "2022-07-23",
+          "bounds": [
+            [40.172841, 70.862127],
+            [40.170207, 70.867966]
+          ],
         },
         "after": {
-          "url": "./satellite/lakkon-2022-09-17.jpg",
-          "date": "2022-09-17"
+          "url": "./satellite/lakkon-2022-09-17.png",
+          "date": "2022-09-17",
+          "bounds": [
+            [40.172884, 70.862059],
+            [40.169943, 70.867833]
+          ],
         }
       }
     }, {
@@ -376,8 +381,8 @@ const config = {
       "yandex": "https://yandex.ru/maps/geo/4114127012/?l=sat&ll=70.628840%2C39.995050&z=15",
       "satellite": {
         "bounds": [
-          [ 40.002258,  70.617004],
-          [ 39.990352,  70.625700]
+          [40.002258, 70.617004],
+          [39.990352, 70.625700]
         ],
         "before": {
           "url": "./satellite/min-oruk-2021-05-02.jpg",

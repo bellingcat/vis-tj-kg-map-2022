@@ -331,6 +331,7 @@ export default {
       return (village !== undefined && village.satellite !== undefined && village.satellite.before !== undefined && village.satellite.after !== undefined);
     },
     addBeforeAfterSat: function (village) {
+      const opacityVal = 0.95;
       if (village.satellite === undefined) return;
       if (!village.satellite.before || !village.satellite.after) return;
       // singleton logic - only created on first call
@@ -350,7 +351,7 @@ export default {
       this.satellites[village.id].before.overlay = L.imageOverlay(
         bf.url,
         L.latLngBounds(bf?.bounds || village.satellite.bounds), {
-        opacity: 0.8,
+        opacity: opacityVal,
         errorOverlayUrl: errorOverlayUrl,
         alt: this.$t(`satellite.altText`, { village: this.$t(`villages.${village.id}.name`), date: bf.date }),
         interactive: true,
@@ -371,11 +372,11 @@ export default {
       }).addTo(this.map);
       this.satellites[village.id].display = () => {
         if (this.satellites[village.id].active == "before") {
-          this.satellites[village.id].before?.overlay?.setOpacity(0.8);
+          this.satellites[village.id].before?.overlay?.setOpacity(opacityVal);
           this.satellites[village.id].after?.overlay?.setOpacity(0);
         } else {
           this.satellites[village.id].before?.overlay?.setOpacity(0);
-          this.satellites[village.id].after?.overlay?.setOpacity(0.8);
+          this.satellites[village.id].after?.overlay?.setOpacity(opacityVal);
         }
       }
       const clickCoords = { x: 0, y: 0, delta: 10 }; // used not to change imagery on map drag
