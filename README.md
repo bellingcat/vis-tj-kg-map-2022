@@ -4,6 +4,8 @@
 
 <h3 align="center">and <a href="https://bellingcat.github.io/vis-tj-kg-map-2022/">visit the map</a></h3>
 
+This repository holds the code for the map, the displayed data in [CSV](public/incidents.csv) and [JSON](public/incidents.json), along with the before/after [satellite imagery](public/satellite/) shown on the map. 
+
 <details><summary>More on development</summary>
 
 Built with vite, vue.js and vuetify. 
