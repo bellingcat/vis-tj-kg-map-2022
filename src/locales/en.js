@@ -42,7 +42,7 @@ export default {
       table: {
         colVillage: `Village`,
       },
-      read: "read the article"
+      close: "close"
     },
     bellingcat: "Bellingcat"
   },
@@ -125,7 +125,6 @@ export default {
       csv: "CSV data",
     },
     links: {
-      article: "Read article",
       code: "Code",
       about: `About`
     }

@@ -68,14 +68,10 @@
           </tbody>
         </v-table>
       </v-card-text>
-      <v-card-actions v-if="!isEmbed" class="ma-10 text-uppercase" style="display:block">
+      <v-card-actions  class="ma-10 text-uppercase" style="display:block">
         <div class="justify-center">
-          <v-btn href="TODO" class="ma-2" target="_blank" variant="outlined" size="x-large" append-icon="mdi-open-in-new">
-            <template v-slot:prepend>
-              <v-avatar class="bcat-logo ma-2" image="@/assets/icon.ico" alt="Bellingcat logo" rounded=""
-                size="28"></v-avatar>
-            </template>
-            {{ $t(`main.panel.read`) }}
+          <v-btn @click="dialog=false" class="ma-2" target="_blank" variant="outlined" size="x-large">
+            {{ $t(`main.panel.close`) }}
           </v-btn>
         </div>
       </v-card-actions>
@@ -92,8 +88,7 @@ export default {
       dialog: false,
       notifications: false,
       sound: true,
-      widgets: false,
-      isEmbed: window !== window.parent
+      widgets: false
     }
   }
 }
@@ -135,7 +130,7 @@ export default {
 
 
  table {
-   max-width: 1200px;
+   max-width: 1000px;
    margin: auto;
  }
 </style>

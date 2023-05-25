@@ -602,7 +602,7 @@ export default {
     this.populateMap();
     this.selectedVillage = this.mapConfig.startVillage; // override default v-tabs behaviour of assinging 1st
     this.autoScroll = !(this.$route.query["disable-scroll"] != undefined);
-    this.coverDialog = !(this.$route.query["no-cover"] != undefined) && this.getCookie(this.coverCookieName) != "true"
+    this.coverDialog = (!(this.$route.query["no-cover"] != undefined) && this.getCookie(this.coverCookieName) != "true") || (this.$route.query["no-cover"] == "0")
   }
 }
 

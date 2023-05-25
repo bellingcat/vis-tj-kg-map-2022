@@ -80,16 +80,6 @@
         </v-list-item-title>
       </v-list-item>
 
-      <!-- article link -->
-      <v-list-item @click="openUrl('https://www.bellingcat.com/TODO')">
-        <template v-slot:prepend>
-          <v-avatar class="bcat-logo" image="@/assets/icon.ico" alt="Bellingcat logo" rounded=""></v-avatar>
-        </template>
-        <v-list-item-title class="text-uppercase">
-          {{ $t(`options.links.article`) }}
-        </v-list-item-title>
-      </v-list-item>
-
       <!-- code -->
       <v-list-item @click="openUrl('https://github.com/bellingcat/vis-tj-kg-map-2022')">
         <template v-slot:prepend>
