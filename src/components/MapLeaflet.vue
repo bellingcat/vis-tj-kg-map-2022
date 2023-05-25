@@ -8,11 +8,9 @@
     <v-card class="pb-2">
       <v-card-title class="text-center text-uppercase pa-3 ">{{ $t('cover.title') }}</v-card-title>
       <v-divider></v-divider>
-      <v-card-text class="text-justify" style="max-width:750px">
-        <!-- <video  class="help-video" controls>
-          <source src="recording.mp4">TODO
-          Your browser does not support video.
-        </video> -->
+      <v-card-text class="text-justify" style="max-width:560px">
+        <iframe v-if="!isMobile && $vuetify.locale.current == 'en'"  class="help-video"  width="560" height="315" src="https://www.youtube-nocookie.com/embed/kMKqkhbTHl4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
         <p v-html="$t('cover.cover', { villageCount: villages.length })"></p>
         <br>
         <v-code class="text-center">{{ $t('cover.link1') }}<a href="#!"
@@ -261,7 +259,8 @@ export default {
       embedEnabled: false,
       autoScroll: true,
       coverCookieName: 'coverCookieHasBeenDismissed',
-      coverDialog: false
+      coverDialog: false,
+      isMobile:false
     }
   }, methods: {
     ...UrlUtils,
@@ -609,6 +608,7 @@ export default {
     }
   },
   mounted: function () {
+    this.isMobile = L.Browser.mobile;
     this.initMap();
     this.populateMap();
     this.selectedVillage = this.mapConfig.startVillage; // override default v-tabs behaviour of assinging 1st
