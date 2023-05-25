@@ -9,10 +9,10 @@
       <v-card-title class="text-center text-uppercase pa-3 ">{{ $t('cover.title') }}</v-card-title>
       <v-divider></v-divider>
       <v-card-text class="text-justify" style="max-width:750px">
-        <video  class="help-video" controls>
+        <!-- <video  class="help-video" controls>
           <source src="recording.mp4">TODO
           Your browser does not support video.
-        </video>
+        </video> -->
         <p v-html="$t('cover.cover', { villageCount: villages.length })"></p>
         <br>
         <v-code class="text-center">{{ $t('cover.link1') }}<a href="#!"
