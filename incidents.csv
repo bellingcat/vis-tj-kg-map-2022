@@ -1,7 +1,7 @@
 tkid,place,lat,lon,impact,description_en,description_ru,link1,link1Time,link2,link2Time,link3,link3Time,tag
-1,dostuk,40.05229068,70.63277194,civinfra,School,,https://youtu.be/JvugPEjieZU?t=531,531.0,,,,,socialmedia
-2,dostuk,40.05256826,70.63278313,civinfra,Kindergarten,,https://youtu.be/vBazRrT6tnQ?t=131,131.0,https://t.me/batken1/1392?single,43.0,https://youtu.be/JvugPEjieZU?t=570,570.0,socialmedia
-3,dostuk,40.05272614,70.63291711,civinfra,Medical unit,,https://youtu.be/vBazRrT6tnQ?t=131,131.0,https://t.me/batken1/1392?single,18.0,https://youtu.be/JvugPEjieZU?t=601,601.0,socialmedia
+1,dostuk,40.05229068,70.63277194,civinfra,School,Школа,https://youtu.be/JvugPEjieZU?t=531,531.0,,,,,socialmedia
+2,dostuk,40.05256826,70.63278313,civinfra,Kindergarten,Детский сад,https://youtu.be/vBazRrT6tnQ?t=131,131.0,https://t.me/batken1/1392?single,43.0,https://youtu.be/JvugPEjieZU?t=570,570.0,socialmedia
+3,dostuk,40.05272614,70.63291711,civinfra,Medical unit,ФАП,https://youtu.be/vBazRrT6tnQ?t=131,131.0,https://t.me/batken1/1392?single,18.0,https://youtu.be/JvugPEjieZU?t=601,601.0,socialmedia
 4,dostuk,40.0529363,70.6322936,privateprop,,,https://youtu.be/vBazRrT6tnQ?t=131,131.0,,,,,socialmedia
 5,dostuk,40.0526721,70.63202613,privateprop,,,,,,,,,satellite
 6,dostuk,40.05235107,70.63204254,privateprop,,,https://t.me/batken1/1392?single,85.0,,,,,socialmedia
@@ -53,15 +53,15 @@ tkid,place,lat,lon,impact,description_en,description_ru,link1,link1Time,link2,li
 52,dostuk,40.05424378,70.62965527,privateprop,,,https://youtu.be/vBazRrT6tnQ?t=255,255.0,,,,,socialmedia
 53,dostuk,40.05418128,70.6293153,privateprop,,,https://youtu.be/vBazRrT6tnQ?t=251,251.0,,,,,socialmedia
 54,dostuk,40.05459475,70.62910266,privateprop,,,https://youtu.be/vBazRrT6tnQ?t=247,247.0,,,,,socialmedia
-55,borborduk,40.18818809,69.82864884,civinfra,Police Station,,https://fb.watch/jk0s06_Xq6/,126.0,,,,,socialmedia
-56,borborduk,,69.82780618,civinfra,Municipality Building ,,https://fb.watch/jk0s06_Xq6/,103.0,,,,,socialmedia
-57,borborduk,40.18089739,69.79597606,privateprop,Hotel,,https://youtu.be/6wskc5TIvGQ?t=2567,2567.0,,,,,socialmedia
+55,borborduk,40.18818809,69.82864884,civinfra,Police Station,Отдел милиции,https://fb.watch/jk0s06_Xq6/,126.0,,,,,socialmedia
+56,borborduk,40.18772418,69.82780618,civinfra,Municipality Building ,Здание сельской администрации (Айыл Окмоту),https://fb.watch/jk0s06_Xq6/,103.0,,,,,socialmedia
+57,borborduk,40.18089739,69.79597606,privateprop,Hotel,Отель,https://youtu.be/6wskc5TIvGQ?t=2567,2567.0,,,,,socialmedia
 58,borborduk,40.19149107,69.83647031,privateprop,,,,,,,,,satellite
 59,borborduk,40.18660708,69.83015517,privateprop,,,,,,,,,satellite
 60,borborduk,40.18723545,69.82834195,privateprop,,,,,,,,,satellite
 61,borborduk,40.18757293,69.82933816,privateprop,,,,,,,,,satellite
 62,borborduk,40.18746162,69.82902011,privateprop,,,,,,,,,satellite
-63,maksat,40.12790161,69.69333127,civinfra,Municipality Building ,,https://youtu.be/x5ubzv86-VQ?t=132,132.0,,,,,socialmedia
+63,maksat,40.12790161,69.69333127,civinfra,Municipality Building ,Здание сельской администрации (Айыл Окмоту),https://youtu.be/x5ubzv86-VQ?t=132,132.0,,,,,socialmedia
 64,maksat,40.135253,69.703747,privateprop,,,,,,,,,satellite
 65,maksat,40.13500819,69.70354465,privateprop,,,https://youtu.be/x5ubzv86-VQ?t=605,605.0,,,,,socialmedia
 66,maksat,40.13472031,69.70325171,privateprop,,,https://youtu.be/x5ubzv86-VQ?t=550,550.0,,,,,socialmedia
@@ -356,7 +356,7 @@ tkid,place,lat,lon,impact,description_en,description_ru,link1,link1Time,link2,li
 320,ak-sai,39.87871135,70.52102486,privateprop,,,,,,,,,satellite
 321,ak-sai,39.87957416,70.51852779,privateprop,,,https://youtu.be/raWjX-jtYkU?t=711,711.0,,,,,socialmedia
 322,ak-sai,39.87897205,70.51843918,privateprop,,,,,,,,,satellite
-323,ak-sai,39.8784482,70.51801344,civinfra,School,,https://t.me/seychas_kg/13359,,https://sputnik.kg/img/07e6/09/13/1068067083_0:0:3072:2048_600x0_80_0_1_38501ebaba72e31c911651ae4a495047.jpg.webp,,https://youtu.be/raWjX-jtYkU?t=645,645.0,socialmedia
+323,ak-sai,39.8784482,70.51801344,civinfra,School,Школа,https://t.me/seychas_kg/13359,,https://sputnik.kg/img/07e6/09/13/1068067083_0:0:3072:2048_600x0_80_0_1_38501ebaba72e31c911651ae4a495047.jpg.webp,,https://youtu.be/raWjX-jtYkU?t=645,645.0,socialmedia
 324,ak-sai,39.87967589,70.52223453,privateprop,,,,,,,,,satellite
 325,ak-sai,39.87942059,70.52196312,privateprop,,,,,,,,,satellite
 326,ak-sai,39.8792243,70.52181786,privateprop,,,,,,,,,satellite
@@ -369,7 +369,7 @@ tkid,place,lat,lon,impact,description_en,description_ru,link1,link1Time,link2,li
 333,ak-sai,39.87997353,70.51542404,privateprop,,,,,,,,,satellite
 334,ak-sai,39.87902336,70.51576918,privateprop,,,,,,,,,satellite
 335,ak-sai,39.87926479,70.5159773,privateprop,,,,,,,,,satellite
-336,ak-sai,39.87981398,70.51667413,civinfra,Kindergarten,,,,,,,,satellite
+336,ak-sai,39.87981398,70.51667413,civinfra,Kindergarten,Детский сад,,,,,,,satellite
 337,ak-sai,39.88049904,70.51799712,privateprop,,,,,,,,,satellite
 338,ak-sai,39.88031746,70.51787142,privateprop,,,https://youtu.be/raWjX-jtYkU?t=711,711.0,,,,,socialmedia
 339,ak-sai,39.88018717,70.51765711,privateprop,,,https://youtu.be/raWjX-jtYkU?t=711,711.0,,,,,socialmedia
@@ -378,7 +378,7 @@ tkid,place,lat,lon,impact,description_en,description_ru,link1,link1Time,link2,li
 342,ak-sai,39.88111373,70.51474484,privateprop,,,,,,,,,satellite
 343,ak-sai,39.88058671,70.51865687,privateprop,,,,,,,,,satellite
 344,ak-sai,39.88248938,70.51896474,privateprop,,,,,,,,,satellite
-345,ak-sai,39.89542982,70.50530184,privateprop,Chicken farm,,https://eurasianet.org/sites/default/files/styles/article/public/2022-10/Photo_6553723_DJI_123_jpg_5279256_0_2022921143934_photo_original-01.jpeg?itok=-PPQ82wm,,,,,,socialmedia
+345,ak-sai,39.89542982,70.50530184,privateprop,Chicken farm,Куриная ферма,https://eurasianet.org/sites/default/files/styles/article/public/2022-10/Photo_6553723_DJI_123_jpg_5279256_0_2022921143934_photo_original-01.jpeg?itok=-PPQ82wm,,,,,,socialmedia
 346,ak-sai,39.88053494,70.51676853,privateprop,,,https://youtu.be/raWjX-jtYkU?t=661,661.0,,,,,socialmedia
 347,vorukh,39.87669721,70.52428464,privateprop,,,,,,,,,satellite
 348,kok-tash,39.9572414,70.51522964,privateprop,,,,,,,,,satellite

@@ -616,7 +616,7 @@
             "lon": 70.51801344,
             "impact": "civinfra",
             "description_en": "School",
-            "description_ru": "",
+            "description_ru": "Школа",
             "tag": "socialmedia",
             "links": [
                 {
@@ -759,7 +759,7 @@
             "lon": 70.51667413,
             "impact": "civinfra",
             "description_en": "Kindergarten",
-            "description_ru": "",
+            "description_ru": "Детский сад",
             "tag": "satellite",
             "links": []
         },
@@ -859,7 +859,7 @@
             "lon": 70.50530184,
             "impact": "privateprop",
             "description_en": "Chicken farm",
-            "description_ru": "",
+            "description_ru": "Куриная ферма",
             "tag": "socialmedia",
             "links": [
                 {
@@ -1703,7 +1703,7 @@
             "lon": 69.82864884,
             "impact": "civinfra",
             "description_en": "Police Station",
-            "description_ru": "",
+            "description_ru": "Отдел милиции",
             "tag": "socialmedia",
             "links": [
                 {
@@ -1714,11 +1714,11 @@
         },
         {
             "tkid": 56,
-            "lat": "",
+            "lat": 40.18772418,
             "lon": 69.82780618,
             "impact": "civinfra",
             "description_en": "Municipality Building ",
-            "description_ru": "",
+            "description_ru": "Здание сельской администрации (Айыл Окмоту)",
             "tag": "socialmedia",
             "links": [
                 {
@@ -1733,7 +1733,7 @@
             "lon": 69.79597606,
             "impact": "privateprop",
             "description_en": "Hotel",
-            "description_ru": "",
+            "description_ru": "Отель",
             "tag": "socialmedia",
             "links": [
                 {
@@ -1831,7 +1831,7 @@
             "lon": 70.63277194,
             "impact": "civinfra",
             "description_en": "School",
-            "description_ru": "",
+            "description_ru": "Школа",
             "tag": "socialmedia",
             "links": [
                 {
@@ -1846,7 +1846,7 @@
             "lon": 70.63278313,
             "impact": "civinfra",
             "description_en": "Kindergarten",
-            "description_ru": "",
+            "description_ru": "Детский сад",
             "tag": "socialmedia",
             "links": [
                 {
@@ -1869,7 +1869,7 @@
             "lon": 70.63291711,
             "impact": "civinfra",
             "description_en": "Medical unit",
-            "description_ru": "",
+            "description_ru": "ФАП",
             "tag": "socialmedia",
             "links": [
                 {
@@ -3610,7 +3610,7 @@
             "lon": 69.69333127,
             "impact": "civinfra",
             "description_en": "Municipality Building ",
-            "description_ru": "",
+            "description_ru": "Здание сельской администрации (Айыл Окмоту)",
             "tag": "socialmedia",
             "links": [
                 {
