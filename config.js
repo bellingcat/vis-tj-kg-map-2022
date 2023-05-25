@@ -22,7 +22,7 @@ const config = {
         satellite: (token) => `https://api.mapbox.com/styles/v1/bellingcat-mapbox/cl1win2vp003914pdhateva6p/tiles/256/{z}/{x}/{y}@2x?access_token=${token}`,
         custom: (token) => `https://api.mapbox.com/styles/v1/bellingcat-mapbox/cl0qnou2y003m15s8ieuyhgsy/tiles/256/{z}/{x}/{y}@2x?access_token=${token}`,
       },
-      startVillage: 'min-oruk' // eg: "ovchi-kalacha"
+      startVillage: null // eg: "ovchi-kalacha"
     },
     ui: {
       toastOptions: {

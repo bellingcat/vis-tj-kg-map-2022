@@ -3,14 +3,19 @@
   <options-button :startTile="currentTileName" @new-tile="setTileLayer" @embed-changed="updateEmbedSettings"
     @show-about-panel="showAboutPanel" />
   <!-- <sidebar /> -->
+  <v-btn icon="mdi-help" id="help-btn" class="ma-1 pa-0" @click="coverDialog=!coverDialog" :title="$t('options.help')"></v-btn>
   <v-dialog v-model="coverDialog" scrollable width="auto" origin="top right">
     <v-card class="pb-2">
       <v-card-title class="text-center text-uppercase pa-3 ">{{ $t('cover.title') }}</v-card-title>
       <v-divider></v-divider>
-      <v-card-text class="text-justify" style="max-height: 450px;max-width:450px">
+      <v-card-text class="text-justify" style="max-width:750px">
+        <video  class="help-video" controls>
+          <source src="recording.mp4">TODO
+          Your browser does not support video.
+        </video>
         <p v-html="$t('cover.cover', { villageCount: villages.length })"></p>
         <br>
-        <v-code>{{ $t('cover.link1') }}<a href="#!"
+        <v-code class="text-center">{{ $t('cover.link1') }}<a href="#!"
             @click="e => { e.preventDefault(); showAboutPanel(); coverDialog = false; }">{{ $t('cover.link2')
             }}</a>.</v-code>
       </v-card-text>
@@ -135,7 +140,9 @@
   </v-card>
 
   <v-card class="village-tabs ma-0 mb-0 ml-auto mr-auto" :class="mdAndDown ? 'w-100' : 'w-50'">
-    <p class="text-center" v-html="$t('buildingCount', {buildingCount :  villages?.map(v=>v.incidents.filter(i => enabledTags.includes(i.tag) && enabledImpacts.includes(i.impact)).length).reduce((a, b) => a + b)})"></p>
+    <p class="text-center"
+      v-html="$t('buildingCount', { buildingCount: villages?.map(v => v.incidents.filter(i => enabledTags.includes(i.tag) && enabledImpacts.includes(i.impact)).length).reduce((a, b) => a + b) })">
+    </p>
 
     <div class="d-flex align-center justify-center pa-0">
       <!-- <div class="d-flex align-center pa-0 ml-2"> -->
@@ -144,10 +151,10 @@
         <v-btn-toggle v-model="enabledTags" divided multiple>
           <v-slide-group-item v-for="(tagProps, tag) in tagTabs" :key="tag" :selected-class="`${tag}-selected`">
             <v-btn :value="tag" :key="tag" density="compact" :size="smAndDown ? 'x-small' : 'small'" variant="tonal"
-            :color="tagProps.color" rounded="0">
-            <div class="d-flex align-center flex-column justify-center">
-              <!-- <v-icon :icon="tagProps.icon"></v-icon> -->
-              {{ $t(`buildingLocation.${tag}.name`) }}
+              :color="tagProps.color" rounded="0">
+              <div class="d-flex align-center flex-column justify-center">
+                <!-- <v-icon :icon="tagProps.icon"></v-icon> -->
+                {{ $t(`buildingLocation.${tag}.name`) }}
               </div>
               <v-tooltip activator="parent" location="top" open-delay="400" z-index="3000">{{
                 $t(`buildingLocation.${tag}.explanation`) }}</v-tooltip>
@@ -165,11 +172,12 @@
         <v-btn-toggle v-model="enabledImpacts" divided multiple color="blue-grey-darken-2">
           <v-slide-group-item v-for="(impactProps, impact) in impactTabs" :key="impact">
             <v-btn :value="impact" :key="impact" :selected-class="`${impact}-selected v-tab--selected`" density="compact"
-            variant="tonal" :size="smAndDown ? 'x-small' : 'small'" :color="enabledImpacts.includes(impact) ? 'white':'black'" rounded="0" >
-            <template v-slot:prepend>
-              <v-icon :icon="impactProps.icon" :color="enabledImpacts.includes(impact) ? 'yellow' : ''"></v-icon>
-            </template>
-            <div class="d-flex align-center justify-center">
+              variant="tonal" :size="smAndDown ? 'x-small' : 'small'"
+              :color="enabledImpacts.includes(impact) ? 'white' : 'black'" rounded="0">
+              <template v-slot:prepend>
+                <v-icon :icon="impactProps.icon" :color="enabledImpacts.includes(impact) ? 'yellow' : ''"></v-icon>
+              </template>
+              <div class="d-flex align-center justify-center">
                 {{ $t(`impact.${impact}.name`) }}
               </div>
             </v-btn>
@@ -682,8 +690,8 @@ function assert(condition, message) {
   left: 0;
   right: 0;
 
-  .v-btn-group{
-    height:34px;
+  .v-btn-group {
+    height: 34px;
   }
 }
 
@@ -827,6 +835,28 @@ div.v-overlay--absolute.v-tooltip div.v-overlay__content {
 //     }
 //   }
 // }
+
+.help-video {
+  width: 100%;
+}
+
+
+ #help-btn {
+   position: absolute;
+   right: 10px;
+   top: 0px;
+   opacity: $opacityMax;
+   z-index: $zMax + 20;
+   border-radius: 25%;
+
+   &:hover {
+     color: $accentColor;
+   }
+ }
+
+ button#help-btn {
+   top: 110px;
+ }
 
 /* Leaflet crispness override */
 .leaflet-container .leaflet-overlay-pane svg,

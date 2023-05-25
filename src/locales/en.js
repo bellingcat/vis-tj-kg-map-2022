@@ -120,6 +120,7 @@ export default {
       on: "fullscreen",
       off: "exit fullscreen"
     },
+    help: `Show help menu`,
     download: {
       json: "JSON data",
       csv: "CSV data",
